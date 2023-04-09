@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>NPer</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000494267"></a><h3 class="newpage"> NPer</h3>
+<p><a name="1000666031"></a>Basic and Crystal syntax.</p><a name="1000494268"></a><h5>Overloads</h5><ul type="disc"><a name="1000494269"></a><li>NPer (rate, payment, presentValue)
+<a name="1000494270"></a><li>NPer (rate, payment, presentValue, futureValue)
+<a name="1000494271"></a><li>NPer (rate, payment, presentValue, futureValue, type)
+</ul><a name="1000494272"></a><h5>Arguments</h5><ul type="disc"><a name="1000494273"></a><li>rate is a Number that specifies the interest rate per period.
+<a name="1000494274"></a><li>payment is a Number or Currency that specifies the payment to be made each period. Payments usually contain principal and interest that doesn't change over the life of the annuity. 
+<a name="1000494275"></a><li>presentValue is a Number or Currency that specifies the present value, or value today, of a series of future payments or receipts. 
+<a name="1000494276"></a><li>futureValue is an optional Number or Currency that specifies the future value or cash balance you want after you've made the final payment. If omitted, 0 is assumed. 
+<a name="1000494277"></a><li>type is an optional Number that specifies when payments are due. Specify 0 if payments are due at the end of the payment period, and 1 if payments are due at the beginning of the period. If omitted, 0 is assumed.
+</ul><a name="1000494278"></a><h5>Returns</h5><p><a name="1000494279"></a>Number value</p><a name="1000494280"></a><h5>Action </h5><p><a name="1000494281"></a>NPer returns a Number specifying the number of periods for an annuity based on periodic, fixed payments and a fixed interest rate.</p><a name="1000494282"></a><h5>Examples</h5><p><a name="1000494283"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><a name="1000494285"></a>Suppose that you want a $200,000 loan to buy a house. The interest rate is 7 percent and you can afford to pay $2500 per month. How long of a mortgage do you need?</p><p><code><a name="1000494286"></a>NPer (0.07/12, -2500, 200000)</code></p><p class="example"><a name="1000494287"></a>Returns 108.08 (rounded to 2 decimals) months. That is 108.08 / 12 = 9 years.</p><p><a name="1000494289"></a>Rather than seeking a loan, suppose that you want to save up $200,000 and then buy the house. You can get a 7 percent interest rate compounded monthly from your savings plan and want to save $2500 per month. How long will you need to save to have the money?</p><p><code><a name="1000494290"></a>NPer  (0.07/12, -2500, 0, 200000)</code></p><p class="example"><a name="1000494291"></a>Returns 65.85 (rounded to 2 decimals) months. That is about 5.5 years.</p><a name="1000494292"></a><h5>Comment</h5><p><a name="1000494293"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp54.html";
+var next = "functionshelp56.html";
+
+function setTopicID() { 
+      var number = "1000494267"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

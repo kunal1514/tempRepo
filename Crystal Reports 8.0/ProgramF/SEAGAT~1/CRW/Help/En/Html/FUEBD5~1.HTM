@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Variance (fld), Variance (fld, condFld), Variance (fld, condFld, cond), Variance (x)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000452231"></a><h3 class="newpage"> Variance (fld), Variance (fld, condFld), Variance (fld, condFld, cond), Variance (x)</h3>
+<p><a name="1000650793"></a>Basic and Crystal syntax.</p><a name="1000452234"></a><h5>Arguments</h5><ul type="disc"><a name="1000452235"></a><li>fld is any valid database or formula field that can be evaluated by the function.
+<a name="1000452236"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000452237"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+<a name="1000452238"></a><li>x is an array of values that can be evaluated by the function being used.
+</ul><a name="1000452239"></a><h5>Returns</h5><p><a name="1000452240"></a>Fractional Number</p><a name="1000452241"></a><h5>Action</h5><p><a name="1000452243"></a>Enables you to find the variance of a set of values in your report. For example:</p><ul type="disc"><a name="1000452245"></a><li>You can calculate the grand total variance for all values in a field. For information about this kind of summary, see <a href="functionshelp22.html#1000432407">SummaryFunction (fld)</a>.
+<a name="1000452247"></a><li>You can calculate the variance for all values within a group (for example, sales grouped by the state that they come from). For information on this kind of summary, see <a href="functionshelp23.html#1000432439">SummaryFunction (fld, condFld)</a>.
+<a name="1000452249"></a><li>You can calculate the variance for all values within a group in which grouping is controlled by changes in a date or Boolean field (for example, sales grouped by the month in which they were made). For information on this kind of summary, see <a href="functionshelp24.html#1000599837">SummaryFunction (fld, condFld, cond)</a>.
+<a name="1000452251"></a><li>If you specify a set of individual values, you can compute the variance of the values in the set. For information on this kind of summary, see <a href="functionshelp155.html#1000567809">Array summary functions (x)</a>.
+</ul><a name="1000452252"></a><h5>Examples</h5><p><a name="1000452253"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000452254"></a>Variance({file.AMOUNT})</code></p><p class="example"><a name="1000452256"></a>Calculates the variance of all values in the Amount field.</p><p><code><a name="1000452261"></a>Variance({file.RESULTS}, {file.DATE},"daily") </code></p><p class="example"><a name="1000452262"></a>Calculates the variation for each group of laboratory test results in the Results field. The test results are separated into groups whenever the value in the Date field changes to a new day.</p><p><a name="1000735893"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000735945"></a>Variance({file.SCORES}, {file.TEACHERS}) % Variance({file.TEACHERS})</code></p><p class="example"><a name="1000735946"></a>Groups values in the Scores field by teacher, and calculates the variance for each teacher group as a percentage of the variance of the values for the entire report (for all teachers listed).</p><p><code><a name="1000452263"></a>Variance([{file.QTY1}, {file.QTY2}, {file.QTY3}, {file.QTY4}]) </code></p><p class="example"><a name="1000452264"></a>Returns 17.00 where Qty1 = 2, Qty2 = 2, Qty3 = 10, and Qty4 = 8.</p><a name="1000452265"></a><h5>Comments</h5><p><a name="1000452267"></a>Variance is calculated using the following technique:</p><ul type="disc"><a name="1000452268"></a><li>It calculates the average (mean) value for the items in the sample.
+<a name="1000452269"></a><li>It subtracts the average value from the value of each item.
+<a name="1000452270"></a><li>It squares the difference for each item.
+<a name="1000452271"></a><li>It adds the squared differences for all of the items in the sample.
+<a name="1000652747"></a><li>It divides the sum by one less than the number of items in the sample (N - 1). The result is the variance. Compare this final step to the <a href="functionshelp29.html#1000282246">PopulationVariance (fld), PopulationVariance (fld, condFld), PopulationVariance (fld, condFld, cond), PopulationVariance (x)</a>.
+</ul><p><a name="1000652812"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. </p>
+<p><a name="1000652813"></a>For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp27.html";
+var next = "functionshelp29.html";
+
+function setTopicID() { 
+      var number = "1000452231"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

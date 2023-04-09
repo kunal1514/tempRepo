@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>To link a subreport to the data in the primary report</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="59377"></a><h4 class="newpage"> To link a subreport to the data in the primary report</h4><ol>
+<a name="54308"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">If you are creating a new subreport or importing an existing report as a subreport, from the <kbd>Insert </kbd>menu, click <kbd>Subreport</kbd>. Choose or create a report and click the <kbd>Link </kbd>tab.
+<p class="indent"><a name="65760"></a>- or -</p><p class="indent"><a name="65830"></a>If you have already placed a subreport in the primary report, but did not create a link at setup, navigate to the Subreport Links dialog box by choosing <kbd>Subreport Links</kbd> from the <strong>Edit </strong>menu.</p><p class="indent"><a name="58670"></a>The Subreport Links dialog box appears.</p><p><a name="65682"></a> <img src="images/db_sbrlk.gif">
+
+
+</p>
+<a name="54698"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Choose the subreport you want to link from the <kbd>For subreport</kbd> list (if it is not already selected).
+<a name="54699"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Select the field you want used as a link field in the primary (containing) report from the <kbd>Available fields</kbd> list.
+<a name="54700"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click the<EM> </EM>arrow<EM> (&gt;) </EM>button.
+</ol>
+<p><a name="54701"></a>The field is added to the Field(s) to link to list box, and is now selected as a link field.</p><ol>
+<a name="25442"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Repeat steps 3 and 4 for each additional link, as desired.
+<a name="25443"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Use the <strong>Field link</strong> section (which will only appear if you have selected a link field) to set up the link for each link field:
+<ul type="disc"><ul type="disc"><a name="25444"></a><li>select the field you want linked to the primary report from the <strong>Subreport parameter field to use</strong>,<a name="25445"></a><li>select the <strong>Select data based on field</strong> check box on and select a field from the adjacent drop<nobr>-d</nobr>own list to organize the subreport data based on a specific field (this is the quick equivalent of using the Select Expert). If nothing is specified here, the subreport will adopt the organization of the primary report.</ul></ul><a name="25446"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+</ol>
+<p><a name="25447"></a>When you run the report, the program will coordinate the data in the primary report with the data in the subreport.</p><p><a name="5546"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The field type of the Containing Report field determines which subreport fields are visible. Because the Report Designer reads dates as either strings, dates, or date/time fields, you must make sure your subreport parameter field type matches the field type set up in Report Options in the main report for the field you want linked.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "23_subreports11.html";
+var next = "23_subreports13.html";
+
+function setTopicID() { 
+      var number = "59377"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

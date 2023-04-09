@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Create Parameter Field dialog box</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000133962"></a><h2 class="newpage">Create Parameter Field dialog box</h2><p><a name="1000133966"></a>This dialog box appears when you click the New button when the Parameter Fields entry is selected in the <a href="dialogs51.html#1000249864">Field Explorer</a>. The Parameter Fields entry is selected in the Field Explorer when you choose the <a href="COMMANDS72.html#130609">Parameter Field command</a> from the Insert menu.</p><p><a name="809966"></a>Use the Create New Parameter Field dialog box to create a parameter field that you can use in a formula, in a record selection formula, or in the body of the report itself.</p><a name="809987"></a><h5>Name</h5><p><a name="809989"></a>Enter the name you want to assign to the parameter field in this box. This is the name that will appear in the Fields list in the <a href="dialogs84.html#1000279563">Formula Editor</a> and it will be used to identify the field when the field is used in the report or in a formula.</p><p><a name="809991"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>When a parameter field name appears, the program puts a question mark at the beginning of the name, to identify it as a parameter field. Thus, if you name a parameter field "Prompt 1," the name will appear in the field list in the Formula Editor as "?Prompt1."</p>
+<a name="809999"></a><h5>Prompting Text</h5><p><a name="810001"></a>Enter the text you want the program to use for your prompt into this box. For example, if you are prompting for a state value, you might want to enter a prompt like "Enter state of interest." You can use approximately 20 characters/spaces in your prompt.</p><a name="1000223642"></a><h5>Value Type</h5><p><a name="1000223643"></a>Select the data type of the parameter field from this list. For example, if you are going to be prompting for a value in a numeric field, select "Number."</p><a name="810003"></a><h5>Allow multiple values</h5><p><a name="810005"></a>By selecting the Allow multiple values check box, you can select more than one default value for your parameter field. You can choose more than one default value for your parameter field after you click the Refresh button on the Standard toolbar.</p><a name="810007"></a><h5>Discrete value(s)</h5><p><a name="810009"></a>By selecting the Discrete value(s) option, you can select only discrete, or singular, values for your parameter field. If you have Allow multiple values selected, you will be able to select more than one discrete value for your parameter field, though those discrete values will continue to function singularly as opposed to a range value. You can choose discrete values for your parameter field after you choose the <a href="COMMANDS141.html#131779">Refresh Report Data command</a>.</p><a name="810011"></a><h5>Range value(s)</h5><p><a name="810013"></a>By selecting the Range value(s) option, you can select a range of values for your parameter field. For example, if you've selected a currency field, your parameter field (with range value selected) could equal any number that falls between $10,000 and $100,000.</p><a name="1000223658"></a><h5>Discrete and Range Values</h5><p><a name="1000223659"></a>This option is only available if you select the Allow multiple values check box.</p><p><a name="1000223666"></a>Selecting this option enables you to choose both discrete and range values for your parameter field. </p><a name="810015"></a><h5>Allow editing of default values</h5><p><a name="810017"></a>The Allow editing of default values check box is, by default, selected. With this check box selected, you can edit values in the parameter field after the parameter field has been added to the report. To edit default values, click the Refresh button and select Prompt for new parameter values.</p><a name="810019"></a><h5>Set default values</h5><p><a name="810021"></a>Click the Set default values button to set the default prompt settings for the parameter field you are creating.</p><a name="1000223625"></a><h6>Related topics</h6><p><a name="1000223627"></a><a href="COMMANDS72.html#130609">Parameter Field command</a></p><p><a name="1000223631"></a><a href="22_param5.html#78212">Creating a parameter field</a></p><p><a name="1000223623"></a><a href="dialogs51.html#1000249864">Field Explorer</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs21.html";
+var next = "dialogs23.html";
+
+function setTopicID() { 
+      var number = "1000133962"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

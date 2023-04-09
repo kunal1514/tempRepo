@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>To Export to an ODBC data source</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1294079"></a><h4 class="newpage"> To Export to an ODBC data source</h4><ol>
+<a name="1294084"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_expor.gif">
+
+
+With the report you want exported active, click <strong>Export</strong> on the Standard toolbar.
+<p class="indent"><a name="1294085"></a>The Export dialog box appears.</p><p class="indent"><a name="1294086"></a>{bmc bt_expor.gif}</p><a name="1294087"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">From the <strong>Format</strong> drop<nobr>-d</nobr>own list, select the ODBC data source for the format in which you want to export your report. For example, <br><EM>ODBC - CRSS</EM> allows you to export your report to a Microsoft SQL Server database.
+<a name="1294088"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;"><strong>Destination</strong> is ignored when you are exporting a report to an ODBC data source. You do not need to make any changes to the <strong>Destination</strong> edit box. Click <strong>OK</strong> in the Export dialog box.
+<a name="1294089"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">If your ODBC data source specifies a particular database, the report will be exported to that database. Otherwise, the Select Database dialog box appears. Select the database to which this report will be added as a new table, and then click <strong>OK</strong>.
+<a name="1294090"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">If the ODBC data source you selected requires a Logon ID and password, the Login or SQL Server Login dialog box appears. Enter your ID and Password, and then click <strong>OK</strong>.
+<p class="indent"><a name="1294091"></a>The Enter ODBC Table Name dialog box appears.</p><a name="1294092"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Enter the name you want to give to the new table in the database, and then click <strong>OK</strong>.
+</ol>
+<p><a name="1294093"></a>The program exports the report as a new table to the database you specified.</p><p><a name="1294094"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If your report contains a binary field, you will be unable to export it to an ODBC data source successfully.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "17_printvex16.html";
+var next = "17_printvex18.html";
+
+function setTopicID() { 
+      var number = "1294079"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

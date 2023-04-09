@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Filter</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000496417"></a><h3 class="newpage"> Filter</h3>
+<p><a name="1000671263"></a>Basic and Crystal syntax.</p><a name="1000496418"></a><h5>Overloads</h5><ul type="disc"><a name="1000496419"></a><li>Filter (inputStrings, searchString)
+<a name="1000496420"></a><li>Filter (inputStrings, searchString, include)
+<a name="1000496421"></a><li>Filter (inputStrings, searchString, include, compare)
+</ul><a name="1000496422"></a><h5>Arguments</h5><ul type="disc"><a name="1000496423"></a><li>InputStrings is an array of strings to be searched.
+<a name="1000496424"></a><li>searchString is a string to search for.
+<a name="1000496425"></a><li>include is an optional Boolean value indicating whether to return substrings that include or exclude searchString. If include is True, Filter returns the subset of the array that contains searchString as a substring. If include is False, Filter returns the subset of the array that does not contain searchString as a substring. If omitted, the value True is assumed.
+<a name="1000496426"></a><li>compare is an optional Number value indicating the kind of string comparison to use:
+<ul type="disc"><ul type="disc"><a name="1000496427"></a><li> Performs a comparison that is case<nobr>-s</nobr>ensitive<a name="1000496428"></a><li> Performs a comparison that is case<nobr>-i</nobr>nsensitive<p class="indent"><a name="1000496429"></a>If omitted, a case<nobr>-s</nobr>ensitive comparison is performed.</p></ul></ul></ul><a name="1000496430"></a><h5>Returns</h5><p><a name="1000496431"></a>Array of String values.</p><a name="1000496432"></a><h5>Action</h5><p><a name="1000496433"></a>Filter searches an array of strings for a specified string, and returns the strings in an array.</p><a name="1000496434"></a><h5>Examples</h5><p><a name="1000496435"></a>The following examples are applicable to Basic and Crystal syntax. </p><p><a name="1000671264"></a>The examples assume that inputStrings is a String array consisting of the 5 elements: "pineapple", "Apple", "APPLE", "grape", and "orange".</p><p><code><a name="1000496436"></a>Filter (inputStrings, "ap")</code></p><p class="example"><a name="1000496437"></a>Returns an array containing the 2 strings "pineapple" and "grape".</p><p><code><a name="1000496438"></a>Filter (inputStrings, "Ap", True)</code></p><p class="example"><a name="1000496439"></a>Returns an array containing the 1 string "Apple". </p><p><code><a name="1000496440"></a>Filter (inputStrings, "ap", True, 1)</code></p><p class="example"><a name="1000496441"></a>Returns an array containing the 4 strings "pineapple", "Apple", "APPLE" and "grape". Matching to the search string uses case<nobr>-i</nobr>nsensitive comparison.</p><p><code><a name="1000496442"></a>Filter (inputStrings, "ap", False)</code></p><p class="example"><a name="1000496443"></a>Returns an array containing the 3 strings "Apple", "APPLE" and "orange".</p><p><code><a name="1000496444"></a>Filter (inputStrings, "cd")</code></p><p class="example"><a name="1000496445"></a>Returns an array containing 1 string, the empty string "". The returned array does not contain any matching strings but contains 1 element since the formula language does not support empty arrays.</p><a name="1000496446"></a><h5>Comments</h5><p><a name="1000496447"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp97.html";
+var next = "functionshelp99.html";
+
+function setTopicID() { 
+      var number = "1000496417"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

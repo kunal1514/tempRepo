@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Restrictions on changing formula variable data types</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="128052"></a><h4 class="newpage"> Restrictions on changing formula variable data types</h4><p><a name="128872"></a>The <EM>formula</EM> variable can be set several times within a single formula. For example, suppose a company has a shipping policy in which orders over $1,000 are insured, but orders below that amount are not insured:</p><PRE><a name="128054"></a>Rem A formula that returns a String value
+<a name="128055"></a>If {Orders.Order Amount} &gt;= 1000 Then
+<a name="128056"></a>   formula = "Insured shipping"
+<a name="128057"></a>Else
+<a name="128058"></a>   formula = "Regular shipping"
+<a name="128059"></a>End If
+</PRE><p><a name="128842"></a>The above formula returns the text string value "Insured shipping" if the value of the database field {Orders.Order Amount} is greater than or equal to 1000; otherwise, it returns the text string value "Regular Shipping." Text strings are usually just referred to as strings. Notice that the <EM>formula </EM>variable appears twice in the above example.</p><p><a name="133669"></a>If the <EM>formula</EM> variable is set to a value of one type, it cannot be set to a value of another type later in the same formula. For example, replacing the String "Regular shipping" in the above example with the Number 10 would result in an error since the special variable <EM>formula</EM> was first set to the String value "Insured shipping." </p><p><a name="141982"></a>The reason for this restriction is that Seagate Crystal Reports needs to know in advance what the return type of a formula will be so that it can allocate enough storage for the returned values. This is because different types have different storage requirements. Another reason is that the formatting options available for a formula field depend on its type. For example, a Number field has Number formatting options, such as the number of decimals to display, which do not make sense for a String field.</p><p><a name="133670"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The special variable <EM>formula</EM> should not be declared, unlike other variables used in a Basic syntax formula. See <a href="20_basicsyntax22.html#130270">Variables</a>.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax4.html";
+var next = "20_basicsyntax6.html";
+
+function setTopicID() { 
+      var number = "128052"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

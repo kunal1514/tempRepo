@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Making an object underlay a following section</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="198455"></a><h3 class="newpage"> Making an object underlay a following section</h3>
+<p><a name="198456"></a>Using this example, you can make the Xtreme logo (Xtreme.bmp) underlay multiple sections. This procedure is similar to the one for inserting a company watermark to serve as a report background.</p><p><a name="198457"></a>To make an object underlay a following section, first place the object in the section above the section you want it to underlay. Then select the Underlay Following Sections check box in the Section Expert for the section in which the object is placed.</p><a name="198458"></a><h6>To create a basic report</h6><ol>
+<a name="198459"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Create a report using the Customer table in <kbd>Xtreme.mdb</kbd>.
+<p class="indent"><a name="198460"></a>The Xtreme.mdb file is located in the \Program Files\Seagate Software\Crystal Reports\Samples\Databases directory, or the directory in which the program resides.</p><a name="198461"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Place {customer.CUSTOMER NAME} and {customer.LAST YEAR'S SALES} side<nobr>-b</nobr>y<nobr>-s</nobr>ide in the Details section of the report.
+<a name="198462"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">To remove unnecessary objects from this example, delete the field titles that the program places in the Page Header section of each field.
+<a name="198463"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Insert</kbd> menu, click <kbd>Group</kbd> to break the data into regional groups.
+<a name="198464"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Common</kbd> tab of the Insert Group dialog box, select {customer.REGION} as the sort and group by field.
+<a name="198465"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd>.
+</ol>
+<a name="198468"></a><h6>To insert a picture onto the report</h6><ol>
+<a name="198473"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><EM><img src="images/bt_insertpicture.gif">
+
+
+</EM>On the <kbd>Insert</kbd> menu, click <kbd>Picture</kbd>.
+<a name="198474"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Select the <kbd>Xtreme.bmp</kbd> file, then place it in the Page Header section, to the right of the report body.
+<p class="indent"><a name="198475"></a>The Xtreme.bmp file is located in the \Program Files\Seagate Software\ Crystal Reports\Samples\Databases directory, or the directory in which the program resides.</p><p class="indent"><a name="198476"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>In this example, the picture is placed to the right of the fields to avoid underlaying the text. When you are working with a watermark, a subdued picture designed to be nearly invisible, place it directly above the text.</p>
+<a name="198480"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_prevw.gif">
+
+
+On the Standard toolbar, click <kbd>Print Preview</kbd>.
+<p class="indent"><a name="198481"></a>The picture prints first (entirely in the Page Header section), then the body of the report follows.</p><a name="198482"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Once you are finished previewing the report, return to the <kbd>Design</kbd> tab.
+</ol>
+<a name="198483"></a><h6>To make the picture underlay the following section</h6><ol>
+<a name="198659"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Format </kbd>menu, click <kbd>Section</kbd>.
+<p class="indent"><a name="198489"></a>The Section Expert dialog box appears.</p><a name="198490"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Sections</kbd> list, click <kbd>Page Header</kbd>, then select the <kbd>Underlay Following Sections</kbd> check box.
+<a name="198491"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> to preview the report again.
+<p class="indent"><a name="198492"></a>The picture now prints in both the Group Header and Details sections, next to (instead of above) the text in the body of the report.</p><p class="indent"><a name="198493"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using the technique of placing a picture to the right of the body of the report, you can set up a chart or an employee picture to print beside the details pertaining to that chart or employee.</p>
+<a name="198494"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Once you are finished previewing the report, return to the <kbd>Design </kbd>tab.
+<a name="198495"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Resize the object vertically to make it two or three times larger, then preview the report again.
+<p class="indent"><a name="198496"></a>The bitmap file now underlays more sections.</p></ol>
+<p><a name="198497"></a>The area in which the picture underlays depends on the following conditions:</p><ul type="disc"><a name="198498"></a><li>the size of the picture
+<a name="198499"></a><li>the section in which the picture was originally placed
+<a name="198500"></a><li>the position of the picture in the section.
+</ul><p><a name="198501"></a>By modifying size and placement of an object, you can create a variety of visual effects, using the underlay feature.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "11_format5.html";
+var next = "11_format7.html";
+
+function setTopicID() { 
+      var number = "198455"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using the Record command</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000216981"></a><h2 class="newpage">Using the Record command</h2><ol>
+<a name="1000216982"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Choose the Record command from the Edit Selection Formula menu on the Report menu. The <a href="dialogs128.html#1000258531">Record Selection Formula Editor</a> appears, displaying the current record selection formula. 
+<a name="1000216992"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">You can use the full range of <a href="glossary14.html#13456">operator</a>, <a href="glossary7.html#13333">function</a>s, and <a href="glossary5.html#13246">data field</a> to edit the formula. This formula restricts the <a href="glossary16.html#318679">range</a> of data that will print. For example, if you want to extract only those records where the item number begins with AA, you can use the Subscript operator in the selection formula:
+<p class="indent"><a name="1000216996"></a><code>{file.Item number} [1 to 2] = "AA"</code></p><a name="1000216997"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Edit your formula.
+<a name="1000216998"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click Accept when finished. The program limits the report to the records specified.
+</ol>
+<p><a name="1000216999"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="1000217000"></a><li>No object frame appears when you create a selection formula; the formula is simply stored in the report.
+<a name="1000217001"></a><li>Your record selection formula must be Boolean; that is, it must result in a Yes or No answer.
+<a name="1000217002"></a><li>You can not use commas in the numbers you enter in a formula. Enter only the number itself.
+</ul><a name="1000217003"></a><h6>Related topics</h6><p><a name="1000217007"></a><a href="COMMANDS134.html#131691">Record command</a> </p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "COMMANDS225.html";
+var next = "COMMANDS227.html";
+
+function setTopicID() { 
+      var number = "1000216981"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

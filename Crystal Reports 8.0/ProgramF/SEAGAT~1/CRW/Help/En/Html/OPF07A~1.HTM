@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>And operator</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000004748"></a><h3 class="newpage"> And operator</h3>
+<p><a name="1000029565"></a>Basic and Crystal syntax.</p><a name="1000004947"></a><h5>Usage</h5><p><code><a name="1000048701"></a>x And y </code></p><p><a name="1000048750"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1000048721"></a>Value of x
+
+</th><th align="left" valign="bottom"><a name="1000048723"></a>Value of y
+
+</th><th align="left" valign="bottom"><a name="1000048725"></a>x And y
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000048727"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000048729"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000048731"></a>True</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000048733"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000048735"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000048737"></a>False</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000048739"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000048741"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000048743"></a>False</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000048745"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000048747"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000048749"></a>False</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="1000004761"></a><h5>Examples</h5><p><a name="1000004762"></a>The following example is applicable to Crystal syntax:</p><p class="code"><a name="1000004764"></a>If {file.CREDIT LIMIT} = 5000 and {file.SALESMAN} = "SP" Then
+<br><a name="1000052190"></a>&nbsp;&nbsp;&nbsp;&nbsp;{file.AMOUNT}
+<br><a name="1000052191"></a>Else
+<br><a name="1000052200"></a>&nbsp;&nbsp;&nbsp;&nbsp;0 
+</p><p class="example"><a name="1000004766"></a>If the credit limit is 5000 and the salesman is SP (both conditions true), then <a href="glossary16.html#13498">returns</a> the <a href="glossary20.html#318757">value</a> in the {file.AMOUNT} field, otherwise return zero.</p><p><code><a name="1000004768"></a>A &gt; B and B &gt; C </code></p><p class="indent"><a name="1000004770"></a>Returns TRUE, where A = 10, B = 6, and C = 3 (both conditions are true).</p><p class="example"><a name="1000004772"></a>Returns FALSE, where A=10, B=6, and C=7 (only one of the two conditions are true).</p><p><code><a name="1000004775"></a>(A&gt;B) and (A * C - D &gt; E) and (E / D &lt;= B)</code></p><p class="example"><a name="1000004776"></a>Returns TRUE, where A = 7, B = 5, C = 3, D = 2, E = 10 (all three of the conditions are true).</p><a name="1000004790"></a><h6>Related topics</h6><p><a name="1000040716"></a><a href="20_basicsyntax44.html#130699">Order of precedence</a> (Basic syntax)</p><p><a name="1000040720"></a><a href="21_crystalsyntax48.html#147262">Order of precedence</a> (Crystal syntax)</p><p><a name="1000025672"></a><a href="19_introformulas36.html#304723">Formula 6</a></p><p><a name="1000004794"></a><a href="19_introformulas45.html#305354">Formula 15</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp41.html";
+var next = "OperatorsHelp43.html";
+
+function setTopicID() { 
+      var number = "1000004748"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

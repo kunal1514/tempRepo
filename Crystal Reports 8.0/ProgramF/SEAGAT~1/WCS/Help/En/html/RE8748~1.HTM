@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Adding the Viewer to a web page</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="149499"></a><h3 class="newpage"> Adding the Viewer to a web page</h3>
+<p><a name="149500"></a>As a Java applet, the Report Viewer can be added to a web page using the standard HTML tag APPLET. The name of the public class exposed by the applet is Report Viewer. Thus, the following code displays the Report Viewer for Java:</p><PRE><a name="149501"></a>&lt;APPLET CODE="ReportViewer.class"
+<a name="161473"></a>CODEBASE="http://&lt;domain&gt;/viewer/JavaViewer"
+<a name="161474"></a>WIDTH=600 HEIGHT=400&gt;
+<a name="161483"></a>&lt;/APPLET&gt;
+</PRE><p><a name="149502"></a>When you install Seagate Crystal Reports or the Crystal Web Component Server, the Java viewer is installed under:</p><p><a name="158567"></a>\Program Files\Seagate Software\Viewers\JavaViewer</p><p><a name="158569"></a>Additionally, a virtual directory named </p><p><a name="158571"></a>/viewer</p><p><a name="158577"></a>is set up on your web server, which points to the</p><p><a name="158579"></a>\Program Files\Seagate Software\Viewers</p><p><a name="149503"></a>The Report Viewer for Java provides several optional parameters to customize the look of the viewer and to control its functionality. Apply values to these parameters using the standard PARAM tag in your HTML code.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "Report_Viewers13.html";
+var next = "Report_Viewers15.html";
+
+function setTopicID() { 
+      var number = "149499"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

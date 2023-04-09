@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DateDiff</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000548748"></a><h3 class="newpage"> DateDiff</h3>
+<p><a name="1000693179"></a>Basic and Crystal syntax.</p><a name="1000548749"></a><h5>Overloads</h5><ul type="disc"><a name="1000548750"></a><li>DateDiff (intervalType, startDateTime, endDateTime)
+<a name="1000548751"></a><li>DateDiff (intervalType, startDateTime, endDateTime, firstDayOfWeek)
+</ul><a name="1000548752"></a><h5>Arguments</h5><ul type="disc"><a name="1000548753"></a><li>intervalType is a String expression that is the interval of time you use to calculate the difference between startDateTime and endDateTime. Possible values can be:
+<p><a name="1000697348"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1000697305"></a>Interval 
+type 
+value
+
+</th><th align="left" valign="bottom"><a name="1000697307"></a>Description
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697309"></a>yyyy</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697311"></a>Year</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697313"></a>q</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697315"></a>Quarter </P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697317"></a>m</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697319"></a>Month</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697321"></a>y</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697323"></a>Day of year</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697325"></a>d</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697327"></a>Day (both "y" and "d" find the difference in days)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697329"></a>w</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697331"></a>Number of weeks between startDateTime and endDateTime</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697333"></a>ww</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697335"></a>Number of firstDayOfWeek's between startDateTime and endDateTime</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697337"></a>h</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697339"></a>Hour</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697341"></a>n</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697343"></a>Minute</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697345"></a>s</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697347"></a>Second</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="1000548764"></a><li> startDateTime is the first DateTime value used in calculating the difference.
+<a name="1000548765"></a><li>endDateTime is the second DateTime value used in calculating the difference.
+<a name="1000707543"></a><li>firstDayOfWeek is an optional constant specifying the first day of the week. If not specified, crSunday is assumed. See <a href="OperatorsHelp70.html#1000033418">Day of Week constants</a>.
+</ul><a name="1000707544"></a><h5>Returns</h5><p><a name="1000548768"></a>A Number value.</p><a name="1000548769"></a><h5>Action</h5><p><a name="1000548770"></a>DateDiff returns a number of time intervals between two specified dates.</p><a name="1000548771"></a><h5>Examples</h5><p><a name="1000548772"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><a name="1000548774"></a>Use DateDiff with the "d" or "y" interval type parameter to find the number of days between two dates:</p><p><code><a name="1000548775"></a>DateDiff ("d", #10/7/1999#, #10/10/1999#)</code></p><p class="example"><a name="1000548776"></a>Returns 3.</p><p><a name="1000548778"></a>Use DateDiff with the "yyyy" interval type parameter to find the number of years difference between two dates. This use of DateDiff is the same as finding the difference between the year of endDateTime and the year of startDateTime.</p><p><code><a name="1000548779"></a>DateDiff ("yyyy", #10/7/1999#, #2/10/2005#)</code></p><p class="example"><a name="1000548780"></a>Returns 6.</p><p><code><a name="1000548781"></a>DateDiff ("yyyy", #12/31/1999#, #1/1/2000#)</code></p><p class="example"><a name="1000548782"></a>Returns 1 (a 1 year difference), even though there is only a 1 day difference between the dates.</p><p><code><a name="1000548783"></a>DateDiff ("yyyy", #1/1/1999#, #12/31/1999#)</code></p><p class="example"><a name="1000548784"></a>Returns 0 (a 0 year difference), even though there is a 364 day difference.</p><p><a name="1000548785"></a>Suppose that for the above examples, the first date is the date that you bought a mutual fund, and the second date is the date you sold it. The mutual fund company must send you an annual report for every year in which you owned units in the fund. Thus, you would get 7, 2 and 1 annual reports respectively, in the above cases.</p><p><a name="1000548787"></a>Use DateDiff with the "q" parameter to find the number of quarters (3 month periods) difference between two dates.</p><p><code><a name="1000548788"></a>DateDiff ("q", #10/6/1999#, #5/20/2003#)</code></p><p class="example"><a name="1000548789"></a>Returns 14.</p><p><code><a name="1000548790"></a>DateDiff ("q", #3/31/1999#, #4/1/1999#)</code></p><p class="example"><a name="1000548791"></a>Returns 1. The two dates are in adjacent quarters.</p><p><code><a name="1000548792"></a>DateDiff ("q", #1/1/1999#, #3/31/1999#)</code></p><p class="example"><a name="1000548793"></a>Returns 0. The two dates are in the same quarter.</p><p><a name="1000548794"></a>Suppose the mutual fund company in the "yyyy" example mailed out quarterly reports. Then it would need to mail out 15, 2 and 1 quarterly reports respectively, in the above cases.</p><p><a name="1000548796"></a>Use DateDiff with the "m" parameter to find the number of months difference between two dates.</p><p><code><a name="1000548797"></a>DateDiff ("m", #3/15/1999#, #7/13/1999#)</code></p><p class="example"><a name="1000548798"></a>Returns 4.</p><p><a name="1000548800"></a>Use DateDiff with the "w" parameter to calculate the number of weeks between two dates. For example, if startDateTime is on a Tuesday, DateDiff counts the number of Tuesdays between startDateTime and endDateTime not including the initial Tuesday of startDateTime. Note however that it counts endDateTime if endDateTime is on a Tuesday. </p><p><code><a name="1000548801"></a>DateDiff ("w", #10/19/1999#, #10/25/1999#)</code></p><p class="example"><a name="1000548802"></a>Returns 0.</p><p><code><a name="1000548803"></a>DateDiff ("w", #10/19/1999#, #10/26/1999#)</code></p><p class="example"><a name="1000548804"></a>Returns 1.</p><p><a name="1000548806"></a>Use DateDiff with the "ww" parameter to calculate the number of firstDayOfWeek's occurring between two dates. For the DateDiff function, the "ww" parameter is the only one that makes use of the firstDayOfWeek argument. It is ignored for all the other interval type parameters. For example, if firstDayOfWeek is crWednesday, it counts the number of Wednesday's between startDateTime and endDateTime. It does not count startDateTime even if startDateTime falls on a Wednesday, but it does count endDateTime if endDateTime falls on a Wednesday. For the examples, note that October 6, 13, 20 and 27 all fall on a Wednesday in 1999.</p><p><code><a name="1000548807"></a>DateDiff ("ww", #10/5/1999#, #10/29/1999#, crWednesday)</code></p><p class="example"><a name="1000548808"></a>Returns 4.</p><p><code><a name="1000548809"></a>DateDiff ("ww", #10/6/1999#, #10/29/1999#, crWednesday)</code></p><p class="example"><a name="1000548810"></a>Returns 3.</p><p><code><a name="1000548811"></a>DateDiff ("ww", #10/5/1999#, #10/27/1999#, crWednesday)</code></p><p class="example"><a name="1000548812"></a>Returns 4.</p><p><a name="1000548813"></a>For example, suppose you want to calculate the number of days between the order date and ship date, excluding Saturdays and Sundays:</p><p class="code"><a name="1000548814"></a>Rem Basic syntax
+<br><a name="1000548815"></a>Dim d1, d2
+<br><a name="1000548816"></a>d1 = {Orders.Order Date}
+<br><a name="1000548817"></a>d2 = {Orders.Ship Date}
+<br><a name="1000548818"></a>formula = DateDiff("d", d1, d2) - _
+<br><a name="1000548819"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DateDiff("ww", d1, d2, crSaturday) - _
+<br><a name="1000548820"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DateDiff("ww", d1, d2, crSunday)
+<br><a name="1000548821"></a>
+<br><a name="1000548822"></a>//Crystal syntax
+<br><a name="1000548823"></a>Local DateTimeVar d1 := {Orders.Order Date};
+<br><a name="1000548824"></a>Local DateTimeVar d2 := {Orders.Ship Date};
+<br><a name="1000548825"></a>DateDiff ("d", d1, d2) - 
+<br><a name="1000548826"></a>&nbsp;&nbsp;&nbsp;&nbsp;DateDiff ("ww", d1, d2, crSaturday) -
+<br><a name="1000548827"></a>&nbsp;&nbsp;&nbsp;&nbsp;DateDiff ("ww", d1, d2, crSunday)
+</p><a name="1000548828"></a><h5>Comment</h5><p><a name="1000548829"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp128.html";
+var next = "functionshelp130.html";
+
+function setTopicID() { 
+      var number = "1000548748"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

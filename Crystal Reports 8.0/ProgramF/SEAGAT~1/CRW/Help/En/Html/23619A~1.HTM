@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Creating an on-demand subreport</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="63561"></a><h2 class="newpage">Creating an on-demand subreport</h2><p><a name="60396"></a>On<nobr>-d</nobr>emand subreports can be especially useful when you want to create a report that contains multiple subreports. In this case, you can choose to have these subreports appear only as hyperlinks.</p><p><a name="60409"></a>The actual data is not read from the database until the user drills down on the hyperlink. This way only data for on<nobr>-d</nobr>emand subreports that are actually viewed will be retrieved from the database. This makes the subreports much more manageable.</p><p><a name="60002"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Data for an on<nobr>-d</nobr>emand subreport is not saved unless the subreport is actually open in a preview window.</p>
+<a name="60004"></a><h6>To create an on-demand subreport</h6><ol>
+<a name="60420"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Place an ordinary subreport in your primary report.
+<a name="60437"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/23_subreports9a.gif">
+
+
+Click the <kbd>Object Properties </kbd>button on the Supplementary toolbar.
+<p class="indent"><a name="60006"></a>The Format Editor dialog box appears.</p><a name="60007"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Subreport </kbd>tab and select the <strong>On<nobr><nobr>-d</nobr></nobr>emand subreport</strong> check box on.
+<a name="60008"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "23_subreports18.html";
+var next = "23_subreports20.html";
+
+function setTopicID() { 
+      var number = "63561"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

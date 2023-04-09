@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>N</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="340473"></a><h2 class="newpage">N</h2><a name="318617"></a><h4>nesting
+</h4><p><a name="42904"></a>In Seagate Crystal Reports, nesting means to use one If<nobr>-T</nobr>hen<nobr>-E</nobr>lse expression inside another. For example, If employee's degree is not Ph.D. Then (if employee's sex is male, use the salutation Dear Mr. Else use the salutation Dear Ms.) Else use the salutation Dear Dr. In this example, the nested If<nobr>-T</nobr>hen<nobr>-E</nobr>lse statement is surrounded by parentheses. The example says, check the degree field on the employee record to verify that the employee is not a Ph.D. If that condition is true (the employee is not a Ph.D.), then use a letter salutation based on the sex indicated on the employee record. (If the sex is male, Then use a male salutation. Else [if the sex is female] use a female salutation.) Else (that is, if the employee is a Ph.D.), use a Dr. salutation. By using this type of formula construction, you can create a wider set of conditions and a wider set of consequences easier than you could without nesting.</p><a name="51833"></a><h4>null
+</h4><p><a name="13439"></a>Null means there is no value within a database field for a given record. It does not mean zero because zero is a value.</p><a name="13440"></a><h4>null string
+</h4><p><a name="13441"></a>A null string is an empty string. It contains no characters. If you were to use the Count function to count the string, it would return a length of zero. "" is used to designate a null string.</p><a name="13442"></a><h4>numeric
+</h4><p><a name="13443"></a>Numeric data is data on which you can perform arithmetic. The designation numeric refers to the way the data is treated by Seagate Crystal Reports and database programs, not to the way the data looks to you. </p><p><a name="13444"></a>For example, a serial number 12345 looks numeric, that is, every character is a number. But a serial number is not the kind of data on which you would want to perform arithmetic, so you would probably store a serial number as text instead of as numeric data. </p><p><a name="13445"></a>Numeric is one of several <a href="glossary5.html#22940">data type</a>s. Database programs require you to designate a data type when you create a <a href="glossary7.html#317426">field</a> for use in a database. The data type you select determines the rules the program follows when dealing with the values stored in that field.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "glossary12.html";
+var next = "glossary14.html";
+
+function setTopicID() { 
+      var number = "340473"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

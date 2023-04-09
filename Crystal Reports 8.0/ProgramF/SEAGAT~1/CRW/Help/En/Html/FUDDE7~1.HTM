@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Date/Time functions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000114189"></a><h2 class="newpage">Date/Time functions</h2><p><a name="363938"></a>Date functions allow you to convert numbers to dates (which you can then format to display as you wish) and to convert dates to numbers.</p><p><a name="1000016015"></a><a href="functionshelp103.html#1000528638">CurrentDate</a></p><p><a name="1000671315"></a><a href="functionshelp104.html#1000530702">CurrentTime</a></p><p><a name="1000671327"></a><a href="functionshelp105.html#1000528664">CurrentDateTime</a></p><p><a name="1000671353"></a><a href="functionshelp106.html#1000581363">Date</a></p><p><a name="1000686968"></a><a href="functionshelp107.html#1000686634">Time</a></p><p><a name="1000671364"></a><a href="functionshelp108.html#1000581401">DateTime</a></p><p><a name="1000671385"></a><a href="functionshelp109.html#1000531915">DateValue</a></p><p><a name="1000671392"></a><a href="functionshelp110.html#1000645674">TimeValue</a></p><p><a name="1000671399"></a><a href="functionshelp111.html#1000533082">DateTimeValue</a></p><p><a name="1000671406"></a><a href="functionshelp112.html#1000535456">DateSerial (year, month, day)</a></p><p><a name="1000671413"></a><a href="functionshelp113.html#1000536658">TimeSerial (hour, minute, second)</a></p><p><a name="1000671420"></a><a href="functionshelp114.html#1000537820">IsDateTime</a></p><p><a name="1000671427"></a><a href="functionshelp115.html#1000781158">IsTime</a></p><p><a name="1000671473"></a><a href="functionshelp116.html#1000540723">IsDate</a></p><p><a name="1000671480"></a><a href="functionshelp117.html#1000074662">Year (x)</a></p><p><a name="1000671487"></a><a href="functionshelp118.html#1000541296">Month (x)</a></p><p><a name="1000671498"></a><a href="functionshelp119.html#1000542086">Day (x)</a></p><p><a name="1000671505"></a><a href="functionshelp120.html#1000542993">WeekDay</a></p><p><a name="1000671536"></a><a href="functionshelp121.html#1000593761">DayOfWeek</a></p><p><a name="1000671557"></a><a href="functionshelp122.html#1000543524">Hour (x)</a></p><p><a name="1000671814"></a><a href="functionshelp123.html#1000543937">Minute (x)</a></p><p><a name="1000671829"></a><a href="functionshelp124.html#1000544307">Second (x)</a></p><p><a name="1000671844"></a><a href="functionshelp125.html#1000545212">MonthName</a></p><p><a name="1000671855"></a><a href="functionshelp126.html#1000546588">WeekdayName</a></p><p><a name="1000671866"></a><a href="functionshelp127.html#1000545231">Timer ( )</a></p><p><a name="1000671876"></a><a href="functionshelp128.html#1000693154">DateAdd (intervalType, nIntervals, startDateTime)</a></p><p><a name="1000686976"></a><a href="functionshelp129.html#1000548748">DateDiff</a></p><p><a name="1000686983"></a><a href="functionshelp130.html#1000548830">DatePart</a></p><p><a name="1000687258"></a><a href="functionshelp131.html#1000547687">First Day of Week/Year constants</a></p><a name="1000671310"></a><h5>Additional Date/Time functions</h5><p><a name="1000688446"></a><a href="functionshelp205.html#1000585289">DateTo2000 (Date, Number)</a></p><p><a name="1000688456"></a><a href="functionshelp206.html#1000585345">DTSTo2000 (DateString, Number)</a></p><p><a name="1000688727"></a><a href="functionshelp207.html#1000585393">DTSToDate (DateTimeString)</a></p><p><a name="1000688739"></a><a href="functionshelp208.html#1000585411">DTSToSeconds (DateTimeString)</a></p><p><a name="1000688750"></a><a href="functionshelp209.html#1000585427">DTSToTimeString (DateTimeString)</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp101.html";
+var next = "functionshelp103.html";
+
+function setTopicID() { 
+      var number = "1000114189"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

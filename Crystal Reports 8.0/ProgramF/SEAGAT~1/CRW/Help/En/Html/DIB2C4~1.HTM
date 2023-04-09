@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Reporting tab </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000220005"></a><h3 class="newpage"> Reporting tab </h3>
+<p><a name="1000220007"></a>The reporting options on this tab let you place a governor on data selection; they let you specify how you want Date/Time strings handled (if they are used in your report); and they let you specify whether or not data will be saved with your report.</p><a name="1000220010"></a><h5>Date-Time Field options</h5><p><a name="1000220011"></a>You have three options for converting Date<nobr>-T</nobr>ime Fields:</p><ul type="disc"><a name="1000220012"></a><li>Convert to String
+<a name="1000220013"></a><li>Convert to Date
+<a name="1000220014"></a><li>Keep Date<nobr>-T</nobr>ime Type.
+</ul><p><a name="1000222427"></a>See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000220015"></a><h5>Convert NULL Field Value to Default</h5><p><a name="1000220016"></a>Select this check box to have the program convert any null values to the database default. Some databases treat a null as a zero, some treat it as a blank, and some treat it as a special null value. This option is not selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000220017"></a><h5>COUNT Number of Records First</h5><p><a name="1000220018"></a>Select this check box (and then supply a maximum value in the Warn If More Than option) if you want to limit the number of records that can be included in a report. When you select the check box, the program will count the number of records first before building your report. By default, the check box is not selected.</p><a name="1000220019"></a><h5>Warn If More Than</h5><p><a name="1000220020"></a>Use this box to specify the maximum number of records the program can use in a report without first giving you a warning prompt. This option applies only to the Count Number of Records First check box.</p><a name="1000220023"></a><h5>Save Data With Report</h5><p><a name="1000220024"></a>When you select this check box, the program automatically saves database data with your report. Otherwise, the program saves the report itself, but it will need to retrieve the report data once again when you run the report. This option is selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000220025"></a><h5>Discard Saved Data When Loading Reports</h5><p><a name="1000220026"></a>Select this check box to discard saved data when loading reports. When you open a report, this function removes that report's current set of data from the database, so that you can enter new data while retaining the report's format and settings. This option is not selected by default.</p><a name="1000220027"></a><h5>Save Summaries With Report</h5><p><a name="1000220028"></a>Use this check box to determine whether the program will save the data summaries you create with the report. This option is selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000220029"></a><h5>Suppress Printing if No Records Selected</h5><p><a name="1000220030"></a>Use this check box to ensure reports cannot be printed if the database does not return any records. This option is not selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000220031"></a><h5>Show All Headers on Drill Down</h5><p><a name="1000220032"></a>Use this check box if you would like report drill<nobr>-d</nobr>own views to included headers for all sections above the drill<nobr>-d</nobr>own records. This option is not selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000220033"></a><h5>Autosave Reports After ... Minutes</h5><p><a name="1000220034"></a>Use this check box if you want reports to be saved automatically as you work on them. Use the Minutes box to specify the interval before and between autosaves. This option is not selected by default.</p><a name="1000220035"></a><h5>More Report Engine Error Messages</h5><p><a name="1000222661"></a>Select this check box to tell the program to offer more explanation in its error messages when a Report Engine error occurs. This option is selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000220037"></a><h5>Formula Language</h5><p><a name="1000220038"></a>Use this list to choose the formula language you want the program to use. You can choose between Crystal Syntax and Basic Syntax. Crystal Syntax is selected by default.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs118.html";
+var next = "dialogs120.html";
+
+function setTopicID() { 
+      var number = "1000220005"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

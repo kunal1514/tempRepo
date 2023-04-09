@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>For loops</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="147536"></a><h3 class="newpage"> For loops</h3>
+<p><a name="147538"></a>For loops enable you to evaluate a sequence of expressions multiple numbers of times. This is unlike the If and Select expressions where the program passes through each expression at most once during the formula's evaluation. For loops are best when you know the number of times that the expressions needs to be evaluated in advance.</p><a name="147540"></a><h4>The syntax of the For loop through examples</h4><a name="152499"></a><h5>Example 1</h5><p><a name="152493"></a>Suppose you want to reverse the {Customer.Customer Name} string. For example, "City Cyclists" becomes "stsilcyC ytiC".</p><PRE><a name="147542"></a>//Reverse a string version 1
+<a name="147543"></a>Local StringVar str := "";
+<a name="147544"></a>Local NumberVar strLen := 
+<a name="147545"></a>   Length ({Customer.Customer Name});
+<a name="147546"></a>Local NumberVar i;
+<a name="147547"></a>For i := 1 To strLen Do
+</PRE><p><a name="147548"></a>(</p><PRE><a name="147549"></a>   Local NumberVar charPos := strLen - i + 1;
+<a name="147550"></a>   str := str + {Customer.Customer Name}[charPos]
+<a name="147551"></a>);
+<a name="147552"></a>str
+</PRE><p><a name="147554"></a>Examine how this formula works assuming that the current value of the field {Customer.Customer Name} is "Clean Air". The variable strLen is assigned to be the length of "Clean Air", namely 9. The variable <EM>i</EM> is known as a <EM>For counter variable</EM> since its value changes with each iteration of the For loop. In other words, it is used to count the iterations of the loop. The For loop will iterate 9 times, during the first time, i is 1, then i is 2, then i is 3 and so on until finally i equals 9. During the first iteration, the ninth character of {Customer.Customer Name} is appended to the empty string variable str. Thus str equals "r" after the first iteration. During the second iteration, the eighth character of {Customer.Customer Name} is appended to str and so str<EM> </EM>equals "ri". This continues until after the ninth iteration, str<EM> </EM>equals, "riA naelC" which is the reversed string.</p><a name="147556"></a><h5>Example 2</h5><p><a name="152503"></a>Here is a simpler version of the above formula that uses a Step clause with a negative Step value of -1. For the "Clean Air" example, i is 9 for the first iteration, 8 for the second, 7 for the third and so on until it is 1 in the final iteration.</p><PRE><a name="147558"></a>//Reverse a string version 2
+<a name="147559"></a>Local StringVar str := "";
+<a name="147560"></a>Local NumberVar strLen := 
+<a name="147561"></a>   Length ({Customer.Customer Name});
+<a name="147562"></a>Local NumberVar i;
+<a name="147563"></a>For i := strLen To 1 Step -1 Do
+<a name="147564"></a>(
+<a name="147565"></a>   str := str + {Customer.Customer Name}[i]
+<a name="147566"></a>);
+<a name="147567"></a>str
+</PRE><a name="147569"></a><h5>Example 3</h5><p><a name="152504"></a>The simplest version is to use the built in function StrReverse:</p><PRE><a name="147571"></a>//Reverse a string version 3
+<a name="147572"></a>StrReverse ({Customer.Customer Name})
+</PRE><p><a name="147574"></a>The built in String functions in Seagate Crystal Reports 8 can handle many of the string processing applications that would traditionally be handled using a For loop or some other kind of loop. However, For loops provide the most flexibility in processing strings and also power in processing arrays, which can be essential if the built<nobr>-i</nobr>n functions do not cover your intended application.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax56.html";
+var next = "21_crystalsyntax58.html";
+
+function setTopicID() { 
+      var number = "147536"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

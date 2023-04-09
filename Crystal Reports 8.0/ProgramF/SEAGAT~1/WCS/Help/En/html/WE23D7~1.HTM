@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Creating a web site</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="149465"></a><h3 class="newpage"> Creating a web site</h3>
+<p><a name="149466"></a>Once you have installed and set up the Web Component Server, the next step is to create a web page that contains report links.</p><a name="149467"></a><h6>To create a web site</h6><p><a name="161997"></a>First, you must decide on a location for your new web page, then create a virtual directory for the site that points to the new directory.</p><ol>
+<a name="149468"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Create a directory where you want to store your reports. Copy the reports into the directory.
+<p class="indent"><a name="164471"></a>This example uses the World Sales Report and Account Statement reports and the directory: </p><p class="indent"><a name="149469"></a>c:\webroot\newsite</p><p class="indent"><a name="164467"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>For information on the location of your web server's root directory, refer to your web server software documentation. The directory shown here is intended only as an example.</p>
+<a name="149471"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Use your web server administration software to create a virtual directory to point to the physical directory you have just created. You will probably need to give this virtual directory "execute" permission. For this example, we will use the virtual directory:
+<p class="indent"><a name="163982"></a>mydirectory</p><a name="149475"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Using a simple text editor, such as Notepad, or your favorite HTML editor, create a page with links to the reports in the virtual directory. For this example use the following HTML code:
+<p class="code"><a name="149476"></a>&lt;HTML&gt;<br><a name="167782"></a>&lt;HEAD&gt;<br><a name="167783"></a>&lt;TITLE&gt;Index of Reports&lt;/TITLE&gt;<br><a name="167786"></a>&lt;/HEAD&gt;<br><a name="149477"></a>&lt;BODY&gt;<br><a name="149478"></a>&lt;H1&gt;Check out these reports!&lt;/H1&gt;<br><a name="167787"></a>&lt;HR&gt;<br><a name="149479"></a>&lt;UL&gt;<br><a name="167788"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;LI&gt;&lt;A HREF="http://localhost/mydirectory/account statement.rpt"&gt;<br><a name="167789"></a>&nbsp;&nbsp;&nbsp;&nbsp;Account Statement<br><a name="167790"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/A&gt;&lt;/LI&gt;<br><a name="167793"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;LI&gt;&lt;A HREF="http://localhost/mydirectory/world sales report.rpt"&gt;<br><a name="167792"></a>&nbsp;&nbsp;&nbsp;&nbsp;World Sales Report<br><a name="167791"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/A&gt;&lt;/LI&gt;<br><a name="167798"></a>&lt;/UL&gt;<br><a name="149480"></a>&lt;/BODY&gt;<br><a name="167802"></a>&lt;/HTML&gt;</p><a name="149481"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Save the file as reportlist.htm in the c:\webroot\newsite directory.
+<a name="165880"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Open your web browser, and enter the following URL:
+<p class="indent"><a name="169009"></a>http://localhost/newsite/reportlist.htm</p><p><a name="169013"></a> <img src="images/pg_indexofreports.gif">
+
+
+</p>
+<a name="169017"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click one of the two links in your new web page to generate and display the report inside your browser.
+</ol>
+<p><a name="149486"></a>In this example, you specified two .rpt files using standard URL addresses. The .rpt extension is analyzed by your web server, and is determined to be an extension that should be handled by the Web Component Server application. The URL is handed off, and the Web Component Server determines how to handle the requested .rpt.</p><p><a name="164454"></a>When the report is displayed inside your browser, the Web Component Server analyzes the type of browser you are using and delivers the report using a Report Viewer it determines is appropriate. For example, if you are using Internet Explorer 4.0, you will see the report inside the Report Viewer for ActiveX. If you are using Netscape Navigator 4.0, you will see the report inside the Report Viewer for Java.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerImplementation20.html";
+var next = "WebServerImplementation22.html";
+
+function setTopicID() { 
+      var number = "149465"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

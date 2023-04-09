@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Length (str)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000518891"></a><h3 class="newpage"> Length (str)</h3>
+<p><a name="1000742564"></a>Length and <a href="functionshelp64.html#1000669116">Len (str)</a> are equivalent functions. However, Length is preferred in Crystal syntax whereas Len is preferred in Basic syntax.</p><a name="1000518895"></a><h5>Arguments</h5><p><a name="1000518896"></a>str is a text value.</p><a name="1000518897"></a><h5>Returns</h5><p><a name="1000518898"></a>Whole Number</p><a name="1000518899"></a><h5>Action</h5><p><a name="1000518900"></a>Length returns the number of characters in a text string that you enter into the <a href="glossary7.html#13326">formula</a>, or in a text string stored as a <a href="glossary20.html#318757">value</a> in a data field.</p><p><a name="1000657027"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Text strings must be enclosed in either double or single quotation marks (" " or ` '). Any blank spaces are included as part of the character count.</p>
+<a name="1000518907"></a><h5>Typical uses</h5><p><a name="1000518908"></a>Use this function any time you have a manipulation, comparison, or calculation that is dependent on the length of a text string.</p><a name="1000518909"></a><h5>Examples</h5><p><a name="1000518910"></a>The following examples are applicable to both Basic and Crystal syntax, although Len is preferred in the latter:</p><p><code><a name="1000518911"></a>Length("Account") </code></p><p class="example"><a name="1000518912"></a>Returns 7.</p><p><code><a name="1000518913"></a>Length("Text_String") </code></p><p class="example"><a name="1000518914"></a>Returns 11.</p><p><code><a name="1000518915"></a>Length("__Center__")</code></p><p class="example"><a name="1000518916"></a>Returns 10.</p><p><code><a name="1000518917"></a>Length(ToText({orders.ORDER AMOUNT})) </code></p><p class="example"><a name="1000518918"></a>Returns 9, where {orders.ORDER AMOUNT} is 14233.08, and ToText ({orders.ORDER AMOUNT}) returns the String "14,233.08". Here, the comma and period have been specified in the Number format for the formula field as the thousands and decimal separators respectively,</p><p><code><a name="1000518919"></a>Length(ToText({orders.ORDER AMOUNT}, 2, "", ".")) </code></p><p class="example"><a name="1000518920"></a>Returns 8 where {orders.ORDER AMOUNT} = 14233.08, and ToText ({orders.ORDER AMOUNT}, 2, "", ".") returns the String "14233.08". Here, the null character and period have been specified in the Number format for the formula field as the thousands and decimal separators respectively.</p><p><code><a name="1000518927"></a>Length("BOB") </code></p><p class="example"><a name="1000518928"></a>Returns 3.</p><p><code><a name="1000518929"></a>Length("SMITH") </code></p><p class="example"><a name="1000518930"></a>Returns 5.</p><p><code><a name="1000518931"></a>Length("BOB SMITH") </code></p><p class="example"><a name="1000518932"></a>Returns 9. (The blank space between BOB and SMITH is counted as a character.)</p><p><code><a name="1000518933"></a>Length({customer.CUSTOMER NAME}) </code></p><p class="example"><a name="1000518934"></a>The length of the text string stored as a value in {customer.CUSTOMER NAME}.</p><p><a name="1000742611"></a>The following examples are applicable to Crystal syntax.</p><p><code><a name="1000518935"></a>{customer.CUSTOMER NAME}[Length({customer.CUSTOMER NAME})-2]</code></p><p class="example"><a name="1000518936"></a>Returns the third character from the right in the Customer Name. This can also be used to extract a substring from a String that always starts at a fixed position from the end of the String.</p><p><a name="1000605283"></a>In the following example, an address line contains the province name and postal code. Full province names are of different lengths, but the first character of the postal code is always the seventh from the last character. The formula determines the length of the address line, subtracts 7 from it, and uses the result to identify the first character of the postal code in the address line. </p><p class="code"><a name="1000518938"></a>Local StringVar addressLine;
+<br><a name="1000518939"></a>Local NumberVar addrLength;
+<br><a name="1000518940"></a>addressLine := "British Columbia V6X 3W2";
+<br><a name="1000518941"></a>addrLength := Length (addressLine);
+<br><a name="1000518942"></a>addressLine [addrLength-7+1 to addrLength]
+</p><a name="1000518945"></a><h6>Related topics</h6><p><a name="1000669514"></a><a href="19_introformulas44.html#305296">Formula 14</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp64.html";
+var next = "functionshelp66.html";
+
+function setTopicID() { 
+      var number = "1000518891"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

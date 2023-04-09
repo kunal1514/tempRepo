@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Comments</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000007036"></a><h3 class="newpage"> Comments</h3>
+<p><a name="1000031267"></a>Formula comments are notes that are included with a formula to explain its design and operation. Comments do not print, and they do not affect the formula; they appear only in the Formula Editor.</p><a name="1000031068"></a><h4>Basic syntax (Rem)</h4><a name="1000031069"></a><h5>Usage</h5><p><code><a name="1000031070"></a>Rem text</code></p><p class="example"><a name="1000031071"></a>The text that follows the operator is a comment. </p><a name="1000031072"></a><h5>Examples</h5><p><a name="1000031073"></a>The following examples are applicable to Basic syntax:</p><p><code><a name="1000031074"></a>Rem This formula returns the total number of days worked in a year.</code></p><p class="example"><a name="1000031075"></a>Comment is on a new line on its own.</p><p><code><a name="1000031076"></a>formula = TotalDays : Rem Total number of days worked in a year.</code></p><p class="example"><a name="1000031077"></a>Comment follows a formula statement and a colon.</p><p class="code"><a name="1000031078"></a>formula = TotalDays : Rem This formula returns the total number of days _
+<br><a name="1000056012"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;worked in a year.
+</p><p class="example"><a name="1000031080"></a>Comment follows a formula statement and a colon, and it uses the line continuation character to continue onto the next line.</p><a name="1000031081"></a><h5>Comments</h5><ul type="disc"><a name="1000031082"></a><li>The comment can be above or below the formula. It can begin on a new line on its own, or it can follow the formula on the same line if it is preceded by a colon (:).
+<a name="1000031083"></a><li>Can use a line continuation character ("_") within comment to carry on to next line.
+<a name="1000031085"></a><li>You can use the comment operator (//) only with Crystal syntax, and the other comment operators (') and (Rem) with Basic syntax.
+</ul><a name="1000039074"></a><h6>Related topics</h6><p><a name="1000039186"></a><a href="20_basicsyntax9.html#128114">Comments</a> (Basic syntax)</p><a name="1000031086"></a><h4>Basic syntax (')</h4><a name="1000031087"></a><h5>Usage</h5><p><code><a name="1000031088"></a>' text</code></p><p class="example"><a name="1000031089"></a>The text that follows the operator is a comment.</p><a name="1000031090"></a><h5>Examples</h5><p><a name="1000031091"></a>The following examples are applicable to Basic syntax:</p><p><code><a name="1000031092"></a>' This formula returns the total number of days worked in a year.</code></p><p class="example"><a name="1000031093"></a>Comment is on a new line on its own.</p><p><code><a name="1000031094"></a>formula = TotalDays 'Total number of days worked in a year.</code></p><p class="example"><a name="1000031095"></a>Comment follows a formula statement.</p><p class="code"><a name="1000031096"></a>formula = TotalDays 'This formula returns the total number of days _
+<br><a name="1000031097"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worked in a year.
+</p><p class="example"><a name="1000031098"></a>Comment follows a formula statement, and it uses the line continuation character to continue onto the next line.</p><a name="1000031099"></a><h5>Comments</h5><ul type="disc"><a name="1000031100"></a><li>The comment can be above or below the formula. It can begin on a new line on its own, or it can follow the formula on the same line if it is preceded by the apostrophe (').
+<a name="1000031101"></a><li>Can use a line continuation character ("_") within comment to carry on to next line.
+<a name="1000056033"></a><li>You can use the comment operator (//) only with Crystal syntax, and the other comment operators (') and (Rem) with Basic syntax.
+</ul><a name="1000056038"></a><h6>Related topics</h6><p><a name="1000056028"></a><a href="20_basicsyntax9.html#128114">Comments</a> (Basic syntax)</p><a name="1000031038"></a><h4>Crystal syntax (//)</h4><a name="1000007180"></a><h5>Usage</h5><p><code><a name="1000007040"></a>// text</code></p><p class="example"><a name="1000007042"></a>The text that follows the operator is a comment; it is not treated as part of a formula, and it does not print.</p><a name="1000007043"></a><h5>Examples</h5><p><a name="1000007044"></a>The following examples are applicable to Crystal syntax:</p><p class="code"><a name="1000007045"></a>{file.SALES} - {file.COST}
+<br><a name="1000056043"></a>// calculates the gross profit
+</p><p class="example"><a name="1000007046"></a>{file.SALES} - {file.COST} is the formula; the <a href="dialogs84.html#1000279563">Formula Editor</a> ignores everything else.</p><p class="code"><a name="1000007047"></a>({file.SALES} - {file.QUOTA}) *.06 
+<br><a name="1000056044"></a>// calculates sales commission
+</p><p class="example"><a name="1000007048"></a>({file.SALES} - {file.QUOTA}) * .06 is the formula; the <a href="dialogs84.html#1000279563">Formula Editor</a> ignores everything else.</p><p class="code"><a name="1000007049"></a>//what follows is
+<br><a name="1000056045"></a>//a formula. Note that when
+<br><a name="1000056046"></a>//we force the line break we have
+<br><a name="1000056047"></a>//to begin each new line with a
+<br><a name="1000056048"></a>//comment operator.
+<br><a name="1000007050"></a>If {file.COST} &gt; {file.SELL PRICE} Then "Loss" Else ""; 
+<br><a name="1000056049"></a>//That was a formula
+</p><p class="example"><a name="1000007052"></a>All commented lines that appear before or after the formula are ignored.</p><a name="1000007053"></a><h5>Comments</h5><ul type="disc"><a name="1000007055"></a><li>The comment can be above or below the formula, or it can follow the formula on the same line if it is preceded by two slashes.
+<a name="1000007058"></a><li>You can use the comment operator (//) with only Crystal syntax, and the other comment operators (') and (Rem) with only Basic syntax.
+</ul><a name="1000031367"></a><h6>Related topics</h6><p><a name="1000039246"></a><a href="21_crystalsyntax11.html#150783">Comments</a> (Crystal syntax)</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp59.html";
+var next = "OperatorsHelp61.html";
+
+function setTopicID() { 
+      var number = "1000007036"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Day (x)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000542086"></a><h3 class="newpage"> Day (x)</h3>
+<p><a name="1000692787"></a>Basic and Crystal syntax.</p><a name="1000542090"></a><h5>Arguments</h5><p><a name="1000542091"></a>x is a Date <a href="glossary20.html#318757">value</a> or a DateTime value. </p><a name="1000542092"></a><h5>Returns</h5><p><a name="1000542093"></a>Whole Number (the day of the month)</p><a name="1000542094"></a><h5>Action</h5><p><a name="1000542095"></a>Day extracts the day from a Date or DateTime value and returns a whole number.</p><a name="1000542096"></a><h5>Typical uses</h5><p><a name="1000542097"></a>Use any time you need only the day component of a Date or DateTime value. For example, if you are tracking payments that fall within a given month, you are interested only in the day they arrive; month and year information would be redundant. Also, if you need to use the day of the month in a <a href="glossary13.html#13442">numeric</a> calculation (example: Day({file.OCTPMT}) - Day ({file.SEPPMT})), use the Day function to extract the day of the month and convert it to a Number.</p><a name="1000542098"></a><h5>Examples</h5><p><a name="1000542099"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000542100"></a>Day({file.LAST INVOICE}) </code></p><p class="example"><a name="1000542101"></a>Returns 10 where the last invoice date was the 10th day of the month.</p><p class="code"><a name="1000542102"></a>If Day({file.LAST PAYMENT}) &lt; 15 Then 
+<br><a name="1000734355"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Past Due" 
+<br><a name="1000734363"></a>Else 
+<br><a name="1000734376"></a>&nbsp;&nbsp;&nbsp;&nbsp;"" 
+</p><p class="example"><a name="1000542103"></a>If the day of the last payment was less than 15, print "Past Due", otherwise print nothing.</p><p><code><a name="1000542104"></a>Day(CDateTime(1996, 3, 3, 10, 33, 20)) </code></p><p class="example"><a name="1000542105"></a>Returns 3.</p><a name="1000542106"></a><h5>Comments</h5><p><a name="1000542107"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp118.html";
+var next = "functionshelp120.html";
+
+function setTopicID() { 
+      var number = "1000542086"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Truncate (x), Truncate (x, #places)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000045804"></a><h3 class="newpage"> Truncate (x), Truncate (x, #places)</h3>
+<p><a name="1000780739"></a>Truncate and <a href="functionshelp8.html#1000674274">Fix</a> are equivalent functions. However, Truncate is preferred in Crystal syntax whereas Fix is preferred in Basic syntax.</p><a name="1000045807"></a><h5>Arguments</h5><ul type="disc"><a name="1000045808"></a><li>x is a fractional Number to be truncated.
+<a name="1000045809"></a><li>#places is a whole number indicating how many decimal places are to remain after the value is truncated. (This argument is optional.)
+</ul><a name="1000045810"></a><h5>Returns</h5><p><a name="1000045811"></a>Fractional Number</p><a name="1000045812"></a><h5>Action</h5><p><a name="1000045813"></a>Truncate(x) returns a whole number by truncating the number at the decimal point. If the #places argument is specified, the number is truncated to the decimal place indicated and the function returns a fractional Number. If #places is negative, the number is rounded to the first ten, hundred, and so on.</p><a name="1000045814"></a><h5>Typical uses </h5><p><a name="1000045815"></a>Use this function whenever the characters to the right of the decimal are not needed for a report or calculation.</p><a name="1000045816"></a><h5>Examples </h5><p><a name="1000045817"></a>The following examples are applicable to both Basic and Crystal syntax, although Fix is preferred in the latter:</p><p><code><a name="1000045818"></a>Truncate(1.23456) </code></p><p class="example"><a name="1000045819"></a>Returns 1.</p><p><code><a name="1000045820"></a>Truncate(1.499)</code></p><p class="example"><a name="1000045821"></a>Returns 1.</p><p><code><a name="1000045822"></a>Truncate(1.599)</code></p><p class="example"><a name="1000045823"></a>Returns 1.</p><p><code><a name="1000045824"></a>Truncate(1.999)</code></p><p class="example"><a name="1000045825"></a>Returns 1.</p><p><code><a name="1000045826"></a>Truncate(12346.33, 1)</code></p><p class="example"><a name="1000045827"></a>Returns 12346.3.</p><p><code><a name="1000045828"></a>Truncate(12345.33, -2)</code></p><p class="example"><a name="1000045829"></a>Returns 12300.00.</p><p><a name="1000045830"></a>If you have 147 golf balls in stock and want to know how many dozen are available for sale, your calculation is 147/12=12.25 12.25 (truncated) = 12 dozen available for sale. If you sell balls only by the dozen, the .25 dozen you truncated is unimportant.</p><p><code><a name="1000045831"></a>Truncate({file.BALL INVENTORY} / 12)</code></p><p class="example"><a name="1000045832"></a>Returns 12 where Ball inventory = 147 (147 / 12 = 12.25, 12.25 truncated = 12).</p><p><code><a name="1000045833"></a>Truncate({file.BALL INVENTORY} / 12)</code></p><p class="example"><a name="1000045834"></a>Returns 12 where Ball inventory = 155 (155/12 = 12.92, 12.92 truncated = 12).</p><p><code><a name="1000045835"></a>Truncate({file.BALL INVENTORY} / 12)</code></p><p class="example"><a name="1000045836"></a>Returns 13 where Ball inventory = 157 (157/12 = 13.08, 13.08 truncated = 13).</p><a name="1000045837"></a><h5>Comments</h5><ul type="disc"><a name="1000045839"></a><li>This is not a rounding function; Truncate simply deletes all characters to the right of the decimal point. 
+<p class="indent"><a name="1000594946"></a>See the <a href="functionshelp6.html#1000044192">Round (x), Round (x, #places)</a> for an explanation on rounding.</p><a name="1000658665"></a><li>Truncate (n) and <a href="functionshelp5.html#1000143348">Int (number)</a> are synonymous except when n (number) is negative, in which case Truncate returns the first integer greater than or equal to n, and Int returns the first integer smaller than or equal to n. For example,
+</ul><p><code><a name="1000658666"></a>Truncate (-10.2)</code></p><p class="example"><a name="1000658667"></a>Returns -10.</p><p><code><a name="1000658668"></a>Int (-10.2)</code></p><p class="example"><a name="1000658669"></a>Returns -11.</p><ul type="disc"><a name="1000045850"></a><li>Truncating is also a feature available as a formatting option for numerical values in fields. Be aware that using field formatting features may affect how values are used in formulas. For more information on converting to Numbers and Currency, see the <a href="functionshelp78.html#1000508281">ToNumber (numeric), ToNumber (string)</a> and <a href="OperatorsHelp13.html#1000024748">To currency operator</a>.
+</ul><a name="1000045851"></a><h6>Related topics</h6><p><a name="1000674270"></a><a href="functionshelp5.html#1000143348">Int (number)</a></p><p><a name="1000674271"></a><a href="19_introformulas43.html#305254">Formula 13</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp6.html";
+var next = "functionshelp8.html";
+
+function setTopicID() { 
+      var number = "1000045804"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>To incorporate a parameter into a formula</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="78552"></a><h4 class="newpage"> To incorporate a parameter into a formula</h4><ol>
+<a name="78505"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Create the parameter.
+<a name="78546"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Check to make sure you are working in the Design tab.
+<a name="78506"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">On the<strong> Insert </strong>menu, click<strong> Formula Field</strong>.
+<p class="indent"><a name="78507"></a>The Field Explorer appears.</p><a name="78508"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>New</kbd>.
+<p class="indent"><a name="78509"></a>The Formula Name dialog box appears.</p><a name="78510"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Enter the name of the formula, then click <strong>OK</strong>.
+</ol>
+<ol>
+<a name="80734"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Create a formula using the parameter field as you would any constant value. For example, rather than creating a formula that hard<nobr>-c</nobr>odes the country name:
+<p class="indent"><a name="78513"></a>{customer.COUNTRY} = "USA"</p><p class="indent"><a name="78514"></a>Use a parameter field instead of "USA".</p><p class="indent"><a name="78515"></a>{customer.COUNTRY} = {?Country}</p><p class="indent"><a name="78516"></a>To do this double<nobr>-c</nobr>lick the database field, press =, then double<nobr>-c</nobr>lick the parameter.</p><a name="78517"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Save,</kbd> then <kbd>Close</kbd>.
+<p class="indent"><a name="78518"></a>The Field Explorer dialog box appears. The name of the formula you have just created is highlighted in the Formula list box.</p><a name="78519"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Drag and drop the formula into the report.
+<a name="78520"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Close </strong>to exit the Field explorer dialog box.
+<a name="80785"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_refrs.gif">
+
+
+Click <kbd>Refresh</kbd> to generate the report.
+<p class="indent"><a name="80788"></a>A dialog box appears, prompting you for values.</p></ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "22_param13.html";
+var next = "22_param15.html";
+
+function setTopicID() { 
+      var number = "78552"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

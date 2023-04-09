@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Equal [=] join</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="13637"></a><h4 class="newpage"> Equal [=] join</h4><p><a name="13638"></a>The result set from an Equal join includes all the records where the linked field value in both tables is an exact match. In the following example, the Customer table is linked to the Orders table by the Customer ID field. When the program finds a Customer ID in the Orders table that matches a Customer ID in the Customer table, it displays information for the corresponding records in both tables.</p><p><a name="13639"></a>SQL uses the following syntax to describe an Equal join:</p><PRE><a name="13640"></a>SELECT Customer.'Customer ID',
+<a name="384053"></a>&nbsp;&nbsp;&nbsp;&nbsp;Customer.'Customer Name',
+<a name="384054"></a>&nbsp;&nbsp;&nbsp;&nbsp;Orders.'Order Amount'
+<a name="384055"></a>FROM 'Customer' Customer,
+<a name="384056"></a>&nbsp;&nbsp;&nbsp;&nbsp;'Orders' Orders
+<a name="384057"></a>WHERE Customer.Customer ID =
+<a name="384058"></a>&nbsp;&nbsp;&nbsp;&nbsp;Orders.Customer ID
+</PRE><p><a name="13641"></a>This statement produces the following data:</p><p><a name="13715"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="13644"></a>Customer Table
+
+</th><th align="left" valign="bottom"><a name="13646"></a>Customer Table
+
+</th><th align="left" valign="bottom"><a name="13648"></a>Orders Table
+
+</th></tr>
+<tr><th align="left" valign="bottom"><a name="13650"></a>Customer ID
+
+</th><th align="left" valign="bottom"><a name="13652"></a>Customer Name
+
+</th><th align="left" valign="bottom"><a name="13654"></a>Order Amount
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="13656"></a>52</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13658"></a>Allez Distribution</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13660"></a>25141.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13662"></a>53</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13664"></a>BG Mountain Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13666"></a>19164.30</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13668"></a>53</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13670"></a>BG Mountain Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13672"></a>1683.60</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13674"></a>57</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13676"></a>Hansen MTB Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13678"></a>15716.40</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13680"></a>58</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13682"></a>La Bomba de Bicicleta</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13684"></a>1956.20</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13686"></a>60</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13688"></a>Mountain Toad</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13690"></a>24580.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13692"></a>62</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13694"></a>SFB Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13696"></a>7911.80</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13698"></a>63</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13700"></a>Sierra Bicycle Group</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13702"></a>19766.20</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13704"></a>63</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13706"></a>Sierra Bicycle Group</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13708"></a>12763.95</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13710"></a>64</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13712"></a>Sierra Mountain</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13714"></a>8233.50</P>
+
+
+</td></tr>
+
+</Table></p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases19.html";
+var next = "24_under_databases21.html";
+
+function setTopicID() { 
+      var number = "13637"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

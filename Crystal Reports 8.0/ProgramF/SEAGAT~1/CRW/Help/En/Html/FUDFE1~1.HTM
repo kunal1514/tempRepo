@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Year (x)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000074662"></a><h3 class="newpage"> Year (x)</h3>
+<p><a name="1000692537"></a>Basic and Crystal syntax.</p><a name="1000074666"></a><h5>Arguments</h5><p><a name="1000074667"></a>x is a Date value or a DateTime value.</p><a name="1000074668"></a><h5>Returns</h5><p><a name="1000074669"></a>Whole Number</p><a name="1000074670"></a><h5>Action</h5><p><a name="1000074671"></a>Year extracts the year from a date and <a href="glossary16.html#13498">returns</a> it as a Number.</p><a name="1000074672"></a><h5>Typical uses</h5><p><a name="1000074673"></a>Use this function any time you need to use a year, converted to a Number, in calculations or comparisons.</p><a name="1000074674"></a><h5>Examples</h5><p><a name="1000074675"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000074676"></a>Year({file.LAST INVOICE ON})</code></p><p class="example"><a name="1000074677"></a>Returns 1989, where the last invoice date was in 1989.</p><p class="code"><a name="1000074678"></a>If Year({file.LAST UPGRADE}) &lt; 1988 Then
+<br><a name="1000755032"></a>&nbsp;&nbsp;&nbsp;&nbsp;"P.S. You are missing out on many of the benefits of our new, improved 
+version."
+<br><a name="1000755035"></a>Else
+<br><a name="1000755037"></a>&nbsp;&nbsp;&nbsp;&nbsp;"" 
+</p><p class="example"><a name="1000074679"></a>Prints a P.S. for those customers who last upgraded prior to 1988, and prints nothing for those customers who show a more recent upgrade.</p><p><code><a name="1000074680"></a>Year(CDateTime(1996, 3, 3, 10, 33, 20)) </code></p><p class="example"><a name="1000074681"></a>Returns 1996.</p><a name="1000074682"></a><h5>Comments</h5><p><a name="1000074683"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp116.html";
+var next = "functionshelp118.html";
+
+function setTopicID() { 
+      var number = "1000074662"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

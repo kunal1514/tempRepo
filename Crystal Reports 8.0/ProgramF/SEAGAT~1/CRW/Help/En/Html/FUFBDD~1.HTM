@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>TrimLeft (str)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000520678"></a><h3 class="newpage"> TrimLeft (str)</h3>
+<p><a name="1000742675"></a>TrimLeft and <a href="functionshelp67.html#1000498575">LTrim (str)</a> are equivalent functions. However, TrimLeft is preferred in Crystal syntax, whereas LTrim is preferred in Basic syntax.</p><a name="1000520682"></a><h5>Arguments</h5><p><a name="1000520683"></a>str is a <a href="glossary17.html#13544">string</a>.</p><a name="1000520684"></a><h5>Returns</h5><p><a name="1000520685"></a>Text String</p><a name="1000520686"></a><h5>Action</h5><p><a name="1000520687"></a>TrimLeft removes all spaces to the left of a string or data field which is stored as a right<nobr>-j</nobr>ustified string in a database.</p><a name="1000520688"></a><h5>Typical uses</h5><ul type="disc"><a name="1000520689"></a><li>Use this function any time there are leading blanks in a text object that may interfere with an alignment of text strings, a character count, or with a calculation (if the <a href="glossary17.html#13544">string</a> is eventually converted to a Number). 
+<a name="1000520690"></a><li>Use whenever you combine (<a href="glossary4.html#13227">concatenate</a>) justified text strings and want to have the proper spacing between strings.
+</ul><a name="1000520691"></a><h5>Examples</h5><p><a name="1000520692"></a>The following examples are applicable to both Basic and Crystal syntax, although LTrim is preferred in the latter:</p><p class="code"><a name="1000520693"></a>TrimLeft("&nbsp;&nbsp;&nbsp;&nbsp;Al/4520/B12") 
+<br><p class="example"><a name="1000780982"></a>Returns "A1/4520/B12".</p><a name="1000520694"></a>TrimLeft("&nbsp;&nbsp;&nbsp;&nbsp;200")
+</p><p class="example"><a name="1000520695"></a>Returns "200", where the text string "200" is right<nobr>-j</nobr>ustified with leading blanks.</p><p><a name="1000520696"></a>You have two right<nobr>-j</nobr>ustified database fields, {file.FOOD1} and {file.FOOD2}. Each field can hold up to 15 characters. {file.FOOD1} contains the word bread and {file.FOOD2} contains the word butter. If you were to print these words, they would appear like this: </p><p class="indent"><a name="1000520697"></a>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bread" </p><p class="indent"><a name="1000520698"></a>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;butter"</p><p><a name="1000520699"></a>For each 15<nobr>-c</nobr>haracter field the database includes the field <a href="glossary20.html#318757">value</a>, right<nobr>-j</nobr>ustified plus enough blank spaces to fill up the field. To use these words without the leading spaces (to create the expression bread and butter, for example) use the TrimLeft function in the following manner:</p><p><code><a name="1000520700"></a>TrimLeft({file.FOOD1}) + " and " + TrimLeft({file.FOOD2}) </code></p><p class="example"><a name="1000520701"></a>Returns "bread and butter".</p><p><a name="1000520702"></a>The spaces enclosed in the quotation marks before and after the word and assure that there is the correct spacing between the three words in the resulting sentence.</p><a name="1000520705"></a><h6>Related topics</h6><p><a name="1000520706"></a><a href="functionshelp66.html#1000499000">Trim (str)</a></p><p><a name="1000780987"></a><a href="functionshelp70.html#1000524259">TrimRight (str)</a></p><p><a name="1000669635"></a><a href="19_introformulas44.html#305296">Formula 14</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp67.html";
+var next = "functionshelp69.html";
+
+function setTopicID() { 
+      var number = "1000520678"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

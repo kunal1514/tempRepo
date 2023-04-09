@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Data file considerations</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="362112"></a><h4 class="newpage"> Data file considerations</h4><p><a name="19000"></a>When working with data files, one<nobr>-t</nobr>o<nobr>-m</nobr>any links can occur when you link tables in a single report or when you add a subreport to your report.</p><a name="18999"></a><h5>Linking data files</h5><p><a name="17787"></a>When retrieving data from linked data files in one<nobr>-t</nobr>o<nobr>-m</nobr>any situations, the program uses the following process:</p><ul type="disc"><a name="296153"></a><li>If there is a selection formula, the program parses the selection formula and passes what it can down to the database DLL. This is generally range limit information. Consider the following record selection formula:
+<p class="code"><a name="296154"></a>{customer.REGION} in "CA" to "IL" AND<br><a name="383891"></a>Remainder ({customer.CUSTOMER ID},2)=0</p></ul><p class="example"><a name="17651"></a>In this formula, the part before the "and" operator contains range selection criteria for the Region field. The region must fall alphabetically between "CA" and "IL." The program passes this kind of condition down to either the database DLL (for PC data) or the server (for SQL data). See <a href="07_recordgroupsel.html#94547">Record Selection</a>.</p><p class="example"><a name="17654"></a>The second half of the selection formula, however, requires processing that must be done in the Report Engine. It uses a built<nobr>-i</nobr>n function to manipulate and evaluate a field value and it cannot be done in the database DLL or the server. The program does not pass this condition to the database DLL.</p><ul type="disc"><a name="17657"></a><li>If there is an index on Table A, and the range limit selection condition is based on the indexed field ({customer.REGION} in this example), the program goes directly to the record it is seeking in Table A (the first CA record) and reads it.
+<ul type="disc"><ul type="disc"><a name="17658"></a><li>For that record, the program locates the first matching record in Table B, using the Table B index.<a name="17659"></a><li>The program passes this merged record (A+B) back to the Report Designer, which tests the record against the entire selection formula.<a name="17660"></a><li>The program then reads the second matching record and passes the merged record on, and then reads the third matching record, and so on, until it has read all of the matching records.<a name="17661"></a><li>The program then returns to Table A and reads the next record. There is no need to test the record to see if it meets the CA condition; the field is indexed and the records are in alphabetic order. But the program tests the record to see if it goes beyond the "IL" condition (for example, could the next record be from Mississippi or Tennessee?). If the record is still within the specified range, the program begins the matching process again for that record.<a name="17662"></a><li>The program continues the process until it has located all targeted Table A records and the matching Table B records.<p class="indent"><a name="375898"></a>To find two records in Table A and the 100 records in Table B that match the Table A records, the program reads 200 records.</p></ul></ul></ul><p><a name="375899"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The lookup table in a link (Table B) must always be indexed; otherwise, you will not be able to link the tables.</p>
+<ul type="disc"><a name="17664"></a><li>If there is no index on Table A, or if there is an index but the range limit selection condition is not based on the indexed field, the program reads the first record it finds.
+<ul type="disc"><ul type="disc"><a name="17665"></a><li>For that record, the program uses the Table B index to locate the first matching record in Table B.<a name="17666"></a><li>The program passes this merged record (A+B) back to the Report Engine, which tests it against the entire selection formula.<a name="17667"></a><li>The program then locates the second matching record in Table B and passes that merged record back, then the third record, and so on, until it has located, merged, and passed back all the records in Table B that match the first record in Table A.<a name="17668"></a><li>The program then moves on to the next record in Table A and begins the matching and merging process all over again.<p class="indent"><a name="17669"></a>To find two records in Table A and the 100 records in Table B that match the Table A records, the program reads 2600 records.</p></ul></ul></ul><a name="17670"></a><h5>Subreports and data files</h5><p><a name="17671"></a>If your primary report is based on Table A, the subreport is based on Table B, and the records are linked, your primary considerations are as follows:</p><ul type="disc"><a name="17672"></a><li>The number of subreports that are run by the program is determined by the index and the selection formula situation in the primary report.
+<ul type="disc"><ul type="disc"><a name="20230"></a><li>If Table A is indexed, and if the primary report has a selection formula that passes down range limit conditions for the indexed field, the program runs two subreports.<a name="20231"></a><li>If Table A is not indexed, or if Table A is indexed but the selection formula does not pass down range limit conditions for the indexed field, the program runs 26 subreports.</ul></ul><a name="17675"></a><li>The number of records read for each subreport is determined by the index situation on Table B.
+<ul type="disc"><ul type="disc"><a name="17676"></a><li>If you have an index on Table B, the program will read only the matching records (100) when it runs a subreport.<a name="17677"></a><li>If you do not have an index on Table B, the program will always read every record in Table B (2600) when it runs a subreport.</ul></ul></ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases9.html";
+var next = "24_under_databases11.html";
+
+function setTopicID() { 
+      var number = "362112"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

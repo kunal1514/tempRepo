@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Summarizing data with aggregate functions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="125950"></a><h3 class="newpage"> Summarizing data with aggregate functions</h3>
+<a name="118839"></a><h6>Aggregate functions</h6><p><a name="9186"></a>Use aggregate functions to obtain summary information on all records or on specific groups of records. Aggregate functions are most useful when you do not need the detailed information and you only want to examine totals.</p><p><a name="8122"></a>For example, you might need the total number of orders made and the average amount of each order. For this type of query, you apply the Count function to the Order ID field, and the AVG (average) function to the Amount field. The query calculates the summary information and provides the results you need.</p><ol>
+<a name="113646"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Select the field you want to summarize from the <strong>Query Fields </strong>area.
+<a name="125900"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Choose an aggregate function to apply to the selected field from the <strong>Total</strong> drop<nobr>-d</nobr>own list:
+<ul type="disc"><ul type="disc"><a name="5033"></a><li>COUNT( ) counts the number of values within a group<a name="5035"></a><li>SUM( ) adds the values within a group, to provide a total<a name="5037"></a><li>AVG( ) finds the average of all values within a group<a name="5039"></a><li>MIN( ) finds the minimum value within a group<a name="5041"></a><li>MAX( ) finds the maximum value within a group.<p class="indent"><a name="5151"></a>Any other fields that appear in the <strong>Query Fields</strong> area can be used for sorting.</p></ul></ul></ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "26_sql10.html";
+var next = "26_sql12.html";
+
+function setTopicID() { 
+      var number = "125950"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 3</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="304477"></a><h3 class="newpage"> Formula 3</h3>
+<a name="304478"></a><h4>Operators/Functions Used</h4><p><a name="304479"></a>Concatenate (+), ToText, ToNumber, Multiply (*), Make Range (to), Subscript [], Parentheses ()</p><a name="304480"></a><h4>Formula Purpose</h4><p><a name="304481"></a>A sail maker, as part of his loan agreement with his bank, has to submit a detailed inventory analysis monthly. The analysis must include the cost of fabric in raw material inventory and the cost of fabric by item number for each item in finished product inventory.</p><p><a name="304482"></a>The company uses one fabric for all of the sails it produces, and it uses the 5th and 6th characters in the item number for each product to represent the number of meters of material (rounded to the nearest meter) necessary to make that item. </p><p><a name="304483"></a>In the form letter the manager sends to his banker each month, he wants the computer to automatically insert the quantity on hand, the item number, and the dollar value of the fabric for each item number.</p><a name="304484"></a><h4>Formula</h4><PRE><a name="304485"></a>ToText({file.QUANTITY}) + " each, Item " + {file.ITEM} +
+<a name="304486"></a>", $ " + ToText({file.QUANTITY} * ToNumber({file.ITEM}[5
+<a name="304487"></a>to 6]) * {file.FABRIC COST})
+</PRE><a name="304488"></a><h4>Result</h4><p><a name="304489"></a>With a fabric cost of $14.88/meter, the formula delivers the following result:</p><p><a name="304509"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="304492"></a>Quantity
+
+</td><td align="left" valign="TOP"><a name="304494"></a>Item 
+
+</td><td align="left" valign="TOP"><a name="304496"></a>Letter Text
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304498"></a>46</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304500"></a>4423141006</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304502"></a>"46 each, Item 4423141006, $ 9582.72"</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304504"></a>27</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304506"></a>4423081009</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304508"></a>"27 each, Item 4423081009, $ 3214.08"</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="304510"></a><h4>Explanation</h4><ul type="disc"><a name="304511"></a><li>This equation uses ToText to convert the value of {file.QUANTITY} (a numeric field) to text so it can be used as part of a concatenated text string.
+<a name="304512"></a><li>It then uses the Concatenate operator (+) to join the text version of {file.QUANTITY} with the string " each, Item ".
+<a name="304513"></a><li>It again uses the Concatenate operator (+) to join the resulting string with the item number, stored as the value of the text object {file.ITEM}.
+<a name="304514"></a><li>It uses the Concatenate operator (+) one final time to join the resulting text string to the calculated fabric cost (expressed as text).
+<a name="304515"></a><li>To calculate that fabric cost:
+<ul type="disc"><ul type="disc"><a name="304516"></a><li>_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The formula uses the Subscript operator [] to extract the 5th and 6th elements (meters of material used) of {file.ITEM} (a text object). <a name="304517"></a><li>_&nbsp;&nbsp;&nbsp;&nbsp;The Make Range operator (to) is used to establish the range 5 to 6.<a name="304518"></a><li>_&nbsp;&nbsp;&nbsp;&nbsp;The ToNumber function converts those elements to a number so it can be used in a numeric calculation. <a name="304519"></a><li>_&nbsp;&nbsp;&nbsp;&nbsp;It uses the Multiply operator (*) to multiply that number by the value of {file.FABRIC COST} by the number of units in inventory ({file.QUANTITY}) to arrive at the total price.<a name="304520"></a><li>_&nbsp;&nbsp;&nbsp;&nbsp;Finally, it uses the ToText function to convert the total price (a number) into text that can be used in the concatenated string.</ul></ul></ul><a name="304521"></a><h6>Related topics</h6><p><a name="304525"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas32.html";
+var next = "19_introformulas34.html";
+
+function setTopicID() { 
+      var number = "304477"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

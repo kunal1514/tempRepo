@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Grouping data hierarchically</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="292713"></a><h3 class="newpage"> Grouping data hierarchically</h3>
+<p><a name="292824"></a>You have the option to group data in a report to show hierarchical relationships. When you group data hierarchically, you sort information based on the relationship between two fields.</p><p><a name="292934"></a>For example, if you want to show the hierarchical structure of a department, you could group data by employee ID and specify the hierarchy using the data field listing whom the employee reports to.</p><a name="292717"></a><h6>To group data hierarchically</h6><ol>
+<a name="292773"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Insert</kbd> menu, click <kbd>Group</kbd>.
+<a name="292774"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">In the Insert Group dialog box, select the field to be the basis of your hierarchy.
+<p class="indent"><a name="292970"></a>For example, if you want to view the hierarchical structure of a company's employee's, select the employee ID data field. If you want to view the hierarchical structure of region sales offices, select office names.</p><a name="292984"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Select <kbd>in ascending order</kbd>.
+<a name="292991"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">By default, the group header of the report will display the value of the field you are grouping on. Select the Customize Group Name field check box if you want to show a different value in the group header.
+<p class="indent"><a name="292992"></a>For example, if you grouped by {Employee.EmployeeID}, at each change of a group you will see the corresponding employee ID. If you want to display a different value (employee name instead of employee ID), customize the group name field by choosing an alternate data field, or creating a formula.</p><a name="292963"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<p class="indent"><a name="293007"></a>The group you created is added to the report.</p><a name="300110"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Report</kbd> menu, click <kbd>Hierarchical Grouping Options</kbd>.
+<p class="indent"><a name="300176"></a>The Hierarchical Options dialog box appears.</p><p><a name="307547"></a> <img src="images/db_hierarchical.gif">
+
+
+</p>
+<a name="300192"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Select the <kbd>Sort Data Hierarchically</kbd> check box.
+<a name="293027"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">In the Instance ID field list, select the group you want to organize hierarchically.
+<p class="indent"><a name="293039"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>It will normally be the same field that you grouped by.</p>
+<a name="293031"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">In the Parent ID field list, select the field by which you want the Instance ID field organized.
+<p class="indent"><a name="293056"></a>For example, for a company hierarchal report, select the data field listing whom the employee reports to.</p><p class="indent"><a name="293335"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The type of the Instance ID and the Parent ID must be the same. For example, they both must be strings (text) or numbers.</p>
+<a name="293048"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">In the Group Indent field, enter the amount you want to indent for each subgroup.
+<a name="293186"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd>.
+</ol>
+<p class="indent"><a name="294829"></a>The report data is grouped hierarchically.</p><p><a name="293334"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="294966"></a><li>The top level of the hierarchy is determined by group instances that match the Instance ID and Parent ID.
+<a name="294956"></a><li>If a group instance is not connected to any Parent ID, it appears at the top of the hierarchy.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "08_sortgrouptotal13.html";
+var next = "08_sortgrouptotal15.html";
+
+function setTopicID() { 
+      var number = "292713"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

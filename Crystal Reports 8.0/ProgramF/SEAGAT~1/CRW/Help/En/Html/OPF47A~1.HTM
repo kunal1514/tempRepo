@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Or operator</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000023956"></a><h3 class="newpage"> Or operator</h3>
+<p><a name="1000029622"></a>Basic and Crystal syntax.</p><a name="1000023958"></a><h5>Usage</h5><p><code><a name="1000023960"></a>x Or y </code></p><p><a name="1000049125"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1000049096"></a>Value of x
+
+</th><th align="left" valign="bottom"><a name="1000049098"></a>Value of y
+
+</th><th align="left" valign="bottom"><a name="1000049100"></a>x Or y
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000049102"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000049104"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000049106"></a>True</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000049108"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000049110"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000049112"></a>True</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000049114"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000049116"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000049118"></a>True</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000049120"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000049122"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000049124"></a>False</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="1000023972"></a><h5>Examples</h5><p><a name="1000023973"></a>The following example is applicable to Crystal syntax:</p><p class="code"><a name="1000023975"></a>If {file.CREDIT LIMIT} = 5000 or {file.SALESMAN} = "SP"
+<br><a name="1000052427"></a>Then
+<br><a name="1000052424"></a>&nbsp;&nbsp;&nbsp;&nbsp;{file.AMOUNT}
+<br><a name="1000052425"></a>Else
+<br><a name="1000052426"></a>&nbsp;&nbsp;&nbsp;&nbsp;0; 
+</p><p class="example"><a name="1000023977"></a>This means that if the credit limit is 5000, or, if the salesman is SP, (either of the conditions are true), then it <a href="glossary16.html#13498">returns</a> the value in the {file.AMOUNT} field; otherwise it returns nothing.</p><p><a name="1000023978"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000023980"></a>A &gt; B or B &gt; C</code></p><p class="example"><a name="1000023981"></a>TRUE, where A = 10, B = 6, and C = 3 (both conditions true).</p><p><code><a name="1000023983"></a>A &gt; B or B &gt; C</code></p><p class="example"><a name="1000023984"></a>TRUE, where A=10, B=6, and C=7 (either one of the two conditions true).</p><p><code><a name="1000023986"></a>A &gt; B or B &gt; C</code></p><p class="example"><a name="1000023987"></a>FALSE, where A=5, B=6, and C=7 (neither of the two conditions true).</p><p><code><a name="1000023990"></a>(A&gt;B) or (A * C - D &gt; E) or (E / D&lt;= B)</code></p><p class="example"><a name="1000023991"></a>TRUE, where A = 5, B = 5, C = 3, D = 2, E = 12 (At least one of the three conditions is true. In this case only (A * C - D &gt; E) is true).</p><a name="1000024003"></a><h6>Related topics</h6><p><a name="1000024007"></a><a href="19_introformulas36.html#304723">Formula 6</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp42.html";
+var next = "OperatorsHelp44.html";
+
+function setTopicID() { 
+      var number = "1000023956"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

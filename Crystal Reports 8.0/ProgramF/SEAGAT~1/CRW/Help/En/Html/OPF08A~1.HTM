@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Imp (Logical implication)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000029707"></a><h3 class="newpage"> Imp (Logical implication)</h3>
+<p><a name="1000029737"></a>Basic and Crystal syntax.</p><a name="1000029708"></a><h5>Usage</h5><p><code><a name="1000026259"></a>x Imp y </code></p><p><a name="1000053000"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1000052971"></a><strong>Value of x
+</strong>
+</th><th align="left" valign="bottom"><a name="1000052973"></a>Value of y
+
+</th><th align="left" valign="bottom"><a name="1000052975"></a>X Imp y
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000052977"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000052979"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000052981"></a>True</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000052983"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000052985"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000052987"></a>False</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000052989"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000052991"></a>True</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000052993"></a>True</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000052995"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000052997"></a>False</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000052999"></a>True</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="1000026261"></a><h5>Examples</h5><p><a name="1000026262"></a>The following example is applicable to both Basic and Crystal syntax:</p><p><code><a name="1000026264"></a>{Customer.SELL} Imp {Customer.GOVT_APPROVE}</code></p><p class="example"><a name="1000026265"></a>Returns True if both {Customer.SELL} and {Customer.GOVT_APPROVE} are in agreement (that is, both are True or both are False), or only {Customer.GOVT_APPROVE} agrees (that is, only {Customer.GOVT_APPROVE} is True) and overrides.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp45.html";
+var next = "OperatorsHelp47.html";
+
+function setTopicID() { 
+      var number = "1000029707"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

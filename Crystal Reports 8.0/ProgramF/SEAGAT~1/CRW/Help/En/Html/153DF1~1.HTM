@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>To add a Cross-Tab to an existing report</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1130696"></a><h3 class="newpage"> To add a Cross-Tab to an existing report</h3>
+<p><a name="1114514"></a><strong></strong>In this example, a Cross<nobr>-T</nobr>ab is added to an existing report to show the sales in North America compared to the rest of the world.</p><ol>
+<a name="1114093"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Open your report.
+<p class="indent"><a name="1114264"></a>This example uses the Group by Intervals.rpt included in the Feature Examples directory.</p><a name="1114164"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Click the <strong>Design</strong> tab.
+</ol>
+<ol>
+<a name="1116439"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">On the<strong> Insert</strong> menu, click <strong>Cross<nobr><nobr>-T</nobr></nobr>ab</strong>.
+<p class="indent"><a name="1113877"></a>The Format Cross<nobr>-T</nobr>ab dialog box appears. This dialog box is made up of <img src="images/bt_insertcrosstab.gif">
+
+
+three tabs: Cross<nobr>-T</nobr>ab, Style, and Customize Style.</p><p><a name="1122285"></a> <img src="images/ex_formatcrosstab_crosstab.gif">
+
+
+</p>
+</ol>
+<a name="1121076"></a><h5>Defining the structure of the Cross-Tab</h5><p><a name="1113903"></a>Add fields to the Rows, Columns, and Summarized Field areas.</p><ol>
+<a name="1114397"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">From the<strong> Report Fields </strong>list, click <strong>Country</strong>, then click <strong>Add Row</strong>.
+<p class="indent"><a name="1113906"></a>The Country field is added to the Rows area.</p><a name="1113907"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">From the <strong>Report Fields </strong>list, click <strong>Last Year's Sales</strong>, then click <strong>Add Summarized Field</strong>.
+<p class="indent"><a name="1113908"></a>The Last Year's Sales field is added to the Summarized Field area.</p><a name="1117330"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Apply additional structure:
+<ul type="disc"><ul type="disc"><a name="1117332"></a><li>Click <strong>Country</strong> in the Rows area.<a name="1114681"></a><li>Click <strong>Group Options</strong>.<a name="1114709"></a><li>Select <strong>in specified order</strong> from the drop<nobr>-d</nobr>own list.<a name="1114722"></a><li>Type <strong>North America</strong> for the Name of the Named Group.<a name="1114735"></a><li>Click <strong>New</strong>.<a name="1114743"></a><li>Choose <strong>is one of </strong>from the drop<nobr>-d</nobr>own list.<a name="1114744"></a><li>Select <strong>Canada, Mexico,</strong> <strong>and the U.S.</strong> from the drop<nobr>-d</nobr>own list.<p><a name="1122353"></a> <img src="images/db_definenamedgroup_crosstab.gif">
+
+
+</p>
+<a name="1121090"></a><li>Click <strong>OK</strong> to close the Define Named Group dialog box.<a name="1114749"></a><li>Click <strong>OK</strong> to close the Cross<nobr>-T</nobr>ab Group Options dialog box.</ul></ul></ol><a name="1114754"></a><h5>Choosing a predefined style</h5><ol>
+<a name="1114768"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Click the<strong> Style</strong> tab.
+<a name="1114772"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Select a style.
+</ol>
+<a name="1113674"></a><h5>Applying a custom style</h5><ol>
+<a name="1114769"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Click the <strong>Customize Style</strong> tab.
+<a name="1114783"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Customize the style as desired.
+</ol>
+<a name="1114786"></a><h5>Finishing the Cross-Tab</h5><ol>
+<a name="1114784"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<a name="1114785"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Place the Cross<nobr>-T</nobr>ab in either the Report Header or Report Footer.
+<a name="1122423"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">On the <strong>Report </strong>menu, click <strong>Refresh Report Data</strong>.
+<p class="indent"><a name="1119140"></a>The updated report appears.</p></ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "15_crosstabs18.html";
+var next = "15_crosstabs20.html";
+
+function setTopicID() { 
+      var number = "1130696"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

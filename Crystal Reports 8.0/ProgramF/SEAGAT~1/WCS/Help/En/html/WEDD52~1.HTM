@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Job sharing and page caching</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="166613"></a><h4 class="newpage"> Job sharing and page caching</h4><p><a name="167565"></a>This section provides a general description of how the Page Server caches and shares jobs. </p><p><a name="163092"></a>When a client requests a report that has not been requested before, the following occurs:</p><ul type="disc"><a name="163093"></a><li>A new job is created. When this happens a cache is created. The cache holds the report pages as they are requested. A reference to the report job is also created. The reference has a unique ID (Request ID) that is used to access the job if it is requested again in the future. 
+<a name="163094"></a><li>A refresh interval is associated with the report job. This is the time interval (Database Refresh setting in the Web Components Manager application) after which a new request for the same report results in accessing the database for updated information. In other words, if a new client requests the report after the refresh interval for the existing report job, then a new report job is created. 
+<a name="163095"></a><li>If a client referencing an existing report job selects refresh, then a new report job is created and the client receives a reference to the new job.
+</ul><a name="163096"></a><h5>Job sharing</h5><p><a name="163097"></a>Job sharing occurs when more than one person accesses the same instance of a report. A report job can be shared if:</p><ul type="disc"><a name="167861"></a><li>the report contains saved data and there are no selection formula (SF#) or group selection formula (GF#) commands
+<a name="167831"></a><li>the report does not have saved data and there are no selection formula (SF#) or group selection formula (GF#) commands
+<a name="171286"></a><li>the selection formula (SF#) or group selection formula (GF#) commands are identical to the formulae of an existing job.
+</ul><p><a name="167606"></a>The sharing of a report stops in the following situations:</p><ul type="disc"><a name="163099"></a><li>A client sharing an existing report job clicks refresh. In this case, a new report job is created and the client receives a reference to the new report job.
+<a name="163100"></a><li>A client sharing an existing report job submits a page request that includes one of the commands listed above. In this case, a new report job is created and the client receives a reference to the new report job.
+</ul><a name="163101"></a><h5>Page caching</h5><p><a name="171777"></a>A cache, associated with each report job, stores requested pages. The pages are generated then passed to the client and stored in the cache. If another client who is sharing the same report job requests a page that is already cached, then that client receives the cached page. This can greatly reduce access time.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerOverview20.html";
+var next = "WebServerOverview22.html";
+
+function setTopicID() { 
+      var number = "166613"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

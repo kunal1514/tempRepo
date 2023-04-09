@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formulas In Action</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="287844"></a><h2 class="newpage">Formulas In Action</h2><p><a name="304282"></a>Formulas in Action have been developed to demonstrate the use of multiple functions and operators in coordination with one another. The formulas have been created to illustrate concepts; they do not represent the only way, or necessarily the best way, to achieve the desired effects. </p><p><a name="304283"></a>The following is a listing of complex formulas created to illustrate the use of various operators and functions. Each formula topic includes:</p><ul type="disc"><a name="304284"></a><li>a report scenario that describes a real<nobr>-w</nobr>orld reporting need 
+<a name="304285"></a><li>a formula using Crystal syntax that fills the need described in the scenario
+<a name="304286"></a><li>a dissection of the formula so you can understand the role of each function and operator.
+</ul><p><a name="304287"></a>The names of the operators and functions used in the formula follow each numbered formula topic. </p><p><a name="304288"></a>Click the formula of interest from the following list for further information:</p><p><a name="304292"></a><a href="19_introformulas31.html#304376">Formula 1</a> (sales management, determining representatives closest to hitting quota)</p><p class="indent"><a name="304293"></a>Abs(x), Subtract (-), Divide (/), Multiply (*), ToText, Concatenate (+)</p><p><a name="304297"></a><a href="19_introformulas32.html#304424">Formula 2</a> (form letter/extracting first purchase date from customer number, use date to calculate # of years as customer, and use result to customize letter)</p><p class="indent"><a name="304298"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Subscript [], Less Than (&lt;), Concatenate (+), Make range (to), ToNumber, Subtract (-), ToText, Parentheses</p><p><a name="304302"></a><a href="19_introformulas33.html#304477">Formula 3</a> (inventory analysis based on extracting inventory data from codes imbedded in item numbers)</p><p class="indent"><a name="304303"></a>Concatenate (+), ToText, ToNumber, Multiply(*), Make Range, Subscript [], Parentheses ()</p><p><a name="304307"></a><a href="19_introformulas34.html#304528">Formula 4</a> (sales compensation, calculating commissions, flag commissions that exceed certain amount)</p><p class="indent"><a name="304308"></a>Nested formulas, If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Subtract (-), Multiply (*), Greater than (&gt;), Greater than or equal (&gt;=), Sum, Parentheses ()</p><p><a name="304312"></a><a href="19_introformulas35.html#305994">Formula 5</a> (form letter, soliciting orders against available credit line)</p><p class="indent"><a name="304313"></a>Nested formulas, If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Subtract (-), Not equal to (&lt;&gt;), Less than (&lt;), Concatenate (+), ToText, To dollar ($), Negate ( -() ), Parentheses ()</p><p><a name="304317"></a><a href="19_introformulas36.html#304723">Formula 6</a> (calculating one value as percent of another, flag percentages outside range, disregard statistically insignificant percentages)</p><p class="indent"><a name="304318"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Greater than (&gt;), Percentage (%), Greater than or equal (&gt;=), Boolean Operator (And), Boolean Operator (Or), Parentheses ()</p><p><a name="304322"></a><a href="19_introformulas37.html#304798">Formula 7</a> (sales compensation, selecting fixed bonus or calculated commission, whichever is higher)</p><p class="indent"><a name="304323"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Subtract (-), Greater than (&gt;), Maximum, Multiply (*), Parentheses ()</p><p><a name="304327"></a><a href="19_introformulas38.html#304858">Formula 8</a> (purchasing, determining quantity to order based on average sales during rolling quarter)</p><p class="indent"><a name="304328"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Less than (&lt;), Negate (-), Add (+), Round, Average([array]), Parentheses ()</p><p><a name="304332"></a><a href="19_introformulas39.html#304946">Formula 9</a> (retail, calculating mail order sales tax based on customer ZIP or Postal code)</p><p class="indent"><a name="304333"></a>Nested If<nobr>-T</nobr>hen<nobr>-E</nobr>lse expressions, NumericText, Subscript, Make Range, Equal to (=), ToNumber, In Range, Parentheses ()</p><p><a name="304337"></a><a href="19_introformulas40.html#305021">Formula 10</a> (staff scheduling, flagging weekend incoming calls)</p><p class="indent"><a name="304338"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Not, DayOfWeek, Make range (to), In range (in), Parentheses ()</p><p><a name="304342"></a><a href="19_introformulas41.html#305098">Formula 11</a> (calculating a contribution based on face value of invoice, and then selecting calculated value or agreed upon minimum) </p><p class="indent"><a name="304343"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Subscript [], Not equal to (&lt;&gt;), Maximum([array]), Multiply (*), Parentheses ()</p><p><a name="304347"></a><a href="19_introformulas42.html#305179">Formula 12</a> (determining monthly compensation based on percent of dollars saved, and comparing result to negotiated maximum)</p><p class="indent"><a name="304348"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Average([array]), Subtract (-), Greater than (&gt;), Minimum([array]), Multiply (*), Parentheses ()</p><p><a name="304352"></a><a href="19_introformulas43.html#305254">Formula 13</a> (converting one unit of measure to another)</p><p class="indent"><a name="304353"></a>ToText, Truncate, Division (/), Concatenate (+), Remainder</p><p><a name="304357"></a><a href="19_introformulas44.html#305296">Formula 14</a> (customer service, determining and identifying warranty plan based on length of product serial number)</p><p class="indent"><a name="304358"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Length, TrimLeft, Less than or equal (&lt;=), Parentheses ()</p><p><a name="304362"></a><a href="19_introformulas45.html#305354">Formula 15</a> (form letter, personalizing salutation based on degree and sex of recipient)</p><p class="indent"><a name="304363"></a>Nested If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operators, Not equal (&lt;&gt;), Boolean operator (And), Equal (=), Concatenate (+), Parentheses ()</p><p><a name="304367"></a><a href="19_introformulas46.html#305433">Formula 16</a> (shipping, calculating discounted value of shipment and adding calculated freight charge to orders that do not meet "free freight" criteria)</p><p class="indent"><a name="304368"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Add (+), Less than (&lt;), Multiply (*)</p><p><a name="304372"></a><a href="19_introformulas47.html#305487">Formula 17</a> (form letter, splitting a mailing list in half and sending a different offer to each half of the list)</p><p class="indent"><a name="304373"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Remainder, ToNumber, Equal, Parentheses ()</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas29.html";
+var next = "19_introformulas31.html";
+
+function setTopicID() { 
+      var number = "287844"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

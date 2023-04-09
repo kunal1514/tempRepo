@@ -1,0 +1,199 @@
+SUPPORTNOW CLICKWRAP LICENSE AGREEMENT - US [1/10/2000]
+
+-IMPORTANT- 
+Read This Carefully Before Installing The Software
+
+THIS IS A LEGAL AGREEMENT BETWEEN YOU AND SEAGATE SOFTWARE, INC.  
+BEFORE CONTINUING WITH THE INSTALLATION OF THE SOFTWARE, YOU 
+MUST READ, ACKNOWLEDGE AND ACCEPT THE TERMS AND CONDITIONS OF 
+THE SOFTWARE LICENSE AGREEMENT WHICH FOLLOWS.  THE SOFTWARE 
+LICENSE AGREEMENT MAY ALSO BE FOUND IN THE LICENSE.TXT FILE 
+CONTAINED WITHIN THE SOFTWARE.  WHEN PROMPTED, PLEASE INDICATE 
+WHETHER YOU ACCEPT OR DO NOT ACCEPT THE TERMS AND CONDITIONS OF 
+THE SOFTWARE LICENSE AGREEMENT.  IF YOU DO NOT ACCEPT SUCH TERMS 
+AND CONDITIONS, YOU SHOULD CLICK ON THE DO NOT ACCEPT BUTTON 
+BELOW AND THE INSTALLATION PROCESS WILL CEASE.  IF YOU HAVE ANY 
+QUESTIONS REGARDING THE SOFTWARE LICENSE AGREEMENT, YOU MAY 
+WRITE, SEAGATE SOFTWARE, INC., LICENSING DEPARTMENT, P.O. BOX 67427, 
+SCOTTS VALLEY, CA  95067, U.S.A.
+
+SEAGATE SOFTWARE LICENSE AGREEMENT
+1.	GRANT OF LICENSE:  Seagate Software, Inc. ("Seagate") grants to you, the end 
+user, a personal, nonexclusive license to use a single copy of the NetManage SupportNow 
+software program, including any updates and documentation provided by Seagate in 
+connection therewith (the "Software"), solely for your own internal use, and solely in 
+accordance with the terms and conditions of this software license agreement ("Agreement").  
+The Software is licensed, not sold, to you.  You acknowledge that the Software is designed to 
+permit Seagate and its authorized contractors ("Support Providers") to access your computer 
+systems, applications and files in order to facilitate the support and maintenance of certain 
+Seagate software applications, including other third-party applications which you may be 
+using in conjunction with such Seagate applications.  The Software permits you to control the 
+access rights and privileges granted to these Support Providers and, therefore, to the extent 
+you have granted access rights to a Support Provider, you grant such Support Provider the 
+right to access and manipulate your computer systems, applications, files and associated data 
+as reasonably necessary to provide you with support and maintenance.  This Agreement is a 
+license to use the Software and does not entitle you to any support or telephone assistance 
+from Seagate.  However, you may order support services pursuant to a separate agreement 
+with Seagate.
+
+2.	RESTRICTIONS:  Except as expressly permitted by this Agreement, you hereby 
+acknowledge and agree that:  (1) you will not modify or translate the Software, except that 
+you may configure the Software using the menus, options and tools provided for such 
+purposes and contained in the Software; (2) you will not copy the Software except as 
+permitted in Section 3; (3) you will not in any way reverse engineer, disassemble or 
+decompile the Software or any portion thereof except to the extent and for the express 
+purposes authorized by applicable law notwithstanding this limitation; (4) you will not use the 
+Software on a timesharing basis or to operate a service bureau facility for the benefit of third-
+parties; (5) you will not transmit, or provide access to, the Software over a network except for 
+operation of the Software as described in the associated documentation; (6) you will not use 
+the Software other than in connection with the support of Seagate software applications by 
+Support Providers; and (7) you will not sublicense, assign, rent, sell, lease, distribute or 
+otherwise transfer the Software or any of the rights granted by this Agreement, except that 
+you may physically transfer the Software from one computer to another computer under your 
+control and you may transfer the Software (including all prior versions if the Software is an 
+update) and accompanying written materials on a permanent basis to the successor or 
+purchasing entity pursuant to a merger, corporate reorganization or sale of relevant assets, 
+provided you retain no copies and the recipient agrees to the terms of this Agreement.  If you 
+wish to develop and/or test an interface to the Software or merge the Software with any other 
+software, you shall inform Seagate and Seagate, at its option, may provide you with 
+information sufficient to enable interoperability between the Software and such other 
+software or products. 
+
+3.	COPYRIGHT:  The Software is copyrighted by Seagate and/or its suppliers and is 
+protected by United States copyright and patent laws and international treaty provisions.  You 
+may not copy the Software except to provide a backup copy and to load the Software into 
+computers as part of executing the Software.  Solely with respect to documentation included 
+with the Software, you may make a reasonable number of copies (either in hardcopy or 
+electronic form), provided that such copies shall be used only in connection with your 
+licensed use of the Software and are not republished or distributed to any third party.  You 
+must reproduce and include all copyright notices, trademarks or other proprietary legends of 
+Seagate and its suppliers on any copy of the Software or documentation made by you.  Any 
+and all other copies of the Software and/or the documentation made by you are in violation of 
+this Agreement.   
+
+4.	OWNERSHIP AND CONFIDENTIALITY:  You agree that Seagate and/or its 
+suppliers retain all right, title and interest in and to the Software and all copies at all times, 
+regardless of the form or media in or on which the original or other copies may subsequently 
+exist.  You agree that you neither own nor hereby acquire any claim or right of ownership to 
+the Software or to any related patents, copyrights, trademarks or other intellectual property.  
+You agree to use your best efforts to prevent and protect the contents of the Software from 
+unauthorized disclosure or use.  Seagate and/or its suppliers reserve all rights not expressly 
+granted to you.  Seagate's suppliers and Support Providers are the intended third party 
+beneficiaries of this Agreement and have the express right to rely upon and directly enforce 
+the terms set forth herein.  Seagate will use reasonable efforts to maintain the confidentiality 
+of any non-public information and data which you may disclose, or which Seagate may 
+observe, pursuant to Seagate's access to your computer systems during the conduct of its 
+support activities; provided such information and data has been conspicuously marked as 
+"confidential" or "proprietary".  Notwithstanding the foregoing, you acknowledge that the 
+communications sessions utilized by the Software are implemented through the Internet, 
+which is inherently insecure, and Seagate shall not be liable for any security breaches 
+occurring on the Internet.  You should take the foregoing into account when granting the 
+Support Providers any access privileges.  You further agree that you will not release the 
+results of any performance or functional evaluation of the Software to any third party without 
+the prior written approval of Seagate for each such release. 
+
+5.	TERM AND TERMINATION:  This Agreement is effective until terminated.  You 
+may terminate this Agreement at any time by providing Seagate with written notice, provided 
+that you have complied with the destruction policies set forth below.  This Agreement will 
+automatically terminate if you fail to comply with its terms and conditions.  You agree that, 
+upon any termination, you will destroy all the materials delivered to you and certify to 
+Seagate, in writing, that all copies and partial copies thereof have been completely destroyed 
+and are no longer being used.  Sections 2, 4, 6, 7, 8, 9 and 10 shall survive any expiration or 
+termination of this Agreement.   
+
+6.		DISCLAIMER OF WARRANTIES:  BECAUSE THE SOFTWARE IS 
+PROVIDED FREE OF CHARGE, THERE IS NO WARRANTY FOR THE SOFTWARE.  
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE 
+AND ANY SERVICES PROVIDED UTILIZING THE SOFTWARE ARE PROVIDED "AS 
+IS" WITHOUT ANY WARRANTIES, CONDITIONS, REPRESENTATIONS OR 
+GUARANTIES OF ANY KIND, EITHER EXPRESS, IMPLIED, STATUTORY, OR 
+OTHERWISE, ORAL OR WRITTEN, INCLUDING WITHOUT LIMITATION, ANY 
+IMPLIED WARRANTIES OR CONDITIONS:  (I) OF MERCHANTABILITY; (II) OF 
+SATISFACTORY OR MERCHANTABLE QUALITY; (III) OF FITNESS FOR A 
+PARTICULAR PURPOSE; (IV) OF NONINFRINGEMENT; OR (V) ARISING FROM 
+COURSE OF PERFORMANCE, COURSE OF DEALING, OR USAGE OF TRADE.  
+SEAGATE DOES NOT WARRANT THAT THE OPERATION OF THE SOFTWARE 
+WILL BE UNINTERRUPTED OR ERROR FREE.  THIS DISCLAIMER OF WARRANTY 
+CONSTITUTES AN ESSENTIAL PART OF THIS AGREEMENT.  SOME 
+STATES/JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED 
+WARRANTIES, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU, AND YOU 
+MAY HAVE OTHER LEGAL RIGHTS THAT VARY FROM STATE TO STATE OR BY 
+JURISDICTION.
+
+7.		LIMITATIONS OF LIABILITY:  TO THE MAXIMUM EXTENT PERMITTED 
+BY APPLICABLE LAW, IN NO EVENT WILL SEAGATE OR ITS DISTRIBUTORS, 
+SUPPLIERS, SUPPORT PROVIDERS, OR AFFILIATES BE LIABLE FOR:  (I) COSTS 
+OF SUBSTITUTE GOODS OR SERVICES; (II) SPECIAL, INDIRECT, INCIDENTAL OR 
+CONSEQUENTIAL DAMAGES OF ANY CHARACTER, WHETHER IN AN ACTION OF 
+CONTRACT OR TORT, EVEN IF SEAGATE OR ANY OTHER PARTY HAS BEEN 
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES; (III) ANY CLAIM AGAINST 
+YOU BY ANY THIRD PARTY; AND (IV) ANY DAMAGES, LOSSES OR INJURIES TO 
+YOU, OR THOSE CLAIMING THROUGH YOU, IN EXCESS OF ONE YEAR'S 
+ANNUAL SUPPORT FEES PAID BY YOU TO SEAGATE.  THESE LIMITATIONS 
+WILL APPLY NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF 
+ANY LIMITED REMEDY.  YOU AGREE THAT THIS LIMITATION OF LIABILITY IS 
+REASONABLE GIVEN THAT THE SOFTWARE IS PROVIDED FREE OF CHARGE.  
+SOME STATES/JURISDICTIONS DO NOT ALLOW THE LIMITATION OR 
+EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, 
+SO THE ABOVE LIMITATION MAY NOT APPLY TO YOU.
+
+Furthermore, you acknowledge that you may configure the Software so as to permit the 
+Support Providers to access your computer systems, files and associated data for support and 
+maintenance purposes.  This access is merely to facilitate support on your behalf, and you 
+remain solely responsible for backing up your systems, files and data.  The Support Providers 
+shall not be liable to you, regardless of the cause of action, including the Support Providers' 
+own negligence, for any loss of data or loss of use of your computer systems due to their 
+support activities or their use of the Software.  If the Software proves defective, your 
+exclusive remedy, and Seagate's sole responsibility, shall be to provide you with that level of 
+support contracted by you with Seagate, but without utilizing the Software.  
+
+8.	EXPORT CONTROLS:  None of the Software or underlying information or 
+technology may be exported or re-exported into (or to a national or resident of) any country in 
+violation of the export-control laws and administrative regulations of the United States, or any 
+other applicable jurisdiction.  By using the Software, you are agreeing to the foregoing and 
+you are representing and warranting that you are not located in, under the control of, or a 
+national or resident of any such country.
+
+9.	U.S. GOVERNMENT RIGHTS:  The Software is a "commercial item," as that term 
+is defined at 48 C.F.R. 2.101 (Oct. 1995), consisting of "commercial computer software" and 
+"commercial computer software documentation," as such terms are used in 48 C.F.R. 12.212 
+(Sept. 1995).  Consistent with 48 C.F.R. 12.212 and 48 C.F.R. 227.7202-1 through 227.7202-
+4 (June 1995) (or an equivalent provision, e.g., in supplements of various U.S. government 
+agencies, as applicable), all U.S. Government users acquire the Software with only those 
+rights set forth herein.  Manufacturer is Seagate Software, Inc., 915 Disc Drive, Scotts Valley, 
+CA  95066.
+ 
+You must affix the following legend to each copy of the Software:
+"Use, duplication, reproduction, or transfer of this commercial software and accompanying 
+documentation is restricted in accordance with FAR 12.212 and DFARS 227.7202 and by a 
+license agreement.  Contact Legal Department, Seagate Software, Inc., P.O. Box 67427, 
+Scotts Valley, California, 95067, U.S.A."
+10.	GENERAL:  Except as otherwise preempted by United States federal law, this 
+Agreement is governed by the laws of the State of California, United States, without reference 
+to conflict of laws provisions or the United Nations 1980 Convention on Contracts for the 
+International Sale of Goods and any amendments thereto.  If any provision of this Agreement 
+is ruled invalid, such invalidity shall not affect the validity of the remaining portions of this 
+Agreement.  This Agreement and the agreements referenced herein constitute the entire 
+agreement between you and Seagate regarding the subject matter herein, and this Agreement 
+may not be modified except by an instrument in writing duly signed by an authorized 
+representative of each of the parties.  If you are acquiring the Software on behalf of an entity, 
+you represent and warrant that you have the legal capacity to bind such entity to this 
+Agreement.  Since the Software is provided free of charge all terms of (i) any purchase order 
+or other ordering document submitted by you, and (ii) any master license or purchase 
+agreement between you and Seagate, shall be superseded by this Agreement.  The product 
+name for the Software is a trademark or registered trademark of Seagate and/or its suppliers.  
+Should you have questions concerning this Agreement, please contact your local Seagate 
+sales office or authorized reseller, or write to:  Seagate Software, Inc., Attn: Contracts 
+Department, 915 Disc Drive, Scotts Valley, CA  95066.
+
+Please indicate below whether you accept, or do not accept, the terms and conditions of this 
+Software License Agreement.
+
+I ACCEPT THE TERMS AND 
+CONDITIONS OF THE SOFTWARE 
+LICENSE AGREEMENT.
+_____
+I DO NOT ACCEPT THE TERMS AND 
+CONDITIONS OF THE SOFTWARE 
+LICENSE AGREEMENT.
+

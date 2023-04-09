@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>PthPercentile (P, fld), PthPercentile (P, fld, condFld), PthPercentile (P, fld, condFld, cond)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000282295"></a><h3 class="newpage"> PthPercentile (P, fld), PthPercentile (P, fld, condFld), PthPercentile (P, fld, condFld, cond)</h3>
+<p><a name="1000667435"></a>Basic and Crystal syntax.</p><a name="1000282299"></a><h5>Arguments</h5><ul type="disc"><a name="1000282300"></a><li>P is any integer between 0 and 100.
+<a name="1000282301"></a><li>fld is any Number or Currency field that can be evaluated by the function.
+<a name="1000282302"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000282303"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. 
+<p class="indent"><a name="1000359234"></a>For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.</p></ul><a name="1000282304"></a><h5>Returns</h5><p><a name="1000282305"></a>Number or Currency value.</p><a name="1000282306"></a><h5>Action</h5><p><a name="1000282307"></a>Calculates the value for a specified percentile (P) in a Number or Currency field.</p><a name="1000282308"></a><h5>Examples</h5><p><a name="1000282309"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000282310"></a>PthPercentile(20, {Customer.LAST YEAR'S SALES})</code></p><p class="example"><a name="1000282311"></a>Returns $2302 as the value at the 20<sup>th</sup> percentile (if 20% of {Customer.LAST YEAR'S SALES are less than $2302</p><p><code><a name="1000282312"></a>PthPercentile(P, {Customer.LAST YEAR'S SALES}, {Customer.REGION})</code></p><p class="example"><a name="1000282313"></a>Groups the Last Year's Sales field by region and returns the value at percentile P in the Last Year's Sales field per region.</p><p><code><a name="1000282314"></a>PthPercentile(P,{orders.ORDER AMOUNT}, {Customer.REGION}, "monthly")</code></p><p class="example"><a name="1000282315"></a>Groups values in the Amount field by region, then returns the value at percentile P in the Amount field for each region, per month.</p><a name="1000282316"></a><h5>Comments</h5><p><a name="1000282317"></a>P = 50 (the 50<sup>th</sup> Percentile) is the same value returned by the <a href="functionshelp37.html#1000473334">Median (fld), Median (fld, condFld), Median (fld, condFld, cond)</a> function (the median value).</p><p><a name="1000656847"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. </p>
+<p><a name="1000656850"></a>For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp37.html";
+var next = "functionshelp39.html";
+
+function setTopicID() { 
+      var number = "1000282295"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

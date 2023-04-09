@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 9</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="304946"></a><h3 class="newpage"> Formula 9</h3>
+<a name="304947"></a><h4>Operators/Functions Used</h4><p><a name="304948"></a>Nested If<nobr>-T</nobr>hen<nobr>-E</nobr>lse expressions, NumericText, Subscript, Make Range, Equal to (=), ToNumber, In Range, Parentheses ()</p><a name="304949"></a><h4>Formula Purpose</h4><p><a name="304950"></a>A retailer has a customer list that includes both customers living inside the state and customers living in Canada. For customers inside the state, some have 5 digit ZIP codes, others have 9 digit ZIP codes. Canadian customers have Postal Codes beginning with a letter.</p><p><a name="304951"></a>The company wants a column on the list that shows the sales tax that needs to be levied on orders from each customer. Local customers (those within the greater metropolitan area) get assigned a 7.5% sales tax (6.5% state and 1% local); customers in the state but outside the metropolitan area are assigned a 6.5% sales tax (state only); and Canadian customers are assigned no sales tax.</p><a name="304952"></a><h4>Formula</h4><PRE><a name="304953"></a>If NumericText({customer.POSTAL CODE}[1 to 5])Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If ToNumber({customer.POSTAL CODE}[1 to 5]) in <br>
+&nbsp;&nbsp;&nbsp;&nbsp;92200 to 92399 Then <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"7.5" <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;"6.5"<br>
+Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;"0"
+</PRE><a name="304954"></a><h4>Result</h4><p><a name="304992"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="304957"></a>ZIP/Postal
+
+</td><td align="left" valign="TOP"><a name="304959"></a>Tax
+
+</td><td align="left" valign="TOP"><a name="304961"></a>Explanation
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304963"></a>91134</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304965"></a>6.5</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304967"></a>Inside state/outside metro area</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304969"></a>92305</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304971"></a>7.5</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304973"></a>Inside state/inside metro area</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304975"></a>92288-5423</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304977"></a>7.5</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304979"></a>Inside state/inside metro area (ZIP + 4)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304981"></a>96544-2333</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304983"></a>6.5</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304985"></a>Inside state, outside metro area (ZIP + 4)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304987"></a>T5A 9S2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304989"></a>0.0</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304991"></a>Canadian customer</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="304993"></a><h4>Explanation</h4><ul type="disc"><a name="304994"></a><li>This formula uses nested If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operators.
+<a name="304995"></a><li>The first of these If<nobr>-T</nobr>hen<nobr>-E</nobr>lse expressions begins with the initial If and ends with the final "0". It says:
+<a name="304996"></a><li>If the first five characters in the {customer.POSTAL CODE} field are all numbers, then compute and print the sales tax using the methodology specified in the second If<nobr>-T</nobr>hen<nobr>-E</nobr>lse expression. 
+<a name="304997"></a><li>If the first five characters are not all numbers, print "0".
+<a name="304998"></a><li>The second of the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse expressions begins immediately after the initial Then and ends immediately before the final words Else "0". It says, now that we have already tested and know that the first five characters of {customer.POSTAL CODE} are numbers:
+<a name="304999"></a><li>If the first five characters of {customer.POSTAL CODE}, converted to numbers, fall in the range of 92200 to 92399, print "7.5" (the amount of state and local sales taxes combined).
+<a name="305000"></a><li>If the first five characters of {customer.POSTAL CODE}, converted to numbers, fall outside that range, print "6.5" (the amount of state sales tax only).
+<a name="305001"></a><li>If NumericText ({customer.POSTAL CODE} [1 to 5]) uses the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operator to test for the condition in parentheses:
+<a name="305002"></a><li>{customer.POSTAL CODE} [1 to 5]) uses the Subscript operator [] and Make Range operator to extract characters 1 to 5 in the {customer.POSTAL CODE} field.
+<a name="305003"></a><li>The NumericText function evaluates the extracted characters to determine if they are all numbers or not.
+<a name="305004"></a><li>If they are all numbers (YES) the first If condition is satisfied and the formula moves to the first Then consequence.
+<a name="305005"></a><li>&#183;	If they are not all numbers, the first If condition is not satisfied, and the formula moves to the final Else consequence.
+<a name="305006"></a><li>&#183;	Then if ToNumber({customer.POSTAL CODE} [1 to 5]) in 92200 to 92399 Then "7.5" Else "6.5" Else "0" shows what is to take place if the original If conditions have been satisfied.
+<a name="305007"></a><li>&#183;	({customer.POSTAL CODE} [1 to 5]) uses the Subscript operator [ ] and Make Range operator to extract characters 1 to 5 in the {customer.POSTAL CODE} field.
+<a name="305008"></a><li>&#183;	ToNumber converts these extracted characters to a number that can then be used in a numeric expression.
+<a name="305009"></a><li>&#183;	in 92200 to 92399 checks to see if the {customer.POSTAL CODE} (now converted to a number) falls anywhere within the range 92200 to 92399.
+<a name="305010"></a><li>&#183;	If it does, the If condition (inside the parentheses) is satisfied and the Then consequence is performed by printing the text string "7.5".
+<a name="305011"></a><li>&#183;	If it does not, the If condition is not satisfied, and the Else consequence is performed by printing the text string "6.5".
+</ul><a name="305012"></a><h4>Comments</h4><p><a name="305013"></a>These tax figures, rules, and Postal codes are for illustration only; they are not meant to accurately represent state and local taxing regulations.</p><a name="305014"></a><h6>Related topics</h6><p><a name="305018"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas38.html";
+var next = "19_introformulas40.html";
+
+function setTopicID() { 
+      var number = "304946"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

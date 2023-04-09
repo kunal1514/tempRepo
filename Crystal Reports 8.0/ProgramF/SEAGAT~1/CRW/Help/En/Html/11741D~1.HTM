@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Adding accounting conventions to a report</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="184575"></a><h3 class="newpage"> Adding accounting conventions to a report</h3>
+<p><a name="185662"></a>As a way of supporting the conventions used in the accounting profession, Seagate Crystal Reports lets you decide on how to display the currency symbol, negative values, and zero values on your financial reports. You can also set up your report to reverse the signs for credit and debit amounts.</p><a name="184577"></a><h6>To add accounting conventions to a report</h6><ol>
+<a name="185974"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Right<nobr>-c</nobr>lick the currency field or number field you want to format to bring up the shortcut menu.
+<a name="186077"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">On the shortcut menu, click <kbd>Format Field</kbd>.
+<p class="indent"><a name="186276"></a>The Format Editor dialog box appears with the Number tab open.</p><p><a name="186478"></a> <img src="images/db_formedit_number.gif">
+
+
+</p>
+<a name="186504"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Style</kbd> area, select how you want the system number format to appear for either positive or negative values.
+<a name="186500"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Currency Symbol</kbd> (<kbd>system default</kbd>) area, specify how you want the currency symbol to appear with the values on your report.
+<a name="186543"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> to save your changes.
+</ol>
+<a name="186544"></a><h6>To customize the accounting conventions for a report</h6><ol>
+<a name="186545"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Right<nobr>-c</nobr>lick the currency field or number field you want to format to bring up the shortcut menu.
+<a name="186553"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">On the shortcut menu, click <kbd>Format Field</kbd>.
+<p class="indent"><a name="186554"></a>The Format Editor dialog box appears with the Number tab open.</p><a name="186559"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Style</kbd> area, select <kbd>Custom Style</kbd>, then click the <kbd>Customize</kbd> button.
+<p class="indent"><a name="184582"></a>The Custom Style dialog box appears with the Number tab open.</p><p><a name="194080"></a> <img src="images/db_formedit_custom.gif">
+
+
+</p>
+<a name="186522"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Select the <kbd>Use Accounting Format</kbd> check box.
+<p class="indent"><a name="186592"></a>Once you select this option, the following conditions occur:</p><ul type="disc"><ul type="disc"><a name="186596"></a><li>In the Negatives list, how the negative values appear on your report are determined by the Windows locale settings. The negative values are represented by either a minus sign or brackets.<a name="184585"></a><li>In the Show Zero Values as list, the dash symbol is automatically selected to represent zero values on your report.<a name="186617"></a><li>On the Currency Symbol tab of the Custom Style dialog box, the currency symbol is positioned on the left<nobr>-s</nobr>ide of the currency and numeric values.<p class="indent"><a name="186649"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Changes made to the Windows locale settings are implemented only after you exit and restart Seagate Crystal Reports.</p>
+</ul></ul><a name="184588"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Select the <kbd>Reverse Sign for Display</kbd> check box to reverse the signs for debit and credit amounts in your financial reports.
+<a name="184589"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> to save your changes.
+<a name="186657"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> again to return to your report.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "11_format44.html";
+var next = "11_format46.html";
+
+function setTopicID() { 
+      var number = "184575"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

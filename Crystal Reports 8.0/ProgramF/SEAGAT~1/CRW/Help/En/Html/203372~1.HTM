@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>For/Next loops</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="132807"></a><h3 class="newpage"> For/Next loops</h3>
+<p><a name="132809"></a>For/Next loops enable you to evaluate a sequence of statements multiple times. This is unlike the If and Select statements where the program passes through each statement at most once during the formula's evaluation. For/Next loops are best when you know the number of times that the statements needs to be evaluated in advance.</p><a name="132811"></a><h4>The syntax of the For loop through examples</h4><a name="135952"></a><h5>Sample 1</h5><p><a name="135965"></a>Suppose you want to reverse the {Customer.Customer Name} string. For example, "City Cyclists" becomes "stsilcyC ytiC".</p><PRE><a name="132813"></a>Rem Reverse a string version 1
+<a name="132814"></a>formula = ""
+<a name="132815"></a>Dim strLen
+<a name="132816"></a>strLen = Len ({Customer.Customer Name})
+<a name="132817"></a>Dim i
+<a name="132818"></a>For i = 1 To strLen
+<a name="132819"></a>   Dim charPos
+<a name="132820"></a>   charPos = strLen - i + 1
+<a name="132821"></a>   formula = formula &amp; _
+<a name="132822"></a>             Mid({Customer.Customer Name}, charPos, 1)
+<a name="144609"></a>Next i
+</PRE><p><a name="144610"></a>Let us examine how this formula works assuming that the current value of the field {Customer.Customer Name} is "Clean Air". The variable strLen is assigned to be the length of "Clean Air", namely 9. At this time it is also typed to be a Number variable. The variable <EM>i</EM> is known as a <EM>For counter variable</EM> since its value changes with each iteration of the For loop. In other words, it is used to count the iterations of the loop. The For loop will iterate 9 times, during the first time, i is 1, then i is 2, then i is 3 and so on until finally i = 9. During the first iteration, the ninth character of {Customer.Customer Name} is appended to the empty special variable <EM>formula</EM>. As a result formula equals "r" after the first iteration. During the second iteration, the eighth character of {Customer.Customer Name} is appended to formula and so formula<EM> </EM>equals "ri". This continues until after the ninth iteration, formula<EM> </EM>equals, "riA naelC" which is the reversed string.</p><a name="132827"></a><h5>Sample 2</h5><p><a name="135968"></a>Here is a simpler version of the above formula, that uses a Step clause with a negative Step value of -1. For the "Clean Air" example, i is 9 for the first iteration, 8 for the second, 7 for the third and so on until it is 1 in the final iteration.</p><PRE><a name="132829"></a>Rem Reverse a string version 2
+<a name="132830"></a>formula = ""
+<a name="132831"></a>Dim i
+<a name="132832"></a>For i = Len ({Customer.Customer Name}) To 1 Step -1
+<a name="132833"></a>   formula = formula + _
+<a name="132834"></a>             Mid({Customer.Customer Name}, i, 1)
+<a name="132835"></a>Next i
+</PRE><a name="132837"></a><h5>Sample 3</h5><p><a name="135969"></a>The simplest version is to use the built in function StrReverse:</p><PRE><a name="132839"></a>Rem Reverse a string version 3
+<a name="132840"></a>formula = StrReverse ({Customer.Customer Name})
+</PRE><p><a name="132842"></a>The built in String functions in Seagate Crystal Reports 8 can handle many of the string processing applications which would traditionally be handled using a For/Next loop or some other kind of loop. However, For/Next loops provide the most flexibility and power in processing strings and arrays. This can be essential if the built<nobr>-i</nobr>n functions do not cover your intended application.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax51.html";
+var next = "20_basicsyntax53.html";
+
+function setTopicID() { 
+      var number = "132807"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

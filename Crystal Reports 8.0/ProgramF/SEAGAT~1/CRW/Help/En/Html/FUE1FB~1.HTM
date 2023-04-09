@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DateAdd (intervalType, nIntervals, startDateTime)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000693154"></a><h3 class="newpage"> DateAdd (intervalType, nIntervals, startDateTime)</h3>
+<p><a name="1000693160"></a>Basic and Crystal syntax.</p><a name="1000693158"></a><h5>Arguments</h5><p><a name="1000547653"></a>intervalType is a String expression specifying the interval of time to be added. Values can be:</p><p><a name="1000697165"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1000697176"></a>IntervalType value
+
+</th><th align="left" valign="bottom"><a name="1000697178"></a>Description
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697180"></a>yyyy</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697182"></a>Year</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697184"></a>q</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697186"></a>Quarter (3<nobr><nobr>-m</nobr></nobr>onth period)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697188"></a>m</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697190"></a>Month</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697192"></a>y</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697194"></a>Day of year</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697196"></a>d</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697198"></a>Day</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697200"></a>w</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697202"></a>Weekday</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697204"></a>ww</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697206"></a>Week (7<nobr><nobr>-d</nobr></nobr>ay period)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697208"></a>h</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697210"></a>Hour</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697212"></a>n</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697214"></a>Minute</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697216"></a>s</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697218"></a>Second</P>
+
+
+</td></tr>
+
+</Table></p>
+<ul type="disc"><a name="1000547664"></a><li>nIntervals is a Number or numeric expression specifying the number of intervals to be added. It can be positive (to get date<nobr>-t</nobr>imes in the future) or negative (to get date<nobr>-t</nobr>imes in the past).
+<a name="1000547665"></a><li>startDateTime is the DateTime value to which the intervals are to be added.
+</ul><a name="1000547666"></a><h5>Returns</h5><p><a name="1000547667"></a>A DateTime value.</p><a name="1000547668"></a><h5>Action</h5><p><a name="1000547669"></a>DateAdd returns a DateTime value to which a specified number of time intervals have been added.</p><a name="1000547670"></a><h5>Typical use</h5><p><a name="1000547671"></a>DateAdd is used to add intervals of time to a DateTime. Its main feature is that the DateTime returned will always be valid. For example, DateAdd takes into account such factors as the number of days in a month and leap years. If you want to add or subtract days to a DateTime, you could use the addition and subtraction operators instead of DateAdd with the "d" parameter. However, DateAdd also handles other types of intervals such as adding months or hours to a DateTime.</p><a name="1000547672"></a><h5>Examples</h5><p><a name="1000547673"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000547674"></a>DateAdd("d", -32, #Sept 28, 1999#)</code></p><p class="example"><a name="1000547675"></a>Returns the DateTime value for August 27, 1999.</p><p><code><a name="1000547676"></a>DateAdd ("m", 1, #1/31/1996#) </code></p><p class="example"><a name="1000547677"></a>Returns the DateTime value for February 29, 1996. Notice that DateAdd will not return the invalid value February 31, 1996.</p><p><code><a name="1000547678"></a>DateAdd ("q", 17, #Sept 28, 1999#)</code></p><p class="example"><a name="1000547679"></a>Returns the DateTime value for December 28, 2003.</p><p><code><a name="1000547680"></a>DateAdd ("h", -400, #Sept 28, 1999#)</code></p><p class="example"><a name="1000547681"></a>Returns the DateTime value for September 11, 1999 8:00 AM. In other words, this is the result of subtracting 400 hours from September 28, 1999 12:00 AM.</p><a name="1000547682"></a><h5>Comments</h5><ul type="disc"><a name="1000547683"></a><li>This function is designed to work like the Visual Basic function of the same name.
+<a name="1000547684"></a><li>To add days to a date<nobr>-t</nobr>ime, you can use any of the interval type parameters "y", "d" or "w". They all have the same effect for DateAdd. 
+<a name="1000547685"></a><li>DateAdd returns a DateTime value and not a Date value. However, you may need to convert this DateTime value to a Date value in certain situations (such as if you wanted to assign the value returned by DateAdd to a Date type variable). To convert to a Date value, use DateAdd in combination with the CDate type conversion function. For example, the following returns the Date value for October 6, 1997:
+</ul><p><code><a name="1000547686"></a>CDate(DateAdd("yyyy", -2, #October 6, 1999#))</code></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp127.html";
+var next = "functionshelp129.html";
+
+function setTopicID() { 
+      var number = "1000693154"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

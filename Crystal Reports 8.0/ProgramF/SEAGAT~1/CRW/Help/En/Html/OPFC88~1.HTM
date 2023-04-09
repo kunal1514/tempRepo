@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Assignment operators</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000030600"></a><h3 class="newpage"> Assignment operators</h3>
+<a name="1000030721"></a><h4>Basic syntax (x = y)</h4><p><a name="1000030766"></a>You can use the assignment operator (=) and the assignment keyword "Let" (Let x=y) with only Basic syntax. Crystal syntax uses the other assignment operator (:=).</p><a name="1000030601"></a><h5>Usage</h5><p><code><a name="1000030602"></a>x = y </code></p><p class="example"><a name="1000030603"></a>Assigns y to the variable x. x must have already been declared before the assignment. y must be of the same type as x, or of a type compatible with x.</p><p><code><a name="1000055803"></a>Let x = y </code></p><p class="example"><a name="1000055804"></a>Assigns y to the variable x. x must have already been declared before the assignment. y must be of the same type as x, or of a type compatible with x.</p><a name="1000030604"></a><h5>Examples</h5><p><a name="1000030605"></a>The following example is applicable to Basic syntax:</p><p class="code"><a name="1000030606"></a>Dim n As Number
+<br><a name="1000030607"></a>Dim b As Boolean
+<br><a name="1000030608"></a>Dim c As Currency
+<br><a name="1000030609"></a>Dim d As Date
+<br><a name="1000030610"></a>Dim t As Time
+<br><a name="1000030611"></a>Dim s As String
+<br><a name="1000030612"></a>Dim numArray () As Number
+<br><a name="1000030614"></a>'n is assigned 100
+<br><a name="1000055698"></a>n = 100
+<br><a name="1000030615"></a>'b is assigned the Boolean value True
+<br><a name="1000055713"></a>b = True
+<br><a name="1000030616"></a>'c is assigned the Currency value 5000
+<br><a name="1000055722"></a>c = CCur (5000)
+<br><a name="1000030617"></a>'d is assigned the Date value of Oct. 10, 1999
+<br><a name="1000055742"></a>d = CDate ("10, 10, 1999")
+<br><a name="1000030618"></a>'t is assigned the Time value 12:50am
+<br><a name="1000055739"></a>t = CTime ("12:50am")
+<br><a name="1000030620"></a>
+<br><a name="1000055755"></a>' s is assigned a string which is a concatenation of 2 substrings and a 
+field value
+<br><a name="1000030622"></a>s = "The total sales is " &amp; {Orders.Order Amount} &amp; " billion."
+<br><a name="1000030623"></a>
+<br><a name="1000030624"></a>' numArray is assigned an array of Number values
+<br><a name="1000030625"></a>numArray = Array (10, 20, 30)
+<br><a name="1000030626"></a>
+<br><a name="1000030633"></a>formula = s
+</p><a name="1000030634"></a><h5>Comments</h5><ul type="disc"><a name="1000030637"></a><li>A variable must be declared in a separate statement before it is assigned any value in Basic syntax.
+<a name="1000030638"></a><li>Assignment only assigns a value to a variable. When a formula returns, the value assigned to the variable Formula is then formatted according to the format specified for that formula field of the corresponding type.
+</ul><a name="1000005748"></a><h4>Crystal syntax (x := y)</h4><p><a name="1000038920"></a>You can use the assignment operator (:=) with only Crystal syntax. For more details, see <a href="21_crystalsyntax28.html#145381">Variable declarations</a>.</p><a name="1000006098"></a><h5>Usage</h5><p><code><a name="1000005751"></a>x := n</code></p><p class="example"><a name="1000005752"></a>Assigns the value n to the variable x. (x must have already been declared in the same formula.)</p><a name="1000005753"></a><h5>Examples</h5><p><a name="1000005754"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000005755"></a>Amount:= 0</code></p><p class="example"><a name="1000005756"></a>Initializes (sets to zero) the variable named Amount.</p><p><code><a name="1000005757"></a>Amount:= 100</code></p><p class="example"><a name="1000005758"></a>Assigns the value 100 to the variable named Amount.</p><p><code><a name="1000005759"></a>Amount:= Amount + {file.QTY}</code></p><p class="example"><a name="1000005760"></a>Assigns the result of a calculation to the variable named Amount. The calculation adds the value of the quantity field ({file.QTY}) to the current value of the Amount variable.</p><p><code><a name="1000005761"></a>Amount:= {file.QTY1} + {file.QTY2} + {file.QTY3}</code></p><p class="example"><a name="1000005762"></a>Totals the three quantity fields and assigns the total to the variable named Amount.</p><p><code><a name="1000005763"></a>Customer:= "Westside Motors"</code></p><p class="example"><a name="1000005764"></a>Assigns the <a href="glossary17.html#13544">string</a> "Westside Motors" to the variable named Customer.</p><p><code><a name="1000005765"></a>Customer:= {customer.FIRST NAME} + {customer.LAST NAME}</code></p><p class="example"><a name="1000005766"></a><a href="glossary4.html#13227">concatenate</a>s two fields and assigns the concatenated value of both fields to the variable named Customer.</p><p><code><a name="1000005767"></a>Customer:= TrimRight({customer.FIRST NAME}) + {customer.LAST NAME}</code></p><p class="example"><a name="1000005768"></a>Trims the trailing blanks from the first name field ({customer.FIRST NAME}), concatenates that field to the last name field ({customer.LAST NAME}), and assigns the concatenated value of both fields to the variable named Customer.</p><p><code><a name="1000005769"></a>Customer:= "Mr. " + {customer.LAST NAME}</code></p><p class="example"><a name="1000005770"></a>Concatenates the string "Mr. " with the value of the last name field {customer.LAST NAME} and assigns the concatenated value to the variable named Customer.</p><p><code><a name="1000005771"></a>Amount:= 100; Customer:= "Westside Motors"</code></p><p class="example"><a name="1000005772"></a>Assigns the constant 100 to the number variable named Amount and assigns the string "Westside Motors" to the string variable named Customer. You can assign values to multiple variables by separating the assignment statements with semicolons.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp58.html";
+var next = "OperatorsHelp60.html";
+
+function setTopicID() { 
+      var number = "1000030600"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

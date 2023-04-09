@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using ranges in formulas</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="128286"></a><h3 class="newpage"> Using ranges in formulas</h3>
+<p><a name="128288"></a>There are twenty<nobr>-s</nobr>even functions in Seagate Crystal Reports that specify date ranges. For example, the function LastFullMonth specifies a range of date values that includes all dates from the first to last day of the previous month. So if today's date is September 15, 1999 then LastFullMonth is the same as the range value CDate (#Aug 1, 1999#) To CDate (#Aug 31, 1999#).</p><p><a name="128290"></a>Ranges are often used with If or Select statements. The following example computes student letter grades based on their test scores. Scores greater than or equal to 90 receive an "A", scores from 80 to 90, not including 90 receive a "B" and so on.</p><PRE><a name="128292"></a>Rem Compute student letter grades
+<a name="128293"></a>Select Case {Student.Test Scores}
+<a name="147484"></a>   Case Is &gt;= 90
+<a name="128295"></a>      formula = "A"
+<a name="128296"></a>   Case 80 To_ 90
+<a name="128297"></a>      formula = "B"
+<a name="128298"></a>   Case 70 To_ 80
+<a name="128299"></a>      formula = "C"
+<a name="128300"></a>   Case 60 To_ 70
+<a name="147487"></a>      formula = "D"
+<a name="128302"></a>   Case Else
+<a name="128303"></a>      formula = "F"
+<a name="128304"></a>End Select
+</PRE><p><a name="128306"></a>The above example uses the Select statement which is discussed in more detail in <a href="20_basicsyntax48.html#132670">Control structures</a>. You can check if a value is in a range by using the In operator. For example:</p><PRE><a name="128308"></a>formula = 5 In 2 To 10 'True
+<a name="128309"></a>formula = 5 In 2 To_ 5 'False
+<a name="128310"></a>formula = 5 In 2 To 5 'True
+</PRE><p><a name="128312"></a>The Maximum and Minimum functions can be used to find the endpoints of a range:</p><PRE><a name="128313"></a>formula = Maximum (2 To 10) 'Returns 10
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax19.html";
+var next = "20_basicsyntax21.html";
+
+function setTopicID() { 
+      var number = "128286"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,8 @@
+:Base Server
+:Title Server
+1 Concurrent users on the Web Component Server
+2 Number of concurrent users=number
+1 Maximum number of concurrent users on the Web Component Server
+2 Reports that find out the maximum number of concurrent users=max
+2 Using the reports=use
+2 If reports are somewhere other than drive C:=setlocation

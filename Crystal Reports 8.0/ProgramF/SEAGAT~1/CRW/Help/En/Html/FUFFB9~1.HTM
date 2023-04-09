@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Format strings for Date, Time, and DateTime values</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000508901"></a><h4 class="newpage"> Format strings for Date, Time, and DateTime values</h4><p><a name="1000747239"></a>The following characters are used to create format strings for Date, Time, and DateTime values:</p><p><a name="1000747321"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1000747242"></a>Character
+
+</th><th align="left" valign="bottom"><a name="1000747244"></a>Comments
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747246"></a>d</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747248"></a>day of month without leading zero for single digits</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747250"></a>dd</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747252"></a>day of month with leading zero for single digits.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747254"></a>ddd</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747256"></a>day of week as a three letter abbreviation</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747258"></a>dddd</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747260"></a>full name of day of week</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747262"></a>M</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747264"></a>month without leading zero for single digit</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747266"></a>MM</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747268"></a>month with leading zero for single digit</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747270"></a>MMM</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747272"></a> month as three letter abbreviation.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747274"></a>MMMM</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747276"></a>full name of month</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747278"></a>yy</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747280"></a>last two digits of year</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747282"></a>yyyy</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747284"></a>full four digits of year</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747286"></a>h</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747288"></a>hours without leading zeros for single digits (12 hour)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747290"></a>hh</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747292"></a>hours without leading zeros for single digits (12 hour).</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747294"></a>H</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747296"></a>hours without leading zeros for single digits (24 hour)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747298"></a>HH</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747300"></a>hours with leading zeros for single digits (24 hour)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747302"></a>m</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747304"></a>minutes without leading zeros for single digits</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747306"></a>mm</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747308"></a>minutes with leading zeros for single digits</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747310"></a>s</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747312"></a>seconds without leading zeros for single digits</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747314"></a>ss</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747316"></a>seconds with leading zeros for single digits</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747318"></a>t, tt</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747320"></a>single character or multiple character a.m./p.m. string</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="1000747695"></a>The following table illustrates how format strings can affect different Date, Time, and DateTime values being converted by the ToText or <a href="functionshelp161.html#1000569614">CStr</a> function: </p><p><a name="1000747733"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="1000747698"></a>Date, Time, or DateTime value
+
+</td><td align="left" valign="TOP"><a name="1000747700"></a>Format String
+
+</td><td align="left" valign="TOP"><a name="1000747702"></a>Resulting String
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747704"></a>CDate(1996, 11, 1)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747706"></a>yy MMM dd, dddd</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747708"></a>96 Nov 01, Monday</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747710"></a>CTime(12, 10, 10)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747712"></a>HH*mm*ss tt</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747714"></a>12*10*10</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747716"></a>CDateTime(1995, 10, 12, 3, 30, 11)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747718"></a>HH:mm, yy MMMM ddd</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747720"></a>03:30, 96 October Mon</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747722"></a>CTime(13, 20, 22)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747724"></a>hh "h" mm "min" ss "sec" tt</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747726"></a>01 h 20 min 22 sec</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000747728"></a>CDate(1998, 3, 17)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747730"></a>M/dd/yy</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000747732"></a>3/17/98</P>
+
+
+</td></tr>
+
+</Table></p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp80.html";
+var next = "functionshelp82.html";
+
+function setTopicID() { 
+      var number = "1000508901"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

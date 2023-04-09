@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Downloading the Report Viewer from the server</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="153820"></a><h3 class="newpage"> Downloading the Report Viewer from the server</h3>
+<p><a name="153821"></a>In order for a web browser to use an ActiveX control stored on the web server, the browser must be able to download the control from the server and register it locally. The CODEBASE attribute of the OBJECT tag allows you to specify the location of the original ActiveX control, relative to the current page. For example:</p><p class="code"><a name="162358"></a>&lt;OBJECT ID="CRViewer" WIDTH=100% HEIGHT=95%
+<br><a name="162359"></a>&nbsp;&nbsp;&nbsp;&nbsp;CLASSID="CLSID:C4847596-972C-11D0-9567-00A0C9273C2A"
+<br><a name="162360"></a>&nbsp;&nbsp;&nbsp;&nbsp;CODEBASE="/viewer/ActiveXViewer/CRViewer.dll#Version=1.0.0.0&gt;
+<br><a name="162361"></a>&lt;/OBJECT&gt;
+</p><p><a name="153823"></a>The first part of the CODEBASE attribute value indicates the location and file name of the ActiveX control as a URL address relative to the current web page. The Version attribute that appears after the # symbol is optional and allows you to specify which version of the Report Viewer for ActiveX you want to provide for your users. If you specify 1.0.0.0, the most recent version available on either the server or the client is automatically used by the browser.</p><p><a name="153824"></a>When a web browser opens this page, it first checks the CLASSID attribute to see if the control is already registered on the client system. If not, or if the version number of the viewer is lower than the current viewer registered on the system, the browser uses the CODEBASE attribute to find the control and download it. Once downloaded, the control can be registered and displayed by the browser.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "Report_Viewers9.html";
+var next = "Report_Viewers11.html";
+
+function setTopicID() { 
+      var number = "153820"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

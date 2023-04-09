@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>To create a running total in a list</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1057468"></a><h4 class="newpage"> To create a running total in a list</h4><ol>
+<a name="1045980"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><strong></strong>To get started, create a report using the sample database <kbd>Xtreme.mdb</kbd> located in the <kbd>File Data Sources</kbd> folder of the Data Explorer dialog box. Link the Customers and Orders tables, and then place the following fields from left to right in the Details section:
+</ol>
+<PRE><a name="1045981"></a>{customer.CUSTOMER NAME}
+<a name="1045991"></a>{orders.ORDER ID}
+<a name="1045992"></a>{orders.ORDER AMOUNT}
+</PRE><ol>
+<a name="1026383"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Insert</kbd> menu, click <kbd>Running Total Field</kbd>.
+<p class="indent"><a name="1041911"></a>The Field Explorer dialog box appears.</p><a name="1026384"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Double<nobr>-c</nobr>lick <kbd>Running Total Fields</kbd>.
+<p class="indent"><a name="1051485"></a>The Create Running Total Field dialog box appears.</p><a name="1051486"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Enter the name "TotalOrders" in the <kbd>Running Total Name</kbd> box.
+<a name="1051487"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Highlight {orders.ORDER AMOUNT} in the <kbd>Available Tables and Fields</kbd> box, and use the first arrow button to move it over to the <kbd>Field to summarize</kbd> box.
+<a name="1026390"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Select <kbd>sum</kbd> from the <kbd>Type of summary</kbd><EM> </EM>list.
+<a name="1026391"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Evaluate</kbd> section of the dialog box, click <kbd>On change of field</kbd>, and select {orders.ORDER ID} as the <kbd>On change of</kbd> field.
+<p class="indent"><a name="1048066"></a>The running total will execute each time this field changes.</p><a name="1026392"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Reset</kbd> section of the dialog box, click <kbd>Never</kbd> (this gives you a running total that never resets; that is, the running total continues throughout the report).
+<a name="1026393"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> to save the running total field.
+<p class="indent"><a name="1042011"></a>The program returns you to the Field Explorer dialog box.</p><a name="1026394"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Insert the running total field in the Details section of the report, just to the right of {orders.ORDER AMOUNT}.
+<p><a name="1050349"></a> </p>
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "09_runtotal6.html";
+var next = "09_runtotal8.html";
+
+function setTopicID() { 
+      var number = "1057468"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

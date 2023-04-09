@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DateTimeValue</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000533082"></a><h3 class="newpage"> DateTimeValue</h3>
+<p><a name="1000690966"></a>Basic and Crystal syntax.</p><p><a name="1000691055"></a>The <a href="functionshelp164.html#1000201915">CDateTime</a> and <a href="functionshelp108.html#1000581401">DateTime</a> functions are equivalent to DateTimeValue. However, DateTime can only be used in Crystal syntax since it is a type name in Basic syntax.</p><a name="1000533083"></a><h5>Overloads</h5><ul type="disc"><a name="1000533084"></a><li>DateTimeValue (date)
+<a name="1000533085"></a><li>DateTimeValue (date, time)
+<a name="1000533086"></a><li>DateTimeValue (number)
+<a name="1000533087"></a><li>DateTimeValue (string)
+<a name="1000533088"></a><li>DateTimeValue (YYYY, MM, DD)
+<a name="1000533089"></a><li>DateTimeValue (YYYY, MM, DD, HH, MM, SS)
+</ul><a name="1000533090"></a><h5>Arguments</h5><p><a name="1000605701"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><P><a name="1000605704"></a>DateTimeValue (date)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000605780"></a><li>date is a Date value.
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000605708"></a>DateTimeValue (date, time)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000605837"></a><li>date is a Date value.
+<a name="1000605838"></a><li>time is a Time value.
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000605897"></a>DateTimeValue (number)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000605977"></a><li>number represents a number of days from December 30, 1899, example: 20 represents 20 days from December, 1899, which is January 19, 1900.
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000606057"></a>DateTimeValue (string)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000606180"></a><li>string represents a date and time, example: "September 15, 1999, 10:45a.m."
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000606373"></a>DateTimeValue (year, month, day)</P>
+
+
+<P><a name="1000606406"></a>DateTimeValue (year, month, day, hour, min, sec)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000607377"></a><li>year is a whole number representing a calendar year, example: 1996.
+<a name="1000607378"></a><li>month is a whole number representing a month, example: 1 for January.
+<a name="1000607379"></a><li>day is a whole number representing a day of the month, example: 10.
+<a name="1000607380"></a><li>hour is a whole number representing an hour of the day, example: 12.
+<a name="1000607381"></a><li>min is a whole number representing a minute, example: 59.
+<a name="1000607382"></a><li>sec is a whole number representing seconds, example: 30.
+</ul></td></tr>
+
+</Table></p>
+<a name="1000533107"></a><h5>Returns</h5><p><a name="1000533108"></a>DateTime value.</p><a name="1000533109"></a><h5>Action</h5><p><a name="1000533110"></a><strong>DateTimeValue (</strong><strong>date</strong><strong>) </strong>returns a DateTime value given a Date value, assigning 12:00:00 AM for the time portion for the returned DateTime value.</p><p><a name="1000533112"></a><strong>DateTimeValue (</strong><strong>date, time</strong><strong>) </strong>returns a DateTime value given a Date and a Time value.</p><p><a name="1000533114"></a><strong>DateTimeValue (</strong><strong>number</strong><strong>) </strong>returns a DateTime value given a number that specifies the number of days from December 30, 1899. Number can be positive or negative, and can be fractional. </p><p><a name="1000533116"></a><strong>DateTimeValue (</strong><strong>string</strong><strong>) </strong>returns a DateTime value given a string that specifies a date and time; various formats of the string are supported.</p><p><a name="1000533118"></a><strong>DateTimeValue (</strong><strong>YYYY, MM, DD</strong><strong>) </strong>returns a DateTime value given numeric arguments for the year, month and day. Assigns 12:00:00 AM for the time portion for the returned DateTime value.</p><p><a name="1000533120"></a><strong>DateTimeValue (</strong><strong>YYYY, MM, DD, HH, MM, SS</strong><strong>) </strong>returns a DateTime value given numeric arguments for the year, month, day, hour, minute and second.</p><a name="1000533121"></a><h5>Examples</h5><p><a name="1000533122"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000533123"></a>DateTimeValue ("10/4/1999 10:20am")</code></p><p class="example"><a name="1000533124"></a>Returns the DateTime value October 4, 1999 10:20:00 am</p><p><code><a name="1000533125"></a>DateTimeValue (12.5)</code></p><p class="example"><a name="1000533126"></a>Returns the DateTime value January 11, 1900 12:00:00 pm</p><p><code><a name="1000533127"></a>DateTimeValue (-2.5)</code></p><p class="example"><a name="1000533128"></a>Returns the DateTime value December 27, 1899, 12:00:00 pm</p><p><code><a name="1000533129"></a>DateTimeValue (CDate ("Dec. 25, 1999"))</code></p><p class="example"><a name="1000533130"></a>Returns the DateTime value December 25, 1999 12:00:00 am</p><p><code><a name="1000533131"></a>DateTimeValue (CDate ("November 10, 1999"), CTime("12:20am"))</code></p><p class="example"><a name="1000533132"></a>Returns the DateTime value November 10, 1999 12:20:00 am</p><p><code><a name="1000533133"></a>DateTimeValue (1945, 8, 21, 0, 0, 0)</code></p><p class="example"><a name="1000533134"></a>Returns the DateTime value August 21, 1945 12:00:00 am</p><p><code><a name="1000533135"></a>DateTimeValue (1945, 8, 21, 10, 0, 0)</code></p><p class="example"><a name="1000533136"></a>Returns the DateTime value August 21, 1945 10:00:00 am</p><a name="1000691022"></a><h5>Comments</h5><p><a name="1000691024"></a>You can use the IsDateTime function to check if a String argument can be converted to a DateTime before doing the actual conversion. That way, if the conversion cannot be done, you can handle the situation appropriately. </p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp110.html";
+var next = "functionshelp112.html";
+
+function setTopicID() { 
+      var number = "1000533082"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

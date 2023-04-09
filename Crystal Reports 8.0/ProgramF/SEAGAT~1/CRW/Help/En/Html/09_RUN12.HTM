@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Creating running totals in a one-to-many linking relationship </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1041724"></a><h3 class="newpage"> Creating running totals in a one-to-many linking relationship </h3>
+<p><a name="1048833"></a>The term A to B, A to C report is used to refer to any report in which a primary table is linked to two lookup tables (see <a href="24_under_databases15.html#13355">Methods of looking up tables (direct access databases)</a>). However, in a true A to B, A to C link, a single field in the primary table is used to link to both of the lookup tables.</p><p><a name="1026623"></a>In a true A to B, A to C relationship, one of the two lookup tables usually has more records than the other. If you group these records based on a field in the primary table, values in the smaller lookup table are repeated for each value in the larger lookup table. The following table shows data for an A to B, A to C relationship. The Customer table is linked to the Credit table and again to the Orders table. Notice that Jones has only one Credit ID, but the credit and its amount are repeated, once for each of Jones' two orders.</p><p><a name="1036665"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1026626"></a>Name
+
+</th><th align="left" valign="bottom"><a name="1026628"></a>Credit ID
+
+</th><th align="left" valign="bottom"><a name="1026630"></a>Credit 
+Amount
+
+</th><th align="left" valign="bottom"><a name="1026632"></a>Order ID
+
+</th><th align="left" valign="bottom"><a name="1026634"></a>Order 
+Amount
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1026636"></a>Jones</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026638"></a>1</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026640"></a>-10.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026642"></a>1</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026644"></a>10.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1026646"></a>Jones</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026648"></a>1</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026650"></a>-10.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026652"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026654"></a>12.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1026666"></a>Smith</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026668"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026670"></a>-23.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026672"></a>3</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026674"></a>20.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1026676"></a>Smith</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026678"></a>3</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026680"></a>-45.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026682"></a>4</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026684"></a>30.00</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="1026685"></a>In this example, a standard subtotal is used for both the Order Amount field and the Credit Amount field. Thus, Jones' single credit is counted twice, and the subtotal displays an inaccurate value of -20.00.</p><p><a name="1036666"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1026688"></a>Name
+
+</th><th align="left" valign="bottom"><a name="1026690"></a>Credit ID
+
+</th><th align="left" valign="bottom"><a name="1026692"></a>Credit 
+Amount
+
+</th><th align="left" valign="bottom"><a name="1026694"></a>Order ID
+
+</th><th align="left" valign="bottom"><a name="1026696"></a>Order 
+Amount
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1026698"></a>Jones</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026700"></a>1</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026702"></a>-10.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026704"></a>1</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026706"></a>10.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1026708"></a>Jones</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026710"></a>1</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026712"></a>-10.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026714"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026716"></a>12.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026722"></a>-20.00</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026726"></a>22.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1026738"></a>Smith</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026740"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026742"></a>-23.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026744"></a>3</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026746"></a>20.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1026748"></a>Smith</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026750"></a>3</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026752"></a>-45.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026754"></a>4</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026756"></a>30.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026762"></a>-68.00</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1026766"></a>50.00</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="1039320"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Notice that the total Credit Amount for Jones is incorrect.</p>
+<p><a name="1026777"></a>This problem also occurs in the Order Amount field if Jones had two different Credit Amounts and only one Order Amount. Avoid this problem by creating a running total for each field you want subtotaled.</p><p><a name="1057557"></a>To create a report that uses running totals in a on<nobr>-t</nobr>o<nobr>-m</nobr>any linking relationship, see the following:</p><ul type="disc"><a name="1057561"></a><li><a href="09_runtotal13.html#1057567">Creating a one<nobr>-t</nobr>o<nobr>-m</nobr>any linking relationship</a>
+<a name="1057565"></a><li><a href="09_runtotal14.html#1057590">Creating a running total in a one<nobr>-t</nobr>o<nobr>-m</nobr>any linking relationship</a>
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "09_runtotal11.html";
+var next = "09_runtotal13.html";
+
+function setTopicID() { 
+      var number = "1041724"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

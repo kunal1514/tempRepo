@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DTSTo2000 (DateString, Number)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000585345"></a><h3 class="newpage"> DTSTo2000 (DateString, Number)</h3>
+<p><a name="1000651789"></a>Basic and Crystal syntax.</p><a name="1000585350"></a><h5>Arguments</h5><ul type="disc"><a name="1000585351"></a><li>Date String: accepts only valid date fields, with either 2 digit or 4 digit years.
+<ul type="disc"><ul type="disc"><a name="1000585352"></a><li>a database field defined as a date field. File|Report Options should be set to Convert Date<nobr>-T</nobr>ime fields to Date<nobr>-T</nobr>ime String.<a name="1000585353"></a><li>a database field defined as a string field, but containing a date.<a name="1000585354"></a><li>a date<nobr>-t</nobr>ime string entered in the format: "yyyy/MM/dd HH:mm:ss.00" or "yy/MM/dd HH:mm:ss:00", example: "1997/04/11 12:12:12.00" or "97/04/11 12:12:12.00".</ul></ul><a name="1000585355"></a><li>Number: a number between 0 and 99 corresponding with the desired windowing year.
+</ul><a name="1000585356"></a><h5>Returns</h5><p><a name="1000585357"></a>a DateTime string with a four digit year</p><a name="1000585358"></a><h5>Action </h5><ul type="disc"><a name="1000585359"></a><li>2 digit years (xx):
+<p class="indent"><a name="1000585360"></a>If the Year value is greater than the windowing number, 19 is appended before the 2 digits (19xx). If the Year value is less than or equal to the windowing number, 20 is appended (20xx).</p><a name="1000585361"></a><li>4 digit years (19xx):
+<p class="indent"><a name="1000585362"></a>If the last two digits in the Year value are greater than the windowing number, the Year is preserved as found in the date field (19xx). If the two digits in the Year value are less than or equal to the windowing number, the first two digits are changed to 20 (20xx). If the first two digits in the year field are 20, the Year is preserved as found in the date field (20xx).</p><p class="indent"><a name="1000585363"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If the year is less than or equal to 1899 and greater than or equal to 100, there will be no change to the date.</p>
+</ul><a name="1000585364"></a><h5>Examples</h5><p><a name="1000585365"></a>The following examples are applicable to Basic and Crystal syntax:</p><p><a name="1000585366"></a>Here the window value is greater than the year and so it will change it to 20XX.</p><p><code><a name="1000585367"></a>DTSTo2000(ToText(CDateTime(1988,12,12,12,12,12)), 90)</code></p><p class="example"><a name="1000585368"></a>should return 2093/12/12 12:12:12</p><p><a name="1000585369"></a>Here the window value is less than the year and so it will not change the year.</p><p><code><a name="1000585370"></a>DTSTo2000(ToText(CDateTime(1984,12,12,1,2,3)), 83)</code></p><p class="example"><a name="1000585371"></a>should return 1984/12/12 1:02:03</p><a name="1000585372"></a><h5>Other Examples </h5><p><a name="1000585373"></a>These are examples of a date that will not be affected by the function.</p><p><code><a name="1000585374"></a>DTSTo2000(ToText(CDateTime(1899,12,12,1,2,3)), 99)</code></p><p class="example"><a name="1000585375"></a>should return 1899/12/12 1:02:03</p><p><code><a name="1000585376"></a>DTSTo2000(ToText(CDateTime(1899,12,12)), 99)</code></p><p class="example"><a name="1000585377"></a>should return 1899/12/12 12:00:00</p><p><code><a name="1000585378"></a>DTSTo2000(ToText(CDateTime(100,12,12,1,2,3)), 99)</code></p><p class="example"><a name="1000585379"></a>should return 100/12/12 1:02:03</p><p><a name="1000585380"></a>Some databases maintain the year of a date as a two digit field and so these samples will simulate that date field.</p><p><code><a name="1000585381"></a>DTSTo2000(ToText(CDateTime(98,12,12,1,2,3)), 99)</code></p><p class="example"><a name="1000585382"></a>should return 2098/12/12 1:02:03</p><p><code><a name="1000585383"></a>DTSTo2000(ToText(CDateTime(98,12,12,1,2,3)), 97)</code></p><p class="example"><a name="1000585384"></a>should return 1998/12/12 1:02:03</p><p><code><a name="1000585385"></a>DTSTo2000(ToText(CDateTime(98,12,12), 97)</code></p><p class="example"><a name="1000585386"></a>should return 1998/12/12 12:00:00</p><p><code><a name="1000585387"></a>DTSTo2000(ToText(CDateTime(9,12,12,1,2,3)), 10)</code></p><p class="example"><a name="1000585388"></a>should return 2009/12/12 1:02:03</p><p><code><a name="1000585389"></a>DTSTo2000(ToText(CDateTime(1,12,12,1,2,3)), 0)</code></p><p class="example"><a name="1000585390"></a>should return 1901/12/12 1:02:03</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp205.html";
+var next = "functionshelp207.html";
+
+function setTopicID() { 
+      var number = "1000585345"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

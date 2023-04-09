@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula fields</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="24475"></a><h4 class="newpage"> Formula fields</h4><p><a name="24476"></a>To display data that is a calculated value, you need to create a formula field and place that formula field on the report. For example, if the database only stores the order dates and ship dates for orders but you need to display the number of days it takes to ship the order, you must create a formula field that will calculate the number of days between ordering and shipping. This is just one example of the use of formula fields. See <EM><a href="19_introformulas.html#172160">Using Formulas</a>, </EM>for an introduction to formulas.</p><a name="205097"></a><h4>Running total fields</h4><p><a name="205090"></a>To display a total that evaluates each record and provides a running sum of all the values in a field (or all the values in a certain set of values), a running total field needs to be created and placed in the report. If the first three values in a field were 2, 4, and 6, a running total would print 2, and then 6 (the sum of 2 + 4), and then 12 (the sum of 2 + 4 + 6). See <a href="09_runtotal.html#1045719">Running Totals</a>, for an introduction to running totals.</p><a name="335202"></a><h4>Picture fields</h4><p><a name="337311"></a>When designing reports, there will be times when you want to include a picture. For example, you may wish to put a company logo in the report header.</p><a name="296076"></a><h6>To insert a picture</h6><ol>
+<a name="296083"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/06_create_rpt8a.gif">
+
+
+On the Supplementary toolbar, click <kbd>Insert Picture</kbd>.
+<p class="indent"><a name="296084"></a>The Open dialog box appears.</p><a name="296085"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Select the desired picture file from the file list and click <kbd>Open</kbd> to return to the report.
+<p class="indent"><a name="337341"></a>An object frame appears with the picture inside, ready to be positioned.</p><p><a name="338778"></a> <img src="images/plc_pict.gif">
+
+
+</p>
+<a name="296090"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Position the picture object where you want it to appear in the report and right<nobr>-c</nobr>lick once.
+</ol>
+<a name="295980"></a><h4>SQL Expression fields</h4><p><a name="227950"></a>SQL expressions are like formulas, but they are written in Structured Query Language (SQL), not in the Seagate Crystal Reports formula language. An SQL expression can be used to query the database for specific sets of data. You can sort, group, and select based on SQL expression fields. See <a href="26_sql.html#109443">The Crystal SQL Designer</a>, for an introduction to SQL expressions.</p><p><a name="295316"></a>When an SQL/ODBC data source is used to design a report, the program adds SQL Expressions Fields to the Field Explorer dialog box. This new option allows SQL expressions to be entered in the Field Explorer and then inserted into a report quickly and efficiently.</p><a name="337356"></a><h6>To create an SQL Expression field</h6><ol>
+<a name="337393"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_indat.gif">
+
+
+On the Standard toolbar, click <kbd>Insert Fields.</kbd>
+<p class="indent"><a name="337394"></a>The Field Explorer dialog box appears with <EM>Database Fields</EM> selected.</p><a name="337399"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Scroll down to <kbd>SQL Expression Fields</kbd> and double<nobr>-c</nobr>lick it.
+<p class="indent"><a name="295318"></a>The SQL Expression Name dialog box appears.</p><a name="295319"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Enter a name in the <kbd>Name</kbd> box, and then click <kbd>OK</kbd>.
+<p class="indent"><a name="295320"></a>The SQL Expression Editor appears.</p><p><a name="295324"></a> <img src="images/SQLEditor.gif">
+
+
+</p>
+<p class="indent"><a name="343078"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The SQL Expression Editor functions in the same way as the Formula Editor. For a discussion of these tools see<a href="19_introformulas5.html#207521">Formula components and syntax</a>. </p>
+<a name="343082"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Type the expression in the SQL Expression Editor.
+<a name="295331"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd>.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "06_create_rpt21.html";
+var next = "06_create_rpt23.html";
+
+function setTopicID() { 
+      var number = "24475"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

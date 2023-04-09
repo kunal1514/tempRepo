@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Strategies for writing efficient record selection formulas</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="101818"></a><h3 class="newpage"> Strategies for writing efficient record selection formulas</h3>
+<p><a name="101819"></a>Consider the following points when creating a record selection formula:</p><a name="102515"></a><h4>Consideration #1</h4><p><a name="101820"></a>Any record selection formula that you can generate completely with the Select Expert, without writing pieces of the formula yourself, can be pushed down.</p><p><a name="101821"></a>This case actually follows from the points below. However, you can write more types of record selection formulas using the tips below than is possible with the Select Expert. To do this, you need to edit the record selection formula directly with the Formula Editor or from within the large text window in the Select Expert.</p><a name="102516"></a><h4>Consideration #2</h4><p><a name="101822"></a>Any selection formula that is of the form: <EM>DataBaseField SupportedOperator ConstantOrParameterExpression</EM> can be pushed down.</p><p><a name="101823"></a>Of course <EM>DataBaseField</EM> is just a database field. <EM>SupportedOperator</EM> is any of =, &lt;&gt;, &lt;, &lt;=, &gt;, &gt;=, StartsWith, Like or In.</p><p><a name="101824"></a><EM>ConstantOrParameterExpression </EM>is any expression that involves constant values, operators, functions and parameter fields. It cannot involve variables, control structures and fields other than parameter fields. By their very definition, constant and parameter expressions can be evaluated without accessing the database.</p><p><a name="101825"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>A constant or parameter expression can evaluate to a simple value, range value, array value or an array of range values. Here are some examples of such expressions:</p>
+<PRE><a name="101826"></a>{?number parameter} - 3
+<a name="101827"></a>Year ({?run date})
+<a name="101828"></a>CurrentDate + 5
+<a name="101829"></a>DateDiff ("q", CurrentDate, CDate("Jan 1, 1996"))
+<a name="101830"></a>Month (Maximum ({?date range parameter}) + 15)
+<a name="101831"></a>["Canada", "Mexico", "USA", {?enter a country}]
+<a name="101832"></a>1000 To 5000
+<a name="101833"></a>[5000 To 10000, 20000 To 30000, 50000 To 60000]
+</PRE><p><a name="101834"></a>A complete example:</p><p><code><a name="101835"></a>{Orders.Order Date} &gt;= CurrentDate - 3</code></p><p><a name="101836"></a>The program can also push down an expression that just contains a Boolean field (without the operator and constant parts).</p><PRE><a name="101837"></a>{Orders.Shipped}
+<a name="101838"></a>Not {Orders.Shipped}
+</PRE><a name="101839"></a><h4>Consideration #3</h4><p><a name="102517"></a>IsNull (<EM>DataBaseField</EM>) can be pushed down.</p><a name="102518"></a><h4>Consideration #4</h4><p><a name="101840"></a><EM>SqlExpression SupportedOperator ConstantOrParameterExpression</EM> can be<br>pushed down.</p><p><a name="101841"></a>For example, the selection formula {@ExtendedPrice} &gt; 1000 cannot be pushed down if {@ExtendedPrice} is Quantity * Price. However, if the formula @ExtendedPrice is replaced with the equivalent SQL Expression, then this will be pushed down.</p><a name="102519"></a><h4>Consideration #5</h4><p><a name="101842"></a>Expressions following the above considerations, separated by "And"s and "Or"s. You can have several of each, and use parentheses to give priority. You can also use "Not". For example:</p><PRE><a name="101843"></a>{Orders.Order ID} &lt; Minimum({?number range}) Or
+<a name="101844"></a>{Orders.Order Amount} &gt;= 1000
+<a name="105167"></a>
+<a name="101845"></a>(IsNull({Customer.Region}) Or 
+<a name="101846"></a> {Customer.Region} = "BC") And
+<a name="101847"></a>{Customer.Last Year's Sales} &gt; 2000
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "07_recordgroupsel15.html";
+var next = "07_recordgroupsel17.html";
+
+function setTopicID() { 
+      var number = "101818"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

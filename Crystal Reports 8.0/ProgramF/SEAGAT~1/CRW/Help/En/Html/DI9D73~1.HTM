@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Number tab </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000245235"></a><h3 class="newpage"> Number tab </h3>
+<p><a name="1000245236"></a>Use the Number tab (click Customize on the Number tab of the Format Editor) to set detailed formatting options for number fields in your report.</p><a name="1000245237"></a><h5>Use Accounting Format </h5><p><a name="1000245238"></a>When you select this option:</p><ul type="disc"><a name="1000245239"></a><li>the negative symbol used and its position is determined by the Windows Regional Settings (it will be either the minus sign or the brackets)
+<a name="1000245240"></a><li>the dash will be automatically chosen for "Show Zero Values as" (zero values are automatically displayed as dashes ('-') in your report
+<a name="1000245241"></a><li>the currency symbol is fixed on the left side.
+</ul><a name="1000245242"></a><h5>Suppress if Zero </h5><p><a name="1000245243"></a>When you select this check box, nothing is printed in a column of number field data if it the value is zero.</p><a name="1000245244"></a><h5>Decimals </h5><p><a name="1000245245"></a>When you are setting up a custom format for a number field object, use this list to set the Decimals property for that object. This option allows you to specify the number of decimal places you want to print. You can specify from 0 to 10 decimal places. When you choose the number of decimal places you want, the program changes the sample number at the bottom of the dialog box to show you the results of your selection.</p><a name="1000245246"></a><h5>Rounding </h5><p><a name="1000245247"></a>When you are setting up a custom format for a number field object, use this list to set the Rounding property for that object. This property allows you to specify the number of places you want to round to. When you choose the number of places you want, the program changes the sample number at the bottom of the dialog box to show you the results of your selection.</p><a name="1000245248"></a><h5>Negatives </h5><p><a name="1000245249"></a>When you are setting up a custom format for a number field object, this property enables you to specify the way you want negative values to appear. Your options are:</p><p><a name="1000245263"></a> <Table Border="0">
+<tr><td align="left" valign="TOP"><P><a name="1000245252"></a>-1.23</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000245254"></a>Prints negative values with a leading minus sign (-100.00, -225.73, -1,000,000).</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000245256"></a>1.23-</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000245258"></a>Prints negative values with a trailing minus sign (100.00-, 225.73-, 1,000,000.00-).</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000245260"></a>(1.23)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000245262"></a>Prints negative values in parentheses [ (100.00), (225.73), (1,000,000) ].</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="1000245264"></a>Set the Negatives property to fit your needs. The program changes the sample number at the bottom of the dialog box to reflect the property you choose.</p><a name="1000245265"></a><h5>Reverse Sign for Displaying </h5><p><a name="1000245266"></a>You can reverse the sign for debit and credit amounts in financial reports by selecting this check box.</p><a name="1000245267"></a><h5>Allow Field Clipping </h5><p><a name="1000245268"></a>The Allow Field Clipping check box determines whether overflow field representation is enabled for the selected field(s).</p><ul type="disc"><a name="1000245269"></a><li>Select this check box to disable overflow field representation. This means that if the value in the field is too large for the field, the value will be truncated. For example, if you have a field that is sized to allow 5 characters, and the value in the field is 3708.19, the field will print the value: 3708.1 (assuming that the field values are right<nobr>-j</nobr>ustified).
+<a name="1000245270"></a><li>Clear this check box to disallow field clipping and enable overflow field representation. With overflow field representation enabled, values that are too large for their fields will be represented by a string of # signs. For example, if you have a field that is sized to allow 5 characters, and the value in the field is 3708.19, the field will print: #####. This lets you know that the field needs to be resized (or that you need to select the Can Grow property).
+</ul><a name="1000245271"></a><h5>Decimal separator </h5><p><a name="1000245272"></a>When you are setting up a custom format for a number field object, the Decimal box allows you to type in the character(s) you want to use as a decimal separator. The default is a decimal point (.). If you want to change the separator, replace the character in the edit box with the separator of your choice. The program modifies the sample number at the bottom of the dialog box as you type in your characters.</p><p><a name="1000245273"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The box does not expand as you type in your separation characters; you are limited to the number of characters the box will hold.</p>
+<a name="1000245274"></a><h5>Thousands Separator </h5><p><a name="1000245275"></a>The Thousands separator property allows you to choose the way you want numbers over 999 to appear on your reports. </p><ul type="disc"><a name="1000245276"></a><li>When you select the property (check mark), the program inserts a comma (,) or another separator of your choice as a thousands separator character for amounts over 999. Your numbers are printed like this: 1,000.00, 10,000.00, 999,000.00. 
+<a name="1000245277"></a><li>When you clear the property you deactivate the thousands separator character. Your numbers are printed like this: 1000.00, 10000.00, 999000.00.
+</ul><a name="1000245278"></a><h5>Symbol </h5><p><a name="1000245279"></a>This box displays the current thousands separator. The default is a comma (,). If you would like to use a different thousands separator, type it in this box. The changes you make in this box do not apply unless you select the Thousands Separator check box.</p><a name="1000245280"></a><h5>Leading Zero </h5><p><a name="1000245281"></a>Leading Zero allows you to include a zero, if you wish, before the decimal point in decimal amounts less than one.</p><ul type="disc"><a name="1000245282"></a><li>Select this property if you want the program to include a zero before the decimal point whenever you have a decimal amount less than one (0.001, 0.9999, 0.755).
+<a name="1000245283"></a><li>Clear this property if you do not want the leading zero (.001, .999, .755).
+</ul><a name="1000245284"></a><h5>Show Zero Values as </h5><p><a name="1000245285"></a>This list contains the options available for displaying values of zero (0) in the selected field.</p><a name="1000245286"></a><h6>Related topics</h6><p><a name="1000245290"></a><a href="dialogs66.html#1000269594">Format Editor</a></p><p><a name="1000245294"></a><a href="11_format.html#192134">Formatting</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs26.html";
+var next = "dialogs28.html";
+
+function setTopicID() { 
+      var number = "1000245235"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

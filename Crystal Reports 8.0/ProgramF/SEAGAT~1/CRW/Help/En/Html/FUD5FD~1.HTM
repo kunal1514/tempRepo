@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>AllDatesToYesterday</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000559528"></a><h3 class="newpage"> AllDatesToYesterday</h3>
+<p><a name="1000696682"></a>Basic and Crystal syntax.</p><a name="1000559531"></a><h5>Returns</h5><p><a name="1000559532"></a>None</p><a name="1000559533"></a><h5>Action</h5><p><a name="1000559534"></a>Specifies a range of Date values that includes every day up through the previous day. AllDatesToYesterday includes all dates before today, but does not include the present day.</p><a name="1000559536"></a><h5>Examples</h5><p><a name="1000559537"></a>The following examples are applicable to Crystal syntax:</p><p class="code"><a name="1000559539"></a>If {orders.ORDER DATE} in AllDatesToYesterday Then
+<br><a name="1000748457"></a>&nbsp;&nbsp;&nbsp;&nbsp;{orders.ORDER AMOUNT}
+<br><a name="1000748466"></a>Else
+<br><a name="1000748475"></a>&nbsp;&nbsp;&nbsp;&nbsp;0
+</p><p class="indent"><a name="1000559540"></a>Returns the Amount if the date falls on any date from the first date entered to yesterday. The following table identifies the first and last dates included in the date range if today equals 04/10/98. </p><p><a name="1000559578"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="1000559543"></a>If today = 04/10/98
+
+</td><td align="left" valign="TOP"><a name="1000559545"></a>{orders.ORDER DATE}
+
+</td><td align="left" valign="TOP"><a name="1000559547"></a>{orders.ORDER AMOUNT}
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000559549"></a>first date included<br>(earliest date in field)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559551"></a>12/10/97</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559553"></a>1252.24</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559557"></a>01/05/98</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559559"></a>1597.87</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559563"></a>03/05/98</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559565"></a>2546.35</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000559567"></a>last date included</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559569"></a>04/09/98</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559571"></a>5462.21</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000559573"></a>not in range</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559575"></a>04/10/98</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000559577"></a>0</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="1000678773"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If you would like to base the date range on a date other than today's date, you must either change the date via the Date/Time option in the Windows Control Panel, or change the report print date via the <a href="COMMANDS142.html#131801">Set Print Date/Time command</a> in the Report Menu.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp140.html";
+var next = "functionshelp142.html";
+
+function setTopicID() { 
+      var number = "1000559528"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

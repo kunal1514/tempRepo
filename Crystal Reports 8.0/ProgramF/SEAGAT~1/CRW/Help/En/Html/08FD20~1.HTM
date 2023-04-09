@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Selecting top or bottom N groups</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="277333"></a><h3 class="newpage"> Selecting top or bottom N groups</h3>
+<p><a name="290173"></a>At times, you might want to show only the "top" or "bottom" groups in a report: the fastest selling product lines, the least productive sales regions, the states that generate the most orders, etc. Because this kind of group selection is so popular, the program includes the Top N/ Sort Group Expert for setting it up easily.</p><p><a name="290174"></a>There is one other element to consider when setting up Top N: what to do with all the records from other groups that do not fit the Top N or Bottom N criteria you have set. You need to decide whether to eliminate those records from your report entirely or to lump them all together into a single group. The program enables you to do choose either option.</p><p><a name="277336"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>A report must contain a summary value in order to be able to perform a top N or bottom N selection. See <a href="08_sortgrouptotal16.html#277036">Summarizing grouped data</a>.</p>
+<a name="277337"></a><h6>To select the top or bottom N groups</h6><ol>
+<a name="277338"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Create a report and summarize the data as desired. When you summarize the data, the program breaks the data into groups and summarizes each group.
+<ul type="disc"><ul type="disc"><a name="277339"></a><li>with top N grouping, you are instructing the program to display those groups that have the highest summary values (Top N)<a name="277340"></a><li>with bottom N grouping, you are instructing the program to display those groups that have the lowest summary values (Bottom N).</ul></ul><a name="277345"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/08_sortgrouptotal5a.gif">
+
+
+Click the <kbd>Top N Expert</kbd> button on the Supplementary toolbar. 
+<p class="indent"><a name="277346"></a>The Top N/Sort Group Expert appears with a tab for your group.</p><p class="indent"><a name="277347"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If you have multiple groups, the program will display a tab for each of the groups.</p>
+<a name="277352"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Choose <kbd>Top N</kbd>, <kbd>Bottom N</kbd>, or <kbd>Sort All</kbd> from the first drop<nobr>-d</nobr>own list.
+<a name="277353"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Choose the summary that you want to base your selection on from the summary drop<nobr>-d</nobr>own list on the right.
+<p class="indent"><a name="277354"></a>The summary drop<nobr>-d</nobr>own list on the right is for those cases in which you have multiple summaries within a single group section. For example, in an orders report, you might sum and average the orders for each customer and then display both the sum and the average in the same group section. In such a case, you would select the sum or the average from this drop<nobr>-d</nobr>own list.</p><a name="298779"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">In the <strong>where N is</strong> text box, enter the number of groups you want to display. For example:
+<ul type="disc"><ul type="disc"><a name="277357"></a><li>to report on the three fastest selling product lines, select the top N option in the Top N Sort Group Expert and set <EM>N</EM> to be equal to three<a name="277358"></a><li>to report on the five least productive sales regions, select the bottom N option in the Top N Sort Group Expert<kbd> </kbd>and set <EM>N</EM> to be equal to five.</ul></ul><a name="277361"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click the <strong>include Others, with the name</strong> check box and enter a name if you want to group all the other records into a single group.
+<a name="277363"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong> when finished.
+<p class="indent"><a name="277364"></a>When the program runs the report, it will include only those groups that you specified.</p></ol>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "08_sortgrouptotal17.html";
+var next = "08_sortgrouptotal19.html";
+
+function setTopicID() { 
+      var number = "277333"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

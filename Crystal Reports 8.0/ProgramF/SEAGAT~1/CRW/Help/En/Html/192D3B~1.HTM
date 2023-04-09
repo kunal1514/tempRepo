@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 7</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="304798"></a><h3 class="newpage"> Formula 7</h3>
+<a name="304799"></a><h4>Operators/Functions Used</h4><p><a name="304800"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Subtract (-), Greater than (&gt;), Maximum ([array]), Multiply (*), Parentheses ().</p><a name="304801"></a><h4>Formula Purpose</h4><p><a name="304802"></a>A company has the following bonus/commission structure for its sales force: when a sales representative sells at or over quota, the representative earns a $250 bonus or a 15% commission (on the amount over quota), whichever is highest. The company pays no bonus or commission on sales less than quota. The sales manager wants bonus/commission calculated and included on a report.</p><a name="304803"></a><h4>Formula</h4><PRE><a name="304804"></a>If ({file.SALES}-{file.QUOTA})&gt;=0 Then <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Maximum([250,.15*({file.SALES} - {file.QUOTA})])<br>
+Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;0
+</PRE><a name="304805"></a><h4>Result</h4><p><a name="304839"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="304808"></a>Sales
+
+</td><td align="left" valign="TOP"><a name="304810"></a>Quota
+
+</td><td align="left" valign="TOP"><a name="304812"></a>15%
+
+</td><td align="left" valign="TOP"><a name="304814"></a>Amount Paid
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304816"></a>10,000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304818"></a>8000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304820"></a>300</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304822"></a>540 (calculated commission)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304824"></a>8000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304826"></a>8000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304828"></a>0</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304830"></a>250 (guaranteed bonus)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304832"></a>7999</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304834"></a>8000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304836"></a>0 </P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304838"></a>0 (sales not &gt;= Quota)</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="304840"></a><h4>Explanation</h4><ul type="disc"><a name="304841"></a><li>This formula uses the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operator to test sales to see if they are greater than or equal to quota. 
+<a name="304842"></a><li>If they are (Then) it calculates the commission and pays the higher of commission or guaranteed bonus. 
+<a name="304843"></a><li>If they are not (Else), it does nothing.
+<a name="304844"></a><li>To test sales to see if they are at least equal to quota, the formula uses the Subtract operator (-) to subtract {file.QUOTA} from {file.SALES}.
+<a name="304845"></a><li>If {file.SALES} is greater than or equal to {file.QUOTA}, this subtraction will produce the result of zero or a positive number (&gt;=0). This will trigger the Then part of the formula.
+<a name="304846"></a><li>If {file.SALES} is less than {file.QUOTA}, this subtraction will produce a negative result. This will trigger the Else part of the formula.
+<a name="304847"></a><li>The Then part of the formula uses the Multiply operator (*) to compute a 15% commission on the amount of sales in excess of quota: .15 * ({file.SALES} - {file.QUOTA}).
+<a name="304848"></a><li>It then uses the Maximum([array]) function to determine if the calculated commission or the guaranteed bonus of $250 offers the highest payout Maximum([commission, 250]), and it returns this highest value.
+<a name="304849"></a><li>Calculating this highest payout is the bottom line of the Then part of the formula.
+<a name="304850"></a><li>The Else part of the formula makes no calculations and returns 0.
+</ul><a name="304851"></a><h6>Related topics</h6><p><a name="304855"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas36.html";
+var next = "19_introformulas38.html";
+
+function setTopicID() { 
+      var number = "304798"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

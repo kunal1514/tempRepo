@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DayOfWeek</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000593761"></a><h3 class="newpage"> DayOfWeek</h3>
+<p><a name="1000692951"></a>DayOfWeek and <a href="functionshelp120.html#1000542993">WeekDay</a> are equivalent functions. However, WeekDay is preferred in Basic syntax and DayOfWeek is preferred in Crystal syntax.</p><a name="1000781171"></a><h5>Overloads</h5><ul type="disc"><a name="1000781172"></a><li>DayOfWeek (date)
+<a name="1000781173"></a><li>DayOfWeek (date, firstDayOfWeek)
+</ul><a name="1000593765"></a><h5>Arguments</h5><p><a name="1000593766"></a>date is a Date value or dateTime value.</p><a name="1000593767"></a><h5>Returns</h5><p><a name="1000593768"></a>Whole Number</p><a name="1000593769"></a><h5>Action</h5><p><a name="1000593770"></a>DayOfWeek determines the day of the week the given date falls on, and converts the day of the week to a Number (1 to 7). Optionally a numeric value for the first day of the week can be specified. If the first day of the week is not specified, Sunday is assumed.</p><a name="1000593771"></a><h5>Typical uses</h5><p><a name="1000593772"></a>Use this function any time you need to use the day of the week as a Number.</p><a name="1000593773"></a><h5>Examples</h5><p><a name="1000593774"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000593775"></a>DayOfWeek(Date(1990,10,1))</code></p><p class="example"><a name="1000593776"></a>Returns 2 where October 1, 1990 is a Monday.</p><p class="code"><a name="1000593777"></a>If DayOfWeek({orders.ORDER DATE}) = 3 Then 
+<br><a name="1000735531"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Sam"
+<br><a name="1000735535"></a>Else
+<br><a name="1000735542"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Bill"
+</p><p class="example"><a name="1000593778"></a>In determining whether Sam or Bill was on duty on September 8, 1990.</p><p class="code"><a name="1000593779"></a>If DayOfWeek({orders.ORDER DATE}) = 7 Then 
+<br><a name="1000735551"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Saturday" 
+<br><a name="1000735552"></a>Else 
+<br><a name="1000735553"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+<br><a name="1000735554"></a>
+<br><a name="1000593780"></a>DayOfWeek(#Sept. 24, 1999#, crMonday)
+</p><p class="example"><a name="1000593781"></a>Returns 5 where Sept. 24, 1999, is a Friday, and Monday is specified to be the first day of the week.</p><a name="1000674409"></a><h5>Comments</h5><p><a name="1000593786"></a>If you want to get the day of the week spelled out, in Crystal syntax, use this <a href="glossary7.html#13326">formula</a>:</p><p><code><a name="1000593787"></a>["Sun", "Mon", "Tues",...] [DayOfWeek(Date)]</code></p><p class="example"><a name="1000593788"></a>Sets up an <a href="glossary2.html#13195">array</a> (["Sun",...]) and uses the number of the day of the week (Sun = 1, Sat = 7) to select the desired date name from the array. </p><a name="1000692992"></a><h6>Related topics</h6><p><a name="1000692996"></a><a href="19_introformulas40.html#305021">Formula 10</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp120.html";
+var next = "functionshelp122.html";
+
+function setTopicID() { 
+      var number = "1000593761"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

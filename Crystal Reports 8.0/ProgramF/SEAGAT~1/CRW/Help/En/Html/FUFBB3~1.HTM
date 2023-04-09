@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>InStrRev</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000511842"></a><h3 class="newpage"> InStrRev</h3>
+<p><a name="1000747782"></a>Basic and Crystal syntax.</p><a name="1000511843"></a><h5>Overloads</h5><ul type="disc"><a name="1000511844"></a><li>InStrRev (inputString, findString)
+<a name="1000511845"></a><li>InStrRev (inputString, findString, startPosition)
+<a name="1000511846"></a><li>InStrRev (inputString, findString, startPosition, compare)
+</ul><a name="1000511847"></a><h5>Arguments</h5><ul type="disc"><a name="1000511848"></a><li>inputString is a String expression being searched.
+<a name="1000511849"></a><li>findString is a String expression being searched for.
+<a name="1000511850"></a><li>startPosition is an optional numeric expression that sets the starting position for each search. If omitted, -1 is used, which means that the search begins at the last character position.
+<a name="1000511851"></a><li>compare is an optional numeric value indicating the kind of comparison to use when evaluating substrings:
+<ul type="disc"><ul type="disc"><a name="1000511852"></a><li> Performs a comparison that is case<nobr>-s</nobr>ensitive<a name="1000511853"></a><li> Performs a comparison that is case<nobr>-i</nobr>nsensitive<p class="indent"><a name="1000511854"></a>If omitted, a case<nobr>-s</nobr>ensitive comparison is performed.</p></ul></ul></ul><a name="1000511855"></a><h5>Returns</h5><p><a name="1000511856"></a>Number value that indicates the position of the matching string in the string to be matched. The first character of the inputString (from the beginning) is 1.</p><a name="1000511857"></a><h5>Action</h5><p><a name="1000511858"></a>InStrRev returns the position of the first occurrence of one string within another. The matching proceeds in the reverse direction from the specified start position. </p><a name="1000511859"></a><h5>Examples</h5><p><a name="1000511860"></a>The following examples are applicable to Basic and Crystal syntax:</p><p><code><a name="1000511861"></a>InStrRev ("abcdefgbchijk", "bc") </code></p><p class="example"><a name="1000511862"></a>Returns 8, where matching starts from the very end of the string in the reverse direction.</p><p><code><a name="1000511863"></a>InStrRev ("abcdefgbchijk", "bc", -1) </code></p><p class="example"><a name="1000511864"></a>Returns 8, where matching starts from the very end of the string in the reverse direction.</p><p><code><a name="1000511865"></a>InStrRev ("abcdefgbchijk", "bc", 2) </code></p><p class="example"><a name="1000511866"></a>Returns 0, i.e., no match is found. Matching starts from the "b" in "ab" in the reverse direction.</p><p><code><a name="1000511867"></a>InStrRev ("abcdefgbchijk", "bc", 3) </code></p><p class="example"><a name="1000511868"></a>Returns 2. Matching starts from the "c" in "abc" in the reverse direction.</p><p><code><a name="1000511869"></a>InStrRev ("abcdefgbchijk", "bc", 10) </code></p><p class="example"><a name="1000511870"></a>Returns 8. Matching starts from the 'h' in "abcdefgbch" in the reverse direction, and the first occurrence of "bc" is found at position 8 from the beginning of the string s.</p><p><code><a name="1000511871"></a>InStrRev ("abcdefgbchijk", "BC", -1, 1) </code></p><p class="example"><a name="1000511872"></a>Returns 8. Matching starts from the very end of the string in the reverse direction, and the first occurrence of "BC", independent of case since case<nobr>-i</nobr>nsensitive comparison is specified, is found at position 8 from the beginning of the input string.</p><p><code><a name="1000511873"></a>InStrRev ("aBCdefgbchijk", "BC", -1, 0) </code></p><p class="example"><a name="1000511874"></a>Returns 2. Matching starts from the very end of the string in the reverse direction, and the first occurrence of "BC" is found at position 2 from the beginning of the string s.</p><a name="1000511875"></a><h5>Comment</h5><p><a name="1000511876"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp89.html";
+var next = "functionshelp91.html";
+
+function setTopicID() { 
+      var number = "1000511842"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

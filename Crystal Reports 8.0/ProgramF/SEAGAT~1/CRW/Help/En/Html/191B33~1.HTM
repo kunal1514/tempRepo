@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula1</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="256344"></a><h4 class="newpage"> Formula1</h4><ol>
+<a name="256345"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">To get started, create a report using the Customer table in <kbd>xtreme.mdb</kbd> and place the following fields from left to right in the Details section:
+</ol>
+<PRE><a name="256346"></a>{customer.CUSTOMER ID}
+<a name="256347"></a>{customer.CUSTOMER NAME}
+<p class="indent"><a name="256348"></a>To test each portion of the formula, you will place a new formula field next to these two fields in the report.</p></PRE><ol>
+<a name="256349"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Create a new formula called Formula1.
+<a name="256350"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Type the following in the <strong>Formula text</strong> box of the Formula Editor:
+</ol>
+<PRE><a name="256351"></a>If {customer.CUSTOMER NAME} [1 to 2 = "Bi" Then
+<a name="256352"></a>&nbsp;&nbsp;&nbsp;&nbsp;"TRUE"
+<a name="256353"></a>Else
+<a name="256354"></a>&nbsp;&nbsp;&nbsp;&nbsp;"FALSE"
+</PRE><ol>
+<a name="256358"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_check.gif">
+
+
+Click <strong>Check </strong>to test for errors. You will receive the following error message:
+</ol>
+<p><code><a name="256359"></a>The ] is missing.</code></p><ol>
+<a name="256360"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Correct the formula by inserting the missing " ] " after the 2.
+<a name="256361"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Check</strong> again. You will receive the following message:
+</ol>
+<p><code><a name="256362"></a>No errors found.</code></p><ol>
+<a name="256366"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_svcls.gif">
+
+
+Click <kbd>Save then Close</kbd> to return to the Insert Fields dialog box.
+<a name="256367"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Insert the corrected formula field to the right of the two data fields in the Details section of your report.
+<a name="256371"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_prevw.gif">
+
+
+Click <kbd>Print Preview</kbd> on the Standard toolbar to check the values in the report and compare the fields to see if the field values returned by @Formula1 are correct.
+</ol>
+<p><a name="272488"></a>You will find "TRUE" listed next to the customer names that begin with "Bi" and "FALSE" next to all the others. Now you will check the other portions of the formula. Create Formula2, Formula3, and Formula4, by following Steps 1 - 9, using the formulas specified below for each. </p><p><a name="286020"></a>Insert each formula field on the same line of the Details section for easy comparison. Check each one for errors, fix as needed, and make sure the values returned are correct before moving on to the next formula.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas22.html";
+var next = "19_introformulas24.html";
+
+function setTopicID() { 
+      var number = "256344"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Greater Than Or Equal [&gt;=] join</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="14084"></a><h4 class="newpage"> Greater Than Or Equal [&gt;=] join</h4><p><a name="14085"></a>The result set from a Greater Than Or Equal join includes all records in which the linked field value in the primary table is greater than or equal to the linked field value in the lookup table. The example here is identical to the example for the Greater Than join, except that it uses the Greater Than Or Equal join:</p><PRE><a name="14086"></a>SELECT SalesRep.'Last Name',
+<a name="384352"></a>&nbsp;&nbsp;&nbsp;&nbsp;SalesRep.'Salary',
+<a name="384369"></a>&nbsp;&nbsp;&nbsp;&nbsp;Manager.'Last Name',
+<a name="384386"></a>&nbsp;&nbsp;&nbsp;&nbsp;Manager.'Salary'
+<a name="384403"></a>FROM 'SalesRep' SalesRep,
+<a name="384420"></a>&nbsp;&nbsp;&nbsp;&nbsp;'Manager' Manager
+<a name="384437"></a>WHERE SalesRep.'Salary' &gt;=
+<a name="384454"></a>&nbsp;&nbsp;&nbsp;&nbsp;Manager.'Salary'
+</PRE><p><a name="14192"></a>This statement might produce data such as this:</p><p><a name="444291"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="14089"></a>SalesRep Table
+
+</th><th align="left" valign="bottom"><a name="14091"></a>SalesRep Table
+
+</th><th align="left" valign="bottom"><a name="14093"></a>Manager Table
+
+</th><th align="left" valign="bottom"><a name="14095"></a>Manager Table
+
+</th></tr>
+<tr><th align="left" valign="bottom"><a name="14097"></a>Last Name
+
+</th><th align="left" valign="bottom"><a name="14099"></a>Salary
+
+</th><th align="left" valign="bottom"><a name="14101"></a>Last Name
+
+</th><th align="left" valign="bottom"><a name="14103"></a>Salary
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="14105"></a>Davolio</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14107"></a>$35,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14109"></a>Fuller</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14111"></a>$32,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14113"></a>Davolio</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14115"></a>$35,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14117"></a>Brid</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14119"></a>$30,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14121"></a>Davolio</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14123"></a>$35,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14125"></a>Buchanan</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14127"></a>$29,500.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14129"></a>Davolio</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14131"></a>$35,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14133"></a>Martin</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14135"></a>$35,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14137"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14139"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14141"></a>Hellstern</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14143"></a>$45,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14145"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14147"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14149"></a>Fuller</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14151"></a>$32,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14153"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14155"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14157"></a>Brid</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14159"></a>$30,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14161"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14163"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14165"></a>Buchanan</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14167"></a>$29,500.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14169"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14171"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14173"></a>Martin</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14175"></a>$35,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14177"></a>Patterson</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14179"></a>$30,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14181"></a>Brid</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14183"></a>$30,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="14185"></a>Patterson</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14187"></a>$30,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14189"></a>Buchanan</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="14191"></a>$29,500.00</P>
+
+
+</td></tr>
+
+</Table></p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases24.html";
+var next = "24_under_databases26.html";
+
+function setTopicID() { 
+      var number = "14084"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

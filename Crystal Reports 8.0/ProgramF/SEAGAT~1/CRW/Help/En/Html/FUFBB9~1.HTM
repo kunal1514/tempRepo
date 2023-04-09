@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Format Strings</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000508806"></a><h4 class="newpage"> Format Strings</h4><p><a name="1000508808"></a>The ToText and <a href="functionshelp161.html#1000569614">CStr</a> functions can use format strings to control how the Number, Currency, Date, Time, or DateTime value passed to the x argument will appear when converted to a String. This section describes how to create format strings for the various data types.</p><a name="1000508809"></a><h5>Format strings for fractional Numbers and Currency values</h5><p><a name="1000508810"></a>The following characters are used to create format strings for fractional Numbers and Currency values:</p><p><a name="1000634701"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1000634658"></a>Character
+
+</th><th align="left" valign="bottom"><a name="1000634660"></a>Description
+
+</th><th align="left" valign="bottom"><a name="1000634662"></a>Comments/Examples
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000634664"></a>#</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000634666"></a>Represents numerical digits or spaces. </P>
+
+
+<P><a name="1000634667"></a>When the original number is converted, # characters are ignored unless the number of # characters in the format string extends beyond the number of significant digits in the original value. Then, for every additional # that appears, a space is added to the string.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000634669"></a> If your original value is 125.34:</P>
+
+
+<ul type="disc"><a name="1000634670"></a><li>the format string "#" produces the string "125" (number of significant digits exceeds the number of # characters)
+<a name="1000634671"></a><li>the format string "###.##" produces the string "125.34" (number of significant digits equal to number of # characters)
+<a name="1000634672"></a><li>the format string "####.###" produces the string "125.34" (number of significant digits is less than the number of # characters).
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000634674"></a>0</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000634676"></a>Represents numerical digits or zeros (0).</P>
+
+
+<P><a name="1000634677"></a>When the original number is converted, 0 characters are ignored unless the number of 0 characters in the format string extends beyond the number of significant digits in the original value. Then, for every additional 0 that appears, a zero is added to the string.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000634679"></a>If your original value is 125.34:</P>
+
+
+<ul type="disc"><a name="1000634680"></a><li>the format string "0" produces the string "125" (number of significant digits exceeds the number of 0 characters)
+<a name="1000634681"></a><li>the format string "000.00" produces the string "125.34" (number of significant digits equal to number of 0 characters)
+<a name="1000634682"></a><li>the format string "0000.000" produces the string "0125.340" (number of significant digits is less than the number of 0 characters).
+</ul><P><a name="1000634683"></a># and 0 characters can be combined in format strings. If your original value is 125.34:</P>
+
+
+<ul type="disc"><a name="1000634684"></a><li>the format string "####.0000" produces the string "125.3400".
+<a name="1000634685"></a><li>A comma (,) 
+<a name="1000634686"></a><li>A decimal point (.) indicates where a decimal separator should appear. The actual character that appears as a decimal separator in the resulting string can be changed. 
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000634688"></a>comma (,)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000634690"></a>Indicates where a thousands separator should appear. </P>
+
+
+<P><a name="1000634691"></a>The actual character that appears as a thousands separator in the resulting string can be changed. </P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000634695"></a>decimal point (.)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000634697"></a>Indicates where a decimal separator should appear.</P>
+
+
+<P><a name="1000634698"></a>The actual character that appears as a decimal separator in the resulting string can be changed.</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="1000634702"></a><h5>How format string can affect values</h5><p><a name="1000634707"></a>The following table illustrates how format strings can affect different fractional Numbers and Currency values being converted. In this table, the underscore character (_) represents a space in the resulting string:</p><p><a name="1000508900"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="1000508829"></a>Original Value
+
+</td><td align="left" valign="TOP"><a name="1000508831"></a>Format string
+
+</td><td align="left" valign="TOP"><a name="1000508833"></a>Resulting String
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508835"></a>16.13</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508837"></a>#</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508839"></a>16</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508841"></a>16.13</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508843"></a>0</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508845"></a>16</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508847"></a>16.13</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508849"></a>##</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508851"></a>16</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508853"></a>16.13</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508855"></a>00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508857"></a>16</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508859"></a>16.13</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508861"></a>###</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508863"></a>_16</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508865"></a>16.13</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508867"></a>000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508869"></a>016</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508871"></a>16.13</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508873"></a>#.####</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508875"></a>16.13_</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508877"></a>16.13</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508879"></a>0.0000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508881"></a>16.1300</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508883"></a>16125.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508885"></a>###,###.#</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508887"></a>_16,125.0</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508889"></a>16125.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508891"></a>000,000.0</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508893"></a>016,125.0</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000508895"></a>16125.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508897"></a>000000.0</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000508899"></a>016125.0</P>
+
+
+</td></tr>
+
+</Table></p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp79.html";
+var next = "functionshelp81.html";
+
+function setTopicID() { 
+      var number = "1000508806"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

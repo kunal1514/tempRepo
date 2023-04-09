@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>NextValue (fld)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000576660"></a><h3 class="newpage"> NextValue (fld)</h3>
+<p><a name="1000719438"></a>Basic syntax.</p><p><a name="1000719487"></a>NextValue and <a href="functionshelp177.html#1000594165">Next (fld)</a> are equivalent functions. However, you can use NextValue only with Basic syntax and Next only with Crystal syntax. </p><a name="1000576661"></a><h5>Argument</h5><p><a name="1000576662"></a>fld is the name of a database field.</p><a name="1000576663"></a><h5>Returns</h5><p><a name="1000576664"></a>Value of specified field; type depends on type of that field.</p><a name="1000576665"></a><h5>Action</h5><p><a name="1000576666"></a>NextValue returns the value of the next record of the specified field.</p><a name="1000576667"></a><h5>Typical use</h5><p><a name="1000576668"></a>You can use NextValue to identify the first or last record in a range, to identify the starting point for a new group, or to test for duplicate values.</p><a name="1000576669"></a><h5>Examples</h5><p><a name="1000576670"></a>The following examples are applicable to Basic syntax:</p><p class="code"><a name="1000576672"></a>If NextValue ({Orders Detail.Quantity}) &lt;&gt; 0 Then
+<br><a name="1000576673"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = {Orders Detail.Quantity} / 2
+<br><a name="1000576674"></a>Else
+<br><a name="1000576675"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = {Orders Detail.Quantity}
+<br><a name="1000576676"></a>End If
+</p><p class="example"><a name="1000576677"></a>Tests the next value in the {Orders Detail.Quantity} field to see if it is zero. If it is not, it divides the current value by two. If it is zero, it returns the current value itself.</p><p class="code"><a name="1000576679"></a>If NextValue ({Orders.Order ID}) Mod 10 = 0 Then
+<br><a name="1000576680"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = "End of block"
+<br><a name="1000576681"></a>Else
+<br><a name="1000576682"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = "More to come"
+<br><a name="1000576683"></a>End If
+</p><p class="example"><a name="1000576684"></a>This formula divides orders into blocks of 10. If the next Order ID is a multiple of 10, it flags the current value as "End of block". Otherwise, it prints "More to come".</p><p><a name="1000719870"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp177.html";
+var next = "functionshelp179.html";
+
+function setTopicID() { 
+      var number = "1000576660"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

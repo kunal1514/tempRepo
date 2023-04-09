@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>More details on If expressions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="147405"></a><h4 class="newpage"> More details on If expressions</h4><p><a name="147407"></a>The <EM>If </EM>expression is an expression. In other words it evaluates to a value of a given type. If there is no Else clause, and the condition is not true, then the value is the default value for the type. For example:</p><PRE><a name="147409"></a>If Length ({Employee.First Name}) &lt; 5 Then
+<a name="147410"></a>   "short"
+</PRE><p><a name="147412"></a>The above If expression returns a String value. The string value is "short" if the Employee's first name has fewer than 5 letters and the empty String "" otherwise. </p><p><a name="159815"></a>Consider the formula:</p><PRE><a name="147414"></a>If Year({Orders.Order Date}) &gt;= 1995 Then
+<a name="147415"></a>   {Orders.Order Date}
+</PRE><p><a name="147417"></a>For order dates before 1995, the above If expression returns the null DateTime value. It is a DateTime value rather than a Date value since {Orders.Order Date} is a DateTime database field. The null DateTime value is not printed by Seagate Crystal Reports so if the above formula is placed in a report, the formula field would be blank for order dates before 1995. Null Time values and null Date values behave similarly.</p><p><a name="147419"></a>Here is an example that illustrates the use of parentheses to have more than one expression executed as the outcome of an If condition. A company charges a 5 percent fee for orders shipped within 3 days and a 2 percent fee otherwise. It wants to print messages such as "Rush shipping is $100.00" or "Regular shipping is $20.00" as appropriate.</p><PRE><a name="147421"></a>Local StringVar message;
+<a name="147422"></a>Local CurrencyVar ship;
+<a name="147424"></a>If {Orders.Ship Date} - {Orders.Order Date} &lt;= 3 Then
+<a name="147425"></a>(
+<a name="147426"></a>   message := "Rush";
+<a name="147427"></a>   //A semicolon at the end of the next line
+<a name="147428"></a>   //is optional
+<a name="147429"></a>   ship := {Orders.Order Amount} * 0.05
+<a name="147430"></a>) //A semicolon cannot be placed here
+<a name="147431"></a>Else
+<a name="147432"></a>(
+<a name="147433"></a>   message := "Regular";
+<a name="147434"></a>   ship := {Orders.Order Amount} * 0.02;
+<a name="147435"></a>);
+<a name="147436"></a>//The preceding semicolon is required to separate the
+<a name="147437"></a>//If expression from the final expression below
+<a name="147438"></a>message &amp; " shipping is " &amp; CStr (ship)
+</PRE><p><a name="147440"></a>When expressions are grouped together with parentheses, the whole group is considered as a single expression, and its value and type are the value and type of the final expression inside the parentheses.</p><PRE><a name="147442"></a>//The parentheses group expression as a whole has
+<a name="147443"></a>//Currency type
+<a name="147444"></a>(
+<a name="147445"></a>   //The first expression in the parentheses has
+<a name="147446"></a>   //String type
+<a name="147447"></a>   message := "Rush";
+<a name="147448"></a>   //The second and final expression in parentheses
+<a name="147449"></a>   //has Currency type
+<a name="147450"></a>   ship := {Orders.Order Amount} * 0.05;
+<a name="147451"></a>)
+</PRE><p><a name="147453"></a>Thus, for example, the following formula gives an error. The reason is that the Then part of the If expression returns a Currency value while the Else part returns a String value. This is not allowed, since the If expression is an expression and so must always return a value of a single type.</p><PRE><a name="147455"></a>//An erroneous formula
+<a name="147456"></a>Local StringVar message;
+<a name="147457"></a>Local CurrencyVar ship;
+<a name="147459"></a>If {Orders.Ship Date} - {Orders.Order Date} &lt;= 3 Then
+<a name="147460"></a>(
+<a name="147461"></a>   message := "Rush";
+<a name="147462"></a>   ship := {Orders.Order Amount} * 0.05
+<a name="147463"></a>)
+<a name="147464"></a>Else
+<a name="147465"></a>(
+<a name="147466"></a>   //The following 2 lines were interchanged
+<a name="147467"></a>   ship := {Orders.Order Amount} * 0.02;
+<a name="147468"></a>   message := "Regular";
+<a name="147469"></a>);
+<a name="147470"></a>message &amp; " shipping is " &amp; CStr (ship)
+</PRE><p><a name="147472"></a>One way of fixing up the erroneous formula without being careful about expression order is just to make the If expression return a constant value of the same type in every branch. For example, the If expression now returns the Number value 0:</p><PRE><a name="147474"></a>//Repaired the erroneous formula
+<a name="147475"></a>Local StringVar message;
+<a name="147476"></a>Local CurrencyVar ship;
+<a name="147478"></a>If {Orders.Ship Date} - {Orders.Order Date} &lt;= 3 Then
+<a name="147479"></a>(
+<a name="147480"></a>   message := "Rush";
+<a name="147481"></a>   ship := {Orders.Order Amount} * 0.05;
+<a name="147482"></a>   0
+<a name="147483"></a>)
+<a name="147484"></a>Else
+<a name="147485"></a>(
+<a name="147486"></a>   ship := {Orders.Order Amount} * 0.02;
+<a name="147487"></a>   message := "Regular";
+<a name="147488"></a>   0
+<a name="147489"></a>);
+<a name="147490"></a>message &amp; " shipping is " &amp; CStr (ship)
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax54.html";
+var next = "21_crystalsyntax56.html";
+
+function setTopicID() { 
+      var number = "147405"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

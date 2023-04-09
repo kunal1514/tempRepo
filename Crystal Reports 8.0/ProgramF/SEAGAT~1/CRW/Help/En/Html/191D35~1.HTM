@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 4</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="304528"></a><h3 class="newpage"> Formula 4</h3>
+<a name="304529"></a><h4>Operators/Functions Used</h4><p><a name="304530"></a>Nested formulas, If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Subtract (-), Multiply (*), Greater than (&gt;), Greater than or equal (&gt;=), Sum, Parentheses ()</p><a name="304531"></a><h4>Formula Purpose</h4><p><a name="304532"></a>A computer store sells hardware, software, and books. It pays its sales representatives 7% of all hardware sales (monthly) over $5000, 10% of all software sales (monthly) over $10, 000, and 5% of all book sales (monthly) over $1000. The sales manager wants to calculate the commission in each category for each representative, total the commission due each representative, and flag those representatives who are entitled to more than $5000 in total commission for the month. We will do this using nested formulas, that is, using one formula as one of the elements in another formula.</p><a name="304533"></a><h4>Formula(s)</h4><a name="304534"></a><h4>@HARDWARE </h4><PRE><a name="304535"></a>If (({file.HARD SALES}-5000)&gt; 0) Then <br>
+&nbsp;&nbsp;&nbsp;&nbsp;.07 * ({file.HARD SALES}-5000) <br>
+Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;0
+</PRE><a name="304536"></a><h4>@SOFTWARE </h4><PRE><a name="304537"></a>If (({file.SOFT SALES}-10000)&gt; 0) Then <br>
+&nbsp;&nbsp;&nbsp;&nbsp;.10 * ({file.SOFT SALES}-10000) <br>
+Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;0
+</PRE><a name="304538"></a><h4>@BOOKS</h4><PRE><a name="304539"></a>If (({file.BOOK SALES}-1000)&gt; 0) Then <br>
+&nbsp;&nbsp;&nbsp;&nbsp;.05 * ({file.BOOK SALES}-1000) <br>
+Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;0
+</PRE><a name="304540"></a><h4>@TOTCOMM</h4><PRE><a name="304541"></a>Sum([{@HARDWARE}, {@SOFTWARE}, {@BOOKS}])
+</PRE><a name="304542"></a><h4>@FLAG </h4><PRE><a name="304543"></a>If {@TOTCOMM} &gt;= 5000 Then <br>
+&nbsp;&nbsp;&nbsp;&nbsp;" **** " <br>
+Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;""
+</PRE><a name="304544"></a><h4>Result</h4><p><a name="304545"></a>Given this data:</p><p><a name="304587"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="304548"></a>Salesrep
+
+</td><td align="left" valign="TOP"><a name="304550"></a>HardSales
+
+</td><td align="left" valign="TOP"><a name="304552"></a>SoftSales
+
+</td><td align="left" valign="TOP"><a name="304554"></a>BookSales
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304556"></a>Salesrep A</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304558"></a>4500</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304560"></a>21000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304562"></a>985</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304564"></a>Salesrep B</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304566"></a>31427</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304568"></a>41222</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304570"></a>4470</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304572"></a>Salesrep C</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304574"></a>22000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304576"></a>4687</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304578"></a>4250</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304580"></a>Salesrep D</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304582"></a>14000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304584"></a>15678</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304586"></a>2200</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="304588"></a>The formulas return the following results:</p><p><a name="304650"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="304591"></a>Salesrep
+
+</td><td align="left" valign="TOP"><a name="304593"></a>Hardware
+
+</td><td align="left" valign="TOP"><a name="304595"></a>Software
+
+</td><td align="left" valign="TOP"><a name="304597"></a>Books
+
+</td><td align="left" valign="TOP"><a name="304599"></a>Total
+
+</td><td align="left" valign="TOP"><a name="304601"></a>Flag
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304603"></a>SalesrepA</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304605"></a>0.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304607"></a>1100.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304609"></a>0.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304611"></a>1100.00</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304615"></a>SalesrepB</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304617"></a>3122.20</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304619"></a>1849.89</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304621"></a>173.50</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304623"></a>5145.59</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304625"></a>****</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304627"></a>SalesrepC</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304629"></a>1190.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304631"></a>0.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304633"></a>162.50</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304635"></a>1352.50</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304639"></a>SalesrepD</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304641"></a>630.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304643"></a>567.80</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304645"></a>60.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304647"></a>1257.80</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="304651"></a><h4>Explanation</h4><ul type="disc"><a name="304652"></a><li>The three formulas (@HARDWARE, @SOFTWARE, and @BOOKS) work in the same manner. 
+<a name="304653"></a><li>They use the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operator to test for a condition, do one thing if the condition is true, do another thing if the condition is false.
+<a name="304654"></a><li>&#183;	They take total sales in the category, use the Subtract operator (-) to subtract the amount of sales on which no commission is to be paid, and test to see if the remaining amount is a positive number (&gt;0). 
+<a name="304655"></a><li>&#183;	If it is (&gt;0), they calculate the commissions using the Multiply operator (*) to multiply the appropriate commission percentage (expressed as a decimal: .07, .10, .05) times the commissionable amount ({file.HARD SALES}-5000}, etc.). 
+<a name="304656"></a><li>&#183;	If the remaining amount is a negative number (&lt;0), no commission is computed and the formula prints a zero amount (0.00).
+<a name="304657"></a><li>&#183;	@TOTCOMM uses the Sum function to total the commissions due. Instead of including the calculations for each formula (a duplication of time and effort) it substitutes the formula name instead of the calculations. When the program encounters the formula name it knows to use the underlying calculations from the formula(s) referenced.
+<a name="304658"></a><li>&#183;	@FLAG uses the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operator to evaluate the values calculated by @TOTCOM and to flag (****) those values of $5000 or more (&gt;= 5000). @FLAG effectively nests two levels of other formulas: it nests @TOTCOM, which is a formula that itself nests three other formulas, @HARDWARE, @SOFTWARE, and @BOOKS. When the program sees @TOTCOM, it performs all of the underlying calculations referenced by that formula and the formulas that are used in @TOTCOM.
+<a name="304659"></a><li>&#183;	Parentheses () are used throughout the formulas to control the order of calculation.
+</ul><a name="304660"></a><h6>Related topics</h6><p><a name="305991"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas33.html";
+var next = "19_introformulas35.html";
+
+function setTopicID() { 
+      var number = "304528"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

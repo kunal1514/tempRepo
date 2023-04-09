@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Month (x)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000541296"></a><h3 class="newpage"> Month (x)</h3>
+<p><a name="1000692763"></a>Basic and Crystal syntax.</p><a name="1000541300"></a><h5>Arguments</h5><p><a name="1000541301"></a>x is a Date value or a dateTime value.</p><a name="1000541302"></a><h5>Returns</h5><p><a name="1000541303"></a>Whole Number</p><a name="1000541304"></a><h5>Action</h5><p><a name="1000541305"></a>Month extracts the month component of a date and converts it to a Number.</p><a name="1000541306"></a><h5>Typical uses</h5><p><a name="1000541307"></a>Use any time you need only the month component of a date. For example, if you are tracking payments that fall within a given year, you are interested only in the month they arrive; day and year information would be redundant. Also, if you need to use the number of the month in a <a href="glossary13.html#13442">numeric</a> calculation (Month({file.OCTPMT}) -<strong> </strong>Month({file.SEPPMT}), for example) use the Month function to extract the month component of the date and convert it to a Number.</p><a name="1000541308"></a><h5>Examples </h5><p><a name="1000541309"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000541310"></a>Month({file.INVOICE}) - Month({file.PAYMENT})</code></p><p class="example"><a name="1000541311"></a>Calculates the number of months between the Invoice and the Payment.</p><p class="code"><a name="1000731949"></a>If Month({file.LAST PURCHASE}) &lt; 6 Then
+<br><a name="1000731952"></a>&nbsp;&nbsp;&nbsp;&nbsp;"You will see some changes since you last shopped our store."
+<br><a name="1000731953"></a>Else 
+<br><a name="1000733154"></a>&nbsp;&nbsp;&nbsp;&nbsp;"As you have certainly noticed, we have been making many changes in 
+our store recently.";
+</p><p class="example"><a name="1000541313"></a>Prints "You will see some changes since you last shopped our store." for those customers whose last purchase was in May or earlier, and prints "As you have certainly noticed, we have been making many changes in our store recently." for customers who have purchased more recently than May.</p><a name="1000541315"></a><h5>Comments</h5><p><a name="1000541316"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp117.html";
+var next = "functionshelp119.html";
+
+function setTopicID() { 
+      var number = "1000541296"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

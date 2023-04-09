@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Eliminating blank lines when fields are empty</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="26493"></a><h3 class="newpage"> Eliminating blank lines when fields are empty</h3>
+<p><a name="26494"></a>It is very common to have two address lines in a customer table, one for street address (Address 1), and one that can be used for a suite number or mail stop (Address 2). Address 1 usually contains a value, but Address 2 is often blank. If you create a customer list using this data and stack the fields on top of one another in mailing label format, those customer records with an empty Address 2 field will print with a blank line. You can eliminate this blank line using multiple sections.</p><a name="43568"></a><h6>To eliminate blank lines when fields are empty</h6><ol>
+<a name="105414"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_secex.gif">
+
+
+Use the Section Expert to create two new Details sections so that you have a total of three. See <EM><a href="10_multsec_rep4.html#97296">Working with sections</a>.</EM>
+<a name="26496"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Place the <kbd>Address 2</kbd> field in the middle section and the other data in the sections above and below it as you want it to appear in the report.
+<a name="26497"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">In the Section expert, highlight the middle section.
+<a name="114528"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Common</kbd> tab, select the <kbd>Suppress Blank Section</kbd> check box.
+</ol>
+<p><a name="42699"></a>Now, when the report prints, if the Address 2 section is blank, the program will not print it and you will not get unwanted blank lines in the report.</p><p><a name="113589"></a> </p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "10_multsec_rep14.html";
+var next = "10_multsec_rep16.html";
+
+function setTopicID() { 
+      var number = "26493"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

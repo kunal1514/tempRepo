@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Typical uses for formulas</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="100435"></a><h3 class="newpage"> Typical uses for formulas</h3>
+<p><a name="226780"></a>There are many uses for formulas. If you have a need for specialized data manipulation, you can do it with a formula.</p><a name="100436"></a><h5>Creating calculated fields to add to your report </h5><p><a name="263497"></a>To calculate a price discounted 15%:</p><p><a name="175032"></a>Crystal syntax example:</p><PRE><a name="263502"></a><code>{Orders_Detail.Unit Price}*.85
+</code></PRE><p><a name="248311"></a>Basic syntax example:</p><PRE><a name="263503"></a><code>formula = {Orders_Detail.Unit Price}*.85
+</code></PRE><a name="100439"></a><h5>Formatting text on a report</h5><p><a name="100440"></a>To change all the values in the Customer Name field to uppercase:</p><p><a name="263514"></a>Crystal syntax example:</p><PRE><a name="263529"></a><code>UpperCase ({Customer.Customer Name})
+</code></PRE><p><a name="248308"></a>Basic syntax example:</p><PRE><a name="263542"></a><code>formula = UCase ({Customer.Customer Name})
+</code></PRE><a name="248319"></a><h5>Pulling out a portion, or portions, of a text string</h5><p><a name="100446"></a>To extract the first letter of the customer name:</p><p><a name="263543"></a>Crystal syntax example:</p><PRE><a name="263548"></a><code>{Customer.Customer Name} [1]
+</code></PRE><p><a name="248326"></a>Basic syntax example:</p><PRE><a name="263549"></a><code>formula = {Customer.Customer Name} (1)
+</code></PRE><a name="100454"></a><h5>Extracting parts of a date</h5><p><a name="100455"></a>To determine what month an order was placed:</p><p><a name="263602"></a>Crystal syntax example:</p><PRE><a name="263621"></a><code>Month ({Orders.Order Date})
+</code></PRE><p><a name="248335"></a>Basic syntax example:</p><PRE><a name="263622"></a><code>formula = Month ({Orders.Order Date})
+</code></PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas3.html";
+var next = "19_introformulas5.html";
+
+function setTopicID() { 
+      var number = "100435"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

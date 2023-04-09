@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Working with conditional formatting</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="16791"></a><h2 class="newpage">Working with conditional formatting</h2><p><a name="10024"></a>Conditional formatting is formatting that applies only under certain conditions. For example, in a report you may only want:</p><ul type="disc"><a name="10025"></a><li>customer balances printed in red if they are past due
+<a name="10026"></a><li>the dates to appear in Day, Month, Year format if the customer is Canadian
+<a name="10027"></a><li>background color to appear on every other line.
+</ul><p><a name="10028"></a>Seagate Crystal Reports makes it easy to apply conditional formatting in these and hundreds of other situations.</p><p><a name="10032"></a>With absolute formatting, you follow the <EM>select, then apply</EM> procedure. For conditional formatting, you follow the same general procedure, but you go a step further and set up conditions that determine whether or not the formatting will be applied. You specify these conditions using simple formulas.For more information on creating formulas using Crystal syntax, see <a href="21_crystalsyntax9.html#144695">Crystal syntax fundamentals</a>. Or, for more information on creating formulas using Basic syntax, see <a href="20_basicsyntax4.html#128034">Basic syntax fundamentals</a>.</p><p><a name="34028"></a>When a conditional formatting formula is set up, the formula overrides any fixed settings you have made in the Format Editor. For example, if you select the <EM>Suppress</EM> option, then set up a conditional formula for the <EM>Suppress</EM> option, the property will still apply only if the condition in the formula is met.</p><p><a name="10034"></a>Seagate Crystal Reports enables you to set both on and off properties and set attribute properties conditionally. However, each of these requires a different kind of formula.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "11_format49.html";
+var next = "11_format51.html";
+
+function setTopicID() { 
+      var number = "16791"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

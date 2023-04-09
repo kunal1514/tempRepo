@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Changing the ODBC data source accessed by a report</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="14833"></a><h4 class="newpage"> Changing the ODBC data source accessed by a report</h4><ol>
+<a name="159065"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Choose <kbd>Set Location</kbd> from the <kbd>Database</kbd> menu.
+<p class="indent"><a name="418318"></a>The Set Location dialog box appears with a list of table aliases for the tables displayed in the report and will display the locations and logon information for the table you select below the list of tables.</p><p><a name="443023"></a> <img src="images/db_setlc.gif">
+
+
+</p>
+<a name="373621"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Highlight the first table in this list box.
+<a name="373622"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Set Location</kbd>.
+<a name="14848"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Choose the original ODBC data source to log on if you are not logged on already. You must log on to the old data source before you can modify a report to use a new data source. Since you must be logged on to the old data source, the old data source must be available on the local machine.
+<ul type="disc"><ul type="disc"><a name="14849"></a><li>If the machine is no longer connected to the old server, you can install an ODBC data source with the name of the old data source and have it point to the new database server. Log on to this data source as you would log on to the "old" data source.<a name="14850"></a><li>If you are using the same data source name to connect to a new server, you must configure that data source in the ODBC Data Source Administrator (found in the Control Panel), and make it point to the new server.<p class="indent"><a name="14851"></a>After you log on to the old data source, double<nobr>-c</nobr>lick it so the list of tables appears in the Data Explorer dialog box.</p></ul></ul><a name="373632"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Choose the new data source within the Data Explorer dialog box to log on.
+<p class="indent"><a name="14861"></a>You should now be logged on to both the old and the new data sources.</p><a name="29112"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Double<nobr>-c</nobr>lick the new data source to display its tables, then select the appropriate table from this list. The table you choose should correspond to the first table you selected in the Set Location dialog box.
+<a name="14874"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">After clicking <kbd>Set</kbd> the program prompts you to change the location of all tables in the report to the location you specified for the first table.
+<p><a name="443046"></a> <img src="images/db_msgbx.gif">
+
+
+</p>
+<a name="373647"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Yes</kbd> to set the location of all tables in the report to the same database.
+<a name="14884"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Close the Set Location dialog box, and choose <kbd>Verify Database</kbd> from the <kbd>Database</kbd> menu to refresh the table definitions in the report.
+<a name="14885"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Log off the old data source.
+<a name="14886"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Save the report.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases50.html";
+var next = "24_under_databases52.html";
+
+function setTopicID() { 
+      var number = "14833"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

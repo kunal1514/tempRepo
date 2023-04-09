@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>PopulationVariance (fld), PopulationVariance (fld, condFld), PopulationVariance (fld, condFld, cond), PopulationVariance (x)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000282246"></a><h3 class="newpage"> PopulationVariance (fld), PopulationVariance (fld, condFld), PopulationVariance (fld, condFld, cond), PopulationVariance (x)</h3>
+<p><a name="1000650801"></a>Basic and Crystal syntax.</p><a name="1000282249"></a><h5>Arguments</h5><ul type="disc"><a name="1000282250"></a><li>fld is any valid database or formula field that can be evaluated by the function.
+<a name="1000282251"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000282252"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+<a name="1000282253"></a><li>x is an array of values that can be evaluated by the function being used.
+</ul><a name="1000282254"></a><h5>Returns</h5><p><a name="1000282255"></a>Fractional Number</p><a name="1000282256"></a><h5>Action</h5><p><a name="1000282257"></a>Enables you to find the population variance of a set of values in your report. For example:</p><ul type="disc"><a name="1000282258"></a><li>You can calculate the grand total population variance for all values in a field. For information on this kind of summary, see <a href="functionshelp22.html#1000432407">SummaryFunction (fld)</a>.
+<a name="1000282259"></a><li>You can calculate the population variance for all values within a group (for example, sales grouped by the state that they come from). For information on this kind of summary, see <a href="functionshelp23.html#1000432439">SummaryFunction (fld, condFld)</a>.
+<a name="1000282260"></a><li>You can calculate the population variance for all values within a group in which grouping is controlled by changes in a date or Boolean field (for example, sales grouped by the month in which they were made). For information on this kind of summary, see<a href="functionshelp24.html#1000599837">SummaryFunction (fld, condFld, cond)</a>.
+<a name="1000282261"></a><li>If you specify a set of individual values, you can compute the population variance of the values in the set. For information on this kind of summary, see <a href="functionshelp155.html#1000567809">Array summary functions (x)</a>.
+</ul><a name="1000282262"></a><h5>Examples</h5><p><a name="1000282263"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><a name="1000282265"></a>For examples of each PopulationVariance function, click on the corresponding summary function.</p><p><code><a name="1000282266"></a>PopulationVariance({file.CENSUS})</code></p><p class="example"><a name="1000282267"></a>Calculates the variance of all values in the Census field.</p><p><code><a name="1000282268"></a>PopulationVariance({file.RESULTS}, {file.PROCEDURE})</code></p><p class="example"><a name="1000282269"></a>Calculates the population variation for each group of laboratory test results in the Results field. The test results are separated into groups whenever the value in the Procedure field changes.</p><p><code><a name="1000282272"></a>PopulationVariance({file.SCORES}, {file.NATURALIZED}, "any change")</code></p><p class="example"><a name="1000282273"></a>Groups values in the Scores field based on whether or not the test taker is a naturalized citizen, and calculates the population variance for each group of scores.</p><p><a name="1000736361"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000738029"></a>PopulationVariance({file.SCORES}, {file.TEACHERS}) % PopulationVariance({file.TEACHERS})</code></p><p class="example"><a name="1000738030"></a>Groups values in the Scores field by teacher, and calculates the population variance for each teacher group as a percentage of the population variance of the values for the entire report (for all teachers listed).</p><p><code><a name="1000740055"></a>PopulationVariance([2,4,6,8,10]) </code></p><p class="example"><a name="1000740056"></a>Returns 8.</p><a name="1000736343"></a><h5>Comments</h5><p><a name="1000282276"></a>Population variance is calculated using the following technique:</p><ul type="disc"><a name="1000282277"></a><li>It calculates the average (mean) value for the items in the population.
+<a name="1000282278"></a><li>It subtracts the average value from the value of each item.
+<a name="1000282279"></a><li>It squares the difference for each item.
+<a name="1000282280"></a><li>It adds the squared differences for all of the items in the population.
+<a name="1000282281"></a><li>It divides the sum by the number of items in the population (N). The result is the population variance. Compare this final step to the <a href="functionshelp28.html#1000452231">Variance (fld), Variance (fld, condFld), Variance (fld, condFld, cond), Variance (x)</a>.
+</ul><p><a name="1000652905"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. </p>
+<p><a name="1000652906"></a>For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>. </p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp28.html";
+var next = "functionshelp30.html";
+
+function setTopicID() { 
+      var number = "1000282246"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

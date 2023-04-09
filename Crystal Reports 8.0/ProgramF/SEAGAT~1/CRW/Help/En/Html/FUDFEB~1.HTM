@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>TimeValue</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000645674"></a><h3 class="newpage"> TimeValue</h3>
+<p><a name="1000690863"></a>Basic and Crystal syntax.</p><p><a name="1000690858"></a>The <a href="functionshelp163.html#1000570720">CTime</a> and <a href="functionshelp107.html#1000686634">Time</a> functions are equivalent to TimeValue. However, Time can only be used in Crystal syntax since it is a type name in Basic syntax.</p><a name="1000645675"></a><h5>Overloads</h5><ul type="disc"><a name="1000534247"></a><li>TimeValue (number)
+<a name="1000534248"></a><li>TimeValue (string)
+<a name="1000534249"></a><li>TimeValue (dateTime)
+<a name="1000534250"></a><li>TimeValue (HH, MM, SS)
+</ul><a name="1000534251"></a><h5>Arguments</h5><p><a name="1000752131"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><P><a name="1000752114"></a>TimeValue (number)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000752116"></a><li>Returns<strong> </strong>a Time value given a number in units of 24 hours
+<a name="1000756476"></a><li>number can be fractional or negative as well.
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000752118"></a>TimeValue (string)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000752154"></a>Returns a Time value that represents the time, given a String expression specifying a time from 0:00:00 (12:00:00 A.M.) to 23:59:59 (11:59:59 P.M.), inclusive.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000752122"></a>TimeValue (dateTime)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000752162"></a>DateTime is a DateTime value.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000752126"></a>TimeValue (hour, min, sec)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000752170"></a><li>Hour is a whole number representing an hour of the day.
+<a name="1000752171"></a><li>Min is a whole number representing a minute.
+<a name="1000752172"></a><li>Sec is a whole number representing a second.
+</ul></td></tr>
+
+</Table></p>
+<a name="1000534262"></a><h5>Returns</h5><p><a name="1000534263"></a>Time value.</p><a name="1000534264"></a><h5>Action</h5><p><a name="1000534265"></a><strong>TimeValue (</strong><strong>number</strong><strong>) </strong>returns a Time value given a number in units of 24 hours. The number can be negative or fractional as well. </p><p><a name="1000534267"></a><strong>TimeValue (</strong><strong>string</strong><strong>) </strong>returns a Time value that represents the time, given a String expression specifying a time from 0:00:00 (12:00:00 A.M.) to 23:59:59 (11:59:59 P.M.), inclusive.</p><p><a name="1000534269"></a><strong>TimeValue (</strong><strong>dateTime</strong><strong>) </strong>returns the time portion of a given DateTime value. </p><p><a name="1000534271"></a><strong>TimeValue (</strong><strong>HH, MM, SS</strong><strong>) </strong>returns a Time value given numeric arguments of the hour, minute and seconds.</p><a name="1000534272"></a><h5>Examples</h5><p><a name="1000534273"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p class="code"><a name="1000534274"></a>TimeValue (.2) 
+<br><a name="1000534275"></a>TimeValue (1.2)
+</p><p class="example"><a name="1000534276"></a>Both return the same value 4:48:00 a.m.</p><p><code><a name="1000534277"></a>TimeValue (-.2)</code></p><p class="example"><a name="1000534278"></a>Returns 7:12:00 pm</p><p><code><a name="1000534279"></a>TimeValue ("Jan. 6, 1999 2:30pm")</code></p><p class="example"><a name="1000534280"></a>Returns 2:30:00 pm</p><p><code><a name="1000534281"></a>TimeValue (#Feb. 24, 1999 2:40pm#)</code></p><p class="example"><a name="1000534282"></a>Returns 2:40:00 pm</p><p><code><a name="1000534283"></a>TimeValue (18, 30, 30)</code></p><p class="example"><a name="1000690850"></a>Returns 6:30:30 pm</p><a name="1000690851"></a><h5>Comments</h5><p><a name="1000690853"></a>You can use the <a href="functionshelp115.html#1000781158">IsTime</a> function to check if a string argument can be converted to a Time before doing the actual conversion. That way, if the conversion cannot be done, you can handle the situation appropriately. See also<a href="functionshelp113.html#1000536658">TimeSerial (hour, minute, second)</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp109.html";
+var next = "functionshelp111.html";
+
+function setTopicID() { 
+      var number = "1000645674"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

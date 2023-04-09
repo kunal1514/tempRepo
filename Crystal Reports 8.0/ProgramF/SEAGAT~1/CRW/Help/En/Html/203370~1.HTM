@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>For/Next loop example</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="132844"></a><h4 class="newpage"> For/Next loop example</h4><p><a name="132846"></a>Here is a more detailed example of Seagate Crystal Reports' string processing capabilities. The Caesar cipher is a simple code that is traditionally credited to Julius Caesar. In this code, each letter of a word is replaced by a letter five characters further in the alphabet. For example, "Jaws" becomes "Ofbx". Notice that "w" is replaced by "b". Since there are not 5 characters after "w" in the alphabet, it starts again from the beginning.</p><p><a name="143644"></a>Here is a formula that implements applying the Caesar cipher to the field {Customer.Customer Name} in the Xtreme database:</p><p><code><a name="132848"></a>Rem The Caesar cipher</code></p><PRE><a name="132850"></a>Dim inString 'The input string to encrypt
+<a name="132851"></a>inString = {Customer.Customer Name}
+<a name="132852"></a>Dim shift
+<a name="132853"></a>shift = 5
+</PRE><p><code><a name="132855"></a>formula = ""</code></p><PRE><a name="132857"></a>Dim i
+<a name="132858"></a>For i = 1 To Len(inString)
+<a name="132859"></a>   Dim inC, outC
+<a name="132860"></a>   inC = Mid(inString, i, 1)
+<a name="132862"></a>   Dim isChar, isUCaseChar
+<a name="132863"></a>   isChar = LCase(inC) In "a" To "z"
+<a name="132864"></a>   isUCaseChar = isChar And (UCase (inC) = inC)
+</PRE><p><code><a name="133195"></a>&nbsp;&nbsp;&nbsp;inC = LCase(inC)</code></p><PRE><a name="133197"></a>   If isChar Then
+<a name="132869"></a>      Dim offset
+<a name="132870"></a>      offset = (Asc(inC) + shift - Asc("a")) Mod _
+<a name="132871"></a>               (Asc("z") - Asc("a") + 1)
+<a name="132872"></a>      outC = Chr(offset + Asc("a"))
+<a name="132873"></a>      If isUCaseChar Then outC = UCase(outC)
+<a name="132874"></a>   Else
+<a name="132875"></a>      outC = inC
+<a name="132876"></a>   End If
+<a name="132878"></a>   formula = formula &amp; outC
+<a name="132879"></a>Next i
+</PRE><p><a name="132881"></a>In the above example, there is a multi<nobr>-l</nobr>ine If statement nested within the statements block of the For/Next loop. This If statement is responsible for the precise details of shifting a single character. For example, letters are treated differently from punctuation and spaces. In particular, punctuation and spaces are not encoded. Control structures can be nested within other control structures and multiple statements can be included in the statement block of a control structure.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax52.html";
+var next = "20_basicsyntax54.html";
+
+function setTopicID() { 
+      var number = "132844"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

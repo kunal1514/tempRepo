@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using the Set Location process</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="394613"></a><h4 class="newpage"> Using the Set Location process</h4><p><a name="394614"></a>When you choose Set Location from the Database menu and specify a new location for the active database, the program checks the database for changes.</p><p><a name="394615"></a>Set Location displays the Map Fields dialog box when it detects any of the following changes in the database structure:</p><ul type="disc"><a name="394616"></a><li>a database field has been deleted
+<a name="394617"></a><li>a database field has been renamed
+<a name="394618"></a><li>the database is completely new.
+</ul><p><a name="394619"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The program checks for these changes only if the databases have different names or if the database name has changed. If the databases have the same name, the Map Fields dialog box does not appear, and you need to verify the database when you have finished setting the location. For more information, see <a href="24_under_databases38.html#394589">Using the Verify Database process</a>.</p>
+<a name="394628"></a><h3>Remapping altered database fields</h3>
+<p><a name="394629"></a>Use the Map Fields dialog box to remap existing report fields in the active database if they have been altered.</p><a name="394630"></a><h6>To remap an altered database field</h6><ol>
+<a name="394631"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">With the report active in the Design tab, choose <kbd>Verify Database</kbd> from the <kbd>Database</kbd> menu.
+<p class="indent"><a name="407350"></a>The Verify Database message box appears.</p><ul type="disc"><ul type="disc"><a name="394632"></a><li>If the program detects no changes in the active database, the message box displays this message: "The database is up to date." In this case, click OK and return to your work.<a name="394633"></a><li>If the program detects a change(s) in the active database, the message box displays this message: "The database file ["database name"] has changed. Proceed to fix up the report?"</ul></ul><a name="394634"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Yes</kbd>.
+<p class="indent"><a name="407374"></a>If the program detects that a field name has been altered in the active database, the Map Fields dialog box appears.</p><p class="indent"><a name="394635"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The program automatically adapts the report to changes in other data within the database (number of fields, field position, data type, etc.). It is not necessary to remap fields in which these changes have been made. </p>
+<a name="394639"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Highlight the first report field that you want to remap in the upper<nobr>-l</nobr>eft box.
+<a name="394640"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">In the upper<nobr>-r</nobr>ight box, highlight the unmapped database field to which you want to remap the selected report field.
+<a name="394641"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Map</kbd>.
+<p class="indent"><a name="394642"></a>The highlighted report and database fields no longer appear in the upper boxes. Instead, they appear in the corresponding lower boxes.</p><a name="394643"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Repeat Steps 3 through 5 for each unmapped report field you want remapped.
+<p class="indent"><a name="394644"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If the names of any report fields remain in the upper<nobr>-l</nobr>eft box when you exit the dialog box, the program removes them from your report.</p>
+<a name="394645"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd>.
+<p class="indent"><a name="407453"></a>The program remaps the report fields to the altered database fields.</p></ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases39.html";
+var next = "24_under_databases41.html";
+
+function setTopicID() { 
+      var number = "394613"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

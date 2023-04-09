@@ -1,0 +1,18 @@
+!!! Holos Data control File
+!!! Created By
+!!! David R Jenkins
+!!! George Michaloudis
+DatafeedControl
+ Header
+  Version "1.0.0"
+ End Header
+ Structure
+  Name "Xtreme"
+  Class Numeric
+  File "xtreme.hsh"
+  Attr "027400<SPARSE>"
+  Dimension "Product","Product.hdd"
+  Dimension "Customer","Customer.hdd"
+  Dimension "Monthly","Monthly.hdd"
+ End Structure
+End DatafeedControl

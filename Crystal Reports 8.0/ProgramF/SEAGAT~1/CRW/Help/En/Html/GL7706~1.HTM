@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>R</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="340528"></a><h2 class="newpage">R</h2><a name="318679"></a><h4>range
+</h4><p><a name="13485"></a>A range is a set of values that fall between and include a defined upper and lower limit. For example, the range 10 to 20 includes 10, 20, and all the numbers that fall between. Also, the range January 1, 1991 to January 30, 1991, includes January 1, January 30, and all the dates that fall between. In Seagate Crystal Reports, a range can consist of numbers, dollar amounts, or dates. </p><a name="52078"></a><h4>record
+</h4><p><a name="13487"></a>In a database, a record is a complete unit of related information, an electronic file folder that holds all of the data on a given entity. Each record contains one or more fields that contain the specific pieces of data of interest. In a customer database, for example, a record would store all of the data on a single customer. In an inventory database, a record would store all of the data on a single inventory item. Data from an individual record is displayed or printed as a row of data on a columnar report. </p><a name="13488"></a><h4>report
+</h4><p><a name="13489"></a>A report is simply an organized presentation of data. As a management tool, a report is used to provide management with the insight it needs to run an organization effectively. Seagate Crystal Reports allows you to create comprehensive, customized, attractive management reports quickly and easily. But report in Seagate Crystal Reports also refers to invoices, form letters, mailing labels, and other related items that require the organization and output of data.</p><a name="13492"></a><h4>Report Footer
+</h4><p><a name="13493"></a>The Report Footer section is the last section of a report in the Design Tab. You can place a summary in this section that you want to appear only on the last page of a report.</p><a name="26038"></a><h4>Report Gallery
+</h4><p><a name="36834"></a>The Report Gallery is a special dialog box that appears when you click the <kbd>New</kbd> button on the standard toolbar or choose the <a href="COMMANDS3.html#1000142721">New command</a> from the File menu. The Report Gallery serves as a gateway to all the report creation experts and to the graphical interface for selecting the report and data type for creating custom reports.</p><a name="13494"></a><h4>Report Header
+</h4><p><a name="13495"></a>The Report Header section is the first section of your report in the Design Tab. You can place a title in this section, or any data you want to appear only on the first page of your report.</p><a name="13496"></a><h4>request
+</h4><p><a name="13497"></a>A request is a set of criteria that specifies the subset of data that you want to use for your report. For example, if you want your report to contain only California data, you can create a record selection request that retrieves only California records for your report. You create record and group selection requests using the <a href="experts62.html#1000083786">Section Expert</a>.</p><a name="13498"></a><h4>returns
+</h4><p><a name="13499"></a>The word "returns" refers to the result of a <a href="glossary7.html#13333">function</a>, an <a href="glossary14.html#13456">operator</a>, or a <a href="glossary7.html#13326">formula</a>. For example:</p><ul type="disc"><a name="13500"></a><li>When using a function, it performs a calculation or manipulation that results in a data change of some kind. The data that results is what the function returns. For example, Average(1, 2, 3, 4, 5) returns the average of the array 1, 2, 3, 4, 5. Truncate(1.2345) returns the integer (whole number) portion of the number 1.2345.
+<a name="13501"></a><li>When using an operator, the result of the operation using that operator is what the operation returns. For example, 5*6 equals 30. You can say that the operation 5*6 returns 30. Also, the operation 100&lt;200 compares the two values and returns True; 200&lt;100 compares the two values and returns False.
+<a name="13502"></a><li>When using a formula that contains functions or operators, each function or operation within the formula returns a result, but the formula taken as a whole returns a result too. When talking about a formula, it is the result of the formula that is of interest, not the result of individual functions or operations. For example, in the following formula: 
+</ul><PRE><a name="43027"></a>&nbsp;&nbsp;&nbsp;&nbsp;If {file.QTY} &lt; {file.REORDERAMOUNT} Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Reorder "<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;""
+<p class="indent"><a name="43028"></a>an internal operation compares the value of the {file.QTY} field with the value of the {file.REORDERAMOUNT} field. If {file.QTY} is less than {file.REORDERAMOUNT}, that individual operation returns the value True, but that is not what the formula taken as a whole returns. The formula, taken as a whole, returns the flag "Reorder" when the operation internally returns the value True.</p></PRE><a name="52246"></a><h4>row
+</h4><p><a name="13504"></a>A row is the display of data from a single record. Rows run horizontally across the page. The words row and record are sometimes used interchangeably in this manual. Contrast with <a href="glossary4.html#279265">column</a>.</p><a name="13505"></a><h4>ruler
+</h4><p><a name="13507"></a>The ruler provides a visual reference for positioning and resizing fields, graphs, lines, boxes, and bitmaps. The increments on the ruler are based on your measurement settings in the International section of the Windows control panel. The ruler also enables you to change page margins while immediately seeing the results of your changes on the report itself.</p><p><a name="89812"></a>The Ruler is visible in both the Design Tab and Preview Tab when their respective check boxes are toggled on in the <a href="dialogs111.html#1000219765">Options dialog box</a>.</p><a name="26081"></a><h4>running total
+</h4><p><a name="37087"></a>A running total is a total that is displayed generally on a record by record basis. They total all records (in the report, in the group, and so forth) up to and including the current record. For example, if your first three records have values of 2, 4, and 6, the running total for each of the three records would be 2, 6, and 12, respectively.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "glossary15.html";
+var next = "glossary17.html";
+
+function setTopicID() { 
+      var number = "340528"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

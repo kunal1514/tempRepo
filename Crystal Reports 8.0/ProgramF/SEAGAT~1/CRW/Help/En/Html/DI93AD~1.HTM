@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Change Group Options dialog box</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="809438"></a><h2 class="newpage">Change Group Options dialog box</h2><p><a name="809446"></a>This dialog box appears when you click the Options button in the <a href="dialogs6.html#1000200878">Change Group dialog box</a>.</p><p><a name="809448"></a>Use the Change Group Options dialog box to edit an existing group.</p><a name="809465"></a><h5>Database field</h5><p><a name="809467"></a>Use this list to select a new database field to group by.</p><a name="809469"></a><h5>Order</h5><p><a name="809471"></a>Use this list to select the sort order for your group.</p><a name="1000214383"></a><h5>Customize Group Name Field</h5><p><a name="1000214389"></a>The group name field is displayed in the group tree and in the group header. By default, the group name field has the same values as the group field. Select this check box to change the group name field to:</p><ul type="disc"><a name="1000216648"></a><li>a database field
+<a name="1000218131"></a><li>a group name formula that returns a string value, to generate values for a group name field.
+</ul><p><a name="1000219069"></a>For example, you could group on the Customer ID, but display the Customer Name as the group name.</p><p><a name="1000218133"></a>Alternatively, you could group on the Customer ID, but use the following formula to display both the Customer ID and the Customer Name in the group name:</p><p><code><a name="1000219107"></a>ToText ({Customer.CustomerID}) + " : " + {Customer.CustomerName}</code></p><p><a name="1000219112"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>You cannot include a field that is evaluated at runtime, such as a running total field, summary field or another group name field, in a group name formula.</p>
+<a name="1000217841"></a><h5>Keep group together</h5><p><a name="809475"></a>Select this check box to keep your groups from breaking across pages.</p><a name="809477"></a><h5>Repeat group header on each new page</h5><p><a name="809479"></a>If you want your groups to break across pages, select this check box to repeat the group header for every successive page.</p><a name="1000214345"></a><h6>Related topics</h6><p><a name="1000214349"></a><a href="dialogs6.html#1000200878">Change Group dialog box</a></p><p><a name="1000214375"></a><a href="dialogs91.html#1000254229">Insert Group dialog box</a></p><p><a name="1000214353"></a><a href="dialogs92.html#1000330559">Specified Order tab</a></p><p><a name="1000214354"></a><a href="dialogs93.html#1000330602">Others tab</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs6.html";
+var next = "dialogs8.html";
+
+function setTopicID() { 
+      var number = "809438"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

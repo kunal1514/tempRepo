@@ -1,0 +1,72 @@
+:Base crsql.HLP
+1 Crystal SQL Designer Overview
+2 Crystal SQL Designer Overview Topics=QUERY_Crystal_SQL_Designer_Overview_Topics
+2 Why Use A Query?=QUERY_Why_Use_A_Query
+2 The Crystal SQL Designer=QUERY_The_Crystal_SQL_Designer
+2 Using the SQL Designer=QUERY_Using_the_SQL_Designer
+1 Crystal SQL Designer Commands
+2 Commands Index=COMMANDS_Crystal_Query_Designer_Commands
+2 File Menu
+3 New command (File menu)=COMMANDS_New_command_File_menu
+3 Open command (File menu)=COMMANDS_Open_command_File_menu
+3 Save command (File menu)=COMMANDS_Save_command_File_menu
+3 Save As command (File menu)=COMMANDS_Save_As_command_File_menu
+3 Close command (File menu)=COMMANDS_Close_command_File_menu
+3 Log On Server command (File menu)=COMMANDS_Log_On_Server_command_File_menu
+3 Log Off Server command (File menu)=COMMANDS_Log_Off_Server_command_File_menu
+3 Open command (File menu)=COMMANDS_Open_command_File_menu
+3 Exit command (File menu)=COMMANDS_Exit_command_File_menu
+2 Edit menu
+3 Query command (Edit menu)=COMMANDS_Query_command_Edit_menu
+3 Query Title command (Edit menu)=COMMANDS_Query_Title_command_Edit_menu
+3 Refresh Data command (Edit menu)=COMMANDS_Refresh_Data_command_Edit_menu
+3 Verify Query command (Edit menu)=COMMANDS_Verify_Query_command_Edit_menu
+2 Window menu
+3 Tile Vertically command (Window menu)=COMMANDS_Tile_Vertically_Window_Menu
+3 Tile Horizontally command (Window menu)=COMMANDS_Tile_Horizontally_Window_Menu
+3 Cascade command (Window menu)=COMMANDS_Cascade_Window_Menu
+3 Arrange Icons command (Window Menu)=COMMANDS_Arrange_Icons_Window_Menu
+3 Close All command (Window Menu)=COMMANDS_Close_All_Window_Menu
+2 Help menu
+3 Contents command (Help menu)=COMMANDS_Contents_Help_menu
+3 Search command (Help menu)=COMMANDS_Search_Help_menu
+3 About Crystal Reports command (Help menu)=COMMANDS_About_Crystal_Reports_Help_menu
+1 Create SQL Expert
+2 Tables Tab=DIALOGBX_Tables_Tab
+2 Links Tab=DIALOGBX_Links_Tab
+2 Fields Tab=DIALOGBX_Fields_Tab
+2 Sort Tab=DIALOGBX_Sort_Tab
+2 Select Tab=DIALOGBX_Select_Tab
+2 SQL Tab=DIALOGBX_SQL_Tab
+1 Dialog Boxes
+2 Dialog Box Index=DIALOGBX_Dialog_Box_Index
+1 SQL Topics
+2 SQL Topics Index=SQL_SQL_Topics
+2 SELECT Clause=SQL_SELECT_clause
+2 FROM clause=SQL_FROM_clause
+2 GROUP BY clause=SQL_GROUP_BY_clause
+2 HAVING clause=SQL_HAVING_clause
+2 ORDER BY clause=SQL_ORDER_BY_clause
+2 WHERE clause=SQL_WHERE_clause
+2 SQL Expressions=SQL_SQL_Expressions
+2 Arithmetic Expressions=SQL_Arithmetic_Expressions
+2 Numeric Functions=SQL_Numeric_Functions
+2 Time and Date Functions=SQL_Time_and_Date_Functions
+2 Aggregate (Summary) Functions=SQL_Aggregate_Summary_Functions
+2 ODBC SQL Functions=SQL_ODBC_SQL_Functions
+2 SQL join types (ODBC data sources)=SQL_SQL_join_types_ODBC_data_sources
+1 Hands-On Tutorials
+2 Hands-On Tutorials Index=QUERY_Hands_On_Tutorial_Topics
+2 How to use an SQL query that you designed elsewhere=QUERY_How_to_use_an_SQL_Query_that_you_designed_elsewhere>howto
+2 How to create a new query=QUERY_How_to_create_a_new_query>howto
+2 How to add tables=CRSQL_How_to_add_tables
+2 How to link tables and specify a join type=QUERY_How_to_link_tables_and_specify_a_join_type>howto
+2 How to summarize data with aggregate functions=QUERY_How_to_summarize_data_with_aggregate_functions>howto
+2 How to sort records according to field values=QUERY_How_to_sort_records_according_to_field_values>howto
+2 How to specify records to be included=QUERY_How_to_specify_records_to_be_included>howto
+2 How to identify unique values=QUERY_How_to_identify_unique_values>howto
+2 How to select groups to be included=QUERY_How_to_select_groups_to_be_included>howto
+2 How to create an SQL expression=QUERY_How_to_create_an_SQL_expression>howto
+2 How to select a query for a report=CRSQL_How_to_select_a_query_for_a_report
+2 How to create a parameter field for use in a query=CRSQL_How_to_create_a_parameter_field_for_use_in_a_query
+2 How to create a parameter field for use in a query=CRSQL_How_to_create_a_parameter_field_for_use_in_a_query

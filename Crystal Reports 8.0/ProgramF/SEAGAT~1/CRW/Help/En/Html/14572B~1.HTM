@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>General OLE considerations</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="73269"></a><h3 class="newpage"> General OLE considerations</h3>
+<p><a name="73270"></a>There are several points to keep in mind when utilizing OLE functionality.</p><ul type="disc"><a name="73274"></a><li>When you double<nobr>-c</nobr>lick an embedded OLE object, the object is activated for editing and the Report Designer merges its menus and toolbars with those of the object's server application. When you are finished editing, click outside the object and the Report Designer toolbars reappear.
+<a name="73278"></a><li>When you double<nobr>-c</nobr>lick a linked OLE object, the program opens the object's server application with the object displayed and ready for editing. You cannot edit a linked object in place in Seagate Crystal Reports because you are working on the original object. Since the object could be linked to multiple documents, displaying the original in the server application limits access to one editor at a time.
+<a name="73282"></a><li>Windows 3.x shipped Microsoft Paintbrush<font size="-1"><sup>TM</sup></font> (PBRUSH.EXE) as the native bitmap editor. Windows 95 and Windows 98 ship Microsoft Paint<font size="-1"><sup>TM</sup></font> (MSPAINT.EXE) as the new bitmap editor. While Windows 95 and Windows 98 know to register and convert PBRUSH.EXE OLE bitmaps as MSPAINT OLE bitmaps, the opposite is not true.
+<a name="73283"></a><li>You can open a report containing a bitmap object created in Windows 3.1, in Windows 95 and Windows 98; however, you cannot open a Windows 95 and Windows 98 report that contains a bitmap object in Windows 3.1. Thus, if you are going to be working back and forth between these two operating systems, it is best to create the reports in Windows 3.1 rather than in Windows 95 and Windows 98.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "14_ole4.html";
+var next = "14_ole6.html";
+
+function setTopicID() { 
+      var number = "73269"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

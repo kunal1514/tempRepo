@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Prompt# command </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="150018"></a><h4 class="newpage"> Prompt# command </h4><p><a name="150019"></a>Specifies values for parameter fields in the report. Parameter values are assigned to parameters in the order in which they exist in the report.</p><PRE><a name="150020"></a>PROMPT#=&lt;value&gt;
+<a name="150021"></a>&#171;&lt;value&gt; is a string.&#187;
+</PRE><p><a name="150022"></a>For example:</p><p><code><a name="150023"></a>prompt0=CA</code></p><p><a name="150024"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Do not use quotation marks around parameter values to indicate string values. All parameter values are passed to the report as strings. Intended numeric values are translated from strings to numbers by the report.</p>
+<p><a name="150025"></a>If the report contains more than one parameter field, multiple values can be passed to parameters by incrementing the PROMPT index value. For example:</p><p><code><a name="150026"></a>prompt0=CA&amp;prompt1=1000</code></p><p><a name="151672"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Make sure parameter values appear in the URL in the same order in which the parameter fields and stored procedures appear in the report. If parameter values are not passed using the URL address, the user requesting the report is prompted to provide values at runtime.</p>
+<p><a name="162743"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Reports that have the PROMPT# command applied do not have their pages shared. Caching will be by user.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerCommands13.html";
+var next = "WebServerCommands15.html";
+
+function setTopicID() { 
+      var number = "150018"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

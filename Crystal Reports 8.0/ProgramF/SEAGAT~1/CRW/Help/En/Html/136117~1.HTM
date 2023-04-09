@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Map types</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="57897"></a><h3 class="newpage"> Map types</h3>
+<p><a name="57898"></a>The Map Expert also provides five basic map types, each suitable for a different strategy of data analysis. When deciding which map type best fits your report, you should consider the type of data you want to analyze. For example, if you want the map to display one data item for each geographic division (city, state, country, and so on), then you might use a Ranged, Dot Density, or Graduated map. On the other hand, if you want the map to display more than one value for each new geographic division, then you could use a Pie Chart map or a Bar Chart map. The following is an overview of the main map types and their most common uses.</p><a name="25250"></a><h5>Ranged</h5><p><a name="60338"></a>A Ranged map breaks the data into ranges, assigns a specific color to each range, then color codes each geographic area on the map to display the range. For example, you could create a map that displays Last Year's Sales by Region. If you have sales ranging from zero to 100,000, you might give the map five ranges, with equal intervals of 20,000 each. You could use shades of red (going from dark to light red) to color code each region according to those sales figures. Then you could use this map to see where sales are the highest.</p><p><a name="87790"></a>With equal intervals, you might end up with all your regions ranging between zero and 20,000, except perhaps one region (for example, California) that might have exceptionally high sales (such as 98,000). This map would be a very distorted representation of the data. A more useful map would have ranges like 0-5000, 5001-10000, 10001-15000, 15001-20000, and over 20000. It is important to carefully define your ranges.</p><p><a name="54082"></a>There are four different distribution methods for ranged maps.</p><ul type="disc"><a name="30452"></a><li><strong>Equal count</strong><br>This option assigns intervals in such a way that the same number of regions (or as close to the same number of regions as possible) appear in each interval. In other words, this option would assign intervals so that each color on the map is assigned to the same number of regions. The numeric quantity of the summary values in each interval may or may not be equal, depending on the individual regions and their summary values.
+<a name="30453"></a><li><strong>Equal ranges</strong><br>This option assigns intervals in such a way that the summary values in each interval are numerically equal. The number of regions in each interval may or may not be equal, depending on the individual regions and their summary values.
+<a name="30468"></a><li><strong>Natural break</strong><br>This option assigns intervals using an algorithm that attempts to minimize the difference between the summary values and the average of the summary values for each interval.
+<a name="30489"></a><li><strong>Standard deviation</strong><br>This option assigns intervals in such a way that the middle interval breaks at the mean (or average) of the data values, and the intervals above and below the middle range are one standard deviation above or below the mean. Standard deviation is the square root of the variance. It projects how various values in a set of values deviate from the mean for that set.
+</ul><a name="25251"></a><h5>Dot Density</h5><p><a name="60391"></a>A Dot Density map displays a dot for each occurrence of a specified item. For example, you might create a United States map that shows one dot for each shipbuilder in the nation. In states like Tennessee, there would be no dots. However, in some coastal states, such as South Carolina, you might be able to count the dots on the map, since their dispersal would be fairly wide.</p><p><a name="92146"></a>The purpose of a Dot Density map is to provide an overall impression of the distribution of the specified item. A Dot Density map is much like a nighttime satellite photo of the United States, where you can see the lights of all the cities. Such a map is not a very accurate means of communicating information (particularly if you have a large number of items), but it is a good way to give an overview of the distribution.</p><a name="27193"></a><h5>Graduated</h5><p><a name="60420"></a>A Graduated map is much like a Ranged map; it shows one symbol per instance of a specified item. This symbol is a circle by default, but you can choose a different symbol if you prefer. Each symbol is proportional in size to the value of the item it represents (within a range of three sizes).</p><p><a name="87799"></a>A Graduated map communicates the same information as the Ranged map, but you would usually create a Ranged map for a case in which the geographic areas have distinct geographic boundaries (as in the case of Regions), while you would use a Graduated map for displaying data that is linked to points rather than precise areas (as in the case of Cities).</p><p><a name="102866"></a>For example, a map of an individual region could use graduated circles to represent the sales for each office. The size of each circle would be proportional to the sales (or to the sales range) of the office it represents. On this map, an office with a sales figure of $70,000 might have a large circle, and an office with a sales figure of $20,000 might have a small circle. So, a Graduated map provides a more efficient representation of point data (e.g. Cities) than a Ranged map does, and it uses sized symbols rather than colors to distinguish variations in the values of the items it represents.</p><a name="25253"></a><h5>Pie Chart</h5><p><a name="60457"></a>A Pie Chart map displays a pie chart over each geographic area. The pie charts represent data items that make up a whole. Each slice of the pie represents an individual data item and shows that item's percentage in the whole. For example, you could create a Pie Chart map showing heating fuel types by region. You might have four types of heating fuel (four slices in each pie): electricity, gas, wood, and solar. Each region would then have a pie chart showing the breakdown of heating fuel types within that region. Washington state would probably use a high percentage (a large slice of the pie) of electricity because of the hydropower in that region, while Idaho would probably use a high percentage (a large slice of the pie) of natural gas.</p><p><a name="65305"></a>You can use this map type to compare the distribution of several items within a particular region. You can also specify that the pie charts be sized proportionately so that, as with the symbols in a Graduated map, the pie charts will appear in various sizes, depending on the underlying data values. This will allow you to compare the totals between regions.</p><a name="25254"></a><h5>Bar Chart</h5><p><a name="60512"></a>A Bar Chart map works like a Pie Chart map, but may be more useful for certain sets of data. Typically, you would use a Bar Chart map for items that do not total 100%; that is, for data items that do not make a whole, or for data items that are unrelated. For example, you could create a Bar Chart map that displays use of heating fuel by region. You might choose to analyze use of three types of fuel: electricity, gas, and solar. Each bar chart on the map could contain individual bars for each of these types. In this example, the data items (electricity, gas, and solar) do not comprise a whole. There may be other types of fuel used in these regions, such as wood, but this map only focuses on three of them. Also, the purpose of the map is to compare each region's use of each fuel type with that of every other region. In a Pie Chart map, you could show these three fuel types as percentages of the entire fuel use within each region, and though you could compare the percentages for each region, you would probably not be able to compare the actual values for each region because each region would have the same total value (100%).</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "13_map4.html";
+var next = "13_map6.html";
+
+function setTopicID() { 
+      var number = "57897"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

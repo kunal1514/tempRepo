@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Advanced record selection formulas</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="101807"></a><h3 class="newpage"> Advanced record selection formulas</h3>
+<p><a name="101808"></a>This section is of interest if you are creating reports from large databases and want to reduce the time it takes to process and display the results.</p><p><a name="101936"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>This section assumes that you are familiar with the Select Expert and that you are reporting off of a SQL database.</p>
+<a name="101946"></a><h4>Limiting amount of data fetched from the database</h4><p><a name="101947"></a>The most important thing you can do to speed up report processing is to limit the amount of data that is fetched from the database.</p><p><a name="101940"></a>A primary tool for doing this is the record selection formula. Seagate Crystal Reports analyzes your record selection formula and generates a SQL query from it. This SQL query is then processed by the database and the resulting records are sent to Seagate Crystal Reports. Seagate Crystal Reports then evaluates the record selection formula locally for each of the records retrieved from the database, to get the set of records that is used to generate the report.</p><p><a name="104248"></a>Unnecessary records are eliminated at two stages: at the database with the SQL query and within Seagate Crystal Reports by the record selection formula. For speed, you want as many records as possible to be eliminated in the first stage. This is commonly called <EM>pushing record selection down to the database server</EM>.</p><a name="104249"></a><h4>Record selection formula examples</h4><p><a name="104250"></a>In the Xtreme sample database, there are 2,001 records in the Orders table of which 169 have order dates prior to 1997. Suppose you want to report on only those records. A possible record selection formula is:</p><p><code><a name="101812"></a>Year ({Orders.Order Date}) &lt; 1997</code></p><p><a name="101813"></a>The SQL query generated will send all 2,001 records to Seagate Crystal Reports and then the record selection formula will reduce this to 169. To see this, invoke the Show SQL Query dialog on the Database menu and notice that the SQL query has no Where clause. This is because Seagate Crystal Reports is not able to push down the Year ( ) function in the WHERE clause.</p><p><a name="101814"></a>On the other hand, a record selection formula that generates the same<br>report is:</p><p><code><a name="101815"></a>{Orders.Order Date} &lt; #Jan 1, 1997#</code></p><p><a name="101816"></a>This record selection can be performed on the database server, so it is pushed down. The SQL query generated will send only 169 records to Seagate Crystal Reports and then when the record selection formula is evaluated by Seagate Crystal Reports, no further records need to be eliminated. Notice that the resulting SQL query has a Where clause.</p><p><a name="101817"></a>For speed, it is better to write record selection formulas like the second than like the first if possible; they both generate the same report, but the second takes advantages of the power and optimizations available on the database server itself for handling its own data.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "07_recordgroupsel14.html";
+var next = "07_recordgroupsel16.html";
+
+function setTopicID() { 
+      var number = "101807"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

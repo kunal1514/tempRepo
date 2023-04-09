@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>General purpose conditional formatting functions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="130675"></a><h3 class="newpage"> General purpose conditional formatting functions</h3>
+<p><a name="130677"></a>There are three general purpose conditional formatting functions:</p><ul type="disc"><a name="135699"></a><li>CurrentFieldValue
+<a name="135701"></a><li>DefaultAttribute
+<a name="144489"></a><li>GridRowColumnValue.
+</ul><p><a name="144490"></a>These functions are displayed at the top of the Functions tree when appropriate. DefaultAttribute can be used for any formatting formula. CurrentFieldValue can be used for any formatting formula where you are formatting a field value. GridRowColumnValue can be used for formatting a formula where you are formatting a field value in a Cross<nobr>-T</nobr>ab or OLAP grid.</p><p><a name="135719"></a><EM></EM>CurrentFieldValue enables you to conditionally format Cross<nobr>-T</nobr>ab or OLAP grid cells based on their value. GridRowColumnValue enables you to conditionally format the cells of a Cross<nobr>-T</nobr>ab or OLAP grid based on row or column headings values. These two functions are essential in some situations as there is no other way in the formula language to refer to these fields.</p><a name="135771"></a><h5>Example</h5><p><a name="135786"></a>If you wanted Cross<nobr>-T</nobr>ab cells to be suppressed if the values are less than 50,000:</p><PRE><a name="130679"></a>Rem Conditional formatting example 4
+<a name="130680"></a>formula = CurrentFieldValue &lt; 50000
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax41.html";
+var next = "20_basicsyntax43.html";
+
+function setTopicID() { 
+      var number = "130675"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

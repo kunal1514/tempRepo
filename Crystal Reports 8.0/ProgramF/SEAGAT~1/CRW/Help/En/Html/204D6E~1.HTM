@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Declaring array variables</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="130410"></a><h3 class="newpage"> Declaring array variables</h3>
+<p><a name="130411"></a>There are several different ways of declaring array variables. The first way is to use empty parentheses and explicitly specify the type of the array:</p><PRE><a name="130413"></a>'Declare x to be a Global variable
+<a name="130414"></a>'of Number Array type
+<a name="130415"></a>Global x () As Number 
+<a name="130416"></a>'Initialize x
+<a name="130417"></a>x = Array (10, 20, 30)
+<a name="130419"></a>'Declare y to be a Shared variable
+<a name="130420"></a>'of String Range Array type
+<a name="130421"></a>Shared y () As String Range
+<a name="130422"></a>'Initialize y
+<a name="130423"></a>y = Array ("A" To "C", "H" To "J")
+</PRE><p><a name="130425"></a>The second way is to declare the variable without specifying that it is an array and without giving its type and waiting for the first assignment to the variable to completely specify its type:</p><PRE><a name="130427"></a>'Declare y to be a Local variable
+<a name="130428"></a>'but do not specify its type
+<a name="130429"></a>Dim y
+<a name="130430"></a>'The type of y is now set to be a String Array
+<a name="130431"></a>y = Array ("Sun", "Mon", "Tue", "Wed", "Th", _
+<a name="130432"></a>           "Fri", "Sat")
+</PRE><p><a name="130434"></a>The third way is to declare that the variable is an array but not specify its type fully until the first assignment. Assuming the declaration of y above:</p><PRE><a name="130436"></a>'Declare z to be a Local variable that is an Array
+<a name="130437"></a>Local z()
+<a name="130438"></a>'z is set to Array ("Mon", "Tue") and is a String Array
+<a name="130439"></a>z = y(2 to 3)
+</PRE><p><a name="130441"></a>The fourth way is to explicitly specify the size of the array during the declaration. If you use this technique, the array is automatically created and default values are used to fill the array. For example, for a Number Array, each element is initialized to 0 and for a String array each element is initialized to the empty string "". Since this type of declaration actually creates the array, you must specify its type with the As clause so that Seagate Crystal Reports knows how much storage space to reserve for the array.</p><PRE><a name="130443"></a>Dim a(2) As String
+<a name="130444"></a>'Assign a value to the first element of the array a
+<a name="130445"></a>a(1) = "good"
+<a name="130446"></a>a(2) = "bye"
+</PRE><p><a name="130447"></a>'The &amp; operator can be used to concatenate strings</p><PRE><a name="130448"></a>'the formula returns the String "goodbye"
+<a name="130449"></a>formula = a(1) &amp; a(2)
+</PRE><a name="130451"></a><h5>Arrays and For/Next loops</h5><p><a name="135332"></a>Arrays are commonly used with For/Next loops. The following example creates and then uses the array <code>Array (10, 20, 30, ..., 100) </code>using a For/Next loop. See <a href="20_basicsyntax52.html#132807">For/Next loops</a> for more details.</p><PRE><a name="130454"></a>Dim b (10) As Number
+<a name="130455"></a>Dim i
+<a name="130456"></a>For i = 1 To 10
+<a name="130457"></a>   b(i) = 10 * i
+<a name="130458"></a>Next i
+<a name="130459"></a>formula = b(2) 'The formula returns the Number 20
+</PRE><p><a name="130461"></a>Several variables can be declared in a single statement by separating their declarations with commas:</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax27.html";
+var next = "20_basicsyntax29.html";
+
+function setTopicID() { 
+      var number = "130410"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

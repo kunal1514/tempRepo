@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Minimum (fld), Minimum (fld, condFld), Minimum (fld, condFld, cond), Minimum (x)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000466482"></a><h3 class="newpage"> Minimum (fld), Minimum (fld, condFld), Minimum (fld, condFld, cond), Minimum (x)</h3>
+<p><a name="1000666230"></a>Basic and Crystal syntax.</p><a name="1000466485"></a><h5>Arguments</h5><ul type="disc"><a name="1000466486"></a><li>fld is any valid database or formula field that can be evaluated by the function.
+<a name="1000466487"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000665003"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+<a name="1000466488"></a><li>x is an array of values that can be evaluated by the function being used.
+</ul><a name="1000466490"></a><h5>Returns</h5><p><a name="1000466491"></a>Fractional Number</p><a name="1000466492"></a><h5>Action</h5><p><a name="1000466494"></a>Enables you to find the minimum value that appears in a set of values. For example:</p><ul type="disc"><a name="1000466495"></a><li>If a sales report includes a field that shows the amount of each order, you can find the lowest order amount of all the orders that appear on the report (a grand total minimum amount). For information on finding this kind of minimum, see <a href="functionshelp22.html#1000432407">SummaryFunction (fld)</a>.
+<a name="1000466498"></a><li>If you break orders into groups (for example, orders grouped by the state that they come from), you can find the lowest order amount per group (in this case, per state). For information on finding this kind of minimum, see <a href="functionshelp23.html#1000432439">SummaryFunction (fld, condFld)</a>.
+<a name="1000466500"></a><li>If you break orders into date or Boolean groups (for example, orders grouped by the month in which they were placed), you can find the lowest order amount per group based on a specific change in the date or Boolean field (in this case, per month). For information on finding this kind of minimum, see <a href="functionshelp24.html#1000599837">SummaryFunction (fld, condFld, cond)</a>.
+<a name="1000466502"></a><li>If you specify a set of individual values, you can find the lowest value in the set. For information on finding this kind of minimum, see <a href="functionshelp155.html#1000567809">Array summary functions (x)</a>.
+</ul><a name="1000466504"></a><h5>Examples</h5><p><a name="1000466505"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000466506"></a>Minimum({file.QTY})</code></p><p class="example"><a name="1000466507"></a>Returns the lowest value in the QTY field.</p><p><code><a name="1000466508"></a>Minimum({orders.AMOUNT}, {orders.CUSTOMER ID})</code></p><p class="example"><a name="1000466509"></a>Identifies the smallest order in each group of orders in the Amount field (the smallest order for each month). The orders are separated into groups whenever the value in the Customer ID field changes.</p><p><code><a name="1000466510"></a>Minimum({orders.AMOUNT}, {orders.ORDER DATE}, "monthly")</code></p><p class="example"><a name="1000466511"></a>Identifies the smallest order in each group of orders in the Amount field (the smallest order for each month). The orders are separated into groups whenever the value in the Date field changes to a new month.</p><p><a name="1000740463"></a>The following example is applicable to Crystal syntax:</p><p><a name="1000740457"></a>Minimum also allows you to set a ceiling on a calculation. For example: Minimum([{file.COMMISSION}, 2500]) returns the commission accrued up to a cap or ceiling of 2500. Once accrued commission passes the $2500 mark, this expression returns 2500. Thus:</p><p><code><a name="1000466514"></a>Minimum([{file.COMMISSION}, 2500]) </code></p><p class="example"><a name="1000466515"></a>Returns 1575 where commission = 1575.</p><p><a name="1000652998"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. </p>
+<p><a name="1000653001"></a>For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp30.html";
+var next = "functionshelp32.html";
+
+function setTopicID() { 
+      var number = "1000466482"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>PPmt</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000494348"></a><h3 class="newpage"> PPmt</h3>
+<p><a name="1000666042"></a>Basic and Crystal syntax.</p><a name="1000494349"></a><h5>Overloads</h5><ul type="disc"><a name="1000494350"></a><li>PPmt (rate, period, nPeriods, presentValue)
+<a name="1000494351"></a><li>PPmt (rate, period, nPeriods, presentValue, futureValue)
+<a name="1000494352"></a><li>PPmt (rate, period, nPeriods, presentValue, futureValue, type)
+</ul><a name="1000494353"></a><h5>Arguments</h5><ul type="disc"><a name="1000494354"></a><li>rate is a Number that specifies the interest rate per period. 
+<a name="1000494355"></a><li>period is a Number that specifies the payment period in the range 1 through nPeriods. 
+<a name="1000494356"></a><li>nPeriods is a positive Number that specifies the total number of payment periods in the annuity. The units used for specifying rate, period and nPeriods must be consistent. For example, if nPeriods is the number of periods in months, then rate is a monthly interest rate and period specifies a month.
+<a name="1000494357"></a><li>presentValue is a Number or Currency that specifies the present value, or value today, of a series of future payments or receipts. 
+<a name="1000494358"></a><li>futureValue is an optional Number or Currency that specifies the future value or cash balance you want after you've made the final payment. If omitted, 0 is assumed. 
+<a name="1000494359"></a><li>type is an optional Number that specifies when payments are due. Specify 0 if payments are due at the end of the payment period, and 1 if payments are due at the beginning of the period. If omitted, 0 is assumed.
+</ul><a name="1000494360"></a><h5>Returns</h5><p><a name="1000494361"></a>Number value</p><a name="1000494362"></a><h5>Action</h5><p><a name="1000494363"></a>PPmt returns a Number specifying the principal payment for a given period of an annuity based on periodic, fixed payments and a fixed interest rate.</p><a name="1000494364"></a><h5>Examples</h5><p><a name="1000494365"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><a name="1000494367"></a>Suppose that you want to take out a $250,000 loan payable monthly over 15 years at an annual interest rate of 7 percent. The following formula returns the amount of principal that you pay in your first loan payment. Note that the monthly interest rate is 0.07 / 12 and the number of months of the loan is 15 * 12.</p><p><code><a name="1000494368"></a>PPmt (0.07 / 12, 1, 15 * 12, 250000)</code></p><p class="example"><a name="1000494369"></a>Returns the Number value -788.74 (rounded to 2 decimals). The value is negative because it represents a payment out from you whereas the loan amount of $250,000 is positive because it represents a payment in to you.</p><p><a name="1000494371"></a>The following formula returns the amount of principal that you pay in your 121st payment (after 10 years of payments):</p><p><code><a name="1000494372"></a>PPmt (0.07 / 12, 10*12 + 1, 15 * 12, 250000)</code></p><p class="example"><a name="1000494373"></a>Returns -1585.09 (rounded to 2 decimals). You've made progress on the loan and are paying off more of the principal per payment. This is because less interest can accrue each month since more of the loan is paid off so that your fixed monthly payment is applied more to the principal.</p><p><a name="1000494375"></a>The following Basic syntax formula returns the amount of the loan that has been paid off after 10 years by summing up the principal payments made for the first 120 monthly payment:</p><p class="code"><a name="1000494376"></a>Rem Basic syntax
+<br><a name="1000494377"></a>Dim total, i
+<br><a name="1000494378"></a>total = 0
+<br><a name="1000494379"></a>For i = 1 To 10 * 12
+<br><a name="1000494380"></a>&nbsp;&nbsp;&nbsp;&nbsp;total = total + PPmt (0.07 / 12, i, 15 * 12, 250000)
+<br><a name="1000494381"></a>Next i
+<br><a name="1000494382"></a>formula = total
+</p><p class="example"><a name="1000494383"></a>Returns -136518.45 (rounded to 2 decimals). So you have paid off $136,518.45 of the loan and still owe $113,481.55 after the 120th payment.</p><p><a name="1000494385"></a>Another way to calculate the amount you still owe after 10 years is to use 2 financial functions:</p><p class="code"><a name="1000494386"></a>Rem Basic syntax
+<br><a name="1000494387"></a>Dim payment
+<br><a name="1000494388"></a>payment = Pmt (0.07 / 12, 15 * 12, 250000)
+<br><a name="1000494389"></a>formula = FV (0.07 / 12, 10 * 12, payment, 250000)
+</p><p class="example"><a name="1000494390"></a>Returns -113481.55 (rounded to 2 decimals). So you still owe $113, 481.55 after 10 years of payments.</p><a name="1000494391"></a><h5>Comment</h5><p><a name="1000494392"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp57.html";
+var next = "functionshelp59.html";
+
+function setTopicID() { 
+      var number = "1000494348"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

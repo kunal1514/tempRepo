@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Covariance (fld, fld), Covariance (fld, fld, condFld), Covariance (fld, fld, condFld, cond)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000472181"></a><h3 class="newpage"> Covariance (fld, fld), Covariance (fld, fld, condFld), Covariance (fld, fld, condFld, cond)</h3>
+<p><a name="1000666357"></a>Basic and Crystal syntax.</p><a name="1000472184"></a><h5>Arguments</h5><ul type="disc"><a name="1000472185"></a><li>fld is any numeric field that can be evaluated by the function.
+<a name="1000472186"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000665036"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+</ul><a name="1000472187"></a><h5>Returns</h5><p><a name="1000472189"></a>Fractional Number</p><a name="1000472190"></a><h5>Action</h5><p><a name="1000472192"></a>Covariance is the measure of the linear relation between paired variables (that is, the tendency of two fields to vary together). Fields are covariant when they vary according to a specific mathematical relationship. The circumference of a circle and the radius of a circle are covariant.</p><a name="1000472193"></a><h5>Examples</h5><p><a name="1000472194"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000472195"></a>Covariance({table.FIELD1}, {table.FIELD2})</code></p><p class="example"><a name="1000472198"></a>Calculates the covariance of the two fields and returns the covariance as a fractional number.</p><p><a name="1000656747"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. </p>
+<p><a name="1000656750"></a>For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p><a name="1000472205"></a><h5>Comments</h5><p><a name="1000472207"></a>Covariance is calculated using the following technique:</p><ul type="disc"><a name="1000472208"></a><li>It calculates the average (mean) value for the items in each sample.
+<a name="1000472209"></a><li>It subtracts the average value from the value of each item, in both samples.
+<a name="1000472210"></a><li>It multiplies the differences for each pair of items.
+<a name="1000472211"></a><li>It calculates the average (mean) value for all the products of that multiplication. The result is the covariance.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp34.html";
+var next = "functionshelp36.html";
+
+function setTopicID() { 
+      var number = "1000472181"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

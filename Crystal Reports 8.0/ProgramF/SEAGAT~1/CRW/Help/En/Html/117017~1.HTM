@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Creating footers after the first page</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="180559"></a><h3 class="newpage"> Creating footers after the first page</h3>
+<p><a name="107497"></a>You may choose to print a page footer on all pages except the first page. You can do this by formatting the Page Footer section conditionally, using an on or off property.</p><a name="107498"></a><h6>To create footers after the first page</h6><ol>
+<a name="107499"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Place the field you want displayed as a page footer in the Page Footer section of the report.
+</ol>
+<ol>
+<a name="177164"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_secex.gif">
+
+
+On the <kbd>Format</kbd> menu, click <kbd>Section</kbd>.
+<p class="indent"><a name="177165"></a>The Section Expert dialog box appears.</p><p><a name="146709"></a> <img src="images/db_sectexpert.gif">
+
+
+</p>
+<a name="107509"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">In the <strong>Sections</strong> area, click <strong>Page Footer</strong>.
+<a name="107510"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">To open the Format Formula Editor dialog box, click the <kbd>Formula </kbd>button, located to the right of the <kbd>Suppress </kbd>(<kbd>No Drill<nobr>-D</nobr>own</kbd>)<kbd> </kbd>check box.
+<a name="107511"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Enter the following formula in the Format Formula Editor:
+</ol>
+<a name="107512"></a><h5>Crystal syntax example</h5><p><code><a name="178797"></a>PageNumber = 1</code></p><a name="178801"></a><h5>Basic syntax example</h5><p><code><a name="178802"></a>formula = PageNumber = 1</code></p><p class="indent"><a name="107513"></a>This formula suppresses the page footer on the first page, but not on any of the other pages.</p><ol>
+<a name="107514"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Save</strong>.
+</ol>
+<p><a name="177182"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="107515"></a><li>If there is an error in the formula, a message box appears, asking whether to exit without examining the error. If you click No, a second message box will be displayed, detailing the error.
+<a name="107516"></a><li>If there is no error in the formula, you are returned to the Section Expert. Note that the <EM>Formula</EM> button has changed. This indicates that a formula has been entered for that property. Search for <EM>Formula Compiler Errors</EM> in Seagate Crystal Reports online help.
+</ul><ol>
+<a name="122844"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_prevw.gif">
+
+
+On the Standard toolbar, click <kbd>Preview</kbd> to preview the report and ensure that the page footer appears on all pages but the first.
+</ol>
+<p><a name="177187"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="107525"></a><li>If you have a multi<nobr>-l</nobr>ine page footer and have inserted the lines into separate Page Footer sections, you will need to suppress each section conditionally, using the formula above.
+<a name="107526"></a><li>To create a page header that appears on all pages but the first, place the header information in the Page Header section and then suppress that section conditionally, using the same formula that was used for suppressing the Page Footer section.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "11_format53.html";
+var next = "11_format55.html";
+
+function setTopicID() { 
+      var number = "180559"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

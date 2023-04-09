@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Previous (fld)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000594322"></a><h3 class="newpage"> Previous (fld)</h3>
+<p><a name="1000594323"></a>Crystal syntax.</p><p><a name="1000649792"></a><a href="functionshelp176.html#1000577708">PreviousValue (fld)</a> and Previous are equivalent functions. However, you can use Previous only with Crystal syntax, and PreviousValue only with Basic syntax.</p><a name="1000594324"></a><h5>Arguments</h5><p><a name="1000594325"></a>fld is any valid database or formula field in the report.</p><a name="1000594326"></a><h5>Returns</h5><p><a name="1000594327"></a>A field value of the same type that was passed as the fld <a href="glossary2.html#16218">argument</a>.</p><a name="1000594328"></a><h5>Action</h5><p><a name="1000594330"></a>Previous (fld) returns the value of the specified field in the previous record.</p><a name="1000594331"></a><h5>Typical uses</h5><p><a name="1000594332"></a>You can use previous to identify the last record in a previous range or the last record occurring before a new range begins, or to test for duplicate values.</p><a name="1000594333"></a><h5>Examples</h5><p><a name="1000594334"></a>The following examples are applicable to Crystal syntax:</p><p class="code"><a name="1000594335"></a>If Previous({file.QTY}) &lt;&gt; 0 Then
+<br><a name="1000750319"></a>&nbsp;&nbsp;&nbsp;&nbsp;{file.QTY}/2
+<br><a name="1000750320"></a>Else
+<br><a name="1000750342"></a>&nbsp;&nbsp;&nbsp;&nbsp;{file.QTY}
+</p><p class="example"><a name="1000594336"></a>Tests the previous value in the {file.QTY} field to see if it is a zero value. If it is not, it divides the value by two. If it is a zero value, it returns the value itself.</p><p class="code"><a name="1000594337"></a>If Previous ({customer.CUSTOMER ID}) = {customer.CUSTOMER ID} Then
+<br><a name="1000750358"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Repeated Value"
+<br><a name="1000750359"></a>Else
+<br><a name="1000750418"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+</p><p class="example"><a name="1000594338"></a>This <a href="glossary7.html#13307">flag</a>s repeated values in the {customer.CUSTOMER ID} field.</p><p class="code"><a name="1000594339"></a>If Remainder(Previous ({file.SERIALNUM}), 300) = 0 Then
+<br><a name="1000750477"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Beginning, new block"
+<br><a name="1000750536"></a>Else
+<br><a name="1000750595"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+</p><p class="example"><a name="1000594340"></a>Divides the previous value in the {file.SERIALNUM} field by 300. If there is no remainder, it flags the current value as "Beginning, new block". If there is a remainder (Else) it prints no flag. (This formula divides serial numbers into blocks of 300.)</p><p><a name="1000594341"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. For more information on evaluation time considerations, see  <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp174.html";
+var next = "functionshelp176.html";
+
+function setTopicID() { 
+      var number = "1000594322"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

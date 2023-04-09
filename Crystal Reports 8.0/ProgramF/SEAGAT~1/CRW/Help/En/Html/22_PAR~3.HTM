@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>To apply conditional formatting using parameter fields</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="80050"></a><h4 class="newpage"> To apply conditional formatting using parameter fields</h4><p><a name="78843"></a>Parameter fields can be used to create conditional formatting formulas. You can customize these formulas whenever you refresh the report data. A conditional formatting formula could be used for color<nobr>-f</nobr>lagging data that meets certain conditions. For example:</p><ul type="disc"><a name="78844"></a><li>Sales representatives who sell more than 10% over quota.
+<a name="78845"></a><li>Customers who have not ordered in the last quarter.
+<a name="78846"></a><li>Inventory items that have not had any movement in the last month.
+</ul><p><a name="78847"></a>If the conditions under which you flag these items never change, you do not need to use parameter fields. You can just use formulas (for text flags) or conditional formatting (for border flags). However, to change the conditions from report to report, you need to use parameter fields in formulas and conditional formatting formulas.</p><ol>
+<a name="78848"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Create the parameter field in the data type you need for the formula.
+<a name="78849"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Create the formula and use the parameter field in place of the fixed value you would normally use.
+<a name="78854"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/22_parama.gif">
+
+
+For example, to be prompted for all the customers whose last year's sales were over a certain value and to print their names in red, then select the Last Year's Sales field and click <kbd>Object Properties</kbd> from the Supplementary toolbar.
+<p class="indent"><a name="81198"></a>The Format Editor appears.</p><a name="78858"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_cdfml.gif">
+
+
+Click the Conditional formula button next to the Color property on the <strong>Font</strong> tab, and format the field using a conditional formatting formula like this:
+</ol>
+<PRE><a name="78859"></a>If {customer.LAST YEAR'S SALES} &gt; {?SalesTarget} Then
+<a name="78860"></a>&nbsp;&nbsp;&nbsp;&nbsp;Red
+<a name="78861"></a>Else
+<a name="78862"></a>&nbsp;&nbsp;&nbsp;&nbsp;Black
+</PRE><p><a name="78863"></a>Now, when you refresh the data, the program will prompt you for the value that triggers the color flag (known as the threshold value). It then runs the report and flags all the customers that had sales last year above the threshold figure. You can change the figure each time you run the report and the program will flag a different set of Customer Names.</p><p><a name="80606"></a>For more information see <a href="20_basicsyntax41.html#130639">Conditional formatting functions</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "22_param10.html";
+var next = "22_param12.html";
+
+function setTopicID() { 
+      var number = "80050"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

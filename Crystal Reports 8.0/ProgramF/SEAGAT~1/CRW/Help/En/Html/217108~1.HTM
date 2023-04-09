@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>If expressions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="147318"></a><h3 class="newpage"> If expressions</h3>
+<p><a name="147320"></a>The <EM>If</EM> expression is one of the most useful control structures. It allows you to evaluate an expression if a condition is true and evaluate a different expression otherwise.</p><a name="152471"></a><h5>Example</h5><p><a name="152472"></a>A company plans to pay a bonus of 4 percent to its employees except for those who work in Sales who will receive 6 percent. The following formula using an If expression would accomplish this:</p><PRE><a name="147322"></a>//If example 1
+<a name="147323"></a>If {Employee.Dept} = "Sales" Then
+<a name="147324"></a>   {Employee.Salary} * 0.06
+<a name="147325"></a>Else
+<a name="147326"></a>   {Employee.Salary} * 0.04
+</PRE><p><a name="147328"></a>In this example, if the condition {Employee.Dept} = "Sales" evaluates as true, then the</p><p><code><a name="147329"></a>{Employee.Salary} * 0.06</code></p><p><a name="147330"></a>expression is processed. Otherwise the expression following the <EM>Else</EM>, namely the</p><p><code><a name="147331"></a>{Employee.Salary} * 0.04</code></p><p><a name="147332"></a>is processed.</p><p><a name="147334"></a>Suppose another company wants to give employees a 4% bonus, but with a minimum bonus of $1,000. The following example shows how. Notice that the <EM>Else</EM> clause is not included; it is optional, and not needed in this case.</p><PRE><a name="147336"></a>//If example 2
+<a name="147337"></a>Local CurrencyVar bonus := {Employee.Salary} * 0.04;
+<a name="147338"></a>If bonus &lt; 1000 Then
+<a name="147339"></a>   bonus := 1000;
+<a name="147340"></a>//The final expression is just the variable 'bonus'.
+<a name="147341"></a>//This returns the value of the variable and is the
+<a name="147342"></a>//result of the formula
+<a name="147343"></a>bonus
+</PRE><p><a name="147345"></a>Another way of accomplishing example 2 is to use an Else clause:</p><PRE><a name="147347"></a>//If example 3
+<a name="147348"></a>Local CurrencyVar bonus := {Employee.Salary} * 0.04;
+<a name="147349"></a>If bonus &lt; 1000 Then
+<a name="147350"></a>   1000
+<a name="147351"></a>Else
+<a name="147352"></a>   bonus
+</PRE><p><a name="147354"></a>Now suppose that the previous company also wants a maximum bonus of $5,000. You now need to use an Else If clause. The following example has only one Else If clause, but you can add as many as you need. Note, however, that there is a maximum of one Else clause per If expression. The Else clause is executed if none of the If or Else If conditions are true.</p><PRE><a name="147356"></a>//If example 4
+<a name="147357"></a>Local CurrencyVar bonus := {Employee.Salary} * 0.04;
+<a name="147358"></a>If bonus &lt; 1000 Then
+<a name="147359"></a>   1000
+<a name="147360"></a>Else If bonus &gt; 5000 Then
+<a name="147361"></a>   5000
+<a name="147362"></a>Else
+<a name="147363"></a>   bonus;
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax52.html";
+var next = "21_crystalsyntax54.html";
+
+function setTopicID() { 
+      var number = "147318"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

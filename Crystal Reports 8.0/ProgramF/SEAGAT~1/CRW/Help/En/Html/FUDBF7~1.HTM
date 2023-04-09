@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>WhilePrintingRecords</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000575826"></a><h3 class="newpage"> WhilePrintingRecords</h3>
+<p><a name="1000712619"></a>Basic and Crystal syntax.</p><a name="1000575829"></a><h5>Returns</h5><p><a name="1000575830"></a>None</p><a name="1000575831"></a><h5>Action</h5><p><a name="1000575832"></a>Forces the program to evaluate the formula while it is printing database record data.</p><a name="1000575833"></a><h5>Typical uses</h5><p><a name="1000575834"></a>Formulas are normally evaluated at the following times:</p><ul type="disc"><a name="1000575835"></a><li>If no database or group field is included in the formula, the formula is evaluated before the program reads database records.
+<a name="1000575836"></a><li>If a database is included in the formula, the formula is evaluated while the program reads database records.
+<a name="1000575837"></a><li>If a group field, page # field, subtotal, etc. is included in the formula, the formula is evaluated after database records are read and while the data from the records is being printed in the report.
+</ul><p><a name="1000575839"></a>WhilePrintingRecords forces the formula to be evaluated while the program prints database records.</p><p><a name="1000575840"></a>This function can also force a formula that includes no database fields and no group fields to process while printing records instead of before reading records. It will also force a formula that includes database fields to process while printing records instead of while reading records.</p><a name="1000575841"></a><h5>Examples </h5><p><a name="1000712624"></a>The following examples are applicable to Crystal syntax:</p><p class="code"><a name="1000712625"></a>WhilePrintingRecords;
+<br><a name="1000712628"></a>3* Sum ({file.QTY1}, {file.QTY2})
+</p><p class="example"><a name="1000575845"></a>Forces the formula (which contains a group) to be evaluated at its normal time (while printing records).</p><p class="code"><a name="1000575847"></a>WhilePrintingRecords;
+<br><a name="1000712629"></a>ToNumber ("12345")
+</p><p class="example"><a name="1000575848"></a>Forces the formula (which contains no database fields or groups), to be evaluated later than it would normally be evaluated. In this case, it causes the formula to be evaluated while printing records instead of before reading records.</p><p><a name="1000681824"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp171.html";
+var next = "functionshelp173.html";
+
+function setTopicID() { 
+      var number = "1000575826"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

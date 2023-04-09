@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Variables can only hold values of one type</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="130289"></a><h4 class="newpage"> Variables can only hold values of one type</h4><p><a name="135261"></a>A variable can only hold values of one type. For example, if a variable holds a Number value you cannot later use it to hold a String.</p><a name="135274"></a><h5>Example</h5><PRE><a name="135300"></a>Dim y As String
+<a name="130291"></a>y = "hello"
+<a name="130293"></a>'OK - the Len function expects a String argument
+<a name="130294"></a>formula = Len (y)
+<a name="130296"></a>'Error- y can only hold String values
+<a name="130297"></a>y = #Jan 5, 1993#
+<a name="130299"></a>'Error- y can only hold String values
+<a name="130300"></a>y = Array ("a", "bb", "ccc")
+<a name="130302"></a>'Error- the Sin function expects a Number argument
+<a name="130303"></a>formula = Sin (y)
+</PRE><p><a name="130304"></a>You can declare more than one variable per statement by separating their declaration by commas:</p><PRE><a name="130305"></a>Dim x As Number, y as String, z as DateTime Range
+<a name="130306"></a>x = 10 : y = "hello"
+<a name="130307"></a>z = #Jan 1, 1999# To #Jan 31, 1999#
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax23.html";
+var next = "20_basicsyntax25.html";
+
+function setTopicID() { 
+      var number = "130289"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

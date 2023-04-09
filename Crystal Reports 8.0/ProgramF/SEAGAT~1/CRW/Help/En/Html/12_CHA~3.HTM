@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Charting on Cross-Tab summaries (Cross-Tab layout)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="90491"></a><h3 class="newpage"> Charting on Cross-Tab summaries (Cross-Tab layout)</h3>
+<p><a name="63554"></a>Seagate Crystal Reports allows you to include a chart based on summary values in your Cross<nobr>-T</nobr>ab report. For example, with a Cross<nobr>-T</nobr>ab that shows the amount of a certain product sold in each region of the United States, you may want to include a chart showing the percentage of total sales provided by each region for that product.</p><p><a name="63555"></a>To create a Cross<nobr>-T</nobr>ab chart you must first have a Cross<nobr>-T</nobr>ab in your report. For more information, see <a href="15_crosstabs.html#1106670">Cross<nobr>-T</nobr>ab Objects</a>.</p><a name="85459"></a><h6>To chart on a Cross-Tab summary</h6><ol>
+<a name="85464"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_insertchart.gif">
+
+
+On the <kbd>Insert</kbd> menu, click <kbd>Chart</kbd>.
+<p class="indent"><a name="89409"></a>The Chart Expert dialog box appears.</p><a name="79052"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Type</kbd> tab, in the <kbd>Chart type</kbd> list, click the chart type that best illustrates your data. See <a href="12_chart5.html#34534">Chart types</a>.
+<a name="96153"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Data</kbd> tab.
+<p><a name="99881"></a> <img src="images/db_chartcross_data.gif">
+
+
+</p>
+<a name="79083"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Layout</kbd> area, click <kbd>Cross<nobr>-T</nobr>ab</kbd>.
+<a name="96211"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Placement</kbd> area, click <kbd>Header</kbd> or <kbd>Footer</kbd> to specify where to place your chart.
+<a name="97533"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">How often your chart appears on the report depends on where the Cross<nobr>-T</nobr>ab summary field has been placed.
+<a name="97761"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Data</kbd> area, in the <kbd>On change of</kbd> list, click the group field you want to base your chart on.
+<a name="97788"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">If necessary, in the <kbd>Subdivided by</kbd> list, click a secondary row or column you want to base your chart on.
+<a name="97815"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Show</kbd> list, click the summary field you want to display on your chart.
+<a name="97842"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Axes</kbd> and <kbd>Options</kbd> tab, add data values, a legend, or other elements to your chart.
+<a name="97869"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Text</kbd> tab.
+<a name="97896"></a><li value="12&nbsp;&nbsp;&nbsp;&nbsp;">Accept the default title information or add new titles to your chart.
+<a name="97923"></a><li value="13&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd>.
+<p class="indent"><a name="91054"></a>Your chart is placed in the Header or Footer section of the report, depending on your selection in Step 5.</p><p class="indent"><a name="96202"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>When your chart is inserted, it may cover a portion of the report. Move and resize the chart so that it fits properly within the report.</p>
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "12_chart10.html";
+var next = "12_chart12.html";
+
+function setTopicID() { 
+      var number = "90491"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

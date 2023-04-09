@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>FREquityVsTotalAssets (TotalEquity, TotalAssets)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000657402"></a><h3 class="newpage"> FREquityVsTotalAssets (TotalEquity, TotalAssets)</h3>
+<p><a name="1000723352"></a>Basic and Crystal syntax.</p><a name="1000657405"></a><h5>Format</h5><p><code><a name="1000589170"></a>FREquityVsTotalAssets(TotalEquity, TotalAssets)</code></p><a name="1000589171"></a><h5>Arguments</h5><ul type="disc"><a name="1000589172"></a><li>TotalEquity is a Number or formula. In general, TotalEquity consist of common stocks, preferred stocks, capital surplus, and retained earnings in a company's balance sheet.
+<a name="1000589173"></a><li>TotalAssets is a Number or formula. In general, TotalAssets consist of total current assets, net fixed assets and all other assets in a company's balance sheet.
+</ul><a name="1000589174"></a><h5>Action</h5><p><a name="1000589175"></a>FREquityVsTotalAssets returns the ratio between TotalEquity and TotalAssets (for example, EquityVsTotalAssets = TotalEquity / TotalAssets).</p><a name="1000589177"></a><h5>Typical uses</h5><p><a name="1000589178"></a>This ratio is used to measure the financial structure of a company. The higher the ratio, the stronger a company's capital structure and the better it is capitalized.</p><a name="1000589179"></a><h5>Examples</h5><p><a name="1000589180"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000589181"></a>FREquityVsTotalAssets(2, 4) </code></p><p class="example"><a name="1000723357"></a>Returns 0.5.</p><p><code><a name="1000589182"></a>FREquityVsTotalAssets(2.82, 18.8) </code></p><p class="example"><a name="1000589183"></a>Returns 0.15.</p><p><a name="1000684508"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="1000684569"></a><li>None of the arguments can be negative; you may have to check for negative values before passing the arguments.
+<a name="1000684657"></a><li>TotalEquity must be smaller or equal to TotalAssets, otherwise you will receive an error message.
+</ul><a name="1000589197"></a><h5>Comment</h5><p><a name="1000589198"></a>FREquityVsTotalAssets is one of the many financial analysis tools used in interpreting the financial position of a company. As in the case of all ratios, it has to be used with caution. It can just be used as a clue and not solid proof for forming a judgment on the financial status of a company. </p><p><a name="1000589199"></a>Neither one of the ratios can be used alone for doing financial analysis and there are no fixed rules on the results of the ratios. Apart from differences between type of industries, result varies among different companies within the same industry and within different account periods. The results should only be used for relative comparison and trend analysis, rather than treating them as something absolute.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp219.html";
+var next = "functionshelp221.html";
+
+function setTopicID() { 
+      var number = "1000657402"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

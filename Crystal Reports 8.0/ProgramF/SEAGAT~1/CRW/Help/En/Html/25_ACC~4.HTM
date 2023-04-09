@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Exchange</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="11700"></a><h4 class="newpage"> Exchange</h4><p><a name="11701"></a>Exchange is Microsoft's successor to MS Mail. Exchange, however, includes not only e<nobr>-m</nobr>ail, but also management of group scheduling, electronic forms, groupware, and Internet connectivity. An Exchange folder can contain standard notes (mail), files, and instances of Exchange forms. All of this data is stored in the Exchange Information Store.</p><p><a name="14277"></a>Seagate Crystal Reports can report on data contained in the Exchange Information Store. Exchange data sources available for reporting include:</p><ul type="disc"><a name="14366"></a><li>Message Tracking Logs
+<a name="14367"></a><li>Address Lists
+<ul type="disc"><ul type="disc"><a name="14368"></a><li>Personal Address Books<a name="14370"></a><li>Global Address Lists<a name="14379"></a><li>Distribution Lists</ul></ul><a name="14369"></a><li>Exchange Folder Contents
+<ul type="disc"><ul type="disc"><a name="14388"></a><li>mail messages<a name="14396"></a><li>Exchange Form applications<a name="14397"></a><li>properties of OLE documents</ul></ul><a name="14395"></a><li>Exchange Administrator
+<ul type="disc"><ul type="disc"><a name="14398"></a><li>properties of Exchange mailboxes on the Exchange Server<a name="14399"></a><li>properties of public folders on the Exchange Server<a name="14400"></a><li>replica list of public folders<a name="14401"></a><li>ACL (Access Control List) of public folders.</ul></ul></ul><p><a name="14402"></a>You can use each Exchange data source like a database table and you can link each Exchange data source to other data sources. For example, you can join the Message Tracking Log to an Address List by using an e<nobr>-m</nobr>ail address as the link field.</p><p><a name="333116"></a> </p>
+<p><a name="162496"></a>The data translation file used to access the Exchange data source depends on the data source that is being accessed. The following table lists each of the Exchange data translation files and describes their purpose:</p><p><a name="210117"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="210094"></a>File name
+
+</th><th align="left" valign="bottom"><a name="210096"></a>Data source
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="210098"></a>P2strack.dll</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="210100"></a>Message Tracking Logs</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="210102"></a>P2smapi.dll</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="210104"></a>Exchange Folder Contents and Address Lists</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="210106"></a>P2sexsr.dll</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="210108"></a>Properties of Exchange Mailboxes and Public Folders</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="210110"></a>P2srepl.dll</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="210112"></a>Replica Lists of Public Folders </P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="210114"></a>P2sacl.dll</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="210116"></a>Access Control Lists (ACL) of Public Folders</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="327727"></a>P2soutlk.dll</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="327729"></a>Microsoft Outlook</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="27633"></a>Exchange translation files work directly with the Microsoft Messaging API (MAPI). MAPI acts as a database engine for Exchange data.</p><a name="271792"></a><h5>How the Report Designer treats Exchange data </h5><p><a name="319784"></a>Seagate Crystal Reports treats Exchange Administrator data (Public Folder Admin, Public Folder ACL, Public Folder Replica, and Mailbox Admin server types) as a physical database server. To access this data, you must log on using a SQL/ODBC server and select the appropriate tables from the Choose SQL Table dialog box.</p><p><a name="162751"></a>When you log on to any of the Exchange Administrator servers, you must select a profile (or profiles). Each profile represents an Exchange Server.</p><p><a name="305505"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Refer to your Microsoft Exchange documentation for more information about how to set up and create Exchange profiles.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources11.html";
+var next = "25_access_sources13.html";
+
+function setTopicID() { 
+      var number = "11700"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

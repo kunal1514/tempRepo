@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Parameters </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="149505"></a><h4 class="newpage"> Parameters </h4><p><a name="149506"></a>The Report Viewer for Java provides the following parameters:</p><a name="149507"></a><h5>CanDrillDown</h5><p><a name="149508"></a>Indicates whether or not the user can drill<nobr>-d</nobr>own on summary data, graphs, or charts in the report. </p><ul type="disc"><a name="158583"></a><li>TRUE allows drill<nobr>-d</nobr>own.
+<a name="158586"></a><li>FALSE prevents drill<nobr>-d</nobr>own.
+</ul><a name="149509"></a><h5>HasExportButton</h5><p><a name="149510"></a>Indicates whether or not an Export button appears on the Report Viewer. The export button allows users to export reports displayed in the Report Viewer to Microsoft Word, Microsoft Excel, HTML 3.2, or Seagate Crystal Reports format. </p><ul type="disc"><a name="158590"></a><li>TRUE allows exporting.
+<a name="158592"></a><li>FALSE prevents exporting.
+</ul><p><a name="158599"></a>To override this setting use the Crystal Report Web Components Manager application. For more information, refer to the <a href="WebServerAdministration11.html#166018">Report Viewing tab</a>.</p><a name="149514"></a><h5>HasGroupTree</h5><p><a name="149515"></a>Indicates whether or not the viewer generates a Group Tree for the report. Does not indicate whether or not the Group Tree is displayed. </p><ul type="disc"><a name="158601"></a><li>TRUE generates a Group Tree.
+<a name="158603"></a><li>FALSE prevents generation of a Group Tree.
+</ul><a name="149516"></a><h5>HasPrintButton</h5><p><a name="149517"></a>Indicates whether or not the viewer includes a print button allowing the viewed report to be printed. </p><ul type="disc"><a name="158605"></a><li>TRUE allows printing. 
+<a name="158614"></a><li>FALSE prevents printing. 
+</ul><p><a name="158615"></a>Printing from the Report Viewer for Java requires a web browser or Java Virtual Machine that supports version 1.1 or later of the Java Developer's Kit (JDK).</p><a name="149518"></a><h5>HasRefreshButton</h5><p><a name="149519"></a>Indicates whether or not a Refresh button is available in the viewer to allow the user to refresh report data. </p><ul type="disc"><a name="158624"></a><li>TRUE allows users to refresh report data.
+<a name="158631"></a><li>FALSE prevents users from refreshing report data.
+</ul><a name="149520"></a><h5>HasTextSearchControls</h5><p><a name="149521"></a>Indicates that the viewer includes controls to allow searching for specific values in the report. </p><ul type="disc"><a name="158634"></a><li>TRUE allows searching.
+<a name="158640"></a><li>FALSE prevents search controls from being displayed.
+</ul><a name="149522"></a><h5>ReportName</h5><p><a name="149523"></a>Specifies the report to be displayed inside the viewer. The path must be a URL on the same server as the HTML document and must be placed inside quotation marks.</p><a name="149524"></a><h5>ShowGroupTree</h5><p><a name="149525"></a>Indicates whether or not the Group Tree is displayed when the viewer first appears. If the HasGroupTree parameter is set to False, this parameter is ignored. If the Group Tree is hidden, the user can display it by clicking the Toggle Group Tree button in the viewer. </p><ul type="disc"><a name="158645"></a><li>TRUE displays the Group Tree.
+<a name="158656"></a><li>FALSE hides the Group Tree.
+</ul><a name="149526"></a><h5>Example</h5><p><a name="162937"></a>The following code demonstrates one means of embedding the Report Viewer for Java in a web page. This JavaScript code determines browser version and then installs the appropriate version of the Report Viewer for Java.</p><p class="code"><a name="162940"></a>&lt;SCRIPT LANGUAGE="JavaScript"&gt;&lt;!-- 
+<br><a name="162367"></a>&nbsp;&nbsp;&nbsp;&nbsp; var _ns3 = false; 
+<br><a name="162368"></a>&nbsp;&nbsp;&nbsp;&nbsp; var _ns4 = false; 
+<br><a name="162369"></a>&nbsp;&nbsp;&nbsp;&nbsp; //--&gt;&lt;/SCRIPT&gt; 
+<br><a name="162370"></a>&nbsp;&nbsp;&nbsp;&nbsp; &lt;COMMENT&gt;&lt;SCRIPT LANGUAGE="JavaScript1.1"&gt;&lt;!-- 
+<br><a name="162371"></a>&nbsp;&nbsp;&nbsp;&nbsp; var _info = navigator.userAgent; 
+<br><a name="162372"></a>&nbsp;&nbsp;&nbsp;&nbsp; var _ns3 = (navigator.appName.indexOf("Netscape") &gt;= 0 &amp;&amp; 
+_info.indexOf("Mozilla/3") &gt;= 0); 
+<br><a name="162373"></a>&nbsp;&nbsp;&nbsp;&nbsp; var _ns4 = (navigator.appName.indexOf("Netscape") &gt;= 0 &amp;&amp; 
+_info.indexOf("Mozilla/4") &gt;= 0 ); 
+<br><a name="162374"></a>&nbsp;&nbsp;&nbsp;&nbsp; //--&gt;&lt;/SCRIPT&gt;&lt;/COMMENT&gt; 
+<br><a name="162375"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;SCRIPT LANGUAGE="JavaScript"&gt;&lt;!-- 
+<br><a name="162376"></a>&nbsp;&nbsp;&nbsp;&nbsp; if(_ns3==true) 
+<br><a name="162377"></a>&nbsp;&nbsp;&nbsp;&nbsp;  document.writeln( '&lt;applet 
+code=com.seagatesoftware.img.ReportViewer.ReportViewer
+<br><a name="162378"></a>&nbsp;&nbsp;&nbsp;&nbsp;codebase="/viewer/JavaViewer" id=ReportViewer width=100% height=95%
+<br><a name="162379"></a>&nbsp;&nbsp;&nbsp;&nbsp;archive="/viewer/JavaViewer/ReportViewer.zip"&gt;' ); 
+<br><a name="162380"></a>&nbsp;&nbsp;&nbsp;&nbsp; else if (_ns4 == true) 
+<br><a name="162381"></a>&nbsp;&nbsp;&nbsp;&nbsp;  document.writeln( '&lt;applet 
+code=com.seagatesoftware.img.ReportViewer.ReportViewer
+<br><a name="162382"></a>&nbsp;&nbsp;&nbsp;&nbsp;codebase="/viewer/JavaViewer" id=ReportViewer width=100% height=95%
+<br><a name="162383"></a>&nbsp;&nbsp;&nbsp;&nbsp;archive="/viewer/JavaViewer/ReportViewer.jar"&gt;' ); 
+<br><a name="162384"></a>&nbsp;&nbsp;&nbsp;&nbsp; else 
+<br><a name="162385"></a>&nbsp;&nbsp;&nbsp;&nbsp;  document.writeln( '&lt;applet 
+code=com.seagatesoftware.img.ReportViewer.ReportViewer
+<br><a name="162386"></a>&nbsp;&nbsp;&nbsp;&nbsp;codebase="/viewer/JavaViewer" id=ReportViewer width=100% height=95%&gt;' 
+); 
+<br><a name="162387"></a>&nbsp;&nbsp;&nbsp;&nbsp;//--&gt;&lt;/SCRIPT&gt; 
+<br><a name="162388"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=Language value="en"&gt; 
+<br><a name="162389"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=ReportName value="empprof.rpt"&gt; 
+<br><a name="162390"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=ReportParameter value=""&gt; 
+<br><a name="162391"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=HasGroupTree value="true"&gt; 
+<br><a name="162392"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=ShowGroupTree value="true"&gt; 
+<br><a name="162393"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=HasRefreshButton value="true"&gt; 
+<br><a name="162394"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=HasPrintButton value="true"&gt; 
+<br><a name="162395"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=HasExportButton value="true"&gt; 
+<br><a name="162396"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=HasTextSearchControls value="true"&gt; 
+<br><a name="162397"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=CanDrillDown value="true"&gt; 
+<br><a name="162398"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=PromptOnRefresh value="true"&gt; 
+<br><a name="162399"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;param name=cabbase value="/viewer/JavaViewer/ReportViewer.cab"&gt; 
+<br><a name="162400"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/applet&gt; 
+</p><p><a name="149533"></a>This example displays the empprof.rpt report in the Report Viewer for Java window. A Group Tree is generated to allow Smart Navigation, but it will be hidden initially. The viewer does not allow a user to refresh the report data.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "Report_Viewers14.html";
+var next = "Report_Viewers16.html";
+
+function setTopicID() { 
+      var number = "149505"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Conditional attribute properties</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="10043"></a><h3 class="newpage"> Conditional attribute properties</h3>
+<p><a name="10044"></a>A conditional attribute property tests to see <EM>which</EM> of two or more conditions is met. The program then applies the formatting appropriate to the condition. For example, assume that you want values under quota printed in red and all other values printed in black. The program tests to see whether the value is under quota or not. If it is under quota, then it applies the red attribute; if it is not, then it applies the black attribute. </p><p><a name="10045"></a>Use an If<nobr>-T</nobr>hen<nobr>-E</nobr>lse formula for this kind of conditional formatting. For Crystal syntax, see <a href="21_crystalsyntax53.html#147318">If expressions</a>. Or, for Basic syntax, see <a href="20_basicsyntax49.html#132674">If statements</a>.</p><a name="178656"></a><h5>Crystal syntax example</h5><PRE><a name="178659"></a>If Condition A Then
+<a name="102973"></a>&nbsp;&nbsp;&nbsp;&nbsp;crRed
+<a name="102974"></a>Else
+<a name="102975"></a>&nbsp;&nbsp;&nbsp;&nbsp;crBlack
+</PRE><a name="105206"></a><h5>Basic syntax example</h5><PRE><a name="178663"></a>If Condition A Then
+<a name="178683"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = crRed
+<a name="178684"></a>Else
+<a name="178688"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = crBlack
+<a name="178689"></a>End If
+</PRE><p><a name="178685"></a>When conditional attribute properties are set up, Seagate Crystal Reports loads a selection of attributes into the Functions list in the Formula Editor. Double<nobr>-c</nobr>lick any of these attributes to add them to a formula. For example, if you are setting horizontal alignment conditionally, the Functions list contains attributes such as DefaultHorAligned, LeftAligned, and Justified. If you are setting borders conditionally, the Functions list contains attributes such as NoLine, SingleLine, and DashedLine.</p><p><a name="10048"></a>You can take this kind of property one step further. You can specify a list of conditions and a property for each; you are not limited to two conditions. For example, if you have a number field on your report that contains sales figures from countries around the world, you can specify the number attribute(s) that you want to apply to each country. In this case, your conditions would specify that if it is from Country A, the program should apply the Country A attribute; if it is from Country B, the Country B attribute; if it is from Country C, the Country C attribute, and so on.</p><p><a name="10049"></a>With more than two alternatives, use this kind of formula:</p><a name="10050"></a><h5>Crystal syntax example</h5><PRE><a name="178690"></a>If Condition A Then
+<a name="178694"></a>&nbsp;&nbsp;&nbsp;&nbsp;crRed
+<a name="178697"></a>Else If Condition B Then
+<a name="178703"></a>&nbsp;&nbsp;&nbsp;&nbsp;crBlack
+<a name="178706"></a>Else If Condition C Then
+<a name="178712"></a>&nbsp;&nbsp;&nbsp;&nbsp;crGreen
+<a name="178715"></a>Else
+<a name="178718"></a>&nbsp;&nbsp;&nbsp;&nbsp;crBlue
+</PRE><a name="14012"></a><h5>Basic syntax example</h5><PRE><a name="178722"></a>If Condition A Then
+<a name="178723"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = crRed
+<a name="178724"></a>ElseIf Condition B Then
+<a name="178725"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = crBlack
+<a name="178726"></a>ElseIf Condition C Then
+<a name="178731"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = crGreen
+<a name="178732"></a>Else
+<a name="178733"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = crBlue
+<a name="178739"></a>End If
+</PRE><p><a name="199432"></a>Use a multi<nobr>-c</nobr>ondition If<nobr>-T</nobr>hen<nobr>-E</nobr>lse formula for this kind of conditional formatting.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "11_format51.html";
+var next = "11_format53.html";
+
+function setTopicID() { 
+      var number = "10043"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

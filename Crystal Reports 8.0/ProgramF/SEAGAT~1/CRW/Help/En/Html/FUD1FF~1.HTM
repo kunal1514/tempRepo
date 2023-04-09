@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>WeekdayName</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000546588"></a><h3 class="newpage"> WeekdayName</h3>
+<p><a name="1000693102"></a>Basic and Crystal syntax.</p><a name="1000546589"></a><h5>Overloads</h5><ul type="disc"><a name="1000546590"></a><li>WeekdayName (weekday)
+<a name="1000546591"></a><li>WeekdayName (weekday, abbreviate)
+<a name="1000546592"></a><li>WeekdayName (weekday, abbreviate, firstDayOfWeek)
+</ul><a name="1000546593"></a><h5>Arguments</h5><ul type="disc"><a name="1000546594"></a><li>weekday is the numeric designation for the day of the week. Numeric value of each day depends on the value of the firstDayOfWeek argument. If firstDayOfWeek is not specified, crSunday is assumed.
+<a name="1000546595"></a><li>abbreviate is an optional Boolean value that indicates if the weekday name is to be abbreviated. If omitted, the default is False.
+<a name="1000546596"></a><li>firstDayOfWeek is an optional Number indicating the first day of the week. See <a href="OperatorsHelp70.html#1000033418">Day of Week constants</a>.
+</ul><a name="1000546597"></a><h5>Returns</h5><p><a name="1000546598"></a>String value.</p><a name="1000546599"></a><h5>Action</h5><p><a name="1000546600"></a>WeekdayName returns a String indicating the name of the specified day of the week.</p><a name="1000546601"></a><h5>Examples</h5><p><a name="1000546602"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000546603"></a>WeekdayName (3)</code></p><p class="example"><a name="1000546604"></a>Returns "Tuesday" since Sunday is assumed to be the first day of the week.</p><p><code><a name="1000546605"></a>WeekdayName (3, True, crMonday) </code></p><p class="example"><a name="1000546606"></a>Returns "Wed" since abbreviation is selected and the first day of the week is specified to be Monday.</p><a name="1000546607"></a><h5>Comments</h5><p><a name="1000546608"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp125.html";
+var next = "functionshelp127.html";
+
+function setTopicID() { 
+      var number = "1000546588"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

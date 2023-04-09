@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Debugging formulas</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="256332"></a><h2 class="newpage">Debugging formulas</h2><a name="256334"></a><h3>Debugging tutorial</h3>
+<p><a name="256335"></a>Follow the example below to learn the necessary steps for debugging a formula. After completing this exercise, use the same principles to debug your own formulas.</p><a name="258830"></a><h4>About this tutorial</h4><ul type="disc"><a name="256336"></a><li>This tutorial uses the <kbd>Xtreme.mdb</kbd> sample database.
+<a name="258877"></a><li>This tutorial uses Crystal syntax.
+<a name="256337"></a><li>The following formula is the formula you will test for errors:
+</ul><PRE><a name="256338"></a>If ({customer.CUSTOMER NAME} [1 to 2 = "Bi" and
+<a name="286668"></a>ToText({customer,CUSTOMER ID}) [1] = "6") Or
+<a name="286670"></a>({customer.CUSTOMER NAME} [1] = 'Ro" and
+<a name="286672"></a>ToText({customer.CUSTOMER ID}) [1] = "5")
+<a name="256339"></a>&nbsp;&nbsp;&nbsp;&nbsp;"PREFERRED CUSTOMER"
+<a name="256340"></a>Else
+<a name="256341"></a>&nbsp;&nbsp;&nbsp;&nbsp;"DOES NOT FIT CRITERIA"
+</PRE><p><a name="256342"></a>If correct, this formula should pick out all customers whose names begin with "Bi" and whose customer IDs begin with "6" as well as those companies whose names begin with "Ro" and whose customer IDs begin with "5". When printing the field, those selections will read "PREFERRED CUSTOMER", while the rest will read "DOES NOT FIT CRITERIA".</p><p><a name="256343"></a>You will now break down the formula to check and see that each condition of the formula is working individually.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas21.html";
+var next = "19_introformulas23.html";
+
+function setTopicID() { 
+      var number = "256332"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

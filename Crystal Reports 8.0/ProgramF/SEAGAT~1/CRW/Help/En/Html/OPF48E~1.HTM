@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Variable scopes for Crystal syntax</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000023174"></a><h3 class="newpage"> Variable scopes for Crystal syntax</h3>
+<p><a name="1000023175"></a>Declaring a scope for your variable regulates its availability through different parts of your report. See <a href="21_crystalsyntax29.html#145424">Variable Scope</a> (Crystal syntax).</p><p><a name="1000040225"></a>The variable scopes available are:</p><ul type="disc"><a name="1000023176"></a><li>Global<br>The variable is available to formulas throughout the entire current report.
+<a name="1000023177"></a><li>Shared<br>The variable can be shared with a subreport as well as the entire current report.
+<a name="1000023178"></a><li>Local<br>The variable is specific and can only be used in the formula in which it is defined.
+</ul><p><a name="1000023179"></a>To use variable scopes you add the scope that you want to declare with your variable at the beginning of your variable declaration statement. You can also omit the scope keyword and start the variable declaration with the type name. This is the same as declaring a Global variable.</p><a name="1000023180"></a><h5>Examples</h5><p><code><a name="1000023181"></a>NumberVar Amount;</code></p><p class="example"><a name="1000023182"></a>Declares a global variable named Amount that can hold any value of an integer or decimal data type. </p><p><code><a name="1000023183"></a>Global NumberVar Amount;</code></p><p class="example"><a name="1000023184"></a>Declares a global variable named Amount that can hold any value of an integer or decimal data type. This variable would be available to formulas throughout the current report</p><p><code><a name="1000023185"></a>BooleanVar Outstanding;</code></p><p class="example"><a name="1000023186"></a>Declares a global variable named Outstanding that can hold a TRUE or FALSE value.</p><p><code><a name="1000023187"></a>Shared BooleanVar Outstanding;</code></p><p class="example"><a name="1000023188"></a>Declares a shared variable named Outstanding that can hold a TRUE or FALSE value. This variable would be available in both the main report and any subreports contained within the main report.</p><p><code><a name="1000023189"></a>StringVar LastName := "Adams";</code></p><p class="example"><a name="1000023190"></a>Declares a global variable named LastName that can hold a string value and assigns the string "Adams" to that variable.</p><p><code><a name="1000023191"></a>Local StringVar LastName : = "Adams";</code></p><p class="example"><a name="1000023192"></a>Declares a local variable named LastName that can hold a string value and assigns the string "Adams" to that variable. This variable would be available only within the formula which it was declared.</p><a name="1000023193"></a><h5>Comments </h5><ul type="disc"><a name="1000023194"></a><li>Your variable declaration statement is used to set aside a block of memory to hold the value assigned to the variable, and to assign a default value to that memory block. The default value assigned depends on the data type stored by the particular variable declarator used and on whether or not a value was assigned when the variable was declared.
+<a name="1000023195"></a><li>A variable declared in two formulas uses the same block of memory (that is, it refers to the same value.) For example:
+</ul><p class="code"><a name="1000023196"></a>//Formula #1
+<br><a name="1000023197"></a>NumberVar x;
+<br><a name="1000056329"></a>x:=5
+</p><p class="code"><a name="1000023198"></a>//Formula #2
+<br><a name="1000023199"></a>NumberVar x;
+<br><a name="1000056333"></a>x:=x+15
+</p><p class="example"><a name="1000040280"></a>x now has the value of 20.</p><a name="1000042986"></a><h6>Related topics</h6><p><a name="1000040450"></a><a href="21_crystalsyntax28.html#145381">Variable declarations</a> (Crystal syntax).</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp66.html";
+var next = "OperatorsHelp68.html";
+
+function setTopicID() { 
+      var number = "1000023174"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

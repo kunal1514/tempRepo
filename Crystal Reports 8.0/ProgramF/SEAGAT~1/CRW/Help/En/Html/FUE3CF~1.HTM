@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Count (fld), Count (fld, condFld), Count (fld, condFld, cond), Count (x)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000467753"></a><h3 class="newpage"> Count (fld), Count (fld, condFld), Count (fld, condFld, cond), Count (x)</h3>
+<p><a name="1000667397"></a>Basic and Crystal syntax.</p><a name="1000467756"></a><h5>Arguments</h5><ul type="disc"><a name="1000467757"></a><li>fld is any valid database or formula field that can be evaluated by the function.
+<a name="1000467758"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000665011"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+<a name="1000467759"></a><li>x is an array of values that can be evaluated by the function being used.
+</ul><a name="1000467761"></a><h5>Returns</h5><p><a name="1000467762"></a>Fractional Number</p><a name="1000467763"></a><h5>Action</h5><p><a name="1000467765"></a>Enables you to count the values that appear in your report (for a specified field). For example:</p><ul type="disc"><a name="1000467766"></a><li>If a sales report includes all orders made and the amount of each order, you can compute the total number of orders that appear on the report (a grand total count). For information on this kind of counting, see <a href="functionshelp22.html#1000432407">SummaryFunction (fld)</a>.
+<a name="1000467767"></a><li>If you break orders into groups (for example, orders grouped by the state that they come from), you can compute the number of orders per group (in this case, per state). For information on this kind of counting, see <a href="functionshelp23.html#1000432439">SummaryFunction (fld, condFld)</a>.
+<a name="1000467768"></a><li>If you break orders into date or Boolean groups (for example, orders grouped by the month in which they were placed), you can compute the number of orders per group based on a particular change in the date or Boolean field (in this case, per month). For information on this kind of counting, see <a href="functionshelp24.html#1000599837">SummaryFunction (fld, condFld, cond)</a>.
+<a name="1000467769"></a><li>If you specify a set of individual values, you can compute the number of values in the set. For information on this kind of counting, see <a href="functionshelp155.html#1000567809">Array summary functions (x)</a>.
+</ul><a name="1000467770"></a><h5>Examples</h5><p><a name="1000742530"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000742162"></a>Count({orders.AMOUNT}, {orders.CUSTOMER ID})</code></p><p class="example"><a name="1000742163"></a>This formula counts the number of orders in each group of orders in the Amount field (the total orders for each month). The orders are separated into groups whenever the value in the Customer ID field changes.</p><p><code><a name="1000742164"></a>Count({orders.ORDER AMOUNT}, {orders.ORDER DATE}, "monthly")</code></p><p class="example"><a name="1000742165"></a>Counts the number of orders in each group of orders in the Amount field (the total orders for each month). The orders are separated into groups whenever the value in the Date field changes to a new month.</p><p><a name="1000467771"></a>The following examples are applicable to Crystal syntax:</p><p class="code"><a name="1000467772"></a>If Count({orders.ORDER ID}) &gt;= 100 Then
+<br><a name="1000740477"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Congratulations on meeting your quota!"
+<br><a name="1000740478"></a>Else
+<br><a name="1000740479"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+</p><p class="example"><a name="1000467773"></a>Prints the congratulatory message if the number of orders is 100 or more, and prints nothing if the number of orders is less than 100.</p><p><code><a name="1000467778"></a>Count([1,2,3,4,5])</code></p><p class="example"><a name="1000467779"></a>Returns 5. Counts the total number of values in the array.</p><p><a name="1000654628"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. </p>
+<p><a name="1000654631"></a>For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp31.html";
+var next = "functionshelp33.html";
+
+function setTopicID() { 
+      var number = "1000467753"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

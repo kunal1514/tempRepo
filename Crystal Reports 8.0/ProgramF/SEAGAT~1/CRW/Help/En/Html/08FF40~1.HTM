@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using the Select Expert</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="271793"></a><h4 class="newpage"> Using the Select Expert</h4><p><a name="271794"></a>The Select Expert can be used to select groups of records in the same way that you select individual records.</p><p><a name="271795"></a>When you are setting up group selection criteria, instead of basing the selection criteria on standard fields, as you do for record selection, you base the criteria on group name fields or summary fields.</p><ul type="disc"><a name="271796"></a><li>If you have grouped your data but have not summarized it, you can only set up group selection based on the group name field. For example, you may want to select only those groups whose Region is Massachusetts:
+</ul><p><code><a name="271797"></a>GroupName ({Customer.REGION}) = "MA"</code></p><ul type="disc"><a name="271798"></a><li>If you have summarized your data, you can set up group selection based on either the group name field or the summary field. For example:
+</ul><p><code><a name="271799"></a>Sum({Customer.LAST YEAR'S SALES}, <br>{Customer.REGION}) &gt; 10000</code></p><p><a name="271800"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The Select Expert can be used to set up record selection and group selection requests. When a group name or summary field is selected, the program knows that the selection criteria you set up is intended for group selection. In all other cases, the program knows that you are setting up record selection.</p>
+<a name="271802"></a><h6>To set up group selection using the Select Expert</h6><ol>
+<a name="271806"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_selrc.gif">
+
+
+Right<nobr>-c</nobr>lick the summary field on which you want to base group selection and choose <kbd>Select Expert</kbd> from the shortcut menu.
+<p class="indent"><a name="291961"></a>The Select Expert dialog box appears.</p><p class="indent"><a name="271807"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If you click the Select Expert button without first highlighting a summary field in your report, the Choose Field dialog box appears. Highlight the summary field on which you want to base group selection and click OK. The Select Expert appears.</p>
+<p><a name="271817"></a> <img src="images/db_slrc2.gif">
+
+
+</p>
+<a name="291987"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Use the drop<nobr>-d</nobr>own list to enter your selection criteria for the indicated field.
+<a name="271821"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">To base the group selection on more than one field, click the <strong>New</strong> tab and choose the next field from the Choose Field dialog box.
+</ol>
+<p><a name="271823"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font><img src="images/bt_prevw.gif">
+
+
+If you have not already previewed the report or refreshed the data, there will not be any data saved with the report. Without the data, the program cannot calculate group values; thus, no values appear when you click the arrow in the right drop<nobr>-d</nobr>own list. In this situation, you will have to type in the values you want. If you want real values to work with, you will need to preview your report first. This will calculate the actual summary values available for you to work with.</p>
+<ol>
+<a name="271824"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">When you are finished, click <strong>OK</strong> in the Select Expert to return to the report.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "08_sortgrouptotal8.html";
+var next = "08_sortgrouptotal10.html";
+
+function setTopicID() { 
+      var number = "271793"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

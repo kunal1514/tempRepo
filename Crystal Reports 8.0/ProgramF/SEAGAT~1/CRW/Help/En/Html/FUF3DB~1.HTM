@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>NPV (rate, values)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000494294"></a><h3 class="newpage"> NPV (rate, values)</h3>
+<p><a name="1000666037"></a>Basic and Crystal syntax.</p><a name="1000494295"></a><h5>Arguments</h5><ul type="disc"><a name="1000494296"></a><li>rate is a Number that specifies the discount rate over the length of the period, expressed as a decimal. 
+<a name="1000494297"></a><li>values is a Number or Currency type array that specifies cash flow values. Negative values represent payments and positive values receipts. The cash flows must occur at regular intervals such as monthly or yearly.
+</ul><a name="1000494298"></a><h5>Returns</h5><p><a name="1000494299"></a>Number value</p><a name="1000494300"></a><h5>Action </h5><p><a name="1000494301"></a>NPV returns a Number specifying the net present value of an investment based on a series of periodic cash flows (payments and receipts) and a discount rate.</p><a name="1000494302"></a><h5>Example</h5><p><a name="1000494303"></a>The following example is applicable to both Basic and Crystal syntax:</p><p><a name="1000494305"></a>Suppose that someone offers to pays you $1000 after 1 year, $2000 after 2 years, $1500 after 3 years and $1200 after 4 years. If the discount rate (the time value of money) is 5 percent, the value of this offer to you today is:</p><p class="code"><a name="1000494306"></a>Rem Basic syntax
+<br><a name="1000494307"></a>formula = NPV (0.05, Array (1000, 2000, 1500, 1200))
+<br><a name="1000494308"></a>
+<br><a name="1000494309"></a>//Crystal syntax
+<br><a name="1000494310"></a>NPV (0.05, [1000, 2000, 1500, 1200])
+</p><p class="example"><a name="1000494311"></a>The formula returns 5049.44 (rounded to 2 decimals). So this scheme is worth $5,049.44 to you today. This is less than the sum of the payments, which is $5700, since you have to wait for this money.</p><a name="1000494312"></a><h5>Comments</h5><ul type="disc"><a name="1000494313"></a><li>This function is designed to work like the Visual Basic function of the same name.
+<a name="1000494314"></a><li>The NPV and <a href="functionshelp53.html#1000494220">IRR</a> functions are related since NPV (IRR (values), values) = 0. That is, the internal rate of return of a sequence of cash flows is the discount rate for which that sequence of cash flows has a net present value of 0.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp55.html";
+var next = "functionshelp57.html";
+
+function setTopicID() { 
+      var number = "1000494294"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

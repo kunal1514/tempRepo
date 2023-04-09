@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Database tab </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000219871"></a><h3 class="newpage"> Database tab </h3>
+<p><a name="1000219874"></a>Use the Database tab to set SQL/ODBC database options, the method you want to use to sort and display table and field names, and other advanced options.</p><a name="1000219875"></a><h4>Show</h4><a name="1000219876"></a><h5>Tables</h5><p><a name="1000219877"></a>When you select this check box, the program allows reporting on database tables in your SQL/ODBC data sources. This option is selected by default.</p><a name="1000219878"></a><h5>Views</h5><p><a name="1000219879"></a>When you select this check box, the program allows reporting on virtual tables in your SQL/ODBC data sources. This option is selected by default.</p><a name="1000219880"></a><h5>System Tables</h5><p><a name="1000219881"></a>When you select this check box, the program allows reporting on system tables. These tables are typically used by the system administrator only but are available for use if you have the appropriate permissions. This option is not selected by default.</p><a name="1000219882"></a><h5>Synonyms</h5><p><a name="1000219883"></a>When you select this check box, the program allows reporting on virtual tables that are available on some hosts. This option is not selected by default.</p><a name="1000219884"></a><h5>Stored Procedures</h5><p><a name="1000219885"></a>When you select this check box, the program will allow reporting on the result sets from stored procedures if you are using SQL systems that support stored procedures. This option is not selected by default.</p><a name="1000219886"></a><h5>Table name LIKE</h5><p><a name="1000219887"></a>This box allows you to enter the SQL LIKE function to specify the kinds of table names you want to appear in the <a href="dialogs36.html#1000205890">Data Explorer</a>. You can use the underscore character (_) and the percent sign character (%) as <a href="glossary21.html#318762">wildcard</a>s with this function. The underscore character specifies any single character, and while the percent sign signifies any character string. For example, DAV_ matches DAVE only, while DAV% matches both DAVE and DAVID. Table name Like C% would display only those tables that have a table name beginning with the letter C.</p><a name="1000219891"></a><h5>Owner LIKE</h5><p><a name="1000219892"></a>This box works exactly like the Table name Like box except that the LIKE function here is used to select the Owner (or Creator or Alias) of the table, not the table name itself. For example, Owner Like C% would display only those tables that have an owner beginning with the letter C.</p><a name="1000219893"></a><h5>Reprompt user when connecting</h5><p><a name="1000219894"></a>When you select this check box, the program opens the <a href="dialogs3.html#809121">Allow Reporting On dialog box</a> before it opens the <a href="dialogs36.html#1000205890">Data Explorer</a>. The Allow Reporting On dialog box allows you to specify the types of data you want to appear in the Data Explorer. All of the options from the Show section of the Database tab appear in the Allow Reporting On dialog box.</p><a name="1000219895"></a><h4>List Tables and Fields by</h4><p><a name="1000219896"></a>By setting the options in this section of the Database tab, you can specify the text that you want the program to use for tables and fields.</p><ul type="disc"><a name="1000219897"></a><li><strong>Name<br></strong>If you select this option, the program identifies tables and fields using the actual name, for example, "Customer" table and "Customer Name" field. This option is selected by default.
+<a name="1000219898"></a><li><strong>Description<br></strong>If you select this option, the program identifies tables and fields using the description you have specified, for example, "Our Clients" table and "The names of all our customers" field.
+<a name="1000219899"></a><li><strong>Both<br></strong>If you select this option, the program identifies tables and fields using both the name and the description you have assigned, for example, "Customer - Our Clients" table and "Customer Name - The names of all our customers" field.
+</ul><a name="1000219900"></a><h4>Sorting</h4><a name="1000219901"></a><h5>Sort Tables Alphabetically</h5><p><a name="1000219902"></a>When you select this check box, tables are displayed throughout the program sorted in alphabetical order (instead of the order they appear in the database). This option is selected by default.</p><a name="1000219903"></a><h5>Sort Fields Alphabetically</h5><p><a name="1000219904"></a>When you select this check box, fields are displayed throughout the program sorted in alphabetical order (instead of the order they appear in the database table). This option is not selected by default.</p><a name="1000219905"></a><h4>Advanced Options</h4><a name="1000219906"></a><h5>Use Indexes or Server for Speed</h5><p><a name="1000219907"></a>Select this check box to use the available indexes/servers to speed the record selection process. If this check box is cleared, the record section process may be much slower. This option is selected by default.</p><p><a name="1000263504"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If an index has a name that is different from the database it indexes, you need to identify the index for the program. You do this using the Link <a href="dialogs111.html#1000219765">Options dialog box</a>, which you can access via the <a href="experts66.html#1000120147">Visual Linking Expert</a>.</p>
+<a name="1000263505"></a><h5>Perform Grouping on Server</h5><p><a name="1000221912"></a>Select this check box to have the program perform grouping on the server (server<nobr>-s</nobr>ide processing). Server<nobr>-s</nobr>ide processing allows you to set up a report that performs the majority of its processing on the server and pushes only relevant details to your computer. Server<nobr>-s</nobr>ide processing provides you with a number of benefits:</p><ul type="disc"><a name="1000219911"></a><li>less time connected to the server
+<a name="1000219912"></a><li>less memory needed to process the report on your computer
+<a name="1000219913"></a><li>lower transfer time from the server to the client.
+</ul><p><a name="1000219914"></a>Server<nobr>-s</nobr>ide processing works only for reports based on SQL data sources (you cannot, for example, use server<nobr>-s</nobr>ide processing for a report based on a query, since a query is not an SQL data source).</p><p><a name="1000219915"></a>This option is not selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000219916"></a><h6>Related topics</h6><p><a name="1000355654"></a><a href="24_under_databases32.html#394532">Server<nobr>-s</nobr>ide processing</a></p><a name="1000219917"></a><h5>Use Default Alias</h5><p><a name="1000219918"></a>Select this check box to use the default alias for each database you activate. The default alias is the name of the database in one word without the extension. For example, the default alias for the database Craze.mdb is "craze." Use this option if you are usually satisfied with the default alias and do not want to have to accept or change the alias whenever you activate a database. This option is selected by default.</p><p><a name="1000219919"></a>Clear this check box to display the <a href="dialogs2.html#1000011872">Alias Name dialog box</a> whenever you activate a database. You can accept the default alias or enter a new one in the Alias Name dialog box.</p><p><a name="1000219920"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The "accept" option does not prevent you from later changing the alias for any active database. If you want to change an alias, use the Set Alias command on the Database menu.</p>
+<a name="1000219921"></a><h5>Translate DOS Strings</h5><p><a name="1000219922"></a>When this check box is selected, the program assumes that any character code it finds in a dBASE string field is an ASCII code and it translates that code to a corresponding ANSI value so that the same character that appears in dBASE appears in your report.</p><p><a name="1000219923"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If you clear this check box and you have used upper ASCII characters in your dBASE string fields, the special characters will not be the same in your report as they are in the dBASE string field.</p>
+<p><a name="1000219924"></a>This option is selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000219925"></a><h5>Case-Insensitive SQL Data</h5><p><a name="1000219926"></a>Select this check box if you want to search for strings in your SQL data without checking the case. For example, if your report contains SQL data and the data is of mixed case (red, RED, Red), a case<nobr>-s</nobr>ensitive search for "red" returns only "red." If you select this check box, the same query will return red, RED, and Red when using red as a record selection value. This option is selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000219927"></a><h5>Translate DOS Memos</h5><p><a name="1000219928"></a>When this check box is selected, the program assumes that any character code it finds in a dBASE memo field is an ASCII code and it translates that code to a corresponding ANSI value so that the same character that appears in dBASE appears in your report.</p><p><a name="1000219929"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If you clear this check box and you have used upper ASCII characters in your dBASE memo fields, the special characters will not be the same in your report as they are in the dBASE memo field.</p>
+<p><a name="1000219930"></a>This option is selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000219931"></a><h5>Auto-Smart Linking</h5><p><a name="1000219932"></a>Use this check box if you want the program to automatically link your tables when you are using the <a href="experts66.html#1000120147">Visual Linking Expert</a>. This option is selected by default.</p><a name="1000219933"></a><h5>Cartesian Product</h5><p><a name="1000219934"></a>Use this check box to produce all possible combinations of the original data. This option is not selected by default.</p><p><a name="1000222198"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The Cartesian Product option applies to OLAP data sources and does not apply specifically to other direct access data sources. The option ensures a report shows all values of all dimensions (as opposed to all values of the first dimension by one value of the second dimension, which would be the result if the option was not selected). See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p>
+<a name="1000222199"></a><h5>Perform Query Asynchronously</h5><p><a name="1000222200"></a>When this check box is selected, the program uses asynchronous queries. The program normally sends an entire query to the database server. Selecting this option, however, allows the program and the ODBC database server (if it supports asynchronous queries) to transfer data back and forth. An advantage of using this option is you can cancel queries during processing more easily. This option is not selected by default. See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p><a name="1000222201"></a><h5>Select Distinct Data for Browsing</h5><p><a name="1000221797"></a>When Select Distinct Data for Browsing is selected, you can see the first 500 distinct (unique) records when you browse the contents of a database field.</p><p><a name="1000221771"></a>When Select Distinct Data for Browsing is not selected, browsing returns the unique values in the first 500 records.</p><p><a name="1000221772"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Note that since most SQL servers do not support selecting distinct records for long data types such as memo and blob fields, selecting and browsing distinct records are not supported for such fields.</p>
+<p><a name="1000402035"></a>See also the <a href="dialogs132.html#1000259104">Report Options dialog box</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs115.html";
+var next = "dialogs117.html";
+
+function setTopicID() { 
+      var number = "1000219871"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Variable declarations</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="145381"></a><h3 class="newpage"> Variable declarations</h3>
+<p><a name="145383"></a>Before using a variable in a formula, you must declare it.</p><p><a name="146473"></a>A variable can hold values of a given type. The allowed types are the seven simple types (Number, Currency, String, Boolean, Date, Time and DateTime), the six range types (Number Range, Currency Range, String Range, Date Range, Time Range and DateTime Range) and variables that hold arrays of the previously mentioned types. This gives a total of 26 different types that a variable can have.</p><p><a name="146482"></a>When you declare a variable, you also specify its name. A variable cannot have the same name as any function, operator or other keyword that is valid for Crystal syntax. For example, your variable cannot be named Sin, Mod or If because Sin is a built in function, Mod is a built in operator and If is a built in keyword. When typing formulas in the formula editor, the names of the built in functions, operators and other keywords are highlighted in a different color and so it is easy to check if the variable name conflicts.</p><p><a name="145385"></a>Once a variable is declared, it can be used in the formula. For example, you might want to assign it an initial value:</p><PRE><a name="145387"></a>Local NumberVar x; //Declare x to be a Number variable
+<a name="145388"></a>x := 10; //Assign the value of 10 to x
+</PRE><p><a name="145390"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The keyword for declaring the Number variable has a <EM>Var</EM> at the end. This is true for all the variable types in Crystal syntax.</p>
+<p><a name="145392"></a>A variable can only hold values of one type. For example, if a variable holds a Number value, you cannot later use it to hold a String.</p><a name="151273"></a><h5>Example</h5><PRE><a name="145394"></a>Local StringVar y;
+<a name="145395"></a>y := "hello";
+<a name="145397"></a>//OK- the Length function expects a String argument
+<a name="145398"></a>Length (y);
+<a name="145400"></a>//Error- y can only hold String values
+<a name="145401"></a>y := #Jan 5, 1993#;
+<a name="145403"></a>//Error- y can only hold String values
+<a name="145404"></a>y := ["a", "bb", "ccc"];
+<a name="145406"></a>//Error- the Sin function expects a Number argument
+<a name="145407"></a>Sin (y);
+</PRE><p><a name="145409"></a>You can combine declaring a variable and assigning it a value in a single expression. For example:</p><PRE><a name="145410"></a>Local NumberVar x := 10 + 20;
+<a name="145411"></a>Local StringVar y := "Hello" + " " + "World";
+<a name="145412"></a>Local DateVar z := CDate (#Sept 20, 1999#);
+<a name="145413"></a>Local NumberVar Range gradeA := 90 To 100;
+</PRE><p><a name="145415"></a>This is a good practice because it is more efficient and helps prevent the common mistake of having incorrectly initialized variables.</p><p><a name="145417"></a>Here are some more examples of declaring and initializing range variables:</p><PRE><a name="145419"></a>Local NumberVar Range gradeA;
+<a name="145420"></a>Local DateVar Range quarter;
+<a name="145421"></a>gradeA := 90 To 100;
+<a name="145422"></a>quarter := CDate (1999, 10, 1) To CDate (1999, 12, 31);
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax27.html";
+var next = "21_crystalsyntax29.html";
+
+function setTopicID() { 
+      var number = "145381"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

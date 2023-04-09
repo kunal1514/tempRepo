@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Report Options dialog box</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000259104"></a><h2 class="newpage">Report Options dialog box</h2><p><a name="1000259111"></a>This dialog box appears when you choose the <a href="COMMANDS19.html#129882">Report Options command</a> from the File menu.</p><p><a name="1000259115"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>These options also appear in the <a href="dialogs111.html#1000219765">Options dialog box</a>. Use the Options dialog box to change the default values for the program, use the Report Options dialog box to change the options for the current report.</p>
+<a name="1000259116"></a><h5>Convert Date-Time Field</h5><p><a name="1000259117"></a>Using this list, specify if you want Date/Time string fields from Microsoft Access automatically converted to:</p><ul type="disc"><a name="1000259118"></a><li>string format
+<a name="1000259119"></a><li>date format
+<a name="1000259120"></a><li>date<nobr>-t</nobr>ime format.
+</ul><a name="1000259121"></a><h5>Preview Pages Start With</h5><p><a name="1000259122"></a>This list enables you to select the default level of magnification for displaying reports on the Preview tab.</p><ul type="disc"><a name="1000259123"></a><li><strong>Full Size <br></strong>Full size allows you to view your report at the highest magnification for easy reading. The page is larger than a standard VGA Preview tab. When you resize the Preview tab, the report size remains unchanged. All that changes is the amount of the report you can view at one time. You may need to use scroll bars to see all sections of your report.
+<a name="1000259124"></a><li><strong>Fit Width <br></strong>Fit Width adjusts the width of the report to the width of the Preview tab. When you resize the Preview tab (within realistic limits), the page image resizes as well. To see a larger image, you can expand the window.
+<a name="1000259125"></a><li><strong>Fit Page <br></strong>Fit Page adjusts the width and the length of the report to let you see a full page of your report in the Preview tab. When you resize the Preview tab (within realistic limits), the page image resizes as well. To see a larger image, you can expand the window.
+</ul><p><a name="1000259126"></a>By default, the selector is set to Fit Width.</p><p><a name="1000259127"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>All of the functions available in the Preview tab are available at every magnification.</p>
+<a name="1000259128"></a><h5>Convert NULL Field to Default</h5><p><a name="1000259129"></a>Selecting this check box forces the program to convert any null values to the database field default. Some databases treat a null as zero, some as a blank, and some as a special null value. </p><a name="1000259130"></a><h5>Translate DOS Strings</h5><p><a name="1000259131"></a>This option is like the Translate DOS Memos option. The only difference is that it is active for string fields instead of memo fields.</p><p><a name="1000259132"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If this check box is not selected and you have used upper ASCII characters in your dBASE string fields, the special characters will not be the same in your report as they are in the dBASE string field.</p>
+<p><a name="1000259133"></a>By default, the Translate DOS Strings check box is selected.</p><a name="1000259134"></a><h5>Translate DOS Memos</h5><p><a name="1000259135"></a>When you insert special characters in dBASE memo fields, you use the upper ASCII character set (those characters with decimal values between 128 and 255). When you insert special characters into Windows programs, you use ANSI codes to do so. If you include upper ASCII characters in dBASE memo fields and then use those fields to create a reports, the program would read the codes and assume they were ANSI codes were it not for the Translate DOS Memos option.</p><ul type="disc"><a name="1000259136"></a><li>When Translate DOS Memos is activated (a check in the check box), the program assumes that any character code it finds is an ASCII code and it translates that code to a corresponding ANSI value so the same character that appears in dBASE appears in your report.
+<a name="1000259137"></a><li>When the option is not checked, the program assumes that any character code it finds is already an ANSI code and it does no further translation.
+</ul><p><a name="1000259138"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If this check box is not selected and you have used upper ASCII characters in your dBASE memo fields, the special characters will not be the same in your report as they are in the dBASE memo field.</p>
+<p><a name="1000259139"></a>By default, the Translate DOS Memos check box is selected.</p><a name="1000259140"></a><h5>Save Data with Report</h5><p><a name="1000259141"></a>Select this check box to save the current data with the report.</p><a name="1000259142"></a><h5>Save Summaries with Report</h5><p><a name="1000259143"></a>Select this check box to save summary information with your report.</p><a name="1000259144"></a><h5>Cartesian Product</h5><p><a name="1000259145"></a>Use this check box to produce all possible combinations of the original data. This option is not selected by default.</p><p><a name="1000259146"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The Cartesian Product option applies to OLAP data sources and does not apply specifically to other direct access data sources. The option ensures a report shows all values of all dimensions (as opposed to all values of the first dimension by one value of the second dimension, which would be the result if the option was not selected).</p>
+<a name="1000259147"></a><h5>Perform Query Asynchronously</h5><p><a name="1000259148"></a>When this check box is selected, the program uses asynchronous queries. The program normally sends an entire query to the database server. Selecting this option, however, allows the program and the ODBC database server (if it supports asynchronous queries) to transfer data back and forth. An advantage of using this option is you can cancel queries during processing more easily. This option is not selected by default. </p><a name="1000259149"></a><h5>Suppress Printing If No Records</h5><p><a name="1000259150"></a>Select this option to suppress the printing of a report if that report does not contain any records.</p><a name="1000259151"></a><h5>Show All Headers on Drill Down</h5><p><a name="1000353848"></a>Use this check box if you would like report drill<nobr>-d</nobr>own views to included headers for all sections above the drill<nobr>-d</nobr>own records. This option is not selected by default.</p><a name="1000353849"></a><h5>Use Indexes Or Server for Speed</h5><p><a name="1000259154"></a>When you select this check box, the program uses available indexes/servers to speed the record selection process.</p><p><a name="1000259155"></a>When you clear this check box, the program selects records without the use of indexes/specified servers (a much slower process).</p><p><a name="1000259156"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If an index has a different name than the database it indexes, you need to identify the index for the program. You do this using the <a href="dialogs103.html#1000294387">Link Options dialog box</a>, which is accessed from the <a href="experts66.html#1000120147">Visual Linking Expert</a>.</p>
+<a name="1000259161"></a><h5>Perform Grouping On Server</h5><p><a name="1000259162"></a>This check box is only available if the Use Indexes or Server For Speed check box is selected.</p><p><a name="1000259163"></a>Select this check box to have the program perform grouping on the server (server<nobr>-s</nobr>ide processing). Server<nobr>-s</nobr>ide processing allows you to set up a report that performs the majority of its processing on the server and pushes only relevant details to your computer. Server<nobr>-s</nobr>ide processing provides you with a number of benefits:</p><ul type="disc"><a name="1000259164"></a><li>less time connected to the server
+<a name="1000259165"></a><li>less memory needed to process the report on your computer
+<a name="1000259166"></a><li>lower transfer time from the server to the client.
+</ul><p><a name="1000259167"></a>Server<nobr>-s</nobr>ide processing works only for reports based on SQL data sources (you cannot, for example, use server<nobr>-s</nobr>ide processing for a report based on a query, since a query is not an SQL data source).</p><p><a name="1000355835"></a>This option is not selected by default. </p><a name="1000355836"></a><h6>Related topics</h6><p><a name="1000355842"></a><a href="24_under_databases32.html#394532">Server<nobr>-s</nobr>ide processing</a></p><a name="1000259170"></a><h5>More Report Engine Error Messages</h5><p><a name="1000259171"></a>Using this check box tells the program to use more verbose error messages when a Report Engine error occurs. </p><a name="1000259172"></a><h5>Case Insensitive SQL Data</h5><p><a name="1000259173"></a>This check box specifies whether or not the SQL data you use in the report becomes case sensitive. If the data you are using contains fields where the data is in both upper case and lower case, and you do not wish to categorize the data by this aspect, select this check box.</p><p><a name="1000259174"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Case Sensitive SQL data is not supported in the 32<nobr>-b</nobr>it standard edition of the program.</p>
+<a name="1000259196"></a><h5>Select Distinct Records</h5><p><a name="1000259197"></a>Use this option to select only unique records from SQL tables in your database. By selecting this option in the Report Options dialog box, you set the option for the current report. Alternatively, you can set the option for all reports by switching on the <a href="COMMANDS129.html#1000113498">Select Distinct Records command</a> on the Database menu.</p><a name="1000259201"></a><h5>Select Distinct Data for Browsing</h5><p><a name="1000259202"></a>When you browse a field, by default you see the first 500 unique values of the field. You can change this for the current report by clearing this option. If Select Distinct Data for Browsing is not selected, browsing returns the unique values in the first 500 records.</p><p><a name="1000259203"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Note that since most SQL servers do not support selecting distinct records for long data types such as memo and blob fields, selecting and browsing distinct records are not supported for such fields. </p>
+<a name="1000259204"></a><h5>Create Group Tree</h5><p><a name="1000259205"></a>Select this check box to create a Group Tree for use in the Preview tab. Using the Group Tree view, you can drill<nobr>-d</nobr>own on group data.</p><a name="1000259206"></a><h6>Related topics</h6><p><a name="1000259210"></a><a href="COMMANDS19.html#129882">Report Options command</a></p><p><a name="1000259214"></a><a href="dialogs111.html#1000219765">Options dialog box</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs131.html";
+var next = "dialogs133.html";
+
+function setTopicID() { 
+      var number = "1000259104"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

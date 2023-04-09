@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>WeekDay</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000542993"></a><h3 class="newpage"> WeekDay</h3>
+<p><a name="1000692858"></a>WeekDay and <a href="functionshelp121.html#1000593761">DayOfWeek</a> are equivalent functions. However, WeekDay is preferred in Basic syntax and DayOfWeek is preferred in Crystal syntax.</p><a name="1000542994"></a><h5>Overloads</h5><ul type="disc"><a name="1000542995"></a><li>WeekDay (date)
+<a name="1000542996"></a><li>WeekDay (date, firstDayOfWeek)
+</ul><a name="1000542997"></a><h5>Arguments</h5><ul type="disc"><a name="1000542998"></a><li>date is a Date or DateTime value for which a numeric designation for the day of the week is to be returned.
+<a name="1000542999"></a><li>firstDayOfWeek is an optional Number indicating the first day of the week. See <a href="functionshelp121.html#1000593761">DayOfWeek</a> for more information. If not specified, Sunday is assumed.
+</ul><a name="1000543000"></a><h5>Returns</h5><p><a name="1000543001"></a>Number value.</p><a name="1000543002"></a><h5>Action</h5><p><a name="1000543003"></a>WeekDay returns a number n which is the nth day of the week given a Date or DateTime value.</p><a name="1000543004"></a><h5>Typical use</h5><p><a name="1000543005"></a>WeekDay is often useful in performing date computations that take into account special days of the week such as weekends. See the <a href="functionshelp112.html#1000535456">DateSerial (year, month, day)</a> examples section for some examples.</p><a name="1000543006"></a><h5>Examples</h5><p><a name="1000543007"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000543008"></a>WeekDay (#Oct. 4, 1999#)</code></p><p class="example"><a name="1000543009"></a>Returns 2 since Oct. 3, 1999 is a Monday, and the first day of the week is assumed to be Sunday.</p><p><code><a name="1000543010"></a>WeekDay (#Oct. 4, 1999#, crMonday)</code></p><p class="example"><a name="1000543011"></a>Returns 1 since Oct. 3, 1999 is a Monday, and the first day of the week is specified to be Monday.</p><a name="1000543012"></a><h5>Comments</h5><p><a name="1000543013"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp119.html";
+var next = "functionshelp121.html";
+
+function setTopicID() { 
+      var number = "1000542993"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

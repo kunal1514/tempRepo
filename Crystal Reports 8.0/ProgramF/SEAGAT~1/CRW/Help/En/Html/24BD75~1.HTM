@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Greater Than [&gt;] join</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="13895"></a><h4 class="newpage"> Greater Than [&gt;] join</h4><p><a name="13896"></a>The result set from a Greater Than join includes all records in which the linked field value from the primary table is greater than the linked field value in the lookup table. As an example, a company may want to compare the salaries made by all their sales representatives to the salaries made by all their sales managers. The company executives want to make sure no sales representative is making more money than any manager. With this in mind, you can link the SalesRep table to the Manager table by the Salary field in each table using a Greater Than join:</p><PRE><a name="13897"></a>SELECT SalesRep.'Last Name',
+<a name="384094"></a>&nbsp;&nbsp;&nbsp;&nbsp;SalesRep.'Salary',
+<a name="384125"></a>&nbsp;&nbsp;&nbsp;&nbsp;Manager.'Last Name',
+<a name="384156"></a>&nbsp;&nbsp;&nbsp;&nbsp;Manager.'Salary'
+<a name="384187"></a>FROM 'SalesRep' SalesRep,
+<a name="384240"></a>&nbsp;&nbsp;&nbsp;&nbsp;'Manager' Manager
+<a name="384241"></a>WHERE SalesRep.'Salary' &gt;
+<a name="384265"></a>&nbsp;&nbsp;&nbsp;&nbsp;Manager.'Salary'
+</PRE><p><a name="13987"></a>This SQL statement might produce data similar to this:</p><p><a name="444263"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="13900"></a>SalesRep Table
+
+</th><th align="left" valign="bottom"><a name="13902"></a>SalesRep Table
+
+</th><th align="left" valign="bottom"><a name="13904"></a>Manager Table
+
+</th><th align="left" valign="bottom"><a name="13906"></a>Manager Table
+
+</th></tr>
+<tr><th align="left" valign="bottom"><a name="13908"></a>Last Name
+
+</th><th align="left" valign="bottom"><a name="13910"></a>Salary
+
+</th><th align="left" valign="bottom"><a name="13912"></a>Last Name
+
+</th><th align="left" valign="bottom"><a name="13914"></a>Salary
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="13916"></a>Davolio</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13918"></a>$35,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13920"></a>Fuller</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13922"></a>$32,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13924"></a>Davolio</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13926"></a>$35,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13928"></a>Brid</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13930"></a>$30,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13932"></a>Davolio</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13934"></a>$35,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13936"></a>Buchanan</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13938"></a>$29,500.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13940"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13942"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13944"></a>Hellstern</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13946"></a>$45,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13948"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13950"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13952"></a>Fuller</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13954"></a>$32,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13956"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13958"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13960"></a>Brid</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13962"></a>$30,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13964"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13966"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13968"></a>Buchanan</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13970"></a>$29,500.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13972"></a>Dodsworth</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13974"></a>$48,300.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13976"></a>Martin</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13978"></a>$35,000.00</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13980"></a>Patterson</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13982"></a>$30,000.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13984"></a>Buchanan</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13986"></a>$29,500.00</P>
+
+
+</td></tr>
+
+</Table> </p>
+<p><a name="13988"></a>In this table, there is no relationship established between sales representatives and sales managers. Since all managers have seniority over all sales representatives, a company might find it necessary to check if any representatives make more money than any managers, evidence of a salary problem that needs to be remedied.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases22.html";
+var next = "24_under_databases24.html";
+
+function setTopicID() { 
+      var number = "13895"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

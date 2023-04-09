@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 8</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="304858"></a><h3 class="newpage"> Formula 8</h3>
+<a name="304859"></a><h4>Operators/Functions Used</h4><p><a name="304860"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Less than (&lt;), Negate (-), Add (+), Round, Average([array]), Parentheses ().</p><a name="304861"></a><h4>Formula Purpose</h4><p><a name="304862"></a>To better control her purchasing and inventory, a store owner wants the inventory report to include a QtyToOrder column. She wants that column to tell her what quantity she needs to order to keep on hand the average quantity sold monthly during the previous three months.</p><ul type="disc"><a name="304863"></a><li>If there is stock on hand, she will want to order the average quantity sold less the stock on hand.
+<a name="304864"></a><li>If there is no stock on hand but no backorders, she will want to order the average quantity sold. 
+<a name="304865"></a><li>If there is no stock on hand and backorders, she will want to order enough to clear the backorders plus the average quantity sold.
+</ul><a name="304866"></a><h4>Formula</h4><PRE><a name="304867"></a>If {file.ONHAND} &lt; 0 Then
+<a name="304868"></a>((- ({file.ONHAND})) + Round
+<a name="304869"></a>((Average([{file.MONTH1}{file.MONTH2},
+<a name="304870"></a>{file.MONTH3}]))))
+<a name="304871"></a>Else
+<a name="304872"></a>(Round((Average([{file.MONTH1}{file.MONTH2},
+<a name="304873"></a>{file.MONTH3}])) - {file.ONHAND}))
+</PRE><a name="304874"></a><h4>Result</h4><p><a name="304924"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="304877"></a>OnHand
+
+</td><td align="left" valign="TOP"><a name="304879"></a>Month1
+
+</td><td align="left" valign="TOP"><a name="304881"></a>Month2
+
+</td><td align="left" valign="TOP"><a name="304883"></a>Month3
+
+</td><td align="left" valign="TOP"><a name="304885"></a>Avg.
+
+</td><td align="left" valign="TOP"><a name="304887"></a>Order
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304889"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304891"></a>16</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304893"></a>6</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304895"></a>30</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304897"></a>17</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304899"></a>15</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304901"></a>5-</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304903"></a>7</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304905"></a>3</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304907"></a>19</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304909"></a>10</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304911"></a>15</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304913"></a>0</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304915"></a>9</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304917"></a>8</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304919"></a>18</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304921"></a>12</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304923"></a>12</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="304925"></a><h4>Explanation</h4><ul type="disc"><a name="304926"></a><li>The formula uses the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operator to set up one set of calculations if there are backorders ({file.ONHAND} &lt; 0), and a different set of calculations if there are no backorders.
+<a name="304927"></a><li>The If part of the formula uses the Less than operator (&lt;) to see if the quantity on hand is less than zero. This indicates that, not only is all stock gone but there are unfilled orders (a backorder situation).
+<a name="304928"></a><li>If there is a backorder, the Then part of the formula calculates the amount to order as the average monthly sales over a specified three month period plus the amount backordered (expressed as a positive number).
+<a name="304929"></a><li>It uses the Negate operator (-) to convert the negative value of {file.ONHAND} to a positive value.
+<a name="304930"></a><li>It uses the Average([array]) function to average the product sales for {file.MONTH1}, {file.MONTH2}, and {file.MONTH3} (the three months used to determine a typical sales pattern for the product).
+<a name="304931"></a><li>It uses the Round function to round the average product sales to the nearest whole number.
+<a name="304932"></a><li>It uses the Add operator (+) to add the quantity on hand (now expressed as a positive) to the rounded average monthly sales figure.
+<a name="304933"></a><li>The result is the amount to order.
+<a name="304934"></a><li>If there is no backorder, the Else part of the formula calculates the amount to order as the average monthly sales over the specified three month period less the quantity already on hand.
+<a name="304935"></a><li>It uses the Average function to average the product sales for {file.MONTH1}, {file.MONTH2}, and {file.MONTH3} (the three months used to determine a typical sales pattern for the product).
+<a name="304936"></a><li>It uses the Round function to round the average product sales to the nearest whole number.
+<a name="304937"></a><li>It uses the Subtract operator (-) to subtract the quantity on hand from the rounded, average monthly sales figure.
+<a name="304938"></a><li>The result is the amount to order.
+</ul><a name="304939"></a><h6>Related topics</h6><p><a name="304943"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas37.html";
+var next = "19_introformulas39.html";
+
+function setTopicID() { 
+      var number = "304858"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

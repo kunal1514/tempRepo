@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>If statements</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="132674"></a><h3 class="newpage"> If statements</h3>
+<p><a name="132676"></a>The If statement is one of the most useful control structures. It enables you to evaluate a sequence of statements if a condition is true and evaluate a different sequence of statements if it is not true.</p><a name="135924"></a><h5>Example </h5><p><a name="135926"></a>A company plans to pay a bonus of 4 percent to its employees except for those who work in Sales who will receive 6 percent. The following formula using an If statement would accomplish this:</p><PRE><a name="132678"></a>Rem Multi<nobr>-l</nobr>ine If example 1
+<a name="132679"></a>If {Employee.Dept} = "Sales" Then
+<a name="132680"></a>   formula = {Employee.Salary} * 0.06
+<a name="132681"></a>Else
+<a name="132682"></a>   formula = {Employee.Salary} * 0.04
+<a name="132683"></a>End If
+</PRE><p><a name="132685"></a>In this example, if the condition {Employee.Dept} = "Sales" evaluates as true, then the</p><p><code><a name="132686"></a>formula = {Employee.Salary} * 0.06</code></p><p><a name="132687"></a>statement is processed. Otherwise the statement following the Else, namely the</p><p><code><a name="132688"></a>formula = {Employee.Salary} * 0.04</code></p><p><a name="132689"></a>is processed.</p><p><a name="132691"></a>Suppose another company wants to give employees a 4% bonus, but with a minimum bonus of $1,000. The following example shows how. Notice that the Else clause is not included; it is optional, and not needed in this case.</p><PRE><a name="132693"></a>Rem Multi<nobr>-l</nobr>ine If example 2
+<a name="132694"></a>formula = {Employee.Salary} * 0.04
+<a name="132695"></a>If formula &lt; 1000 Then
+<a name="132696"></a>   formula = 1000
+<a name="132697"></a>End If
+</PRE><p><a name="132699"></a>Now suppose that the previous company also wants a maximum bonus of $5,000. You now need to use an ElseIf clause. Notice that ElseIf is all one word. The following example has only one ElseIf clause, but you can add as many as you need.</p><p><a name="135931"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>There is a maximum of one Else clause per If statement.</p>
+<p><a name="135934"></a>The Else clause is executed if none of the If or ElseIf conditions are true.</p><PRE><a name="132701"></a>Rem Multi<nobr>-l</nobr>ine If example 3
+<a name="132702"></a>formula = {Employee.Salary} * 0.04
+<a name="132703"></a>If formula &lt; 1000 Then
+<a name="132704"></a>   formula = 1000
+<a name="132705"></a>ElseIf formula &gt; 5000 Then
+<a name="132706"></a>   formula = 5000
+<a name="132707"></a>End If
+</PRE><a name="132709"></a><h5>Example</h5><p><a name="132711"></a>Suppose that a company wants to compute an estimate of the amount of tax an employee needs to pay and write a suitable message. Income below $8,000 is not taxed, income between $8,000 and $20,000 is taxed at 20%, income between $20,000 and $35,000 is taxed at 29%, and income above $35,000 is taxed at 40%.</p><PRE><a name="132713"></a>Rem Multi<nobr>-l</nobr>ine If example 4
+<a name="132714"></a>Dim tax As Currency, income As Currency
+<a name="132715"></a>income = {Employee.Salary}
+</PRE><p><a name="132716"></a>Dim message As String</p><PRE><a name="132717"></a>If income &lt; 8000 Then
+<a name="132718"></a>&nbsp;&nbsp;&nbsp;&nbsp;tax = 0
+<a name="132719"></a>&nbsp;&nbsp;&nbsp;&nbsp;message = "no"
+<a name="132720"></a>ElseIf income &gt;= 8000 And income &lt; 20000 Then
+<a name="132721"></a>&nbsp;&nbsp;&nbsp;&nbsp;message = "lowest"
+<a name="132722"></a>&nbsp;&nbsp;&nbsp;&nbsp;tax = (income - 8000)*0.20
+<a name="132723"></a>ElseIf income &gt;= 20000 And income &lt; 35000 Then
+<a name="132724"></a>&nbsp;&nbsp;&nbsp;&nbsp;message = "middle"
+<a name="132725"></a>&nbsp;&nbsp;&nbsp;&nbsp;tax = (20000 - 8000)*0.20 + (income - 20000)*0.29
+<a name="132726"></a>Else
+<a name="132727"></a>&nbsp;&nbsp;&nbsp;&nbsp;message = "highest"
+<a name="132728"></a>&nbsp;&nbsp;&nbsp;&nbsp;tax = (20000 - 8000)*0.20 + (35000 - 20000)*0.29 + _
+<a name="132729"></a>        (income - 35000)*0.40
+<a name="132730"></a>End If
+<a name="132732"></a>Dim taxStr As String
+<a name="132733"></a>Rem use 2 decimal places
+<a name="133068"></a>Rem and use the comma as a thousands separator
+<a name="132734"></a>taxStr = CStr (tax, 2, ",")
+<a name="132735"></a>formula = "You are in the " &amp; message &amp; _
+<a name="132736"></a>          " tax bracket. " &amp; _
+<a name="132737"></a>          "Your estimated tax is " &amp; taxStr &amp; "."
+</PRE><p><a name="132739"></a>Notice, the use of variables to simplify the logic of the computation. Also, notice that there are two statements that are executed when one of the conditions are met; one assigns the tax variable, and the other assigns the message variable. It is often useful to have multiple statements executed as a result of a condition.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax48.html";
+var next = "20_basicsyntax50.html";
+
+function setTopicID() { 
+      var number = "132674"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

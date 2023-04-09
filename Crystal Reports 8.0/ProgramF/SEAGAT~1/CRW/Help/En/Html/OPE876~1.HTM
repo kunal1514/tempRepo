@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Subscript for arrays and strings</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000031508"></a><h3 class="newpage"> Subscript for arrays and strings</h3>
+<a name="1000028828"></a><h4>Basic syntax (x(y))</h4><a name="1000028829"></a><h5>Usage </h5><p><code><a name="1000028830"></a>x(y)</code></p><p class="example"><a name="1000028831"></a>Extracts the y element from string x.</p><p><code><a name="1000028832"></a>x(y To z) </code></p><p class="example"><a name="1000028833"></a>Extracts the y to z range of elements from string x.</p><p><code><a name="1000028834"></a>x(n)</code></p><p class="example"><a name="1000028835"></a>Extracts the n element of array x.</p><p><a name="1000028836"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The subscript ranges are 1<nobr>-b</nobr>ased; they start at 1 rather than 0.</p>
+<p><a name="1000028837"></a>Subscript is used to extract one or more characters from a text string or to extract an element from an array.</p><a name="1000028838"></a><h5>Examples</h5><p><a name="1000028839"></a>The following examples are applicable to Basic syntax:</p><p><code><a name="1000029002"></a>LNAME (1) </code></p><p class="example"><a name="1000029003"></a>Returns "S", where LNAME = "Smith".</p><p><code><a name="1000029004"></a>Postal (6) </code></p><p class="example"><a name="1000028843"></a>Returns "V", where Postal Code = "T5A 9V2" (the space between A and 9 counts as an element).</p><p><code><a name="1000028844"></a>{customer.POSTAL CODE} (5 to 7)  </code></p><p class="example"><a name="1000028845"></a>Returns "9V2", where Postal Code = T5A 9V2.</p><p><code><a name="1000028846"></a>{file.ITEMNUMBER} (4 to 5) </code></p><p class="example"><a name="1000028847"></a>Returns "40", where ItemNumber is A1/4020/B10.</p><a name="1000028848"></a><h5>Comments</h5><ul type="disc"><a name="1000028850"></a><li>You must subscript an array by first declaring an array, then referencing the array variable name in Basic syntax. For example:
+</ul><p class="code"><a name="1000028851"></a>'declare array MyName
+<br><a name="1000047516"></a>Dim MyName () As String
+<br><a name="1000028852"></a>MyName = Array ("Company A", "Company B", "Company C")
+<br><a name="1000037419"></a>'reference array by its name
+<br><a name="1000048036"></a>formula = MyName (1)
+</p><ul type="disc"><a name="1000037420"></a><li>Do not confuse Subscript with the <a href="OperatorsHelp25.html#1000015726">In String operator</a>. 
+<p class="indent"><a name="1000037421"></a>While Subscript tests a target string for the presence of an element and extracts the element (if found) from the string, In String only tests the target string for the presence of the element.</p></ul><a name="1000028826"></a><h6>Related topics</h6><p><a name="1000029026"></a><a href="OperatorsHelp24.html#1000028823">Crystal Syntax (x[y])</a></p><a name="1000028823"></a><h4>Crystal Syntax (x[y]) </h4><a name="1000022736"></a><h5>Usage </h5><p><code><a name="1000022737"></a>x[y]</code></p><p class="example"><a name="1000022738"></a>Extracts the y element from string x.</p><p><code><a name="1000022739"></a>x[y to z]</code></p><p class="example"><a name="1000022740"></a>Extracts the y to z range of elements from string x.</p><p><code><a name="1000022741"></a>x[n]</code></p><p class="indent"><a name="1000022742"></a>Extracts the n element of array x.</p><p><a name="1000022968"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The subscript ranges are 1<nobr>-b</nobr>ased; they start at 1 rather than 0.</p>
+<p><a name="1000022754"></a>Subscript is used to extract one or more characters from a text string or to extract an element from an array.</p><a name="1000022755"></a><h5>Examples </h5><p><a name="1000022756"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000022757"></a> [100,233,466,998][3] </code></p><p class="example"><a name="1000022758"></a>Returns 466; 466 is the third element in the array.</p><p><code><a name="1000022759"></a>LNAME [1]</code></p><p class="example"><a name="1000022760"></a>Returns "S", where LNAME = "Smith".</p><p><code><a name="1000022761"></a>Postal [6] </code></p><p class="example"><a name="1000022762"></a>Returns "V", where Postal Code = "T5A 9V2" (the space between A and 9 counts as an element).</p><p><code><a name="1000022763"></a>{customer.POSTAL CODE} [5 to 7]  </code></p><p class="example"><a name="1000022764"></a>Returns "9V2", where Postal Code = "T5A 9V2".</p><p><code><a name="1000022765"></a>{file.ITEMNUMBER} [4 to 5] </code></p><p class="example"><a name="1000022766"></a>Returns "40", where ItemNumber is A1/4020/B10.</p><a name="1000022767"></a><h5>Comments</h5><p><a name="1000022771"></a>Do not confuse Subscript with <a href="OperatorsHelp25.html#1000015726">In String operator</a>. </p><p><a name="1000029063"></a>While Subscript tests a target string for the presence of an element and extracts the element (if found) from the string, In String only tests the target string for the presence of the element.</p><a name="1000022773"></a><h6>Related topics</h6><p><a name="1000029052"></a><a href="OperatorsHelp24.html#1000028828">Basic syntax (x(y))</a></p><p><a name="1000022781"></a><a href="19_introformulas31.html#304376">Formula 1</a></p><p><a name="1000022785"></a><a href="19_introformulas32.html#304424">Formula 2</a></p><p><a name="1000037228"></a><a href="19_introformulas33.html#304477">Formula 3</a></p><p><a name="1000037232"></a><a href="19_introformulas39.html#304946">Formula 9</a></p><p><a name="1000037233"></a><a href="19_introformulas41.html#305098">Formula 11</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp23.html";
+var next = "OperatorsHelp25.html";
+
+function setTopicID() { 
+      var number = "1000031508"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

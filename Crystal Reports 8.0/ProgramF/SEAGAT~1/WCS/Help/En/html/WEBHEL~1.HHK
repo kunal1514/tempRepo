@@ -1,0 +1,1148 @@
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<title></title>
+
+</head>
+
+<body>
+
+<object type="text/site properties">
+  <param name="Auto Generated" value="No">
+  <param name="FrameName" value="frmTopic">
+  <param name="WindowName" value="TriPane">
+</object>
+
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="accessing">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Crystal Report Web Components Manager&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Accessing the Crystal Report Web Components Manager">
+<param name="Local" value="WebServerAdministration3.html#149546">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="ActiveX">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer for ActiveX ">
+<param name="Local" value="Report_Viewers7.html#153809">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="adding the viewer to a web page">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Java using browser JVM&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Adding the Viewer to a web page">
+<param name="Local" value="Report_Viewers14.html#149499">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="administration">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Cache Settings tab&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Cache Settings tab">
+<param name="Local" value="WebServerAdministration8.html#166033">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Page Server tab&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Page Server tab">
+<param name="Local" value="WebServerAdministration16.html#163745">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewing tab&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewing tab">
+<param name="Local" value="WebServerAdministration11.html#166018">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Web Component Server tab&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Web Component Server tab">
+<param name="Local" value="WebServerAdministration4.html#163454">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="applications">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="registering&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Product registration">
+<param name="Local" value="B_suprt2.html#20848">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="using Report Viewers in&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Using Report Viewers in applications">
+<param name="Local" value="Report_Viewers6.html#149394">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="AuthentiCode certification&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="AuthentiCode certification ">
+<param name="Local" value="Report_Viewers8.html#153813">
+        </object>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="button conventions&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Command, button, and key conventions">
+<param name="Local" value="Welcome6.html#162383">
+        </object>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Cache Settings tab&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Cache Settings tab">
+<param name="Local" value="WebServerAdministration8.html#166033">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="changing">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="selection formulas in web reports&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Changing Selection Formulas in Web Reports ">
+<param name="Local" value="WebServerCommands6.html#161718">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="changing Web Component Server settings&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Accessing the Crystal Report Web Components Manager">
+<param name="Local" value="WebServerAdministration3.html#149546">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="command conventions&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Command, button, and key conventions">
+<param name="Local" value="Welcome6.html#162383">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="commands">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="exporting&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report exporting">
+<param name="Local" value="WebServerCommands16.html#150048">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="GF&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="GF command (Group Selection)">
+<param name="Local" value="WebServerCommands7.html#161850">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="INIT&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="INIT command ">
+<param name="Local" value="WebServerCommands4.html#149835">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="new syntax&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Alternate method">
+<param name="Local" value="WebServerCommands12.html#162241">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Password#&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="PASSWORD# command ">
+<param name="Local" value="WebServerCommands10.html#162222">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Prompt#&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Prompt# command ">
+<param name="Local" value="WebServerCommands14.html#150018">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="PromptOnRefresh#&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="PromptOnRefresh# command ">
+<param name="Local" value="WebServerCommands15.html#162745">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="report requests&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Constructing report requests">
+<param name="Local" value="WebServerCommands3.html#161239">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="SF&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="SF command (Selection)">
+<param name="Local" value="WebServerCommands8.html#149894">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="specifying report export format&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="CMD# and EXPORT_FMT commands ">
+<param name="Local" value="WebServerCommands17.html#150073">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="USER#&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="USER# command ">
+<param name="Local" value="WebServerCommands11.html#149962">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Web Component Server&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Commands overview">
+<param name="Local" value="WebServerCommands2.html#149737">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="configuring">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Lotus Domino&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Configuring Lotus Domino to work with the Web Component Server">
+<param name="Local" value="WebServerImplementation10.html#170150">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Microsoft Internet Information Server 4.0&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Microsoft Internet Information Server 4.0">
+<param name="Local" value="WebServerImplementation18.html#149432">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Netscape Servers&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Netscape Servers">
+<param name="Local" value="WebServerImplementation19.html#165262">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="NT Services&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Configuring NT Services">
+<param name="Local" value="WebServerImplementation11.html#169516">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="conventions">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="button&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Command, button, and key conventions">
+<param name="Local" value="Welcome6.html#162383">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="command&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Command, button, and key conventions">
+<param name="Local" value="Welcome6.html#162383">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="control&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Command, button, and key conventions">
+<param name="Local" value="Welcome6.html#162383">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Crystal Report Web Components Manager">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="accessing&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Accessing the Crystal Report Web Components Manager">
+<param name="Local" value="WebServerAdministration3.html#149546">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Cache Settings tab&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Cache Settings tab">
+<param name="Local" value="WebServerAdministration8.html#166033">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Page Server tab&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Page Server tab">
+<param name="Local" value="WebServerAdministration16.html#163745">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewing tab&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewing tab">
+<param name="Local" value="WebServerAdministration11.html#166018">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Web Component Server tab&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Web Component Server tab">
+<param name="Local" value="WebServerAdministration4.html#163454">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="data">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="refreshing web report&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Refreshing web report data ">
+<param name="Local" value="WebServerCommands18.html#150103">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="databases">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="ODBC&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="SQL and ODBC data sources ">
+<param name="Local" value="WebServerCommands9.html#149904">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="secured&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="SQL and ODBC data sources ">
+<param name="Local" value="WebServerCommands9.html#149904">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="SQL&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="SQL and ODBC data sources ">
+<param name="Local" value="WebServerCommands9.html#149904">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="defaults">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer defaults">
+<param name="Local" value="Report_Viewers4.html#153181">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="dialog box controls&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Command, button, and key conventions">
+<param name="Local" value="Welcome6.html#162383">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="downloading">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer from the server&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Downloading the Report Viewer from the server">
+<param name="Local" value="Report_Viewers10.html#153820">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="drilling-down on data&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Improving performance">
+<param name="Local" value="WebServerOverview22.html#171779">
+        </object>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="embedding in a web page">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer for ActiveX&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Embedding the Report Viewer for Active X in a web page">
+<param name="Local" value="Report_Viewers12.html#153868">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="exporting reports">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="commands&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report exporting">
+<param name="Local" value="WebServerCommands16.html#150048">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="features">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="in Version 8&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="New features in version 8">
+<param name="Local" value="WebServerOverview8.html#171695">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer features">
+<param name="Local" value="Report_Viewers3.html#153183">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="group selection formulas">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="GF command&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="GF command (Group Selection)">
+<param name="Local" value="WebServerCommands7.html#161850">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Group Tree&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Improving performance">
+<param name="Local" value="WebServerOverview22.html#171779">
+        </object>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="HTML">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer for&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewers for HTML">
+<param name="Local" value="Report_Viewers18.html#157730">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="HTML Report Format&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="HTML Report Format">
+<param name="Local" value="WebServerOverview17.html#172768">
+        </object>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="implementation">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Web Component Server&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Implementation overview">
+<param name="Local" value="WebServerImplementation2.html#163645">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="improving performance">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="saving data with reports&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Improving performance">
+<param name="Local" value="WebServerOverview22.html#171779">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="INIT command&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="INIT command ">
+<param name="Local" value="WebServerCommands4.html#149835">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="installation">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="ensuring success&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Ensuring successful installation">
+<param name="Local" value="WebServerImplementation17.html#166356">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="installed files&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Installed files">
+<param name="Local" value="WebServerImplementation9.html#149384">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="installed files&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Installed files">
+<param name="Local" value="WebServerImplementation9.html#149384">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="installing">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Web Component Server&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Installing the Web Component Server ">
+<param name="Local" value="WebServerImplementation7.html#149363">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Java using bowser JVM">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer for Java using browser JVM">
+<param name="Local" value="Report_Viewers13.html#149487">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Java using browser JVM">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="adding the viewer to a web page&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Adding the Viewer to a web page">
+<param name="Local" value="Report_Viewers14.html#149499">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Java using Java Plug-in">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer for Java using Java Plug-in">
+<param name="Local" value="Report_Viewers16.html#152317">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="key combinations&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Command, button, and key conventions">
+<param name="Local" value="Welcome6.html#162389">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="keyboard shortcuts&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Command, button, and key conventions">
+<param name="Local" value="Welcome6.html#162389">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Knowledge Link&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Seagate Knowledge Link">
+<param name="Local" value="B_suprt10.html#18549">
+        </object>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="limitations">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="HTML reports&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="HTML report limitations">
+<param name="Local" value="Report_Viewers19.html#153981">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="logging on">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Password# command&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="PASSWORD# command ">
+<param name="Local" value="WebServerCommands10.html#162222">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="USER# command&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="USER# command ">
+<param name="Local" value="WebServerCommands11.html#149962">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Lotus Domino">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="configuring&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Configuring Lotus Domino to work with the Web Component Server">
+<param name="Local" value="WebServerImplementation10.html#170150">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Microsoft">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="AuthentiCode&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="AuthentiCode certification ">
+<param name="Local" value="Report_Viewers8.html#153813">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Microsoft Internet Information Server 4.0">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="configuring&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Microsoft Internet Information Server 4.0">
+<param name="Local" value="WebServerImplementation18.html#149432">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Netscape Plug-in">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer for&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer for Netscape Plug-in">
+<param name="Local" value="Report_Viewers17.html#152334">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Netscape Servers">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="configuring&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Netscape Servers">
+<param name="Local" value="WebServerImplementation19.html#165262">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="NT Services">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="configuring&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Configuring NT Services">
+<param name="Local" value="WebServerImplementation11.html#169516">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="ODBC databases&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="SQL and ODBC data sources ">
+<param name="Local" value="WebServerCommands9.html#149904">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="overview">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer overview">
+<param name="Local" value="Report_Viewers2.html#150632">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Page Server">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="job sharing&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Job sharing and page caching">
+<param name="Local" value="WebServerOverview21.html#166613">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="overview&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Page Server">
+<param name="Local" value="WebServerOverview19.html#166474">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="page caching&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Job sharing and page caching">
+<param name="Local" value="WebServerOverview21.html#166613">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Page Server format&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Page Server format">
+<param name="Local" value="WebServerOverview20.html#163066">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Page Server tab&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Page Server tab">
+<param name="Local" value="WebServerAdministration16.html#163745">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="parameters">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="GF command&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="GF command (Group Selection)">
+<param name="Local" value="WebServerCommands7.html#161850">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Prompt# command&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Prompt# command ">
+<param name="Local" value="WebServerCommands14.html#150018">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report View for Java&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Parameters ">
+<param name="Local" value="Report_Viewers15.html#149505">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer for ActiveX&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Parameters ">
+<param name="Local" value="Report_Viewers11.html#153826">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="passwords">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Password# command&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="PASSWORD# command ">
+<param name="Local" value="WebServerCommands10.html#162222">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="printing">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="from the Report Viewers&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Printing from Report Viewers ">
+<param name="Local" value="Report_Viewers5.html#149387">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="procedures">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="SQL stored, see SQL&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="SQL stored procedures and parameter fields ">
+<param name="Local" value="WebServerCommands13.html#162243">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Prompt# command&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Prompt# command ">
+<param name="Local" value="WebServerCommands14.html#150018">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="PromptOnRefresh# command&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="PromptOnRefresh# command ">
+<param name="Local" value="WebServerCommands15.html#162745">
+        </object>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="refreshing">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="web report data&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Refreshing web report data ">
+<param name="Local" value="WebServerCommands18.html#150103">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="registration of product&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Product registration">
+<param name="Local" value="B_suprt2.html#20848">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="replacement policy&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Product replacement policy">
+<param name="Local" value="B_suprt12.html#138">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Report Formats">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="HTML&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="HTML Report Format">
+<param name="Local" value="WebServerOverview17.html#172768">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="report request">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="overview&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report request overview">
+<param name="Local" value="WebServerOverview10.html#169694">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="steps&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report request steps">
+<param name="Local" value="WebServerOverview11.html#174495">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Report Viewer">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="ActiveX&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer for ActiveX ">
+<param name="Local" value="Report_Viewers7.html#153809">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="ActiveX parameters&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Parameters ">
+<param name="Local" value="Report_Viewers11.html#153826">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="adding to a web page&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Adding the Report Viewer to a web page">
+<param name="Local" value="Report_Viewers9.html#153815">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="defaults&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer defaults">
+<param name="Local" value="Report_Viewers4.html#153181">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="downloading from the server&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Downloading the Report Viewer from the server">
+<param name="Local" value="Report_Viewers10.html#153820">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="features&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer features">
+<param name="Local" value="Report_Viewers3.html#153183">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Java parameters&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Parameters ">
+<param name="Local" value="Report_Viewers15.html#149505">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="overview&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Report Viewer overview">
+<param name="Local" value="Report_Viewers2.html#150632">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="printing from&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Printing from Report Viewers ">
+<param name="Local" value="Report_Viewers5.html#149387">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="specifying&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Specifying the Report Viewer">
+<param name="Local" value="WebServerImplementation22.html#149487">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Report Viewer for ActiveX">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="embedding in a web page&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Embedding the Report Viewer for Active X in a web page">
+<param name="Local" value="Report_Viewers12.html#153868">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Report Viewer for HTML&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Report Viewers for HTML">
+<param name="Local" value="Report_Viewers18.html#157730">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Report Viewer for Java using browser JVM&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Report Viewer for Java using browser JVM">
+<param name="Local" value="Report_Viewers13.html#149487">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Report Viewer for Java using Java Plug-in&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Report Viewer for Java using Java Plug-in">
+<param name="Local" value="Report_Viewers16.html#152317">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Report Viewer for Netscape Plug-in&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Report Viewer for Netscape Plug-in">
+<param name="Local" value="Report_Viewers17.html#152334">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Report Viewers">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="overview&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Web browser/Report Viewers">
+<param name="Local" value="WebServerOverview12.html#172222">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="using in applications&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Using Report Viewers in applications">
+<param name="Local" value="Report_Viewers6.html#149394">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Report Viewing tab&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Report Viewing tab">
+<param name="Local" value="WebServerAdministration11.html#166018">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="return policy&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Product return policy">
+<param name="Local" value="B_suprt11.html#20681">
+        </object>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="secured databases&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="SQL and ODBC data sources ">
+<param name="Local" value="WebServerCommands9.html#149904">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="selection formulas">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="changing in web reports&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Changing Selection Formulas in Web Reports ">
+<param name="Local" value="WebServerCommands6.html#161718">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="SF command&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="SF command (Selection)">
+<param name="Local" value="WebServerCommands8.html#149894">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="shortcuts">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="keyboard&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Command, button, and key conventions">
+<param name="Local" value="Welcome6.html#162389">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="software">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="registering&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Product registration">
+<param name="Local" value="B_suprt2.html#20848">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="specifying">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Report Viewer&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Specifying the Report Viewer">
+<param name="Local" value="WebServerImplementation22.html#149487">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="SQL">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="databases, and Web Reports Server&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="SQL and ODBC data sources ">
+<param name="Local" value="WebServerCommands9.html#149904">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="stored procedures, and Web Reports Server&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="SQL stored procedures and parameter fields ">
+<param name="Local" value="WebServerCommands13.html#162243">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="stored procedures, SQL">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="see SQL&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="SQL stored procedures and parameter fields ">
+<param name="Local" value="WebServerCommands13.html#162243">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="support">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="email&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Email support">
+<param name="Local" value="B_suprt6.html#23853">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="fax&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Fax support">
+<param name="Local" value="B_suprt7.html#7694">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="telephone&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Technical support">
+<param name="Local" value="B_suprt8.html#26088">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="web site&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Web support">
+<param name="Local" value="B_suprt4.html#24106">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="system requirements">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Web Component Server&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="System requirements ">
+<param name="Local" value="WebServerImplementation6.html#158697">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="technical support">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="email&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Email support">
+<param name="Local" value="B_suprt6.html#23853">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="fax&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Fax support">
+<param name="Local" value="B_suprt7.html#7694">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="telephone&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Technical support">
+<param name="Local" value="B_suprt8.html#26088">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="web site&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Web support">
+<param name="Local" value="B_suprt4.html#24106">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="user IDs">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="USER# command&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="USER# command ">
+<param name="Local" value="WebServerCommands11.html#149962">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="virtual directories">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="Web Component Server&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Virtual directories">
+<param name="Local" value="WebServerImplementation20.html#165241">
+            </object>
+    </ul>
+</ul>
+<ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Web Component Server&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Web Component Server">
+<param name="Local" value="WebServerOverview14.html#171732">
+        </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="administration&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Administration overview ">
+<param name="Local" value="WebServerAdministration2.html#149502">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="commands&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Commands overview">
+<param name="Local" value="WebServerCommands2.html#149737">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="installing&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Installing the Web Component Server ">
+<param name="Local" value="WebServerImplementation7.html#149363">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="overview&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Web Component Server">
+<param name="Local" value="WebServerOverview14.html#171732">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="system requirements&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="System requirements ">
+<param name="Local" value="WebServerImplementation6.html#158697">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="virtual directories&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Virtual directories">
+<param name="Local" value="WebServerImplementation20.html#165241">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Web Component Server implementation&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Implementation overview">
+<param name="Local" value="WebServerImplementation2.html#163645">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Web Component Server tab&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Web Component Server tab">
+<param name="Local" value="WebServerAdministration4.html#163454">
+        </object>
+    <li><object type="text/sitemap">
+          <param name="Name" value="web page">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="adding a Report Viewer&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Adding the Report Viewer to a web page">
+<param name="Local" value="Report_Viewers9.html#153815">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="web reports">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="changing selection formulas in&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Changing Selection Formulas in Web Reports ">
+<param name="Local" value="WebServerCommands6.html#161718">
+            </object>
+        <li><object type="text/sitemap">
+              <param name="Name" value="refreshing data&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Refreshing web report data ">
+<param name="Local" value="WebServerCommands18.html#150103">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="Web server">
+                  </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="overview&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Web server">
+<param name="Local" value="WebServerOverview13.html#162204">
+            </object>
+    </ul>
+    <li><object type="text/sitemap">
+          <param name="Name" value="web site&nbsp;&nbsp;&nbsp;&nbsp;">
+          <param name="Name" value="Web support">
+<param name="Local" value="B_suprt4.html#24106">
+        </object>
+    <ul>
+        <li><object type="text/sitemap">
+              <param name="Name" value="creating&nbsp;&nbsp;&nbsp;&nbsp;">
+              <param name="Name" value="Creating a web site">
+<param name="Local" value="WebServerImplementation21.html#149465">
+            </object>
+    </ul>
+</ul>
+
+
+</body></html>
+
+
+

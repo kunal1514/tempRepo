@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Linking indexed tables </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="13344"></a><h4 class="newpage"> Linking indexed tables </h4><p><a name="13345"></a>When you are linking direct<nobr>-a</nobr>ccess database tables, you must link from the primary table to an indexed field in the lookup table. The link field in the primary table can be indexed, but does not have to be. The link field in the lookup table, however, must be indexed.</p><p><a name="15488"></a>In addition, the fields used to link two tables must have the same data type. For example, you can link a string field in one table to a string field in another table, or a numeric field in one table to a numeric field in another table, but you cannot link a numeric field in one table to a string field in another table.</p><p><a name="348418"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="443409"></a><li>Some DBMS applications allow you to convert the field value to another data type in the index. For instance, the field in the table can be numeric, while the index converts the field value to a string. However, if you choose to use that field to link to another table, you must link to a field of the original data type. You cannot link a string value to a numeric field that has been converted to a string in the index.
+<a name="348423"></a><li>If you are linking tables from two different ODBC data sources, MS SQL Server and Oracle, for example, you can only use string fields to link the tables. String fields are stored in databases in the same manner, regardless of the data source. Other types of values, however, may not be stored the same way in different data sources, so you cannot link different data sources in Seagate Crystal Reports using anything other than string values.
+<a name="477674"></a><li>When using non<nobr>-S</nobr>QL, direct access database types, the only join type that can be used to link two tables is a Left Outer join.
+</ul><a name="477679"></a><h5>Changing the index used in linking</h5><p><a name="15485"></a>When using the Smart Linking feature to link tables using a field that is a component of multiple indexes (two or more), Seagate Crystal Reports selects one of the indexes for the link. That index may or may not be the one you want to use. To determine the index in use and to change it, use the Index section of the Link Options dialog box.</p><p><a name="22729"></a>To call up the dialog box, use one of the following methods:</p><ul type="disc"><a name="13346"></a><li>double<nobr>-c</nobr>lick the link line of interest
+<a name="13347"></a><li>select the link line of interest and choose Options at the bottom of the Visual Linking Expert
+<a name="13348"></a><li>right<nobr>-c</nobr>lick the link line of interest and choose Options from the shortcut menu.
+</ul><p><a name="13349"></a>The Index section of the Link Options dialog box has two parts:</p><ul type="disc"><a name="13350"></a><li><strong>The Index In Use text box</strong>.<br>This text box displays the index that is currently in use. If you click the arrow, it lists the other indexes that are available for the link, as well as the option <EM>No specific index</EM>. If you are using an indexed database table and you do not see a particular index that you would expect to see on this list, use the Add Index button.
+<a name="13351"></a><li><strong>The Fields in Index text box</strong>.<br>This text box displays the fields that are included in the index that is currently selected in the Index In Use list box.
+</ul><p><a name="13352"></a>If you select the No specific index option, the program will select an index for you the next time you print the report to the Preview tab.</p><p><a name="348544"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Not all DBMS applications support indexed tables. Verify that your database uses indexes before trying to select an index for linking. Refer to your DBMS documentation to find out if your DBMS can use indexes, and to learn how to create them.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases13.html";
+var next = "24_under_databases15.html";
+
+function setTopicID() { 
+      var number = "13344"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

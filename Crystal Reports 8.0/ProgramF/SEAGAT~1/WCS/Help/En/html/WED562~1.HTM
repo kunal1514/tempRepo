@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Saving data with reports</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="163104"></a><h3 class="newpage"> Saving data with reports</h3>
+<a name="164007"></a><h4>Reports with saved data</h4><p><a name="163105"></a>A report that is saved with data and does not have selection or group selection formulas applied to it will have its pages shared by all users. If the report has the selection or group selection formulas applied, the caching will be by the user as in Seagate Crystal Reports 7.</p><a name="163106"></a><h4>Reports without saved data</h4><p><a name="163107"></a>A report without saved data that does not have selection formula (SF#), group selection formula (GF#), password prompt (PASSWORD#), user id prompt (USER#), parameter prompt (PROMPT#) or prompt for values on refresh (promptOnRefresh#) commands will have its pages shared by all users.</p><p><a name="170752"></a>Because reports are not saved with data, the administrator must specify the database refresh time interval in the Web Component Manager application. This interval indicates how often the database will be accessed. Here is an example:</p><ol>
+<a name="163108"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">The database refresh time is set to 5 minutes.
+<a name="163109"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">User A selects report A1 (without saved data). Since User A is the first person to select this report, the database is accessed. 
+<a name="163110"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Two minutes after User A requested Report A1, User B selects Report A1. User A and User B will share the report's pages because the report was requested before the database refresh time expired. As a result, the database is not accessed.
+<a name="163111"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Six minutes after User A requested Report A1, User C selects Report A1. Since the database refresh time interval has expired (the setting is 5 minutes and 6 minutes have passed since the database was accessed for this report), the database will be accessed and User C will not share the pages with User A or User B.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerOverview22.html";
+var next = "WebServerOverview24.html";
+
+function setTopicID() { 
+      var number = "163104"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

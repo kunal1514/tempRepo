@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>To define sort order using parameter fields</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="80792"></a><h4 class="newpage"> To define sort order using parameter fields</h4><p><a name="80509"></a>To set the sort order using parameter fields, you need to first create a formula that includes a parameter field and then sort based on that formula. For example, assume that you have a customer list report based on the Customer table. For each customer, you show the Customer Name, City, Region, Country, and Phone Number. You want to be able to sort the report by Country, by Region, or by City, depending on your needs at the time.</p><ol>
+<a name="80807"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Create a parameter field and call it <strong>SortField</strong>.
+<a name="80215"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">In the <strong>Prompting Text </strong>edit box, enter a prompt similar to this:
+</ol>
+<p><code><a name="80218"></a>Type R to sort by Region or C to sort by City; otherwise, data will be sorted by Country.</code></p><ol>
+<a name="80219"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Select String from the <strong>Value Type </strong>drop<nobr>-d</nobr>own list.
+<a name="80220"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">You may want to limit the number of characters the user can type to one. To do this, select the <strong>Length Limit</strong> check box, and type the numeral 1 into the <strong>Max Length</strong> text box. Now the parameter field will only accept single<nobr>-c</nobr>haracter values. The field will accept "C" as a value, but not "City."
+<a name="80221"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Create a formula similar to this and call it Sort:
+</ol>
+<PRE><a name="82481"></a>If {?SortField} = "C" Then
+<a name="80223"></a>&nbsp;&nbsp;&nbsp;&nbsp;{customer.CITY}
+<a name="80224"></a>Else
+<a name="80225"></a>&nbsp;&nbsp;&nbsp;&nbsp;If {?SortField} = "R" Then
+<a name="80226"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{customer.REGION}
+<a name="80227"></a>&nbsp;&nbsp;&nbsp;&nbsp;Else
+<a name="80228"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{customer.COUNTRY}
+</PRE><p class="example"><a name="84772"></a>This formula prompts for a value for the parameter field {?SortField}. If you enter "C", the formula will sort by the City field. If you enter "R" it will sort by the Region field. If you enter anything else, or do not enter anything at all, the formula will sort by the Country field.</p><p class="indent"><a name="81380"></a>For more information see <a href="20_basicsyntax49.html#132674">If statements</a>.</p><ol>
+<a name="81383"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_secex.gif">
+
+
+Place the formula in the Report Header section of the report and select <strong>Suppress</strong> in the Section Expert so that it does not print.
+<a name="80240"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_sordr.gif">
+
+
+Click <kbd>Sort Records</kbd>.
+<a name="80241"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Choose your formula.
+</ol>
+<p><a name="80514"></a>Now when you run the report, the program will prompt you for a sort field, the formula will return a value based on your selection, and the sort facility will use that value as your sort field.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "22_param14.html";
+var next = "22_param16.html";
+
+function setTopicID() { 
+      var number = "80792"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

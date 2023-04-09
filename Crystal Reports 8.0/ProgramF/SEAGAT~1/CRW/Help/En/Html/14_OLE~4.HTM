@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Working with embedded vs. linked objects</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="75582"></a><h2 class="newpage">Working with embedded vs. linked objects</h2><p><a name="75584"></a>Since embedded and linked objects each have different properties, it is important for you to consider the capabilities of each when deciding which OLE format to use.</p><a name="72264"></a><h3>Embedded objects</h3>
+<p><a name="72268"></a>An embedded object can be created from within Seagate Crystal Reports or by using a file that already exists. If you use an existing file, the object is copied to the report.</p><p><a name="72269"></a>When changes are made to an embedded object it does not affect the original file and vice versa. The changes are made only to the object within your report.</p><a name="72271"></a><h6>To insert an embedded OLE object</h6><ol>
+<a name="72272"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Click the <strong>Design</strong> tab.
+<a name="72273"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">On the <strong>Insert</strong> menu, click <kbd>OLE Object</kbd>.
+<p class="indent"><a name="72274"></a>The Insert Object dialog box appears.</p><a name="72275"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Select <strong>Create From File</strong>.
+<p class="indent"><a name="72276"></a>The dialog box changes, allowing you to either type in an object name or browse. </p><a name="72277"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Browse </strong>and choose Xtreme.gif from the \Program Files\Seagate Software\Crystal Reports\Samples\Databases directory.
+<p class="indent"><a name="73927"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The location of the bitmap may vary depending on the destination specified during installation.</p>
+<a name="72279"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Open </strong>to return to the Insert Object dialog box.
+<a name="72280"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK </strong>to return to the report. An object frame appears.
+<a name="72281"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Place the object in the Report Header section, just to the right of the first picture.
+<a name="72282"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Right<nobr>-c</nobr>lick this picture and observe that it is also identified as an OLE Object on the shortcut menu. The second command from the bottom of the shortcut menu identifies it as a Bitmap Image Object. It is an embedded OLE object.
+<a name="72285"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Double<nobr>-c</nobr>lick the object. Note that you have remained in Seagate Crystal Reports but the menus and tools have merged with Microsoft Paint, or those of another graphics package installed on your machine. These tools can be used to edit the bitmap in place. Remember that even though you are working with the tools of the OLE server application, you are not working on the original file; you are working with a copy and nothing you do here will affect the original.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "14_ole11.html";
+var next = "14_ole13.html";
+
+function setTopicID() { 
+      var number = "75582"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

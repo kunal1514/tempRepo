@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Date, Time, and DateTime </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="145260"></a><h3 class="newpage"> Date, Time, and DateTime </h3>
+<p><a name="145262"></a>The DateTime type can hold date<nobr>-t</nobr>imes, dates only, or times only and thus is rather versatile. The Date type holds dates only and the Time type holds times only. The Date and Time types are more efficient than the DateTime type, and so can be used in situations where the added functionality and flexibility of the DateTime type is not needed.</p><p><a name="145264"></a>You can create DateTime values directly using the date<nobr>-t</nobr>ime literal construction, which is formed by typing in the date<nobr>-t</nobr>ime between two pound (#) signs. Many different formats are supported.</p><p><a name="151220"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Date<nobr>-t</nobr>ime literals cannot be split between lines.</p>
+<a name="151231"></a><h5>Examples</h5><PRE><a name="145266"></a>#8/6/1976 1:20 am#
+<a name="145267"></a>#August 6, 1976#
+<a name="145268"></a>#6 Aug 1976 13:20:19#
+<a name="145269"></a>#6 Aug 1976 1:30:15 pm#
+<a name="145270"></a>#8/6/1976#
+<a name="145271"></a>#10:20 am#
+</PRE><p><a name="145273"></a>Even though #10:20 am# looks like it could have the Time type and <br>#8/6/1976# looks like it could have the Date type, they do not. They both have the DateTime type, as do all date<nobr>-t</nobr>ime literals. For example, you can think of #10:20 am# as a DateTime value with a null date part. To convert it to the Time type use CTime (#10:20 am#).</p><p><a name="145275"></a>Instead of using date<nobr>-t</nobr>ime literals, you can use CDateTime to convert a String to a DateTime. For example,</p><PRE><a name="145277"></a>CDateTime ("8/6/1976 1:20 am")
+<a name="145278"></a>CDateTime ("10:20 am")
+</PRE><p><a name="153676"></a>However, there is one key difference between using date<nobr>-t</nobr>ime literals and the above usage of CDateTime. Date<nobr>-t</nobr>ime literals always use U.S. English date formats rather than settings from the locale of the particular computer on which Seagate Crystal Reports is running. Thus, the date<nobr>-t</nobr>ime literal examples above would work on all computers. On the other hand, on a French system, you could use constructions like:</p><p><code><a name="145284"></a>CDateTime ("22 aout 1997") //Same as #Aug 22, 1997#</code></p><p><a name="153666"></a>Date values can be constructed with CDate and Time values with CTime:</p><PRE><a name="145286"></a>CDate ("Aug 6, 1969")
+<a name="145287"></a>CDate (1969, 8, 6) //Specify the year, month, day
+<a name="145288"></a>//Converts the DateTime argument to a Date
+<a name="145289"></a>CDate (#Aug 6, 1969#)
+<a name="145291"></a>CTime ("10:30 am")
+<a name="145292"></a>CTime (10, 30, 0) //Specify the hour, minute, second
+<a name="145293"></a>CTime (#10:30 am#)
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax22.html";
+var next = "21_crystalsyntax24.html";
+
+function setTopicID() { 
+      var number = "145260"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

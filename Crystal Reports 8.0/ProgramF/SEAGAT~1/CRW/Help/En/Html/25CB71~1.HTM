@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Microsoft Access</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="116245"></a><h4 class="newpage"> Microsoft Access</h4><p><a name="1780"></a>Microsoft Access provides several means for opening its database files. Each method has its advantages and disadvantages, and the technique that you should use may depend on how your data is set up. Below is a description of how to open Access data from Seagate Crystal Reports through the DAO engine. Another technique uses Microsoft's Open Database Connectivity (ODBC) standard, and is described in <a href="25_access_sources35.html#98286">Access</a>.</p><p><a name="103235"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="333726"></a><li>You can maintain Access security when opening database files with Seagate Crystal Reports by running Sysdb32.exe and select the Access Systm.mdw file. In this case, the program will look to Systm.mdw when opening an Access database and the user will be prompted for the Access password (as required) in Seagate Crystal Reports.
+<a name="305110"></a><li>When you open an Access database using the DAO engine, Seagate Crystal Reports opens the entire database and loads information about all tables and queries from the database. To do this, Seagate Crystal Reports must reserve a large section of your computer's memory (called a buffer) in advance. Computer memory restrictions limit this buffer to 65,536 bytes (64K). This restricts the size of your Access database to about 80 tables, depending on the number of fields in your tables.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources8.html";
+var next = "25_access_sources10.html";
+
+function setTopicID() { 
+      var number = "116245"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

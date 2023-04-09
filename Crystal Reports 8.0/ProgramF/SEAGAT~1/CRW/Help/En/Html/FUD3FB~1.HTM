@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DatePart</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000548830"></a><h3 class="newpage"> DatePart</h3>
+<p><a name="1000693186"></a>Basic and Crystal syntax.</p><a name="1000548831"></a><h5>Overloads</h5><ul type="disc"><a name="1000548832"></a><li>DatePart (intervalType, inputDateTime)
+<a name="1000548833"></a><li>DatePart (intervalType, inputDateTime, firstDayOfWeek)
+<a name="1000548834"></a><li>DatePart (intervalType, inputDateTime, firstDayOfWeek, firstWeekOfYear)
+</ul><a name="1000548835"></a><h5>Arguments</h5><ul type="disc"><a name="1000548836"></a><li>intervalType a String expression that specifies the part of a date to be returned. Possible values can be:
+<p><a name="1000697444"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1000697401"></a>Interval type 
+value
+
+</th><th align="left" valign="bottom"><a name="1000697403"></a>Description
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697405"></a>yyyy</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697781"></a>Extracts the year</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697409"></a>q</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697411"></a>Quarter (the result is 1, 2, 3 or 4</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697413"></a>m</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697800"></a>Month (the result is from 1 to 12)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697417"></a>y</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697804"></a>Day of year (1 to 365 or 366 in a leap year)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697421"></a>d</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697808"></a>Day part of the date (1 to 31)</P>
+
+
+<P><a name="1000697809"></a>Year</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697425"></a>w</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697427"></a>Day of week (1 to 7 with the result depending on firstDayOfWeek)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697429"></a>ww</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697735"></a>Week of year (1 to 53 with firstDayOfWeek and firstWeekOfYear determining the exact days of the first calendar week of the year)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697433"></a>h</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697717"></a>Extracts the hour part of the given DateTime (0 to 23)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697437"></a>n</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697711"></a>Minute part (0 to 59)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000697441"></a>s</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000697689"></a>Second part (0 to 59)</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="1000697841"></a><li> inputDateTime is the DateTime value whose part will be extracted.
+<a name="1000548848"></a><li>firstDayOfWeek is an optional constant used to specify the first day of the week. If not specified, crSunday is assumed. See <a href="OperatorsHelp70.html#1000033418">Day of Week constants</a> for more information.
+<a name="1000548849"></a><li>firstWeekOfYear is an optional constant specifying the first week of the year. If not specified, the first week is assumed to be the one in which Jan. 1 occurs (crFirstJan1). See <a href="OperatorsHelp71.html#1000056670">First Week of Year constants</a>.
+</ul><a name="1000548850"></a><h5>Returns</h5><p><a name="1000548851"></a>A Number value.</p><a name="1000548852"></a><h5>Action</h5><p><a name="1000548853"></a>DatePart returns a Number that specifies a given part of a given date.</p><a name="1000548854"></a><h5>Examples</h5><p><a name="1000548855"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000548856"></a>DatePart ("d", #August 15, 1999#) </code></p><p class="example"><a name="1000548857"></a>Returns 15.</p><p><code><a name="1000548858"></a>DatePart ("m", #August 15, 1999#)</code></p><p class="example"><a name="1000548859"></a>Returns 9.</p><p><code><a name="1000548860"></a>DatePart ("n", #10:35 am#)</code></p><p class="example"><a name="1000548861"></a>Returns 35.</p><p><code><a name="1000548862"></a>DatePart ("q", #September 29, 1999#)</code></p><p class="example"><a name="1000548863"></a>Returns 3 since September 29 is in the third quarter of the year.</p><p><code><a name="1000548864"></a>DatePart ("ww", #September 14, 1997#)</code></p><p class="example"><a name="1000548865"></a>Returns 38 since September 14, 1997 is in the 38th week of 1997.</p><p><a name="1000548867"></a>Suppose that a company wants to stamp an id number on each of its shipments for quality control purposes. The id is composed of the order id, followed by a dash, followed by the week the order was shipped, followed by the last two digits of the year. Here is an example formula that produces these ids: </p><p class="code"><a name="1000548868"></a>Rem Basic syntax
+<br><a name="1000548869"></a>formula = CStr({Orders.Order ID}, 0, "") &amp; "-" &amp; _
+<br><a name="1000548870"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CStr(DatePart("ww", {Orders.Ship Date}), 0) &amp; _
+<br><a name="1000548871"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CStr({Orders.Ship Date}, "yy")
+<br><a name="1000548872"></a>
+<br><a name="1000548873"></a>//Crystal syntax
+<br><a name="1000548874"></a>CStr({Orders.Order ID}, 0, "") &amp; "-" &amp;
+<br><a name="1000548875"></a>&nbsp;&nbsp;&nbsp;&nbsp;CStr(DatePart("ww", {Orders.Ship Date}), 0) &amp;
+<br><a name="1000548876"></a>&nbsp;&nbsp;&nbsp;&nbsp;CStr({Orders.Ship Date}, "yy")
+</p><p class="example"><a name="1000548877"></a>Returns the string "2082-3897" if {Orders.Order ID} is 2082 and {Orders.Ship Date} is September 14, 1997.</p><a name="1000548878"></a><h5>Comments</h5><p><a name="1000548879"></a>This function is designed to work like the Visual Basic function of the same name.</p><p><a name="1000548880"></a>The DatePart function with "yyyy" intervalType argument is the same as the Year function. Similarly, the DatePart function with "m", "d", "w", "h", "n" and "s" intervalType argument is the same as the functions Month, Day, Weekday (or DayOfWeek), Hour, Minute and Second respectively. On the other hand, there is no easy alternative to using the DatePart function for the "q", "y" and "ww" intervalType arguments.</p><p><a name="1000548881"></a>The firstDayOfWeek argument affects the DatePart function when the interval type argument is "w" or "ww". For all other intervalType argument values, it is ignored.</p><p><a name="1000548882"></a>The firstWeekOfYear argument affects the DatePart function only when the intervalType argument is "ww". For all other intervalType argument values, it is ignored.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp129.html";
+var next = "functionshelp131.html";
+
+function setTopicID() { 
+      var number = "1000548830"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

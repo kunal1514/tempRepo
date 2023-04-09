@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Tips on learning Basic syntax</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="127598"></a><h3 class="newpage"> Tips on learning Basic syntax</h3>
+<a name="127600"></a><h4>If you have no programming experience</h4><p><a name="127602"></a>In many cases you may not need to use the formula language. Seagate Crystal Reports includes several Experts that automatically handle situations where formulas could be used. These include the Select, Search, Running Totals and Highlighting Experts, and the Insert Summary and Insert Grand Total dialog boxes. Before creating formulas, check to see if you can use one of these tools.</p><p><a name="127604"></a>However, you may need to create formulas without the help of an Expert. Read this section to learn about Basic syntax and the rules you need to follow to create a formula.</p><a name="127606"></a><h4>If you know Microsoft Visual Basic, VBScript, or another version of Basic</h4><p><a name="127608"></a>In order to create formulas using Basic syntax, you need to understand the following:</p><ul type="disc"><a name="127609"></a><li>How a Basic syntax formula refers to other fields in the report such as database fields, parameter fields, summary fields, running total fields and other formula fields.
+<a name="127610"></a><li>How to return a value from a formula by setting the special variable named <EM>formula</EM>.
+<a name="147493"></a><li>How to use functions specific to report processing such as ReportTitle and OnFirstRecord.
+<a name="147494"></a><li>How to use the type system. Basic syntax is strongly typed, similar to using Option Explicit in Visual Basic and there is no Variant type. Basic syntax supports separate Date, Time and DateTime types unlike just the Date type in Visual Basic. It also supports range types such as <EM>10 To 20</EM> to allow for ranges of values which are common in many reporting applications.
+</ul><p><a name="134426"></a>Read this section to familiarize yourself with the above details.</p><a name="127614"></a><h5>Familiar features</h5><p><a name="134509"></a> </p>
+<ul type="disc"><a name="147501"></a><li>Many Basic syntax functions work in the same way as their counterparts in Visual Basic. This includes string functions such as Len, Mid and Filter, math functions such as Abs, Rnd and Sin, financial functions such as PV, programming shortcut functions such as IIF and date functions such as DateSerial, DateAdd and DateDiff.
+<a name="147502"></a><li>Most operators supported by Visual Basic are also in Basic syntax. For example, string concatenation (&amp;) and date<nobr>-t</nobr>ime literals (#...#).
+<a name="127617"></a><li>Most statements and control structures use the same syntax as in Visual Basic. This includes the If, Select, Do While, Do Until, While and For/Next statements.
+<a name="127618"></a><li>The overall look of the formula will be unmistakably Basic like. For example, Basic style comments and line continuation characters are supported as is the Basic language use of new lines, colons, and the equal sign.
+</ul><a name="127622"></a><h4>If you already know Crystal syntax</h4><p><a name="127624"></a>The main adjustment is getting used to the parts of the Basic language that are common to every version of Basic. Read this section for a detailed introduction.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax2.html";
+var next = "20_basicsyntax4.html";
+
+function setTopicID() { 
+      var number = "127598"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

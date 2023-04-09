@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>To create an Informix MetaCube Cross-Tab report</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="45227"></a><h4 class="newpage"> To create an Informix MetaCube Cross-Tab report</h4><ol>
+<a name="39712"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">On the <strong>File</strong> menu, click <strong>New</strong>.
+<p class="indent"><a name="37270"></a>The Seagate Crystal Report Gallery appears.<img src="images/bt_new.gif">
+
+
+</p><a name="36218"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Select the <kbd>Cross<nobr>-T</nobr>ab Expert</kbd>.
+<p><a name="37271"></a> <img src="images/db_reportgallery_crosstab.gif">
+
+
+</p>
+<a name="38159"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<p class="indent"><a name="37242"></a>The Cross<nobr>-T</nobr>ab Report Expert appears.</p><p><a name="37290"></a> <img src="images/ex_crosstabreport_data.gif">
+
+
+</p>
+<p><a name="37280"></a> </p>
+<a name="38173"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Database</strong>.
+<p class="indent"><a name="36228"></a>The Data Explorer appears.</p><a name="37255"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Expand the <strong>More Data Sources</strong> folder, then expand the I<strong>nformix Metacube</strong> folder.
+<p><a name="37294"></a> <img src="images/db_dataexplorer_informixmetacube.gif">
+
+
+</p>
+<a name="38241"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">In the RDBMS Login &amp; Choose DSS System dialog box, enter the password, then click <strong>OK</strong>.
+<p><a name="37311"></a> <img src="images/db_rdbms_login.gif">
+
+
+</p>
+<p class="indent"><a name="38187"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If you have already been working with Informix MetaCube reports during this session, you may not be required to login.</p>
+<a name="37368"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Select the <strong>Audio Sales YTD by Channel </strong>and <strong>Brand Channel Net Profit</strong> tables, then click <strong>Add</strong>, then click <strong>Close</strong>.
+<p class="indent"><a name="36251"></a>The Cross<nobr>-T</nobr>ab Report Expert appears with the Links tab active.</p><p><a name="39741"></a> <img src="images/ex_crosstabreport_linkstabmetacube.gif">
+
+
+</p>
+<a name="40652"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Next</strong>.
+<p class="indent"><a name="40654"></a>The Fields tab appears.</p><a name="40655"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Drag and drop the following fields from the Report Fields area to the appropriate Cross<nobr>-T</nobr>ab areas:
+<ul type="disc"><ul type="disc"><a name="36258"></a><li><strong>Attributes.Channel.Channel</strong> field from the Audio Sales YTD Channel table to the Rows area.<a name="36267"></a><li><strong>Attributes.Product.Brand</strong> field from the Brand Channel Net Profit table to the Columns area.<a name="37376"></a><li><strong>Measures.Sales Transactions.Net Profit </strong>field from the Brand Channel Net Profit table to the Summarized Fields area.<p><a name="37388"></a> <img src="images/ex_crosstabreport_crosstabmetacube.gif">
+
+
+</p>
+</ul></ul><a name="38257"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Preview Report</strong> to see a Cross<nobr>-T</nobr>ab report based on the fields you selected.
+<a name="35305"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Save the report.
+<p class="indent"><a name="36288"></a>This report is used in the adding a field to a Cross<nobr>-T</nobr>ab report tutorial.</p></ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "16_olap16.html";
+var next = "16_olap18.html";
+
+function setTopicID() { 
+      var number = "45227"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

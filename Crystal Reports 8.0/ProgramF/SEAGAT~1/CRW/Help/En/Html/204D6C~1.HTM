@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Declaring variables without immediately specifying their type</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="130309"></a><h4 class="newpage"> Declaring variables without immediately specifying their type</h4><p><a name="130311"></a>In general, the type of a variable does not need to be explicitly given when declaring it. In such cases, the variable's type is determined by the first assignment that is made to it. This is similar to the special variable <EM>formula</EM>. This is different from in Visual Basic where a variable whose type is not given at declaration automatically has the Variant type. However, in practice, it means that you can write formulas in a similar style to what you would do if using a Variant in Visual Basic.</p><PRE><a name="130313"></a>Dim p 'The type of p is not known yet
+<a name="130314"></a>p = "bye" 'The type of p is now set to be String
+<a name="130316"></a>Dim q 'The type of q is not known yet
+<a name="130317"></a>q = Array ("hello", p) 'q is a String Array
+<a name="130319"></a>'Error- p is a String variable and cannot hold a Number
+<a name="130320"></a>p = 25
+<a name="130322"></a>Dim r
+<a name="130323"></a>'r is a Number variable, and holds the value 5
+<a name="130324"></a>r = (10 + 5) / 3
+<a name="130326"></a>'The types of a and c are not known yet
+<a name="130327"></a>Dim a, b As Boolean, c
+<a name="130328"></a>b = False
+<a name="130329"></a>'The type of a is now set to Boolean
+<a name="130330"></a>'and its value is False
+<a name="130331"></a>a = b
+<a name="130332"></a>'The type of c is now set to Number and its value is 17
+<a name="130333"></a>c = 2 + 3 * 5
+</PRE><a name="130335"></a><h5>Examples of declaring and initializing range variables</h5><p><a name="131115"></a> </p>
+<PRE><a name="130337"></a>Dim gradeA, quarter
+<a name="130338"></a>'The type of gradeA is set to Number Range
+<a name="130339"></a>gradeA = 90 To 100
+<a name="130340"></a>'The type of quarter is set to Date Range
+<a name="130341"></a>quarter = CDate (1999, 10, 1) To CDate (1999, 12, 31)
+</PRE><a name="130343"></a><h3>Variable Scope</h3>
+<p><a name="130345"></a>Variable scopes are used to define the degree to which variables in one formula are made available to other formulas. There are three levels of scope in Seagate Crystal Reports: local, global and shared. Every variable has a scope, and this scope is specified when the variable is declared.</p><a name="130346"></a><h4>Local Variables</h4><p><a name="130347"></a>Variables with local scope, also known as local variables, are declared using either the Dim or Local keywords. For example, all the declarations in the previous section using Dim were declaring local variables. Another example:</p><p><code><a name="130348"></a>Local x As Number 'equivalent to Dim x As Number</code></p><p><a name="130349"></a>Local variables are restricted to a single formula and a single evaluation of that formula. This means that you cannot access the value of a local variable in one formula from a different formula.</p><a name="135301"></a><h5>Example</h5><PRE><a name="130351"></a>Rem Formula A
+<a name="130352"></a>Local x as Number
+<a name="130353"></a>x = 10
+<a name="130354"></a>formula = x
+<a name="130356"></a>Rem Formula B
+<a name="130357"></a>EvaluateAfter ({@Formula A})
+<a name="130358"></a>Local x as Number
+<a name="130359"></a>formula = x + 1
+</PRE><p><a name="130361"></a>The function call EvaluateAfter ({@Formula A}) ensures that Formula B will be evaluated after Formula A is evaluated. Formula A returns a value of 10 and Formula B returns a value of 1. Formula B does not have access to Formula A's x and thus cannot use the value of 10 and add 1 to it; instead, it uses the default value for the uninitialized local variable x found in Formula B, which is 0, and adds 1 to it to get 1.</p><p><a name="130363"></a>You can also create local variables with the same name but different types in different formulas. For example, the type declarations in formulas A and B do not conflict with:</p><PRE><a name="130365"></a>Rem Formula C
+<a name="130366"></a>Local x as String
+<a name="130367"></a>x = "hello"
+<a name="130368"></a>formula = x
+</PRE><p><a name="130369"></a>Local variables are the most efficient of the three scopes. In addition, they do not interfere with one another in different formulas. For these reasons, it is best to declare variables to be local whenever possible.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax24.html";
+var next = "20_basicsyntax26.html";
+
+function setTopicID() { 
+      var number = "130309"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

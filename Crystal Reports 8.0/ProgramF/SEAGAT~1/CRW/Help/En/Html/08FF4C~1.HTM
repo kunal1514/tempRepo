@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Sorting data</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="171366"></a><h2 class="newpage">Sorting data</h2><p><a name="232754"></a>Sorting means placing data in some kind of order to help you find and evaluate it.</p><p><a name="242648"></a>When you first insert a database field into your report, the data within the fields appears in the order in which it was originally entered into the database. Locating information in this kind of report is difficult. It is much easier to review or find information when you can see it sorted in a logical format. For example, you may want to have a customer list sorted alphabetically by name or by country.</p><a name="33340"></a><h3>Understanding sort options</h3>
+<p><a name="32765"></a>When you sort, the program asks you to define two things:</p><ul type="disc"><a name="32766"></a><li>the field you want the sort to be based on (sort field)
+<a name="32767"></a><li>the sort direction.
+</ul><a name="32768"></a><h4>Sort field</h4><p><a name="285295"></a>A sort field is the field that determines the order in which data appears on your report. Almost any field can be used as a sort field, including formula fields. A field's data type determines the method in which the data from that field is sorted.</p><p><a name="298209"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>You cannot sort on memo or BLOB fields.</p>
+<p><a name="284812"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="284830"></a><strong>Field Type
+</strong>
+</th><th align="left" valign="bottom"><a name="284832"></a>Sort Order
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="284834"></a>Single<nobr><nobr>-c</nobr></nobr>haracter string fields</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="284836"></a>blanks</P>
+
+
+<P><a name="284891"></a>punctuation</P>
+
+
+<P><a name="284892"></a>numbers</P>
+
+
+<P><a name="284898"></a>uppercase letter</P>
+
+
+<P><a name="284899"></a>lowercase letters</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="284838"></a>Multiple character string field</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="284840"></a>two letters</P>
+
+
+<P><a name="284907"></a>three letters</P>
+
+
+<P><a name="284910"></a>four letters, etc.</P>
+
+
+<P><br></P>
+
+
+<P><a name="284928"></a>For example:</P>
+
+
+<ul type="disc"><a name="284911"></a><li>"BOB" comes before "bob"
+<a name="284912"></a><li>"123" comes before "124" 
+<a name="284913"></a><li>" " (blank) comes before "a"
+<a name="284914"></a><li>"aa" comes before "aaa"
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="284842"></a>Currency fields</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="284844"></a>numeric order</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="284846"></a>Number fields</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="284848"></a>numeric order</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="284850"></a>Date fields</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="284962"></a>chronological order</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="284854"></a>DateTime fields</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="284856"></a>chronological order </P>
+
+
+<P><a name="285053"></a>same<nobr><nobr>-d</nobr></nobr>ate values sorted by time</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="284858"></a>Time fields</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="284860"></a>chronological order</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="284862"></a>Boolean comparison fields</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="284864"></a>False values (0)</P>
+
+
+<P><a name="285062"></a>True values (1)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="298211"></a>Null values</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="298213"></a>null values</P>
+
+
+<P><a name="298297"></a>non<nobr><nobr>-n</nobr></nobr>ull values</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="32785"></a><h4>Sort Direction</h4><p><a name="32786"></a>Direction refers to the order in which the values are displayed, once sorted.</p><ul type="disc"><a name="48967"></a><li><strong>Ascending<br></strong>Ascending order means smallest to largest (1 to 9, A to Z, False to True). The program sorts the records in ascending order based on the values in the sort field you select.
+<a name="48969"></a><li><strong>Descending<br></strong>Descending order means largest to smallest (9 to 1, Z to A, True to False). The program sorts the records in descending order based on the values in the sort field you select.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "08_sortgrouptotal2.html";
+var next = "08_sortgrouptotal4.html";
+
+function setTopicID() { 
+      var number = "171366"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

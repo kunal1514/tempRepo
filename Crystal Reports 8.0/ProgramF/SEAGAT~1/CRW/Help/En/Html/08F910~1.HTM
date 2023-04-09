@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Grouping by the first letter of a company name</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="282929"></a><h3 class="newpage"> Grouping by the first letter of a company name</h3>
+<p><a name="255381"></a>You might want to break your data into groups based on the first letter of the company name. For example, in a customer list you might want all the "A" customers in a group, then all the "B" customers, and so forth. To do this requires the use of a formula.</p><p><a name="255382"></a>Do not worry if you are unfamiliar with formulas. This text will show you what formula you need here and how to enter it.</p><p><a name="255385"></a>You can learn more about creating and editing formulas in <a href="19_introformulas3.html#155144">Formulas overview</a>.</p><p><a name="255387"></a>You are going to create a formula that will extract the first letter of each customer's name. Then you will group the data using that formula field as the sort<nobr>-a</nobr>nd<nobr>-g</nobr>roup<nobr>-b</nobr>y field. The program will sort the data based on the first letter of each customer name and start a new group whenever that letter changes.</p><a name="255388"></a><h6>To group data by the first letter of a company name</h6><ol>
+<a name="255389"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Create a report using the sample data,<strong> Xtreme.mdb</strong>, and place the following fields from left to right in the Details section:
+</ol>
+<PRE><a name="255390"></a>{customer.CUSTOMER NAME}
+<a name="263377"></a>{customer.REGION}
+<a name="263378"></a>{customer.POSTAL CODE}
+<a name="263379"></a>{customer.COUNTRY}
+</PRE><ol>
+<a name="269430"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_indat.gif">
+
+
+On the <strong>Insert</strong> menu, click <strong>Formula Field</strong>.
+<p class="indent"><a name="269431"></a>The Field Explorer dialog box appears.</p><p><a name="305401"></a> <img src="images/db_infd1.gif">
+
+
+</p>
+<a name="269437"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Double click <strong>Formula Fields</strong>.
+<a name="269444"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">In the Formula Name dialog box, enter the name you want to identify the formula, for example "First Letter."
+<a name="269445"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<p class="indent"><a name="269446"></a>The Formula Editor appears.</p><a name="255406"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Choose <strong>Crystal syntax</strong> from the drop down list in the top right corner.
+<a name="288677"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Type the following formula into the Formula text box:
+</ol>
+<p><code><a name="255407"></a>{Customer.Customer Name}[1]</code></p><ol>
+<a name="255408"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_sclfe.gif">
+
+
+Click the <kbd>Save and Close</kbd> button.
+<p class="indent"><a name="255409"></a>You return to the Field Explorer dialog box. The name of the formula is listed in the Formula Fields directory.</p><a name="255422"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/08_sortgrouptotal7a.gif">
+
+
+On the Insert menu, click <kbd>Group</kbd>.
+<p class="indent"><a name="255423"></a>The Insert Group dialog box appears.</p><p><a name="305212"></a> <img src="images/in_grp2.gif">
+
+
+</p>
+<a name="255428"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Select the formula field as the field you want your data grouped by from the first drop<nobr>-d</nobr>own list.
+<a name="255429"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Select the sort direction from the second drop<nobr>-d</nobr>own list.
+<a name="255430"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<p class="indent"><a name="255431"></a>You return to your report with the data grouped by the formula field as specified. The data is broken into groups based on the first letter in the customer's name. The formula provides a live header for every group.</p><p class="indent"><a name="255433"></a>For more information on live headers, see <a href="08_sortgrouptotal24.html#18193">Live headers</a>.</p><p class="indent"><a name="307259"></a>Your report should look similar to the following:</p><p><a name="310244"></a> </p>
+<p><a name="310403"></a> <img src="images/Sort7_2.gif">
+
+
+</p>
+</ol>
+<a name="310249"></a><h6>Related topics</h6><p><a name="284618"></a><a href="19_introformulas3.html#155144">Formulas overview</a>.</p><p><a name="284623"></a><a href="08_sortgrouptotal5.html#32794">Grouping data</a>.</p><p><a name="284624"></a><a href="08_sortgrouptotal12.html#274169">Grouping data in intervals</a>.</p><p><a name="284628"></a><a href="08_sortgrouptotal22.html#298928">Creating group headers</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "08_sortgrouptotal12.html";
+var next = "08_sortgrouptotal14.html";
+
+function setTopicID() { 
+      var number = "282929"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

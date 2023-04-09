@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Constructing report requests</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="161239"></a><h3 class="newpage"> Constructing report requests</h3>
+<p><a name="149817"></a>When requesting a report from the Web Component Server, or when setting up a link to a report from another web page, there are several optional commands available for customizing the information returned. </p><p><a name="161138"></a>Commands are passed with a report request by appending the URL address of the report with a question mark followed by each query string command you want to use. </p><p><a name="161139"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Commands can be passed in any order and in any combination. All commands are optional. If you do not specify any commands, the default viewer displays the report.</p>
+<p><a name="149818"></a>The following is an example of using query string commands when requesting a report:</p><p><code><a name="149820"></a>http://&lt;localhost&gt;/scrreports/Accounting/ wsale.rpt?sf={customer.Sales}&gt;10000</code></p><p><a name="149821"></a>Note that each command is specified using the following syntax:</p><p><code><a name="149822"></a>command=value</code></p><p><a name="149823"></a>Where <EM>command</EM> is the first name of the command, and <EM>value</EM> is the value you assign to that command.</p><p><a name="161142"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The command is preceded by a question mark ? and additional commands are separated by an ampersand &amp;.</p>
+<p><a name="149824"></a>It may be more convenient to embed the request in an HTML page and pass it to the Web Component Server via a FORM tag, as in the following example:</p><p class="code"><a name="164477"></a>&lt;FORM ACTION='http://localhost/scrreports/Accounting/
+wsale.rpt?sf={customer.Sales}&gt;1000' METHOD='post'&gt; 
+<br><a name="164478"></a>&lt;input type=submit value='Click Here To Launch the report: http://
+localhost/scrreports/Accounting/ wsale.rpt?sf={customer.Sales}&gt;1000'&gt;
+<br><a name="164479"></a>&lt;input type=hidden name="init" value="html_page"&gt;
+<br><a name="164480"></a>&lt;input type=hidden name="promptOnRefresh" value="0"&gt;
+<br><a name="164481"></a>&lt;/FORM&gt;
+</p><p><a name="149831"></a>The resulting URL and attached query string look like this:</p><p><code><a name="164216"></a>http://localhost/scrreports/Accounting/wsale.rpt?sf={customer.Sales}&gt;1000&amp;init=html_page&amp;promptOnRefresh=0</code></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerCommands2.html";
+var next = "WebServerCommands4.html";
+
+function setTopicID() { 
+      var number = "161239"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

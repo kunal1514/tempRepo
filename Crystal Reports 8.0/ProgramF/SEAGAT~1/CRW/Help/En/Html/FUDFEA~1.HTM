@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>ExchGetOrganization (address)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000586441"></a><h3 class="newpage"> ExchGetOrganization (address)</h3>
+<p><a name="1000652047"></a>Basic and Crystal syntax.</p><a name="1000586445"></a><h5>Arguments</h5><p><a name="1000586446"></a>Address is the Address of the sender/recipient (string data type).</p><a name="1000586447"></a><h5>Returns</h5><p><a name="1000586448"></a>String</p><a name="1000586449"></a><h5>Action</h5><p><a name="1000586450"></a>The function will begin by determining whether the address is in X500 or X400 format. Once this has been solved, the function will then determine the Organization Name.</p><ul type="disc"><a name="1000586451"></a><li>If the field is in X500 format, the function will extract the last instance of the "/O=" code (not case sensitive).
+<a name="1000586452"></a><li>If the field is in the X400 format, it will extract the instance of the "P=" code (not case sensitive).
+</ul><p><a name="1000651950"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The fields must follow the address type standards for the functions to operate on them.</p>
+<a name="1000586459"></a><h5>Examples</h5><p><a name="1000586460"></a>The following examples are applicable to Crystal syntax:</p><p class="code"><a name="1000586461"></a>Field = /o=Seagate Software/ou=CRYSTALNT/
+<br><a name="1000721829"></a>cn=Configuration/
+<br><a name="1000721834"></a>cn=Servers/cn=ESPRESSO/cn=Fredt
+<br><a name="1000721843"></a>ExchGetOrganization({Field})
+</p><p class="example"><a name="1000586462"></a>Returns "Seagate Software".</p><p class="code"><a name="1000586463"></a>Field = c=US; a= ; p=Microsoft; o=apps<nobr>-w</nobr>ga; da:ms=com/
+<br><a name="1000721860"></a>Rich/James.
+<br><a name="1000721865"></a>ExchGetOrganization({Field})
+</p><p class="example"><a name="1000586464"></a>Returns "Microsoft".</p><p class="code"><a name="1000586465"></a>Field = c=US; a= ; p=Microsoft; o=apps<nobr>-w</nobr>ga; 
+<br><a name="1000721885"></a>da:smtp=James@crystal.com.
+<br><a name="1000721886"></a>ExchGetOrganization({Field})
+</p><p class="example"><a name="1000586466"></a>Returns "Microsoft".</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp210.html";
+var next = "functionshelp212.html";
+
+function setTopicID() { 
+      var number = "1000586441"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

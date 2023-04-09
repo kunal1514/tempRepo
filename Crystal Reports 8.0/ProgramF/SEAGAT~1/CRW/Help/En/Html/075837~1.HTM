@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using the Select Expert</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="95100"></a><h3 class="newpage"> Using the Select Expert</h3>
+<p><a name="95101"></a>The Select Expert makes it easy to specify the records you want included in your report. When you work with the Select Expert, you select the field to which you want to apply selection conditions and then you specify those conditions.</p><p><a name="13175"></a>The Select Expert can be used to set up simple record selection requests. For example:</p><ul type="disc"><a name="13176"></a><li>customers from Arizona
+<a name="13177"></a><li>orders in the first quarter
+<a name="13178"></a><li>sales over $10,000.
+</ul><p><a name="13179"></a>The Select Expert can also be used to set up some sophisticated requests:</p><ul type="disc"><a name="13180"></a><li>customers whose names start with "A", "M", or "S"
+<a name="13181"></a><li>customers from California or Florida who ordered in July.
+</ul><p><a name="89094"></a>These are all range limit requests. One or more constants define the range. The program compares the field value in each record to the constant(s) and rejects records with values outside the range. The report is limited to values within the range. You can set up all of these types of record selection requests without any previous knowledge of the formula language.</p><p><a name="89062"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The Select Expert can be used to set up both record selection and group selection requests. When a group name or summary field is selected, the program knows that the selection criteria set up is intended for group selection. In all other cases, the program knows that you are setting up record selection.</p>
+<a name="100744"></a><h6>To set up record selection using the Select Expert </h6><ol>
+<a name="100745"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_selrc.gif">
+
+
+On the <kbd>Report</kbd> menu, click <kbd>Select Expert</kbd>.
+<p class="indent"><a name="95982"></a>The Select Expert dialog box appears.</p><p><a name="103399"></a> <img src="images/db_selrc.gif">
+
+
+</p>
+<p class="indent"><a name="96074"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If you click the Select Expert button without first highlighting a field in your report, the Choose Field dialog box appears. Highlight the field on which you want to base record selection and click OK. The Select Expert appears.</p>
+<a name="89257"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Use the drop<nobr>-d</nobr>own lists to enter your selection criteria for the indicated field.
+</ol>
+<ol>
+<a name="89258"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong> when finished.
+<p class="indent"><a name="89259"></a>A selection formula is generated based on your specifications, limiting the report to the records you indicated.</p><p class="indent"><a name="105709"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>To view the selection formula, click the Show Formula button. The Select Expert expands to show the formula. Click the Formula Editor button to modify the formula.</p>
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "07_recordgroupsel3.html";
+var next = "07_recordgroupsel5.html";
+
+function setTopicID() { 
+      var number = "95100"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

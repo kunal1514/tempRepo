@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>SummaryFunction (fld)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000432407"></a><h3 class="newpage"> SummaryFunction (fld)</h3>
+<p><a name="1000432408"></a>Basic and Crystal syntax.</p><a name="1000664614"></a><h5>Arguments</h5><p><a name="1000432409"></a>fld is any valid database or formula field that can be evaluated by the function. </p><a name="1000432410"></a><h5>Returns</h5><p><a name="1000432411"></a>Fractional Number.</p><a name="1000432412"></a><h5>Action</h5><p><a name="1000432414"></a>SummaryFunction (fld) summarizes the values in the specified field for the entire report. It generates, in effect, a "grand total" summary.</p><a name="1000432415"></a><h5>Typical uses </h5><p><a name="1000432416"></a>Use these functions any time you need to summarize all the values that appear in a given field in a report, or when you need to use a summary in a calculation or comparison.</p><a name="1000432417"></a><h5>Examples</h5><p><a name="1000432418"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000432419"></a>SummaryFunction({orders.ORDER AMOUNT})</code></p><p class="example"><a name="1000432420"></a>Summarizes all values in the Amount field.</p><p class="code"><a name="1000432421"></a>If {orders.ORDER AMOUNT} &gt; SummaryFunction({orders.ORDER AMOUNT}) Then
+<br><a name="1000432422"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Flag" 
+<br><a name="1000432423"></a>Else
+<br><a name="1000432424"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+</p><p class="example"><a name="1000432425"></a>Compares each value in the Amount field to the summary value of all values in the Amount field. If the value is greater than the summary value, it flags it with the word "Flag"; if it is equal to or less then the summary value, it prints nothing.</p><p><code><a name="1000432426"></a>Average({orders.ORDER AMOUNT})</code></p><p class="example"><a name="1000432427"></a>Calculates the average of all values in the Amount field.</p><p class="code"><a name="1000432428"></a>If Count({orders.ORDER ID}) &gt;= 100 Then
+<br><a name="1000432429"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Congratulations on meeting your quota!" 
+<br><a name="1000735617"></a>Else
+<br><a name="1000432430"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+</p><p class="example"><a name="1000432431"></a>Prints the congratulatory message if the number of orders is 100 or more, and prints nothing if the number of orders is less than 100.</p><p><code><a name="1000432432"></a>Sum({file.QTY})</code></p><p class="example"><a name="1000432433"></a>Calculates the sum of all values in the QTY field.</p><a name="1000432434"></a><h5>Comments</h5><p><a name="1000432435"></a>Not all arithmetic group functions are available for use with all data types.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp21.html";
+var next = "functionshelp23.html";
+
+function setTopicID() { 
+      var number = "1000432407"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

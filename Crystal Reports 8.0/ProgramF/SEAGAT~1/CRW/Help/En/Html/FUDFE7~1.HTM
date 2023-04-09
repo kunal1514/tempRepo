@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DateSerial (year, month, day)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000535456"></a><h3 class="newpage"> DateSerial (year, month, day)</h3>
+<p><a name="1000691076"></a>Basic and Crystal syntax.</p><a name="1000535457"></a><h5>Arguments</h5><ul type="disc"><a name="1000535458"></a><li>year is a whole Number or numeric expression representing a year, example: 1996.
+<a name="1000535459"></a><li>month is a whole Number or numeric expression representing a month, example: 12 for December.
+<a name="1000535460"></a><li>day is a whole Number or numeric expression representing a day of the month, example: 5.
+</ul><a name="1000535461"></a><h5>Returns</h5><p><a name="1000535462"></a>A Date value.</p><a name="1000535463"></a><h5>Action</h5><p><a name="1000535464"></a>DateSerial returns a Date value for the specified year, month and day. It also handles relative Date expressions.</p><a name="1000535465"></a><h5>Typical uses</h5><p><a name="1000535466"></a>DateSerial can be used instead of <a href="functionshelp162.html#1000568875">CDate</a> or <a href="functionshelp109.html#1000531915">DateValue</a> to create a Date value out of a year, month and day. </p><p><a name="1000535467"></a>A useful feature of DateSerial is that the month argument does not have to be from 1 to 12 and the day argument does not have to be in the valid range for the number of days in the month. Such dates are interpreted as relative dates, and DateSerial will produce a valid Date value. This can be used to perform many computations with dates, without checking for special cases such as the end of the year, leap years and the number of days in a month. See the examples below for some typical applications.</p><a name="1000535468"></a><h5>Examples</h5><p><a name="1000535469"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p class="code"><a name="1000535470"></a>DateSerial (1999, 6, 15)
+<br><a name="1000535471"></a>DateSerial (2000, 1 - 7, 15)
+<br><a name="1000535472"></a>DateSerial (1999, 1, 166)
+</p><p class="example"><a name="1000535473"></a>All three return the date June 15, 1999. The second says that 7 months before January 1, 2000 is June 15, 1999. The third says that the 166th day of 1999 is June 15, 1999.</p><p><code><a name="1000535474"></a>DateSerial (1996 + 12, 2 + 13, 29 + 14)</code></p><p class="example"><a name="1000535475"></a>Returns April 12, 2009. What it means is that 12 years, 13 months and 14 days from February 29, 1996 is April 12, 2009.</p><p><a name="1000535477"></a>Suppose you want to calculate the last day of the month for the DateTime field {Orders.Order Date}. Notice that in the calculation, DateSerial(Year(d), Month(d) + 1, 1) is the first day of the month after {Orders.Order Date} and then subtracting one day gives the desired result:</p><p class="code"><a name="1000535478"></a>Rem Basic syntax
+<br><a name="1000535479"></a>Dim d
+<br><a name="1000535480"></a>d = {Orders.Order Date}
+<br><a name="1000535481"></a>formula = DateSerial(Year(d), Month(d) + 1, 1 - 1)
+<br><a name="1000535482"></a>
+<br><a name="1000535483"></a>//Crystal syntax
+<br><a name="1000535484"></a>Local DateTimeVar d := {Orders.Order Date};
+<br><a name="1000535485"></a>DateSerial(Year(d), Month(d) + 1, 1 - 1)
+</p><p class="indent"><a name="1000535487"></a>It is often useful to combine DateSerial with other date functions. For example, if you want to calculate the date of the last Friday of the month for the field {Orders.Order Date} you can do the following. </p><p class="example"><a name="1000652454"></a>The calculation proceeds by finding the last day of the month and then subtracting off a number of days to get to a Friday. Since some months have 5 Fridays (example: October 1999) and some have 4 Fridays (example: November 1999), this approach is easier than working from the first day of the month.</p><p class="code"><a name="1000535488"></a>Rem Basic syntax
+<br><a name="1000535489"></a>Dim d1, d2
+<br><a name="1000535490"></a>d1 = {Orders.Order Date}
+<br><a name="1000535491"></a>d2 = DateSerial(Year(d1), Month(d1) + 1, 1 - 1)
+<br><a name="1000535492"></a>formula = d2 - (WeekDay(d2, crFriday) - 1)
+<br><a name="1000535493"></a>
+<br><a name="1000535494"></a>//Crystal syntax
+<br><a name="1000535495"></a>Local DateTimeVar d1 := {Orders.Order Date};
+<br><a name="1000535496"></a>Local DateVar d2;
+<br><a name="1000535497"></a>d2 := DateSerial(Year(d1), Month(d1) + 1, 1 - 1);
+<br><a name="1000535498"></a>d2 - (DayOfWeek(d2, crFriday) - 1)
+</p><p class="example"><a name="1000535499"></a>Returns the Date value March 27, 1998 if {Orders.Order Date} is March 18, 1998.</p><p><a name="1000535501"></a>Here is an example that returns the date of the second Tuesday of the month 3 months before {Orders.Order Date}:</p><p class="code"><a name="1000535502"></a>Rem Basic syntax
+<br><a name="1000535503"></a>Dim d1, d2
+<br><a name="1000535504"></a>d1 = {Orders.Order Date}
+<br><a name="1000535505"></a>d2 = DateSerial(Year(d1), Month(d1) - 3, 1)
+<br><a name="1000535506"></a>formula = d2 + (2 * 7 - (WeekDay(d2, crTuesday) - 1))
+<br><a name="1000535507"></a>
+<br><a name="1000535508"></a>//Crystal syntax
+<br><a name="1000535509"></a>Local DateTimeVar d1 := {Orders.Order Date};
+<br><a name="1000535510"></a>Local DateVar d2 := DateSerial(Year(d1), Month(d1) - 3, 1);
+<br><a name="1000535511"></a>d2 + (2 * 7 - (DayOfWeek(d2, crTuesday) - 1))
+</p><p class="example"><a name="1000535512"></a>Returns the Date value December 9, 1997 if {Orders.Order Date} is March 18, 1998.</p><a name="1000535513"></a><h5>Comment</h5><p><a name="1000535514"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp111.html";
+var next = "functionshelp113.html";
+
+function setTopicID() { 
+      var number = "1000535456"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

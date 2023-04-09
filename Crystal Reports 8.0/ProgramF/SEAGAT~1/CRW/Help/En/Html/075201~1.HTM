@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Choosing a formula template</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="91894"></a><h3 class="newpage"> Choosing a formula template</h3>
+<a name="99141"></a><h6>To choose a formula template</h6><ol>
+<a name="91895"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Select the template you want to use.
+<p class="indent"><a name="91953"></a>You can do this in one of two ways:</p><ul type="disc"><ul type="disc"><a name="91898"></a><li>review the list in <a href="07_recordgroupsel7.html#91801">Record selection formula templates</a>, and write down the formula of interest<a name="91904"></a><li>find the Record Selection Formula Templates in the online help file and copy the formula of interest to the Clipboard.</ul></ul><a name="91905"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Choose <kbd>Edit Selection Formula</kbd> from the <kbd>Report</kbd> menu.
+<a name="91910"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Choose <strong>Record</strong> to create a record selection formula.
+<p class="indent"><a name="100469"></a>The Record Selection Formula Editor appears.</p><p class="indent"><a name="91911"></a>- or -</p><p class="indent"><a name="100819"></a>Choose <kbd>Group</kbd> to create a group selection formula.</p><p class="indent"><a name="100470"></a>The Group Selection Formula Editor appears.</p><a name="91912"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">In the <strong>Formula text box</strong>, type in the formula you wrote down in Step 1 or paste it from the Clipboard.
+<a name="91913"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Replace the values (fields, text, etc.) in the formula with the values you want. For example, if the example formula is:
+</ol>
+<p><code><a name="91914"></a><code>{file.FIELD} &gt; 99999</code></code></p><p class="indent"><a name="100478"></a>and you want to limit your report to records for which the value in the {orders detail.QUANTITY} field is greater than 25, replace the existing values with the values you want, so that your selection formula reads:</p><p><code><a name="91916"></a><code>{orders detail.QUANTITY} &gt; 25</code></code></p><ol>
+<a name="91922"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/07_recordgroupsel3a.gif">
+
+
+Click the <kbd>Save and Close</kbd> button when finished to exit the Selection Formula Editor.
+<p class="indent"><a name="100844"></a>- or - </p><p class="indent"><a name="100861"></a>Click <kbd>Refresh</kbd> on the Standard toolbar to preview the results.</p></ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "07_recordgroupsel12.html";
+var next = "07_recordgroupsel14.html";
+
+function setTopicID() { 
+      var number = "91894"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

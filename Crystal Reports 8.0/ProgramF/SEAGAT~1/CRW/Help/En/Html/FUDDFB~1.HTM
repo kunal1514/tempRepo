@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>PreviousIsNull (fld)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000578318"></a><h3 class="newpage"> PreviousIsNull (fld)</h3>
+<p><a name="1000719989"></a>Basic and Crystal syntax.</p><a name="1000578319"></a><h5>Arguments</h5><p><a name="1000578320"></a>fld is any numeric, formula, memo, or BLOB field in the report.</p><a name="1000578321"></a><h5>Returns</h5><p><a name="1000578322"></a>Boolean Value</p><a name="1000578323"></a><h5>Action</h5><p><a name="1000578324"></a>Evaluates the field specified in the previous record and returns a TRUE if the field contains a null value. </p><a name="1000578325"></a><h5>Typical uses</h5><p><a name="1000578326"></a>You can use this function to test for the first item in a list and to take some action when that first item is identified.</p><a name="1000578327"></a><h5>Examples</h5><p><a name="1000578328"></a>The following example is applicable to Crystal syntax:</p><p class="code"><a name="1000578329"></a>If PreviousIsNull ({employee.EMPLOYEE ID}) Then
+<br><a name="1000750799"></a>&nbsp;&nbsp;&nbsp;&nbsp;"First employee of record" 
+<br><a name="1000750800"></a>Else
+<br><a name="1000750801"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+</p><p class="example"><a name="1000578330"></a>In an employee database with no null values in the Employee ID field, flags the first employee on the list.</p><a name="1000578331"></a><h5>Comments</h5><p><a name="1000578332"></a>Some databases support null data values and others do not. This function will not work if the active database(s) do not support null values. If the database(s) do support null values, the function can be used to reference the null values that get created as the result of a failed lookup while joining.</p><p><a name="1000578333"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="1000578334"></a><li>Zero and blank (empty or " ") are not null values.
+<a name="1000578335"></a><li>Using this function in a formula forces the formula to be evaluated at print time. For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp179.html";
+var next = "functionshelp181.html";
+
+function setTopicID() { 
+      var number = "1000578318"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

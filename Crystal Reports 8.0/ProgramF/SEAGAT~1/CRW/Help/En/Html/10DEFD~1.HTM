@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Alternating background colors for rows</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="26483"></a><h3 class="newpage"> Alternating background colors for rows</h3>
+<p><a name="26484"></a>Another typical use of multiple sections is to vary the background color in alternating lines for the Details section of a report in order to improve readability (a greenbar<nobr>-p</nobr>aper effect).</p><a name="105222"></a><h6>To alternate background colors for rows</h6><ol>
+<a name="108994"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_secex.gif">
+
+
+Use the Section Expert to insert a second Details section. You should now have Details A and Details B sections. See <EM><a href="10_multsec_rep4.html#97296">Working with sections</a>.</EM>
+<a name="105265"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">While in the Section Expert, highlight Details A in the <kbd>Sections</kbd> list, click the <kbd>Color</kbd> tab, and set the background color to White.
+<a name="38772"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_cdfml.gif">
+
+
+Click the <kbd>Common</kbd> tab, click the <kbd>Conditional Formula</kbd> button to the right of <kbd>Suppress (No Drill<nobr>-D</nobr>own)</kbd>, and type the following formula in the Format Formula Editor when it appears:
+</ol>
+<p><code><a name="64820"></a>Remainder (RecordNumber,2)&lt;&gt;0</code></p><p class="indent"><a name="38794"></a>&#171;This formula divides the record number by 2 and if the remainder is something other than zero (which will happen for every odd numbered record), it tells the program to suppress the section.&#187;</p><ol>
+<a name="38769"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Save and Close</kbd>.
+<a name="114518"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Now select Details B and set the background color to Green.
+<a name="38832"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Use the technique from Step 3 to set <kbd>Suppress</kbd> conditionally for this section using the following formula:
+</ol>
+<p><code><a name="38836"></a>Remainder(RecordNumber,2) = 0</code></p><p class="indent"><a name="44456"></a>&#171;This formula divides the record number by 2 and if the remainder is equal to zero, it tells the program to suppress the section.&#187;</p><ol>
+<a name="26486"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Create the report and make certain that the information and layout of each of the Details sections is identical. In other words, whatever objects you place in Details A should be placed into Details B as well.
+</ol>
+<p><a name="26492"></a>Now when you run the report, the program will print every even numbered line with a white background and every odd numbered line with a green background.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "10_multsec_rep13.html";
+var next = "10_multsec_rep15.html";
+
+function setTopicID() { 
+      var number = "26483"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

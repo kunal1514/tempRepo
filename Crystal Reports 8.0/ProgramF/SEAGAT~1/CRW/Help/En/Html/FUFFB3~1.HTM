@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>StrCmp (str1, str2), StrCmp (str1, str2, compare)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000512268"></a><h3 class="newpage"> StrCmp (str1, str2), StrCmp (str1, str2, compare)</h3>
+<p><a name="1000670915"></a>Basic and Crystal syntax.</p><a name="1000512271"></a><h5>Arguments</h5><ul type="disc"><a name="1000512272"></a><li>str1 is the first text string to be compared.
+<a name="1000512273"></a><li>str2 is the second text string to be compared.
+<a name="1000747794"></a><li>compare is an optional Number value indicating the kind of string comparison to use:
+<ul type="disc"><ul type="disc"><a name="1000747795"></a><li> Performs a comparison that is case<nobr>-s</nobr>ensitive<a name="1000747796"></a><li> Performs a comparison that is case<nobr>-i</nobr>nsensitive<p class="indent"><a name="1000747797"></a>If omitted, a case<nobr>-s</nobr>ensitive comparison is performed.</p></ul></ul></ul><a name="1000512275"></a><h5>Returns</h5><p><a name="1000512276"></a>Whole Number where</p><ul type="disc"><a name="1000512277"></a><li>-1 = Less Than
+<a name="1000512278"></a><li>0 = Equal To
+<a name="1000512279"></a><li>1 = Greater Than
+</ul><a name="1000512280"></a><h5>Action</h5><p><a name="1000512282"></a>The StrCmp function compares two strings. </p><a name="1000512283"></a><h5>Typical Uses</h5><p><a name="1000512284"></a>Use this function to determine if two string values are identical. </p><a name="1000512285"></a><h5>Examples</h5><p><a name="1000512286"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000512287"></a>StrCmp("abcd", "aa") </code></p><p class="example"><a name="1000512288"></a>Returns = 1.</p><p><code><a name="1000512289"></a>StrCmp("abcd", "aa", 1) </code></p><p class="example"><a name="1000512290"></a>Returns = 1.</p><p><code><a name="1000512292"></a>StrCmp ("abcd", "ac") </code></p><p class="example"><a name="1000512293"></a>Returns = -1.</p><p><code><a name="1000512295"></a>StrCmp ("aa", "aa") </code></p><p class="example"><a name="1000512296"></a>Returns = 0.</p><a name="1000512297"></a><h5>Comments</h5><p><a name="1000512298"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp90.html";
+var next = "functionshelp92.html";
+
+function setTopicID() { 
+      var number = "1000512268"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

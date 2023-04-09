@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formatting objects conditionally</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="44319"></a><h3 class="newpage"> Formatting objects conditionally</h3>
+<p><a name="26476"></a>You may want to create a report that uses different formats depending on the field value. For example, you may want to create an international report that prints currency values for each country in the format that is common in that country. You can do that using multiple sections.</p><a name="104941"></a><h6>To format objects conditionally</h6><ol>
+<a name="108960"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Create a report. See <a href="04_quick11.html#111530">Creating the report</a>. Ensure you report contains the <kbd>Last Year's Sales</kbd> field found in the <kbd>Customer</kbd> table.
+<a name="108965"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Create one Details section for each country that requires a unique format. See <a href="11_format17.html#151300">Using guidelines</a>.
+<a name="36770"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Make certain that each of the Details sections contains the same data; every field that you place in the Details A section, you must also place in the Details B section, and in the Details C section, etc.
+<a name="36771"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/10_multsec_rep2a.gif">
+
+
+In the Details A section, select the <kbd>Last Year's Sales</kbd> field and then click <kbd>Object Properties</kbd> on the Supplementary toolbar.
+<p class="indent"><a name="114043"></a>The Format Editor appears showing the Number tab.</p><a name="43344"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Set the currency style you want to use for the first country.
+<a name="43347"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> to return to the report.
+<a name="45305"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_secex.gif">
+
+
+Click <kbd>Section Expert</kbd> on the Standard toolbar.
+<p class="indent"><a name="114059"></a>The Section Expert appears.</p><a name="26480"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Select the Details A section in the <kbd>Sections</kbd> box. Select the <kbd>Suppress (No Drill<nobr>-D</nobr>own)</kbd> check box.
+<a name="43455"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_cdfml.gif">
+
+
+Click the <kbd>Conditional Formula</kbd> button to the right of the <kbd>Suppress (No Drill<nobr>-D</nobr>own)</kbd> check box and use the Format Formula Editor to create a formula that specifies the conditions under which the section should be suppressed.
+<p class="indent"><a name="43135"></a>For example, if the Details A section contains currency values for the UK, you would create a formula that specifies that the country value is not equal to UK. In other words, you create a formula that suppresses the section when the country value is not UK. This will make the section print only when the record contained a UK value.</p><a name="26481"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Repeat Steps 4 through 9 for each additional section.
+</ol>
+<p><a name="26482"></a>Now, when the report is printed, the date and currency data for each country appears in the format that is expected for that country. See <a href="11_format50.html#16791">Working with conditional formatting</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "10_multsec_rep12.html";
+var next = "10_multsec_rep14.html";
+
+function setTopicID() { 
+      var number = "44319"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

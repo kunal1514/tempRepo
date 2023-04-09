@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>For loop example</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="147576"></a><h4 class="newpage"> For loop example</h4><p><a name="147578"></a>Here is a more full featured example of Seagate Crystal Reports' string processing capabilities. The Caesar cipher is a simple code that is traditionally credited to Julius Caesar. In this code, each letter of a word is replaced by a letter five characters further in the alphabet. For example, "Jaws" becomes "Ofbx". Notice that "w" is replaced by "b"; since there are not 5 characters after "w" in the alphabet, it starts again from the beginning. Here is a formula that implements applying the Caesar cipher to the field {Customer.Customer Name} in the Xtreme database:</p><p><code><a name="147580"></a>//The Caesar cipher</code></p><PRE><a name="147582"></a>//The input string to encrypt
+<a name="147583"></a>Local StringVar inString := {Customer.Customer Name};
+<a name="147584"></a>Local NumberVar shift := 5;
+<a name="147585"></a>Local StringVar outString := "";
+<a name="147587"></a>Local NumberVar i;
+<a name="147588"></a>For i := 1 To Length(inString) Do
+<a name="147589"></a>(
+<a name="147590"></a>   Local StringVar inC := inString [i];
+<a name="147591"></a>   Local StringVar outC;
+<a name="147593"></a>   Local BooleanVar isChar :=
+<a name="153415"></a>   LowerCase(inC) In "a" To "z";
+<a name="147594"></a>   Local BooleanVar isUCaseChar :=
+<a name="153422"></a>   isChar And (UpperCase (inC) = inC);
+</PRE><p><code><a name="147596"></a>   inC := LCase(inC);</code></p><PRE><a name="164435"></a>   If isChar Then
+<a name="147599"></a>   (
+<a name="147600"></a>      Local NumberVar offset :=
+<a name="147601"></a>         (Asc(inC) + shift - Asc("a")) Mod
+<a name="147602"></a>         (Asc("z") - Asc("a") + 1);
+<a name="147603"></a>      outC := Chr(offset + Asc("a"));
+<a name="147604"></a>      If isUCaseChar Then outC := UpperCase(outC)
+<a name="147605"></a>   )
+<a name="147606"></a>   Else
+<a name="149892"></a>      outC := inC;
+<a name="149894"></a>   outString := outString + outC
+<a name="147610"></a>);
+<a name="147611"></a>outString
+</PRE><p><a name="147613"></a>In the above example there is an If expression nested within the expression block of the For loop. This If expression is responsible for the precise details of shifting a single character. For example, letters are treated differently from punctuation and spaces. In particular, punctuation and spaces are not encoded. The general points here are that control structures can be nested within other control structures and that multiple expressions can be included in the (parentheses enclosed) expression blocks of other control structures.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax57.html";
+var next = "21_crystalsyntax59.html";
+
+function setTopicID() { 
+      var number = "147576"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

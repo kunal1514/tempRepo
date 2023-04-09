@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Linking multiple tables</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="291675"></a><h3 class="newpage"> Linking multiple tables</h3>
+<p><a name="16767"></a>If the report contains data from two or more database tables, they need to be linked at this point when creating reports. Database tables are linked so records from one database match related records from another. For example, if you activate a Suppliers table and a Product table, the databases are linked so that each product (from the Product table) can be matched up with the supplier (from the Supplier table) that made the product.</p><p><a name="23733"></a>The majority of reports will probably require data from two or more tables, so linking will be necessary. The process of linking is made easy with the Visual Linking Expert. See <a href="24_under_databases7.html#13335">Linking tables</a>.</p><p><a name="299695"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>It isn't necessary to link tables in reports created from a query because any links required by the data have already been processed.</p>
+<a name="293848"></a><h6>To add and link multiple tables</h6><ol>
+<a name="294054"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Choose <kbd>Add Database to Report</kbd> from the <kbd>Database</kbd> menu.
+<p class="indent"><a name="293849"></a>The Data Explorer dialog box appears.</p><a name="293850"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Select the new database you want to use in the report. See <a href="06_create_rpt17.html#293487">Selecting the data source</a>.
+<a name="293851"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Close</kbd> when finished with the Data Explorer.
+<p class="indent"><a name="293852"></a>The Visual Linking Expert appears and displays the databases currently available for linking.</p><p class="indent"><a name="345773"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If Auto<nobr>-S</nobr>mart Linking is selected on in the Database tab of the Options dialog box, you will not need to manually create links between the tables. See <a href="24_under_databases7.html#13335">Linking tables</a>.</p>
+<p><a name="345784"></a> <img src="images/db_vslnk.gif">
+
+
+ </p>
+<a name="334913"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">To create links manually, drag a field from one table to a field in another table. If successful, a link line is created. If unsuccessful, a message is issued.
+</ol>
+<p><a name="346361"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>You can link tables by table name or by foreign key information.</p>
+<ol>
+<a name="334914"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">To link databases automatically, click <kbd>Link</kbd>. 
+<a name="334915"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">To specify the tables, click <kbd>Add/Remove Tables</kbd>.
+<a name="334916"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> when finished.
+<p class="indent"><a name="299841"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>When manually creating links, the field you are linking "to" must be an indexed field. For more information on indexed fields and tables, see <a href="24_under_databases6.html#456239">Indexed tables</a>.</p>
+<p class="indent"><a name="293918"></a>The Visual Linking Expert closes, and you are returned to your report. The linked databases are now available for use in your report. If you are not satisfied with the link, you can modify it using the Visual Linking Expert.</p></ol>
+<a name="334944"></a><h6>Related topics</h6><p><a name="334945"></a><a href="24_under_databases.html#415192">Understanding Databases</a>.</p><p><a name="334946"></a><a href="24_under_databases19.html#13619">SQL join types (ODBC data sources)</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "06_create_rpt17.html";
+var next = "06_create_rpt19.html";
+
+function setTopicID() { 
+      var number = "291675"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using the Verify Database command</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000217227"></a><h2 class="newpage">Using the Verify Database command</h2><ol>
+<a name="1000217228"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">With the report active in the Design tab, choose the <a href="COMMANDS123.html#1000113415">Verify Database command</a> from the Database menu. 
+<a name="1000217229"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">A message box appears, asking whether you want to verify all the files in the report including those that are not being used.
+<ul type="disc"><ul type="disc"><a name="1000217230"></a><li>Click Yes to verify all the files in the report, used or unused.<a name="1000217231"></a><li>Click No to verify only those files used in the report.<a name="1000217232"></a><li>If your report is using ADO, RDO, or DAO to access data then a dialog box will be displayed allowing you to change the command to be executed. When you are satisfied with the command click Finish.</ul></ul><a name="1000217233"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Another message box appears:
+<ul type="disc"><ul type="disc"><a name="1000217234"></a><li>If the underlying database is unchanged, you will get the following message:<p class="indent"><a name="1000217235"></a><code>Database is up to date.</code></p><a name="1000217236"></a><li>Click OK to return to the Design tab.<a name="1000217237"></a><li>If the underlying database has changed, you will get the following message:<p class="indent"><a name="1000217238"></a><code>The database file ([filename]) has changed. Proceed to fix up the report?</code></p><a name="1000217239"></a><li>If you click Yes, the program revises the report to the current version of the database.<a name="1000217240"></a><li>If you click No, the program attempts to print the report without first adapting it to the current version of the database.</ul></ul></ol>
+<a name="1000217241"></a><h6>Related topics</h6><p><a name="1000217245"></a><a href="COMMANDS123.html#1000113415">Verify Database command</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "COMMANDS238.html";
+var next = "COMMANDS240.html";
+
+function setTopicID() { 
+      var number = "1000217227"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

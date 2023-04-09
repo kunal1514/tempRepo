@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Rnd</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000112987"></a><h3 class="newpage"> Rnd</h3>
+<p><a name="1000645434"></a>Basic and Crystal syntax.</p><a name="1000112988"></a><h5>Overloads</h5><ul type="disc"><a name="1000112989"></a><li>Rnd ()
+<a name="1000112990"></a><li>Rnd (seed)
+</ul><a name="1000112991"></a><h5>Argument</h5><p><a name="1000112992"></a>seed is an optional Number value argument. </p><a name="1000112993"></a><h5>Returns</h5><p><a name="1000112994"></a>A Number value.</p><a name="1000112995"></a><h5>Action</h5><p><a name="1000112996"></a>Rnd returns a random number greater than or equal to 0 and less than 1. If seed is equal to 0, Rnd returns the random number that was returned from the previous call to Rnd. If seed is not supplied <EM>or is greater than 0</EM>, then Rnd returns the next random number in the internally generated sequence of random numbers. If seed <EM>is less than 0</EM>, then Rnd uses this value of seed to start a new random number sequence and returns the first value in this sequence. </p><a name="1000112997"></a><h5>Typical uses</h5><p><a name="1000112998"></a>Used when your formula requires a randomly generated number such as for statistical calculations or for selecting records at random to limit the data in a report.</p><a name="1000112999"></a><h5>Comments</h5><ul type="disc"><a name="1000113000"></a><li>This function is similar to the Visual Basic function of the same name. 
+<a name="1000113001"></a><li>You can call Rnd without ever starting a new random number sequence by specifying a negative seed argument. If you do so, an internal seed will be generated using the system clock. 
+<a name="1000113002"></a><li>The reason to start a new random number sequence by calling Rnd with a negative seed argument, and then making subsequent calls to Rnd without an argument (or with a positive argument) is so that the report will look exactly the same every time it is previewed. In other words, it allows you to make use of random numbers, but get a reproducible result.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp17.html";
+var next = "functionshelp19.html";
+
+function setTopicID() { 
+      var number = "1000112987"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>How server-side grouping affects the SQL query</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="394559"></a><h3 class="newpage"> How server-side grouping affects the SQL query</h3>
+<p><a name="394560"></a>When a report pushes most of its processing to the server, this by necessity alters the SQL query. Thus, when the Perform Grouping on Server option is enabled, individual aspects of server<nobr>-s</nobr>ide processing will modify the SQL statement in different ways.</p><ul type="disc"><a name="394561"></a><li>If you select Use Indexes Or Server For Speed (in the Report Options dialog box), the program adds an ORDER BY clause to the SQL statement and a WHERE clause for the record selection formula, if possible.
+<a name="394562"></a><li>If you group on a linkable data type in the DBMS, the program adds a GROUP BY clause to the SQL statement. The program uses the GROUP BY clause to perform the grouping on the server.
+<a name="394563"></a><li>If you summarize on a linkable data type, the program adds a summary field to the SELECT clause of the SQL statement.
+<a name="394564"></a><li>If you drill<nobr>-d</nobr>own on a linkable data type, the program adds a WHERE clause to the SQL statement.
+<a name="394565"></a><li>If you group in descending order on a linkable data type, the program adds an ORDER BY clause to the SQL statement.
+</ul><p><a name="394566"></a>The statement also varies between tabs:</p><ul type="disc"><a name="394567"></a><li>If you are working in the Preview tab, the statement includes the GROUP BY clause, as well as any aggregates that the report is pushing to the server.
+<a name="394568"></a><li>If you are drilling<nobr>-d</nobr>own, the statement varies depending on the underlying data and the level of drill<nobr>-d</nobr>own. With each drill<nobr>-d</nobr>own, the WHERE criteria changes. Also, if you drill<nobr>-d</nobr>own to the details, the statement will not include a GROUP BY clause (since you no longer have any groups on that drill<nobr>-d</nobr>own tab).
+</ul><p><a name="394569"></a>To view the current SQL statement for the active tab, choose Show SQL Query from the Database menu. The Show SQL Query dialog box appears, displaying the SQL statement.</p><p><a name="446536"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="446543"></a><li>You can use the SQL Expression editor to edit SQL expressions to be processed on the server.
+<a name="446566"></a><li>SQL statements that have been edited in the Show SQL Query dialog box, disable server<nobr>-s</nobr>ide processing as GROUP BY is no longer pushed down.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases32.html";
+var next = "24_under_databases34.html";
+
+function setTopicID() { 
+      var number = "394559"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

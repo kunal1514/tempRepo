@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>In Range operator</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000014715"></a><h3 class="newpage"> In Range operator</h3>
+<p><a name="1000029148"></a>Basic and Crystal syntax.</p><a name="1000014718"></a><h5>Usage</h5><p><code><a name="1000014719"></a>x in y</code></p><p class="example"><a name="1000014720"></a>Tests a range of <a href="glossary20.html#318757">value</a> (y) to see if a value (x) falls within the <a href="glossary16.html#318679">range</a> specified.</p><a name="1000014721"></a><h5>Examples</h5><p><a name="1000014722"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000014723"></a>CurrentDate in CDate(1990, 09, 01) to CDate(1990, 09, 20)</code></p><p class="example"><a name="1000014724"></a>Returns True, if today's date is September 15, 1990.</p><p><code><a name="1000014725"></a>CurrentDate in CDate(1990, 09, 01) to CDate(1990, 09, 20)</code></p><p class="example"><a name="1000014726"></a>Returns False, if today's date is September 21, 1990.</p><p><code><a name="1000014727"></a>{file.QTY} in {file.ONHAND} to ({file.BACKORDER} + {file.ONORDER})</code></p><p class="example"><a name="1000014728"></a>Returns True, where {file.QTY} = 20, {file.ONHAND} = 10, {file.BACKORDER} = 5, {file.ONORDER} = 25 (Is 20 in the range that begins with 10 and ends with the sum of 5 and 25?).</p><p><code><a name="1000014729"></a>{file.QTY} in {file.ONHAND} to ({file.BACKORDER} + {file.ONORDER})</code></p><p class="example"><a name="1000014730"></a>Returns False, where {file.QTY} = 31, {file.ONHAND} = 10, {file.BACKORDER} = 5, {file.ONORDER} = 25 (Is 31 in the range that begins with 10 and ends with the sum of 5 and 25?).</p><a name="1000014731"></a><h5>Comments</h5><p><a name="1000014732"></a>The combination of <a href="OperatorsHelp28.html#1000037566">Make Range operator (x To y)</a> and In Range operators is often used with the <a href="OperatorsHelp56.html#1000038617">If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operators</a> operator. For example the Crystal syntax formula:</p><p class="code"><a name="1000014734"></a>If ({file.AMOUNT} in (100.00 to 250.00)) Then
+<br><a name="1000048066"></a>&nbsp;&nbsp;&nbsp;&nbsp;(.10 * {file.AMOUNT})
+<br><a name="1000048079"></a>Else
+<br><a name="1000048080"></a>&nbsp;&nbsp;&nbsp;&nbsp;0; 
+</p><p class="example"><a name="1000014735"></a>If the value of {file.AMOUNT} falls within the range 100.00 to 250.00, multiply .10 times {file.AMOUNT}. If it does not, it <a href="glossary16.html#13498">returns</a> zero.</p><a name="1000014736"></a><h6>Related topics</h6><p><a name="1000014744"></a><a href="19_introformulas39.html#304946">Formula 9</a></p><p><a name="1000037562"></a><a href="19_introformulas40.html#305021">Formula 10</a></p><p><a name="1000037563"></a><a href="functionshelp108.html#1000581401">DateTime</a> function</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp26.html";
+var next = "OperatorsHelp28.html";
+
+function setTopicID() { 
+      var number = "1000014715"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

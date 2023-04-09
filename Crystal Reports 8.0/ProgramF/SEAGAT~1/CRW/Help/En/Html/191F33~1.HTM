@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 13</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="305254"></a><h3 class="newpage"> Formula 13</h3>
+<a name="305255"></a><h4>Operators/Functions Used</h4><p><a name="305256"></a>ToText, Truncate, Division (/), Concatenate (+), Remainder</p><a name="305257"></a><h4>Formula Purpose</h4><p><a name="305258"></a>Bulk grains and nuts are inventoried by the ounce, but management wants to see a breakdown in pounds and ounces on the inventory report.</p><a name="305259"></a><h4>Formula</h4><PRE><a name="305260"></a>ToText((Truncate({file.OZ}/16)),0) + " pounds, " +
+<a name="305261"></a>ToText((Remainder ({file.OZ}, 16)),0) + " ounces "
+</PRE><a name="305262"></a><h4>Result</h4><p><a name="305280"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="305265"></a>Ounces
+
+</td><td align="left" valign="TOP"><a name="305267"></a>Resulting Text
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305269"></a>433</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305271"></a>"27 pounds, 1 ounces"</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305273"></a>278</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305275"></a>"17 pounds, 6 ounces"</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305277"></a>1455</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305279"></a>"90 pounds, 15 ounces"</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="305281"></a><h4>Explanation</h4><ul type="disc"><a name="305282"></a><li>The formula uses the Divide operator (/) to divide {file.OZ} by 16, thus calculating the number of pounds of the item in inventory. Unless {file.OZ} is perfectly divisible by 16, the quotient will be a whole number with decimal places.
+<a name="305283"></a><li>The Truncate function returns only the whole number (integer) part of the quotient.
+<a name="305284"></a><li>The ToText function converts the number to text so it can be used in a string with other text, and formats the number to zero decimal places (the second parameter).
+<a name="305285"></a><li>The formula uses the Concatenate operator (+) to connect the number of pounds with the text string " pounds" to give the new string " n pounds" (where n is the calculated number of pounds).
+<a name="305286"></a><li>The Remainder function determines the remainder that results from the division {file.OZ}/16 ({file.OZ} the numerator, 16 the denominator). The remainder is a number of ounces less than 16 (less than a full pound).
+<a name="305287"></a><li>The ToText function converts the remainder to text so it can be included in the final text string, and formats the number to zero decimal places.
+<a name="305288"></a><li>The Concatenate operator (+) connects the number of ounces (now converted to text, to the string before ("n pounds,") and to the string after ("ounces") to produce the final text string "n pounds, y ounces" (where y is the remainder).
+</ul><a name="305289"></a><h6>Related topics</h6><p><a name="305293"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas42.html";
+var next = "19_introformulas44.html";
+
+function setTopicID() { 
+      var number = "305254"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

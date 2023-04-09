@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>FRCashFlowVsTotalDebt (CashFlow, TotalDebt)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000590471"></a><h3 class="newpage"> FRCashFlowVsTotalDebt (CashFlow, TotalDebt)</h3>
+<p><a name="1000723465"></a>Basic and Crystal syntax.</p><a name="1000590475"></a><h5>Format</h5><p><code><a name="1000590477"></a>FRCashFlowVsTotalDebt(CashFlow, TotalDebt)</code></p><a name="1000590478"></a><h5>Arguments</h5><ul type="disc"><a name="1000590479"></a><li>CashFlow is a Number or formula. In general, CashFlow equals the net profit of the company plus all the expense items not involving cash (such as depreciation, capital losses, etc.) and minus all the profit not involving cash (such as capital gains, etc.). This information can be found in a company's income statement and statement of change in financial position.
+<a name="1000590480"></a><li>TotalDebt is a Number or formula. In general, TotalDebt is the total short term and long term bank borrowings. Some analysts may even include all the short and long term liabilities as part of total debt. All this information can be found in a company's income statement.
+</ul><a name="1000590481"></a><h5>Action</h5><p><a name="1000590482"></a>FRCashFlowVsTotalDebt returns the ratio between CashFlow and TotalDebt (for example, CashFlowVsTotalDebt = CashFlow / TotalDebt).</p><a name="1000590484"></a><h5>Typical uses</h5><p><a name="1000590485"></a>This ratio is used to measure the ability of a company to pay off its total debts with cash flows generated from operations. It is usually measured in number of times. The higher the result, the higher the ability for the company to pay off its debts.</p><a name="1000590486"></a><h5>Examples</h5><p><a name="1000590487"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000590488"></a>FRCashFlowVsTotalDebt(45, 30)</code></p><p class="example"><a name="1000590489"></a>Returns 1.5.</p><p><code><a name="1000723538"></a>FRCashFlowVsTotalDebt(74.4, 93)</code></p><p class="example"><a name="1000590490"></a>Returns 0.8.</p><p><a name="1000685321"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>None of the arguments can be negative; you may have to check for negative values before passing the arguments.</p>
+<a name="1000590497"></a><h5>Comment</h5><p><a name="1000590498"></a>FRCashFlowVstotalDebt is one of the many financial analysis tools used in interpreting the financial position of a company. As in the case of all ratios, it has to be used with caution. It can just be used as a clue and not solid proof for forming a judgment on the financial status of a company. </p><p><a name="1000590499"></a>Neither one of the ratios can be used alone for doing financial analysis and there are no fixed rules on the results of the ratios. Apart from differences between type of industries, result varies among different companies within the same industry and within different account periods. The results should only be used for relative comparison and trend analysis, rather than treating them as something absolute.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp224.html";
+var next = "functionshelp226.html";
+
+function setTopicID() { 
+      var number = "1000590471"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+
+<title>Crystal Dictionary files </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="72060"></a><h2 class="newpage">Crystal Dictionary files </h2><p><a name="72061"></a>A dictionary (.DC5) file is a structured and simplified view of organizational data that you can create for any of the individuals in your organization that are using Seagate Crystal Reports. With a dictionary, end users only see the subset of tables and fields they need.</p><p><a name="2042"></a>A dictionary is an optional source of data for Seagate Crystal Reports. It provides a convenient filter, clarifying and simplifying complex data access techniques for end users, but the user can still access data directly from the database. Dictionaries simply provide all the convenience without the headaches.</p><p><a name="306370"></a>If you choose to design a report by using a dictionary, you cannot use any other data source in that report. This includes other dictionaries, Seagate Crystal Reports, ODBC data sources, direct access databases, and all other data sources. The purpose of a dictionary is to provide fast, easy to understand access to a particular set of data. Connecting to other sources of data within the same report would defeat this purpose. See <a href="27_dictionary4.html#315681">Creating a new dictionary</a>.</p><p><a name="188257"></a>Dictionaries allow you to:</p><ul type="disc"><a name="2046"></a><li>design a single, dynamic view of all the data that is necessary to create organizational reports and queries
+<a name="2048"></a><li>create a dictionary that contains multiple data sources, tables, and links
+<a name="2050"></a><li>organize the data and rename tables and fields to make it easier for users to understand the content and purpose of the data
+<a name="2052"></a><li>create complex data<nobr>-m</nobr>anipulation formulas that users can access without the need to understand formula concepts.
+</ul><p><a name="2054"></a>Dictionaries reduce support cost and time, increase user productivity, and reduce data misuse, loss, and damage.</p><p><a name="2056"></a>Once created, the dictionary acts as a filter, providing a view of complex data that is clear and easy for any user to understand. The complexity of your data will not stop end users from creating powerful reports.</p><p><a name="363823"></a> <img src="images/dictds.gif">
+
+
+</p>
+<p><a name="333573"></a> </p>
+<p><a name="72165"></a>Seagate Crystal Reports reads the dictionary file by using the P2ixbse.dll file. This translation file is based on the xBase engine used to access dBASE, FoxPro and Clipper databases, but it provides all the flexibility needed to read dictionaries. See <a href="25_access_sources7.html#1756">dBASE, FoxPro, Clipper</a>.</p><p><a name="333631"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If you upgraded from an earlier version of Seagate Crystal Reports that allowed dictionary files, the older dictionary files (.DCT) were based on the Btrieve engine. If you convert those older files to new dictionary files, the new files will use the xBase translation layer instead of Btrieve. However, the Btrieve engine installed by the earlier version of Seagate Crystal Reports must remain on your system for the new dictionary application to read the older dictionary files.</p>
+<p><a name="27251"></a>The Database Access layer is the layer through which the dictionary file actually reads the original database data. Dictionaries must read database data using the same routes that Seagate Crystal Reports uses to read the data. The sections on direct access database layers and ODBC data sources describe the files dictionaries need for reading data.</p><p><a name="33660"></a>The benefit of dictionaries is that this Database Access layer is completely transparent to the user. The dictionary displays a view of data in Seagate Crystal Reports that may or may not match the actual data, but that is easily accessible and convenient for users.</p><p><a name="33661"></a>Finally, dictionaries provide an easy means of changing the originally accessed data without changing the view of data seen by users. For example, your original database may contain Price, Quantity, and Cost fields, and you decide that Cost can be calculated from Price and Quantity, so you eliminate the Cost field. By simply updating the dictionary to calculate Cost instead of getting it directly from the database, your users never know the difference. This is also useful when the entire underlying database format is changed. Once again, just update the dictionary.</p><p><a name="2062"></a>Dictionary files are often created by an IS manager who controls a company database. The IS manager can work with data that is organized and classified to create simple, easy<nobr>-t</nobr>o<nobr>-u</nobr>se dictionaries for company employees. In each dictionary file, the employees will find only the data they need, since the original data has been manipulated or customized by the IS manager for varying usage.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources44.html";
+var next = "26_sql.html";
+
+function setTopicID() { 
+      var number = "72060"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

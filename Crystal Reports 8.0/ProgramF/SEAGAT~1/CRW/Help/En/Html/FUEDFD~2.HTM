@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Round (x), Round (x, #places)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000044192"></a><h3 class="newpage"> Round (x), Round (x, #places)</h3>
+<p><a name="1000780707"></a>Basic and Crystal syntax.</p><a name="1000044195"></a><h5>Arguments</h5><ul type="disc"><a name="1000044196"></a><li>x is a fractional value to be rounded off.
+<a name="1000044197"></a><li>#places is a whole number indicating the number of decimal places x is to be rounded off to.
+</ul><a name="1000044198"></a><h5>Returns</h5><p><a name="1000044199"></a>Fractional Number</p><a name="1000044200"></a><h5>Action </h5><p><a name="1000044202"></a>Round rounds to the nearest whole number if the #places argument is excluded. If the value to the right of the decimal point is .499 or below, the program rounds to the next lowest number. If the value to the right of the decimal point is .5 or above, it rounds to the next highest number.</p><p><a name="1000044203"></a>If the #places argument is used, the value in x is rounded to the nearest decimal place indicated by #places. Specifying #places as 0 works identical to leaving the #places argument off. You can also specify a negative number for #places; the number will be rounded to the nearest tenth (.1), hundredth (.01), or thousandth (.001), and so on.</p><a name="1000044204"></a><h5>Typical uses</h5><p><a name="1000044206"></a>Use Round any time rounding off a value to a particular decimal place is more appropriate than using the original value. </p><a name="1000044207"></a><h5>Examples </h5><p><a name="1000044208"></a>The following examples are applicable to both Basic and Crystal syntax, although Fix is preferred in the latter:</p><p><code><a name="1000044209"></a>Round(1.23456) </code></p><p class="example"><a name="1000044210"></a>Returns 1.</p><p class="example"><a name="1000044211"></a>Round(1.499) </p><p class="example"><a name="1000044212"></a>Returns 1.</p><p><code><a name="1000044213"></a>Round(1.5000) </code></p><p class="example"><a name="1000044214"></a>Returns 2.</p><p><code><a name="1000044215"></a>Round(2345.23456,4) </code></p><p class="example"><a name="1000044216"></a>Returns 2345.2346.</p><p><code><a name="1000044217"></a>Round(2345.23456,3) </code></p><p class="example"><a name="1000044218"></a>Returns 2345.235.</p><p><code><a name="1000044219"></a>Round(2345.23456,2) </code></p><p class="example"><a name="1000044220"></a>Returns 2345.23.</p><p><code><a name="1000044221"></a>Round(2345.23456,0) </code></p><p class="example"><a name="1000044222"></a>Returns 2345.</p><p><code><a name="1000044223"></a>Round(2345.23456,-1) </code></p><p class="example"><a name="1000044224"></a>Returns 2350.</p><p><code><a name="1000044225"></a>Round(2345.23456,-2) </code></p><p class="example"><a name="1000044226"></a>Returns 2300.</p><p><code><a name="1000044227"></a>Round(2345.23456,-3) </code></p><p class="example"><a name="1000044228"></a>Returns 2000.</p><p><code><a name="1000044229"></a>Round(1.234499,3) </code></p><p class="example"><a name="1000044230"></a>Returns 1.234.</p><p><code><a name="1000044231"></a>Round(1.234500,3) </code></p><p class="example"><a name="1000044232"></a>Returns 1.235.</p><p><code><a name="1000044233"></a>Round({file.AMOUNT},1) </code></p><p class="example"><a name="1000044234"></a>Returns 1854.5 where Amount = 1854.49.</p><p><code><a name="1000044235"></a>Round({file.AMOUNT}) </code></p><p class="example"><a name="1000044236"></a>Returns 1854.00 where Amount = 1854.49.</p><p><code><a name="1000044237"></a>Round({file.AMOUNT}) </code></p><p class="example"><a name="1000044238"></a>Returns 1855.00 where Amount = 1854.51.</p><p><code><a name="1000403731"></a>Round({file.WEIGHT} / 100) </code></p><p class="example"><a name="1000403732"></a>Returns 4 where Weight = 424.</p><p><code><a name="1000403733"></a>Round({file.WEIGHT} / 100) </code></p><p class="example"><a name="1000044242"></a>Returns 5 where Weight = 451.</p><p><code><a name="1000044243"></a>Round((A * B) / C) </code></p><p class="example"><a name="1000044244"></a>Returns 11 where A = 25, B = 3, and C = 7.</p><p><code><a name="1000044245"></a>Round(file.AMOUNT,1) </code></p><p class="example"><a name="1000044246"></a>Returns 1854.5 where Amount = 1854.51.</p><p><code><a name="1000044247"></a>Round({file.WAGE} * {file.HOURS WORKED}, 2) </code></p><p class="example"><a name="1000044248"></a>Returns $146.63 where Wage = $5.75 and Hours worked = 25.5.</p><a name="1000044251"></a><h5>Comments</h5><p><a name="1000044252"></a>Rounding is also a feature available as a formatting option for numerical values in fields. </p><p><a name="1000594600"></a>Be aware that using field formatting features may affect how values are used in formulas. See <a href="functionshelp78.html#1000508281">ToNumber (numeric), ToNumber (string)</a> and the <a href="OperatorsHelp13.html#1000024748">To currency operator</a>.</p><a name="1000594498"></a><h6>Related topics</h6><p><a name="1000044254"></a><a href="functionshelp7.html#1000045804">Truncate (x), Truncate (x, #places)</a></p><p><a name="1000780780"></a><a href="functionshelp8.html#1000674274">Fix</a></p><p><a name="1000780776"></a><a href="functionshelp5.html#1000143348">Int (number)</a></p><p><a name="1000594592"></a><a href="19_introformulas38.html#304858">Formula 8</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp5.html";
+var next = "functionshelp7.html";
+
+function setTopicID() { 
+      var number = "1000044192"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

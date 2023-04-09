@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 11</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="305098"></a><h3 class="newpage"> Formula 11</h3>
+<a name="305099"></a><h4>Operators/Functions Used</h4><p><a name="305100"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Subscript [], Not equal to (&lt;&gt;), Maximum([array]), Multiply (*), Parentheses ().</p><a name="305101"></a><h4>Formula Purpose</h4><p><a name="305102"></a>As part of a charity fund raiser, a company agrees to donate 1% of the invoice amount (or $1.00, whichever is larger) for each invoice it cut during the previous quarter. The only invoices that it has exempted are Credit Invoices (identified with the letter "C" as the 6th character in the invoice number) and invoices for non<nobr>-p</nobr>rofit agencies (identified with the letter "N" as the 6th character in the invoice number). Management wants a Contribution column to appear on the quarterly detail sales report.</p><a name="305103"></a><h4>Formula</h4><PRE><a name="305104"></a>If {file.INV#}[6]&lt;&gt; "C" and {file.INV#}[6]&lt;&gt;"N" Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$(Maximum([.01 * {file.AMT}), 1])<br>
+Else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0
+</PRE><a name="305105"></a><h4>Result</h4><p><a name="305157"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="305108"></a>Invoice #
+
+</td><td align="left" valign="TOP"><a name="305110"></a>Amount
+
+</td><td align="left" valign="TOP"><a name="305112"></a>Amt. * 1%
+
+</td><td align="left" valign="TOP"><a name="305114"></a>To Charity
+
+</td><td align="left" valign="TOP"><a name="305116"></a>Reason
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305118"></a>21523R</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305120"></a>143.27</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305122"></a>1.43</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305124"></a>$1.43</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305128"></a>21524C</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305130"></a>223.46</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305132"></a>N/A</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305134"></a>0 </P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305136"></a>&#171;credit&#187;</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305138"></a>21538R</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305140"></a>47.15</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305142"></a>.47</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305144"></a>$1.00</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305148"></a>21575N</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305150"></a>1312.49</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305152"></a>N/A</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305154"></a>0 </P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305156"></a>&#171;nonprofit&#187;</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="305158"></a><h4>Explanation</h4><ul type="disc"><a name="305159"></a><li>The If part of the expression tests for two conditions: that the invoice is not a credit invoice and that it is not a non<nobr>-p</nobr>rofit invoice. Both conditions must be true to trigger the Then consequence.
+<a name="305160"></a><li>Condition A: {file.INV#} [6] &lt;&gt; "C" uses the Subscript operator [] to extract the 6th character of the value stored in {file.INV#}. It then compares that character to "C". If the character is not C (not a credit invoice), Condition A is satisfied.
+<a name="305161"></a><li>Condition B: {file.INV#} [6] &lt;&gt; "N" uses the Subscript operator [] to extract the 6th character of the value stored in {file.INV#}. It then compares that character to "N". If the character is not N (not a non<nobr>-p</nobr>rofit invoice), Condition B is satisfied.
+<a name="305162"></a><li>The Boolean operator and indicates that both Condition A and Condition B must be TRUE in order to satisfy the If part of the expression.
+<a name="305163"></a><li>If Condition A and Condition B are both TRUE, the If part of the expression is satisfied, thus triggering the Then consequence.
+<a name="305164"></a><li>.01 * {file.AMT} uses the Multiply operator (*) to multiply the amount of the invoice by 1% (.01).
+<a name="305165"></a><li>Maximum([.01 * {file.AMT}, 1]) returns the highest contribution for a given invoice: either 1% of the invoice amount or $1.00. 
+<a name="305166"></a><li>The To Dollar ($) operator converts the amount to a dollar value.
+<a name="305167"></a><li>If either Condition A or Condition B is FALSE, or both are FALSE, the If part of the expression is not satisfied, thus triggering the Else consequences.
+<a name="305168"></a><li>If the If part of the expression is not satisfied, the formula returns the value 0.
+</ul><a name="305169"></a><h4>Comments</h4><p><a name="305170"></a>An alternative rendering follows:</p><PRE><a name="305171"></a>If {file.INV#}[6] in ["C", "N"] Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0<br>
+Else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Maximum([.01*{file.AMT}, 1])
+</PRE><a name="305172"></a><h6>Related topics</h6><p><a name="305176"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas40.html";
+var next = "19_introformulas42.html";
+
+function setTopicID() { 
+      var number = "305098"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

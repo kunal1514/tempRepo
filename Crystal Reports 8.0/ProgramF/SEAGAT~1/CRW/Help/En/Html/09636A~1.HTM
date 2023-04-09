@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+
+<title>To create running totals using a formula</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1057608"></a><h4 class="newpage"> To create running totals using a formula</h4><ol>
+<a name="1046987"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><strong></strong>Create a report using the sample data, <kbd>Xtreme.mdb </kbd>located in the <kbd>File Data Sources</kbd> folder of the Data Explorer dialog box. Link the Customers and Orders tables and place the following fields from left to right in the Details section:
+</ol>
+<PRE><a name="1046988"></a>{customer.CUSTOMER NAME}
+<a name="1047587"></a>{orders.ORDER ID}
+<a name="1047588"></a>{orders.ORDER AMOUNT}
+</PRE><ol>
+<a name="1046989"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Insert</kbd> menu, click <kbd>Formula Field</kbd> then double<nobr>-c</nobr>lick <kbd>Formula Fields</kbd> in the Field Explorer dialog box.
+<a name="1048756"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Name the formula @RunningTotal and click <kbd>OK</kbd>.
+<a name="1048740"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Enter the following into the Formula Editor:
+</ol>
+<PRE><a name="1046990"></a>WhilePrintingRecords;
+<a name="1047602"></a>CurrencyVar Amount;
+<a name="1046991"></a>Amount := Amount + {orders.ORDER AMOUNT};
+</PRE><ol>
+<a name="1048768"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_sclfe.gif">
+
+
+Click <kbd>Save and Close</kbd>.
+<a name="1046992"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Place this formula in the Details section of your report, just to the right of the {orders.ORDER AMOUNT} field.
+<p class="indent"><a name="1048793"></a>This formula prints the running total of the values in the Order Amount field.</p><a name="1046993"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_ingrp.gif">
+
+
+On the <kbd>Insert</kbd> menu, click <kbd>Group</kbd> and group the report on the {customer.CUSTOMER NAME} field.
+<a name="1046994"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">In the Formula Editor, create @AmountReset:
+</ol>
+<PRE><a name="1046995"></a>WhilePrintingRecords;
+<a name="1047561"></a>CurrencyVar Amount := 0;
+<p class="indent"><a name="1046996"></a>This formula says:</p><p class="indent"><a name="1046997"></a>Set the value in the Amount variable to 0.</p></PRE><ol>
+<a name="1046998"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Place this formula in the Group Header #1 section of your report.
+<p class="indent"><a name="1047122"></a>Because the Group Header #1 section appears once for every group, @AmountReset will execute each time the group changes. Thus, the Amount variable is reset to 0 each time a new group begins.</p><a name="1047000"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Select the @AmountReset formula on the report and use the Format Editor to suppress it so that it will not appear in the final print<nobr>-o</nobr>ut.
+<a name="1047001"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">In the Formula Editor, create @AmountDisplay:
+</ol>
+<PRE><a name="1047002"></a>WhilePrintingRecords;
+<a name="1047574"></a>CurrencyVar Amount;
+<p class="indent"><a name="1047003"></a>This formula simply displays the current value of the Amount variable at any time.</p></PRE><ol>
+<a name="1047139"></a><li value="12&nbsp;&nbsp;&nbsp;&nbsp;">Place this formula in the Group Footer #1 section of your report.
+<p class="indent"><a name="1047144"></a>Because the Group Footer #1 section appears once for every group, @AmountDisplay will execute each time a group ends. Thus, the value stored in the Amount variable will be printed each time the group changes.</p><p><a name="1047010"></a> <img src="images/Dw_strt1.gif">
+
+
+</p>
+</ol>
+<p><a name="1047166"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>This formula prints the same value that @RunningTotal prints as the running total for the last record in each group. But since it is printing it in the Group Footer section, it acts as a group subtotal, not as a running total.</p>
+<p><a name="1051355"></a> </p>
+<p><a name="1046439"></a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "09_runtotal15.html";
+var next = "10_multsec_rep.html";
+
+function setTopicID() { 
+      var number = "1057608"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

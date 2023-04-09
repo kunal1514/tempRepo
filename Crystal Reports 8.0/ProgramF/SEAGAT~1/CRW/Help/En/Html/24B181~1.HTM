@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using ODBC data sources</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="156793"></a><h3 class="newpage"> Using ODBC data sources</h3>
+<a name="386483"></a><h4>Setting up an ODBC data source</h4><p><a name="156794"></a>To set up an ODBC data source, you must first have an ODBC driver installed for the type of data you want to use. Many DBMS applications automatically install and set up ODBC drivers. If you are not sure whether ODBC drivers have been installed for your data, refer to the documentation that came with your DBMS application.</p><p><a name="417513"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Seagate Crystal Reports installs version 3.510 of ODBC Administrator. If you have a different version, steps in this procedure will vary slightly.</p>
+<a name="386509"></a><h6>To set up an ODBC data source</h6><ol>
+<a name="14628"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">From the Program Manager, double<nobr>-c</nobr>lick the ODBC Administrator icon in the appropriate program group.
+<p class="indent"><a name="323499"></a>The ODBC Data Source Administrator dialog box appears.</p><p><a name="442759"></a> <img src="images/db_dtsc.gif">
+
+
+</p>
+<a name="373350"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Add</kbd> to add a new ODBC data source.
+<p class="indent"><a name="416251"></a>The Create New Data Source dialog box appears.</p><p><a name="445198"></a> <img src="images/db_addds.gif">
+
+
+</p>
+<a name="373360"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Choose the ODBC driver appropriate for your data type from this list.
+<a name="373361"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Finish</kbd> when finished.
+<p class="indent"><a name="43502"></a>If a driver does not appear for your data type, then the ODBC driver has not been correctly installed. Refer to the documentation for your DBMS application.</p><p class="indent"><a name="14654"></a>An ODBC Data Source Setup dialog box that is specific to the ODBC driver you selected appears.</p><p class="indent"><a name="351511"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If an error message appears instead of the Setup dialog box, you may not have the correct ODBC drivers installed on your system for the type of data you selected.</p>
+<p><a name="442785"></a> <img src="images/db_odbc.gif">
+
+
+</p>
+<a name="373384"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Type the name for your new ODBC data source in the <kbd>Data Source Name</kbd> box.
+<p class="indent"><a name="351553"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The dialog box that appears may look different from the one shown here, depending on the type of data you are using. This dialog box is specific to the Access 97 ODBC driver. For more information about using the dialog box that appears for your data, click Help.</p>
+<p><a name="444561"></a> .<img src="images/24_under_databases25a.gif">
+
+
+</p>
+<a name="373402"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> when finished.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases44.html";
+var next = "24_under_databases46.html";
+
+function setTopicID() { 
+      var number = "156793"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

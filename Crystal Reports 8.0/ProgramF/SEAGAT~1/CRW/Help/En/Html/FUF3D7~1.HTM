@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>IsNumeric (str)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000507779"></a><h3 class="newpage"> IsNumeric (str)</h3>
+<p><a name="1000527936"></a>IsNumeric and <a href="functionshelp77.html#1000527509">NumericText (str)</a> are equivalent functions. However, IsNumeric is preferred in Basic syntax, whereas NumericText is preferred in Crystal syntax.</p><a name="1000507780"></a><h5>Argument</h5><p><a name="1000507781"></a>str is a String value to be tested.</p><a name="1000507782"></a><h5>Returns</h5><p><a name="1000507783"></a>Boolean value (True or False).</p><a name="1000507784"></a><h5>Action</h5><p><a name="1000507785"></a>IsNumeric returns True if the String argument can be converted to a Number and False otherwise.</p><a name="1000507786"></a><h5>Typical use</h5><p><a name="1000507787"></a>If you store numbers (like weight) in a text String object, use IsNumeric to check the value of each record to make sure it is OK to convert using ToNumber or <a href="functionshelp160.html#1000201851">CDbl</a>.</p><a name="1000507788"></a><h5>Examples</h5><p><a name="1000507789"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000507790"></a>IsNumeric({file.REFERENCE}) </code></p><p class="example"><a name="1000507791"></a>Returns FALSE where {file.REFERENCE} = "ABCDEFG".</p><p><code><a name="1000507792"></a>IsNumeric({file.IDNUM}) </code></p><p class="example"><a name="1000507793"></a>Returns TRUE where {file.IDNUM} = "12345".</p><p><code><a name="1000507794"></a>IsNumeric({file.IDNUM}) </code></p><p class="example"><a name="1000507795"></a>Returns TRUE where {file.IDNUM} = "12345443". </p><p><code><a name="1000507796"></a>IsNumeric({file.IDNUM}) </code></p><p class="example"><a name="1000507797"></a>Returns FALSE where {file.IDNUM} = "12345-443".</p><p><code><a name="1000507798"></a>IsNumeric ({file.IDNUM} (1 to 5)) </code></p><p class="example"><a name="1000507799"></a>Returns TRUE where {file.IDNUM} = "12345-443".</p><p><code><a name="1000507800"></a>IsNumeric ({file.IDNUM} (6)) </code></p><p class="example"><a name="1000507801"></a>Returns FALSE where {file.IDNUM} = "12345-443".</p><p><code><a name="1000507802"></a>IsNumeric ({file.IDNUM} (7 to 9)) </code></p><p class="example"><a name="1000507803"></a>Returns TRUE where {file.IDNUM} = "12345-443".</p><p><code><a name="1000507804"></a>IsNumeric({file.IDNUM}) </code></p><p class="example"><a name="1000507805"></a>Returns FALSE where {file.IDNUM} = "12345T".</p><p><a name="1000670256"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>You can use this function in combination with <a href="functionshelp78.html#1000508281">ToNumber (numeric), ToNumber (string)</a> or <a href="functionshelp161.html#1000569614">CStr</a> to test for a Number in the Reference field, then return the <a href="glossary17.html#13544">string</a> as a Number or return 0 if the text string is not a Number.</p>
+<p><a name="1000507812"></a>The following example is applicable to Basic syntax:</p><p class="code"><a name="1000507813"></a>If IsNumeric({file.IDNUM}) Then 
+<br><a name="1000507814"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = ToNumber({file.IDNUM})
+<br><a name="1000507815"></a>Else 
+<br><a name="1000507816"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = 0
+<br><a name="1000507817"></a>End If
+</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp75.html";
+var next = "functionshelp77.html";
+
+function setTopicID() { 
+      var number = "1000507779"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

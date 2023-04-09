@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Look up both at the same time</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="13363"></a><h4 class="newpage"> Look up both at the same time</h4><p><a name="13364"></a>For each record in the Customer table, this option looks for a matching record in the Credit table and a matching record in the Orders table. Then it looks for the next matching record in the Credit table and the next matching record in the Orders table, etc. Once it finds all the matching records, it repeats the process with the next record in the Customer table.</p><p><a name="19158"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="13367"></a>Customer Table
+
+</th><th align="left" valign="bottom"><a name="13369"></a>Credit Table
+
+</th><th align="left" valign="bottom"><a name="13371"></a>Orders Table
+
+</th></tr>
+<tr><th align="left" valign="bottom"><a name="13373"></a>Customer Name
+
+</th><th align="left" valign="bottom"><a name="13375"></a>Amount
+
+</th><th align="left" valign="bottom"><a name="13377"></a>Order Amount
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="13379"></a>Cyclists Incorporated</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13381"></a>($1088.56)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13383"></a>$1529.70</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13385"></a>Cyclists Incorporated</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13387"></a>($1260.12)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13389"></a>$23.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13391"></a>CyclePath Corp.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13393"></a>($1958.03)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13395"></a>$49.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13397"></a>CyclePath Corp.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13399"></a>($1076.43)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13401"></a>$1702.60</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13403"></a>CyclePath Corp.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13405"></a>($75.04)</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13409"></a>The Great Bike Shop</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13411"></a>($138.98)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13413"></a>$3269.70</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13415"></a>The Great Bike Shop</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13419"></a>$5219.55</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13421"></a>The Great Bike Shop</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13425"></a>$1538.20</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="13426"></a>Notice that for each line in the report, the value in the Amount field of the Credit table does not necessarily have any connection to the value in the Order Amount field of the Orders table. However, for each record in the Customer table, one record is selected from the Credit table, and one record is selected from the Orders table at the same time.</p><p><a name="13427"></a>Also notice that when the Credit table runs out of records for a given record in the Customer table, blanks are left in place of values until all related records from the Orders table are found. The same holds true if the Orders table runs out of records.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases15.html";
+var next = "24_under_databases17.html";
+
+function setTopicID() { 
+      var number = "13363"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

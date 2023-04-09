@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>C</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="340342"></a><h2 class="newpage">C</h2><a name="317415"></a><h4>calculated data field
+</h4><p><a name="290487"></a>A calculated data field is a field that holds a value that comes from a calculation rather than coming directly from a database. For example, if the database you are using includes a {file.SALES} field and a {file.COST} field but no Gross Profit field, you can still show gross profit on your report by using a calculated data field. To create a calculated data field, you create a <a href="glossary7.html#13326">formula</a> that subtracts {file.COST} from {file.SALES}. The formula calculates a Gross Profit value for each row and prints that value wherever you place the formula field.</p><a name="13219"></a><h4>case-sensitive
+</h4><p><a name="218277"></a>Case<nobr>-s</nobr>ensitive means that a program differentiates between uppercase and lowercase letters when evaluating a text <a href="glossary17.html#13544">string</a>. Thus, a case<nobr>-s</nobr>ensitive search for the word "house" will return only the value "house," but a non<nobr>-c</nobr>ase<nobr>-s</nobr>ensitive search will return "house," "House," "HOUSE," and similar mixed<nobr>-c</nobr>ase strings. Seagate Crystal Reports <a href="glossary14.html#13456">operator</a>s (Equal, In string, etc.) are case<nobr>-s</nobr>ensitive.</p><a name="279265"></a><h4>column
+</h4><p><a name="279266"></a>A column is the display of data from a single field or formula. Columns run up and down the page. Compare with <a href="glossary16.html#52246">row</a>.</p><a name="59526"></a><h4>comments
+</h4><p><a name="22028"></a>Comments are blocks of descriptive text that accompany formulas. Seagate Crystal Reports ignores comments when it runs the formula.</p><a name="13227"></a><h4>concatenate
+</h4><p><a name="13228"></a>To concatenate is to join two or more text <a href="glossary17.html#13544">string</a>s together to form a single contiguous string.</p><a name="13229"></a><h4>condition
+</h4><p><a name="13230"></a>In an If<nobr>-T</nobr>hen<nobr>-E</nobr>lse formula, the condition is the If part of the formula, the set of circumstances that must take place (be true) to trigger the Then (or consequence) part of the formula. In the formula<EM> If x&lt;5 Then x Else 5</EM>, the expression <EM>x&lt;5</EM> is the condition. </p><a name="40373"></a><h4>conditional formatting
+</h4><p><a name="40514"></a>Conditional formatting is formatting that applies only if certain situations occur. For example, you can conditionally format numeric database fields to display in red when negative.</p><a name="22266"></a><h4>conditional formatting formula
+</h4><p><a name="32783"></a>A conditional formatting formula is an expression that applies specific attributes to objects or sections only if certain criteria are met.</p><a name="13231"></a><h4>conditional properties
+</h4><p><a name="13232"></a>Conditional properties are properties that are performed on an object only if a comparison statement returns a value of True.</p><a name="199706"></a><h4>confidence threshold
+</h4><p><a name="199777"></a>A percentage (<EM>C</EM>) used when the Seagate Document Import Tool converts a report. If fewer than <EM>C</EM> percent of the fields are located correctly, the conversion will fail.</p><a name="13233"></a><h4>consequence
+</h4><p><a name="13234"></a>In an If<nobr>-T</nobr>hen<nobr>-E</nobr>lse formula, the consequence is the Then part of the formula; the action that takes place if the If condition is met. In the formula If <EM>x&lt;5 Then x Else 5</EM>, the expression Then <EM>x</EM> is the consequence. </p><a name="13235"></a><h4>constant
+</h4><p><a name="13236"></a>A constant is a value that is fixed and unchanging as opposed to a variable value, which can take on various values depending on the circumstances. </p><p><a name="13237"></a>The value 5 is a constant; the value of the Quantity field (which may be 5 sometimes, but may be a different number at other times) is a variable value. For example, in the formula for converting pounds to ounces (Ounces = Pounds * 16), <EM>16</EM> is a constant while <EM>Ounces</EM> and <EM>Pounds</EM> are variables. In the formula (Today - January 1, 1900), <EM>January 1, 1900</EM>, is a constant, while <EM>Today</EM> is a variable that changes whenever the current date changes. In Seagate Crystal Reports, constants can be numbers, text strings, dates, dollar amounts, time, date/time, or the result of a formula that itself contains no variables (i.e., 14-9).</p><a name="13238"></a><h4>container document
+</h4><p><a name="13239"></a>A file that contains an embedded or linked OLE object.</p><a name="200135"></a><h4>conversion interface file
+</h4><p><a name="200163"></a>A conversion interface file (.cif extension) is the file in which the program saves the formatting and highlighting from the Document Import Tool. When you highlight something in the Document Import Tool and set properties for database fields, these settings are saved in the .cif file. This file can be used to quickly format the same report later, without highlighting.</p><a name="200011"></a><h4>cross-tab
+</h4><p><a name="199982"></a>A cross<nobr>-t</nobr>ab is a report that summarizes and presents data in a compact row and column format that makes it easy to compare data and identify trends.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "glossary3.html";
+var next = "glossary5.html";
+
+function setTopicID() { 
+      var number = "340342"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

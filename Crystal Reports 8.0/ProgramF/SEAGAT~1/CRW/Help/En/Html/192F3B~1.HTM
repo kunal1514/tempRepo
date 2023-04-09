@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+
+<title>Formula 17</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="305487"></a><h3 class="newpage"> Formula 17</h3>
+<a name="305488"></a><h4>Operators/Functions Used</h4><p><a name="305489"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Remainder, ToNumber, Equal (=), Parentheses ()</p><a name="305490"></a><h4>Formula Purpose</h4><p><a name="305491"></a>A retailer wants to test two different direct mail offers to see which one has the best "pulling" power. He wants to send one offer to all customers on his mailing list with even customer numbers and the second offer to all customers with odd customer numbers.</p><a name="305492"></a><h4>Formula</h4><PRE><a name="305493"></a>If Remainder(ToNumber({file.CUSTNUM}), 2 )= 0 Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{file.OFFER1}<br>
+Else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{file.OFFER2}
+</PRE><a name="305494"></a><h4>Results</h4><p><a name="305514"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="305497"></a>Cust #
+
+</td><td align="left" valign="TOP"><a name="305499"></a>Remainder
+
+</td><td align="left" valign="TOP"><a name="305501"></a>Result
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305503"></a>203104</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305505"></a>0</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305507"></a>Offer 1 - "You are entitled to a 10% discount."</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305509"></a>203105</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305511"></a>1</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305513"></a>Offer 2 - "You are entitled to a free gift."</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="305515"></a><h4>Explanation</h4><ul type="disc"><a name="305516"></a><li>The ToNumber function converts the customer number (stored as text) to a number.
+<a name="305517"></a><li>The Remainder function takes that number, divides it by 2, and returns a remainder.
+<a name="305518"></a><li>The Equal operator tests the remainder to see if it is equal to 0.
+<a name="305519"></a><li>If the remainder is equal to zero, the customer number is divisible by two and thus an even number triggering the printing of {file.OFFER1}. 
+<a name="305520"></a><li>If the remainder is not equal to zero, the customer number is not evenly divisible by two and thus an odd number, triggering the printing of {file.OFFER2}.
+</ul><a name="305521"></a><h6>Related topics</h6><p><a name="305525"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p><p><a name="287775"></a></p><p><a name="279018"></a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas46.html";
+var next = "20_basicsyntax.html";
+
+function setTopicID() { 
+      var number = "305487"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

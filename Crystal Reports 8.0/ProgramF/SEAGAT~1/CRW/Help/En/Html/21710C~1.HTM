@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Dealing with null values</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="147294"></a><h4 class="newpage"> Dealing with null values</h4><p><a name="152457"></a>For some products, such as the Guardian Chain Lock, a color value was not recorded and so the {Product.Color} field has a null value in the database for that record. In general, when Seagate Crystal Reports encounters a null valued field in a formula, it immediately stops evaluating the formula and produces no value. Thus, the Guardian Chain Lock record does not have any word printed beside it. If you want to handle null field values in your formula, you must explicitly do so using one of the special functions designed for handling them: IsNull, PreviousIsNull or NextIsNull. Here is how to fix up the above example using IsNull:</p><PRE><a name="147296"></a>If IsNull({Product.Color}) Or 
+<a name="147297"></a>   InStr({Product.Color}, " ") = 0 Then
+<a name="147298"></a>   "basic"
+<a name="147299"></a>Else
+<a name="147300"></a>   "fancy"
+</PRE><p><a name="147302"></a>How this relates to operators, is that when Seagate Crystal Reports evaluates the condition:</p><PRE><a name="147303"></a>IsNull({Product.Color}) Or
+<a name="147304"></a>InStr({Product.Color}, " ") = 0
+</PRE><p><a name="147305"></a>It first evaluates IsNull ({Product.Color}), and when it determines that this is True, it knows that the whole condition is True, and thus does not need to check whether </p><p><code><a name="147306"></a>InStr({Product.Color}, " ") = 0.</code></p><p><a name="147307"></a>In other words, Seagate Crystal Reports will stop evaluating a Boolean expression when it can deduce the results of the whole expression. <br>In the following example, the formula guards against attempting to divide by zero in the case that denom is 0:</p><PRE><a name="147308"></a>Local NumberVar num;
+<a name="147309"></a>Local NumberVar denom;
+<a name="147310"></a>...
+<a name="147311"></a>If denom &lt;&gt; 0 And num / denom &gt; 5 Then
+<a name="147312"></a>...
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax50.html";
+var next = "21_crystalsyntax52.html";
+
+function setTopicID() { 
+      var number = "147294"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

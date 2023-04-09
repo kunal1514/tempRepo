@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>SummaryFunction (fld, condFld, cond)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000599837"></a><h3 class="newpage"> SummaryFunction (fld, condFld, cond)</h3>
+<p><a name="1000650658"></a>Basic and Crystal syntax.</p><a name="1000599838"></a><h5>Arguments</h5><ul type="disc"><a name="1000291506"></a><li>fld is any valid database or formula field that can be evaluated by the function.
+<a name="1000291507"></a><li>condFld is any valid date or Boolean field used to group the values in fld by.
+<a name="1000291508"></a><li>cond is a text string indicating the condition of condFld that controls grouping. Valid strings for this argument depend on whether condFld contains date or Boolean values. For information about the available conditions, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+</ul><a name="1000291509"></a><h5>Returns</h5><p><a name="1000291510"></a>Fractional Number</p><a name="1000291511"></a><h5>Action </h5><p><a name="1000291514"></a>SummaryFunction (fld, condFld, cond) summarizes each group of values that is generated when the specified summary condition is met. These functions work just like <a href="functionshelp23.html#1000432439">SummaryFunction (fld, condFld)</a>, but, because they use a date or Boolean field as a sort and group by (trigger) field, they require a condition in addition to the other arguments.</p><a name="1000291516"></a><h5>Typical uses </h5><p><a name="1000291517"></a>Use these functions whenever you want to duplicate, in a formula, a summary: </p><ul type="disc"><a name="1000291518"></a><li>that summarizes the values in a group
+<a name="1000291519"></a><li>that uses a date or Boolean field as the sort and group by field.
+</ul><a name="1000291520"></a><h5>Examples </h5><p><a name="1000291521"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000291522"></a>SummaryFunction({orders.ORDER ID}, {orders.ORDER DATE}, "monthly")</code></p><p class="example"><a name="1000291523"></a>Summarizes the orders in each group of orders in the Orders field. The orders are separated into groups whenever the value in the Date field changes to a new month.</p><p><code><a name="1000319565"></a>Count({orders.ORDER AMOUNT}, {orders.ORDER DATE}, "monthly")</code></p><p class="example"><a name="1000291527"></a>Counts the number of orders in each group of orders in the Amount field (the total orders for each month). The orders are separated into groups whenever the value in the Date field changes to a new month.</p><p><code><a name="1000291528"></a>DistinctCount({orders.CUSTOMER ID}, {orders.ORDER DATE}, "weekly")</code></p><p class="example"><a name="1000291529"></a>Counts the number of different customers contacted, follow up contacts are excluded. Customers are separated into groups whenever the value in the Date field changes to a new week.</p><p><a name="1000735797"></a>The following example is applicable to Crystal syntax:</p><p><code><a name="1000735775"></a>(SummaryFunction({orders.ORDER AMOUNT}, {orders.ORDER AMOUNT}, "monthly")) % (SummaryFunction({order.ORDER AMOUNT})) </code></p><p class="example"><a name="1000735776"></a>Groups values in the Amount field by month, summarizes the values for each month group, and shows those values as a percentage of the summary value for the entire report.</p><a name="1000291530"></a><h5>Comments </h5><p><a name="1000291531"></a>In order to use these functions to insert a group field in a formula, you must have already entered a group field in your report with identical parameters: same field, same sort and group by field, same date or Boolean condition, same action (average, count, etc.).</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp23.html";
+var next = "functionshelp25.html";
+
+function setTopicID() { 
+      var number = "1000599837"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

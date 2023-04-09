@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Date</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000581363"></a><h3 class="newpage"> Date</h3>
+<p><a name="1000671971"></a>Crystal syntax.</p><p><a name="1000730497"></a>The <a href="functionshelp162.html#1000568875">CDate</a> and <a href="functionshelp109.html#1000531915">DateValue</a> functions are equivalent to Date. However, Date can only be used in Crystal syntax since it is a type name in Basic syntax. </p><a name="1000581364"></a><h5>Overloads</h5><ul type="disc"><a name="1000581365"></a><li>Date (number)
+<a name="1000581366"></a><li>Date (string)
+<a name="1000581367"></a><li>Date (dateTime)
+<a name="1000581368"></a><li>Date (YYYY, MM, DD)
+</ul><a name="1000581369"></a><h5>Arguments</h5><p><a name="1000635994"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><P><a name="1000635968"></a>Date (number)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000636227"></a><li>number is a value representing the number of days starting from December 30, 1899. 
+<a name="1000636232"></a><li>It can be positive or negative, and is truncated if fractional.
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000635974"></a>Date (string)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000636234"></a><li>string is a text string representing a date, example: "September 20, 1999".
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000635980"></a>Date (dateTime)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000636240"></a><li>dateTime is a DateTime value.
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000635985"></a>Date (YYYY, MM, DD)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000636322"></a><li>YYYY is a whole number representing a year, example: 1996.
+<a name="1000636323"></a><li>MM is a whole number representing a month, example: 12 for December.
+<a name="1000636324"></a><li>DD is a whole number representing a day of the month, example: 05.
+</ul></td></tr>
+
+</Table></p>
+<a name="1000581380"></a><h5>Returns</h5><p><a name="1000581381"></a>A Date value.</p><a name="1000581382"></a><h5>Action</h5><p><a name="1000637642"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><P><a name="1000637624"></a>Date (number)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000637661"></a>Returns a Date value given a number of days starting from December 30, 1899.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000637629"></a>Date (string)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000637670"></a>Returns a Date value given a string that represents a date from January 1, 100 through December 31, 9999.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000637633"></a>Date (dateTime)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000637676"></a>Returns the date portion of a given DateTime value.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000637637"></a>Date (YYYY, MM, DD)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000637641"></a>Returns a Date value given numeric arguments of the year, month, and day.</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="1000581387"></a><h5>Examples</h5><p><a name="1000581388"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000581389"></a>Date ("Dec 31, 1999") </code></p><p class="example"><a name="1000581390"></a>Returns the Date value for Dec. 31, 1999.</p><p><code><a name="1000581391"></a>Date (50) </code></p><p class="example"><a name="1000581392"></a>Returns the Date value for February 18, 1900.</p><p><code><a name="1000581393"></a>Date (#Oct. 20, 1999 12:02pm#) </code></p><p class="example"><a name="1000581394"></a>Returns the Date value for October 20, 1999.</p><p><code><a name="1000581395"></a>Date (1930, 7, 30) </code></p><p class="example"><a name="1000581396"></a>Returns the Date value for July 30, 1930.</p><a name="1000581397"></a><h5>Comments</h5><p><a name="1000581399"></a>You can use the IsDate function to check if a String argument can be converted to a Date before doing the actual conversion. That way, if the conversion cannot be done, you can handle the situation appropriately. </p><a name="1000637692"></a><h6>Related topics</h6><p><a name="1000671972"></a><a href="functionshelp112.html#1000535456">DateSerial (year, month, day)</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp105.html";
+var next = "functionshelp107.html";
+
+function setTopicID() { 
+      var number = "1000581363"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

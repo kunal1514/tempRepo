@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Opening Access queries through ODBC</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="14504"></a><h4 class="newpage"> Opening Access queries through ODBC</h4><p><a name="381512"></a>ODBC gives you more control over which parts of a database you can use. For this reason, using an Access query through ODBC may require a few extra steps.</p><a name="386181"></a><h6>To open an Access query through ODBC</h6><ol>
+<a name="381513"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>File</kbd> menu, click <kbd>Options</kbd>.
+<a name="442578"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Database</kbd> tab.
+<p><a name="444200"></a> <img src="images/db_fopt3.gif">
+
+
+</p>
+<a name="373099"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Select the <kbd>Views</kbd> and/or <kbd>Reprompt user when connecting</kbd> check box(es).
+<ul type="disc"><ul type="disc"><a name="14515"></a><li>Selecting <EM>Views</EM> automatically displays any available queries in your Access database.<a name="14516"></a><li>Selecting <EM>Reprompt user when connecting </EM>displays the Allow Reporting On dialog box every time you select an ODBC data source. This dialog box provides the same options as the Allow Reporting On section on the SQL tab of the Options dialog box, but provides those options for every ODBC data source you select.</ul></ul><a name="14517"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">In addition, you can specify <kbd>Table name LIKE</kbd> and <kbd>Owner LIKE</kbd> options, if you wish.
+<ul type="disc"><ul type="disc"><a name="14518"></a><li><EM>Table name LIKE</EM> is based on the SQL LIKE clause. This option allows you to specify the kinds of table names you want to appear in the Choose SQL Table dialog box. You can use the underscore character (_) or the percent sign character (%) as wildcards with this function. The underscore character specifies any single character, while the percent sign signifies any character string. For example, DAV_ matches DAVE only, while DAV% matches DAVE and DAVID. Table name LIKE C% displays only those tables that have a table name beginning with the letter C.<a name="14519"></a><li><EM>Owner LIKE</EM> is also based on the SQL LIKE clause. Owner LIKE allows you to select the Owner (or Creator or Alias) of the table, not the table name itself. For example Owner LIKE C% displays only those tables that have an owner beginning with the letter C.</ul></ul><a name="14520"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> to exit the Options dialog box.
+</ol>
+<ol>
+<a name="405168"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Create a new report and choose ODBC as the data source for your Access database.
+<p class="indent"><a name="408212"></a>If you did not specify a particular Access database file with your Access ODBC data source, the Select Database dialog box appears.</p><p class="indent"><a name="417602"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If your database requires a user name and password, or any other log on information, a log on dialog box appears.</p>
+<a name="408037"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Locate and select the database that contains the Access query you want to use and then expand it.
+<p class="indent"><a name="408038"></a>If you selected the <EM>Reprompt user when connecting </EM>check box in the Options dialog box, the Allow Reporting On dialog box appears. Otherwise, skip to Step 9.</p><p><a name="408042"></a> <img src="images/db_alwrp.gif">
+
+
+</p>
+<a name="408201"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Make sure the <kbd>Views</kbd> check box is selected and click <kbd>OK</kbd> when finished.
+<a name="408086"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Highlight your query, click <kbd>Add</kbd> and then <kbd>Close</kbd>.
+<p class="indent"><a name="258527"></a>The Design tab appears along with the Field Explorer dialog box. Your Access query, and all fields associated with that query, appear under <EM>Database Fields</EM>.</p></ol>
+<p><a name="386200"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>You cannot use Access Action queries or Update queries in Seagate Crystal Reports. However, you can use Access Select queries and Cross<nobr>-t</nobr>ab queries.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases42.html";
+var next = "24_under_databases44.html";
+
+function setTopicID() { 
+      var number = "14504"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

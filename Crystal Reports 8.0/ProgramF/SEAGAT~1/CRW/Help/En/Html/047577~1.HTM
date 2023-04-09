@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Combining database fields in a text object</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="79525"></a><h4 class="newpage"> Combining database fields in a text object</h4><p><a name="79526"></a>Instead of adding the Contact First Name and Contact Last Name fields as separate objects, you can insert both fields in a text object. This allows you to control the formatting of both fields by making changes to only one object. When you insert fields in a text object, the fields are automatically trimmed (they do not have any extra white space on either side). This is important because a field is a fixed size but the data in the fields can vary in size, leaving various amount of unwanted white space.</p><a name="89777"></a><h6>To combine fields in a text object</h6><ol>
+<a name="79531"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_intxt.gif">
+
+
+Click <kbd>Insert Text Object</kbd> on the Standard toolbar. As you move the cursor over the report, an object frame appears next to it.
+<a name="79532"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Insert the field to the right of the fields in the <kbd>Details</kbd> section.
+<p class="indent"><a name="113848"></a>As you drag the field, the Design tab automatically scrolls to the right, if necessary. When you click to place the object, a text object appears and the horizontal ruler of the Design tab changes to a ruler/tab selector that is used for editing the text object. If you click an empty area of the report or a field object, the standard Design tab ruler appears.</p><a name="79533"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click once on the border of the text object to select it for resizing. Handles appear on all sides of the object.
+<a name="79534"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Move the cursor over the right sizing handle of the text object and increase the width by about 1 inch. You may need to scroll to the right and continue resizing.
+<a name="79535"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Double<nobr>-c</nobr>lick inside the text object to select it for editing. Notice the insertion point is now flashing within the text object.
+<a name="79536"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Highlight the <kbd>Contact Last Name</kbd> field in the Field Explorer dialog box. Remember, you can move the Field Explorer dialog box by dragging and dropping it by its title bar.
+<a name="79537"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Drag the field to the text object.
+<a name="79538"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Move the cursor over the text object until the cursor becomes a Drag and Drop cursor.
+<a name="79539"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Click once to place the field in the text object. The cursor now appears after the <kbd>Contact Last Name</kbd> field, within the text object.
+<a name="79540"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Type a comma and a space after the Contact Last Name.
+<a name="79541"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">In the Field Explorer dialog box, highlight the <kbd>Contact First Name</kbd> field.
+<a name="79542"></a><li value="12&nbsp;&nbsp;&nbsp;&nbsp;">Drag the field to the text object.
+<a name="79543"></a><li value="13&nbsp;&nbsp;&nbsp;&nbsp;">Move the cursor over the text object until the cursor becomes a Drag and Drop cursor. Move the cursor to the right of the comma and space you just typed, and click once. The field will be inserted to the right of the comma and space.
+<a name="79544"></a><li value="14&nbsp;&nbsp;&nbsp;&nbsp;">You are finished inserting fields, so <kbd>Close</kbd> the Field Explorer dialog box.
+<a name="79545"></a><li value="15&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Preview</kbd> tab to look at the fields you just placed.
+</ol>
+<p><a name="79549"></a>The report should now look similar to this:</p><p><a name="114542"></a> <img src="images/pw_tutr2.gif">
+
+
+</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "04_quick18.html";
+var next = "04_quick20.html";
+
+function setTopicID() { 
+      var number = "79525"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Passing optional arguments</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000508972"></a><h4 class="newpage"> Passing optional arguments</h4><ul type="disc"><a name="1000508974"></a><li>Many arguments for the ToText function have been specified as optional. However, you can only leave an argument blank if all the arguments that follow it are left blank as well. In other words, you can not leave the y and z arguments blank and provide an argument for w. It is possible, however, to leave one, two, or all of the optional arguments blank, as long as no arguments are supplied after the blank arguments. 
+<p class="indent"><a name="1000670634"></a>The following combinations are possible when supplying arguments to the ToText function:</p><ul type="disc"><ul type="disc"><a name="1000508976"></a><li>ToText(x)<a name="1000508978"></a><li>ToText (x, y)<a name="1000508980"></a><li>ToText (x, y, z)<a name="1000508982"></a><li>ToText (x, y, z, w)<a name="1000508984"></a><li>ToText (x, y, z, w, q)</ul></ul><a name="1000508985"></a><li>Using the "t" or "tt" format characters in a time format string provides default strings for indicating a.m. (morning) and p.m. (evening) hours. "t" produces just a single character, "a" or "p", while "tt" produces the entire string, "am" or "pm". You can pass your own custom strings for indicating am/pm strings. See the arguments for converting time and DateTime values with ToText in the Arguments section of <a href="functionshelp79.html#1000727489">ToText</a>.) 
+<p class="indent"><a name="1000670635"></a>If you do pass your own am/pm strings, the "t" and "tt" format characters will have the same effect on them (producing single character vs. multiple character strings). However, the "t" and "tt" format characters are optional and only necessary when default am/pm strings are needed.</p></ul><a name="1000508987"></a><h6>Related topics</h6><p><a name="1000508988"></a><a href="functionshelp161.html#1000569614">CStr</a></p><p><a name="1000508990"></a><a href="19_introformulas31.html#304376">Formula 1</a></p><p><a name="1000670649"></a><a href="19_introformulas32.html#304424">Formula 2</a></p><p><a name="1000508992"></a><a href="19_introformulas33.html#304477">Formula 3</a></p><p><a name="1000670739"></a><a href="19_introformulas35.html#305994">Formula 5</a></p><p><a name="1000670743"></a><a href="19_introformulas43.html#305254">Formula 13</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp84.html";
+var next = "functionshelp86.html";
+
+function setTopicID() { 
+      var number = "1000508972"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

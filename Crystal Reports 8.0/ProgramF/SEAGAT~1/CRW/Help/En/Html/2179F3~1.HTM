@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Multiple expressions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="150855"></a><h4 class="newpage"> Multiple expressions</h4><p><a name="150866"></a>Typically, each expression takes one line, but you can continue an expression onto the next line if you need more space.</p><p><a name="160283"></a>The formula below consists of five expressions. It returns the Number value 25 since that is the value of the last expression in the formula.</p><a name="160281"></a><h5>Example</h5><PRE><a name="144521"></a>//Expressions example
+<a name="144522"></a>//The first expression. Its value is the Number
+<a name="144523"></a>//value 30
+<a name="144524"></a>10 + 20;
+<a name="144526"></a>//The second expression. Its value is the String
+<a name="144527"></a>//"Hello World". It takes up two lines.
+<a name="144528"></a>"Hello " +
+<a name="144529"></a>"World";
+<a name="144531"></a>//The third expression. Its value is of Number type
+<a name="144532"></a>{Orders Detail.Quantity} * 2 - 5;
+<a name="144534"></a>//The fourth expression. Its value is of String type
+<a name="144535"></a>If {Orders Detail.Quantity} &gt; 1 Then
+<a name="144536"></a>   "multiple units"
+<a name="144537"></a>Else
+<a name="144538"></a>   "one unit";
+<a name="144540"></a>//The fifth and final expression. Its value is the
+<a name="144541"></a>//Number value 25
+<a name="144542"></a>20 + 5
+</PRE><p><a name="157535"></a>Placing a semicolon after the last expression in the formula is also allowed, but optional. For example, the above formula could have ended with:</p><p><code><a name="144545"></a>20 + 5;</code></p><p><a name="144547"></a>Some of the sample formulas in the preceding section do not have semicolons. This is because they consist of a single expression, and a semicolon is optional after the last expression. Many formulas in Crystal syntax can be written as a single expression.</p><p><a name="144549"></a>Notice that there is no semicolon after the "multiple units" String. In fact, if you put a semicolon there, the program will report an error. This is because a semicolon separates expressions, and the</p><PRE><a name="144550"></a>Else
+<a name="144551"></a>   "one unit";
+</PRE><p><a name="144553"></a>is not a separate expression. It does not stand alone apart from the If. In fact, it is an integral part of the If expression since it describes the value that the If expression will return under certain circumstances.</p><p><a name="150880"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The example is not a practical example because the first four expressions in the formula did not have any effect on the last expression.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax14.html";
+var next = "21_crystalsyntax16.html";
+
+function setTopicID() { 
+      var number = "150855"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

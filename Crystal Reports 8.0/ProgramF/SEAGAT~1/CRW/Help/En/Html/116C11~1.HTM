@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Free-form placement off</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="188234"></a><h4 class="newpage"> Free-form placement off</h4><p><a name="188235"></a>If a section has the Free<nobr>-F</nobr>orm Placement option turned off, the program no longer references the object's absolute coordinates to determine where it prints, except under the following conditions.</p><ul type="disc"><a name="188236"></a><li>The absolute <EM>x</EM> coordinate is still referenced to determine where each object begins printing horizontally (left and right placement).
+<a name="188237"></a><li>The <EM>y</EM> coordinate is still referenced for vertical placement of the object, but the coordinates may be adjusted by the Crystal Reports Designer when the printer driver changes.
+</ul><p><a name="188238"></a>So, if the report is printed using a printer driver that measures inter<nobr>-l</nobr>ine spacing <EM>greater</EM> than the original printer driver, the <EM>y</EM> coordinate increases and the text<nobr>-b</nobr>ased object prints farther down the page. With the Free<nobr>-F</nobr>orm Placement option turned off, the user no longer controls the vertical placement of text<nobr>-b</nobr>ased objects; the printer driver determines that instead.</p><p><a name="188239"></a>However, the placement of OLE objects such as graphics, boxes, and lines is <EM>not</EM> controlled by the printer driver. Therefore, when placing and printing, the Crystal Reports Designer always references the absolute coordinates of these objects. Due to the various placement methods, problems can arise when both text<nobr>-b</nobr>ased objects and OLE objects are placed on a report.</p><p><a name="188240"></a>For example, a box (OLE object) is placed around a database string field (text<nobr>-b</nobr>ased object). Everything looks great and everything is aligned as it should be. However, if the report is printed using a printer with an especially high measurement for inter<nobr>-l</nobr>ine spacing, then the following conditions occur.</p><ul type="disc"><a name="188241"></a><li>The placement of the box does not change relative to the section in which it is placed (the <EM>x</EM> and <EM>y</EM> coordinates do not change).
+<a name="188242"></a><li>The vertical placement of the text<nobr>-b</nobr>ased object changes because the <EM>y</EM> coordinate is adjusted upward.
+</ul><p><a name="188243"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The value is a measurement from the upper<nobr>-l</nobr>eft corner of the section; so, the greater the value, the farther down the page the object prints.</p>
+<p><a name="188244"></a>If you are distributing reports that have sections formatted with the Free<nobr>-F</nobr>orm Placement option turned off, and you want the objects in those sections to be surrounded by a border or formatted with lines, it is better to modify the objects' border properties than to insert lines and boxes. This way, the borders always stay with the objects. Right<nobr>-c</nobr>lick the object, then select the Change Border option from the shortcut menu. See <a href="11_format41.html#106769">Adding borders, color, and shading to a field</a>.</p><p><a name="188248"></a>Remember, <EM>any</EM> section can be formatted with the Free<nobr>-F</nobr>orm Placement option turned on or off. While it is better to turn the option on in some cases and not in others, it is highly recommended that every section of your report be formatted in the <EM>same</EM> manner.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "11_format26.html";
+var next = "11_format28.html";
+
+function setTopicID() { 
+      var number = "188234"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

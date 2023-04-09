@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Show SQL Query dialog box</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="816206"></a><h2 class="newpage">Show SQL Query dialog box</h2><p><a name="816212"></a>This dialog box appears when you choose the <a href="COMMANDS126.html#131569">Show SQL Query command</a> from the Database menu.</p><p><a name="816214"></a>Use the Show SQL Query dialog box to edit the SQL Query.</p><p><a name="816220"></a>The Show SQL Query dialog box displays the SQL query that the program is sending to your SQL server.</p><p><a name="816222"></a>The query can have up to four parts:</p><a name="816224"></a><h5>SELECT</h5><p><a name="816226"></a>SELECT lists all of the fields used in the report, including fields used in formulas, totals, the sort order, the selection formula, and ranges. For example:</p><PRE><a name="816228"></a>SELECT<br>
+DIV_INFO.DIVISION_ID, DIV_INFO.DIVISION_NAME,<br>
+DEP_INFO.DEPARTMENT_ID, DEP_INFO.DEPARTMENT_NAME
+</PRE><p><a name="816230"></a>&#171;Shows that the report is using the DIVISION_ID, DIVISION_NAME, DEPARTMENT_ID, and DEPARTMENT_NAME fields.&#187;</p><a name="816232"></a><h5>FROM </h5><p><a name="816234"></a>FROM lists all the tables used in the report, and each table name is followed by an alias name. For example:</p><PRE><a name="816236"></a>FROM<br>
+SYSADM.DIV_INFO DIV_INFO,<br>
+SYSADM.DEP_INFO DEP_INFO
+</PRE><p><a name="816238"></a>&#171;Shows that the report is using the DIV_INFO and DEP_INFO tables from the SYSADM database, and in each case, the alias name is the same as the table name.&#187;</p><a name="816240"></a><h5>WHERE</h5><p><a name="816242"></a>WHERE specifies any links between tables and field ranges for the report. For example:</p><PRE><a name="816244"></a>WHERE<br>
+DIV_INFO.DIVISION_ID = DEP_INFO.DIVISION_ID
+</PRE><p><a name="816246"></a>&#171;Shows that the DIV_INFO and DEP_INFO tables are linked via the DIVISION_ID fields.&#187;</p><a name="816248"></a><h5>ORDER BY</h5><p><a name="816250"></a>ORDER BY sorts the data in alphabetic or numeric ascending or descending order. For example:</p><PRE><a name="816252"></a>ORDER BY<br>
+DIV_INFO.DIVISION_ID ASC
+</PRE><p><a name="816254"></a>&#171;Sorts the records in ascending order by the values that appear in the DIV_INFO.DIVISION_ID field.&#187;</p><a name="816269"></a><h5>Query</h5><p><a name="816271"></a>Use this edit box to edit the SQL Query. You can use the cut, paste and copy buttons as editing tools.</p><a name="816273"></a><h5>Cut</h5><p><a name="816275"></a>This button is used to cut selected text out of the SQL Query onto the Windows clipboard.</p><a name="816277"></a><h5>Paste</h5><p><a name="816279"></a>This button is used to paste text from the clipboard to the current cursor position in the Show SQL Query dialog box.</p><a name="816281"></a><h5>Copy</h5><p><a name="816283"></a>This button is used to copy selected text to the Windows clipboard.</p><a name="816285"></a><h5>Reset</h5><p><a name="816287"></a>This button undoes any changes you have made to the SQL query, restoring it to what the program had originally created.</p><a name="1000267311"></a><h6>Related topics</h6><p><a name="1000267315"></a><a href="COMMANDS126.html#131569">Show SQL Query command</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs142.html";
+var next = "dialogs144.html";
+
+function setTopicID() { 
+      var number = "816206"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>IsNull (fld)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000578104"></a><h3 class="newpage"> IsNull (fld)</h3>
+<p><a name="1000719956"></a>Basic and Crystal syntax.</p><a name="1000578108"></a><h5>Arguments</h5><p><a name="1000578109"></a>fld is any valid database, memo, or BLOB field.</p><a name="1000578110"></a><h5>Returns</h5><p><a name="1000578111"></a>Boolean Value</p><a name="1000578112"></a><h5>Action</h5><p><a name="1000578113"></a>Evaluates the field specified in the current record and returns TRUE if the field contains a null value.</p><a name="1000578114"></a><h5>Typical uses</h5><p><a name="1000578115"></a>You can use this function in a record selection formula to limit the report to records that have something other than a null value in the field specified. You can also use it to have the program take some action whenever it encounters a null value.</p><a name="1000578116"></a><h5>Examples </h5><p><a name="1000578117"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><a name="1000578118"></a>IsNull({orders.ORDER AMOUNT}) = produces the following results:</p><p><a name="1000578140"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="1000578121"></a>If{orders.ORDER AMOUNT}<br>
+shows this value
+
+</td><td align="left" valign="TOP"><a name="1000578123"></a>IsNull({orders.ORDER AMOUNT}) <br>
+returns
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000578125"></a>200.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000578127"></a>False</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000578129"></a>(null)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000578131"></a>True</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000578133"></a>100.00</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000578135"></a>False</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000578137"></a>347.12</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000578139"></a>False</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><code><a name="1000578141"></a>Not IsNull({orders.ORDER AMOUNT})</code></p><p class="indent"><a name="1000578142"></a>When used as a record selection formula, includes in the report only those records that have something other than a null value in the {orders.ORDER AMOUNT} field.</p><a name="1000578143"></a><h5>Comments</h5><p><a name="1000578144"></a>Some databases support null data values and others do not. This function will not work if the active database(s) do not support null values. If the database(s) do support null values, the function can be used to reference the null values that get created as the result of a failed lookup while joining.</p><p><a name="1000683637"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Zero and blank (empty or " ") are not null values.</p>
+<a name="1000750805"></a><h6>Related topics</h6><p><a name="1000750827"></a><a href="20_basicsyntax46.html#130720">Null fields and how to use IsNull</a> (Basic syntax)</p><p><a name="1000750839"></a><a href="21_crystalsyntax50.html#147283">Null fields and how to use IsNull</a> (Crystal syntax)</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp178.html";
+var next = "functionshelp180.html";
+
+function setTopicID() { 
+      var number = "1000578104"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

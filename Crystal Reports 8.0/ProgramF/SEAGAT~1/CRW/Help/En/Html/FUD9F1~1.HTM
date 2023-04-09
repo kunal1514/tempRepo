@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>IIF (expression, truePart, falsePart)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000571561"></a><h3 class="newpage"> IIF (expression, truePart, falsePart)</h3>
+<p><a name="1000709084"></a>Basic and Crystal syntax.</p><a name="1000571562"></a><h5>Argument</h5><ul type="disc"><ul type="disc"><a name="1000571563"></a><li>expression is a Boolean expression.<a name="1000571564"></a><li>truePart is the value returned if expression is True. It can be any simple type (Number, Currency, String, Boolean, Date, Time or DateTime) or range type (Number Range, Currency Range, String Range, Date Range, Time Range or DateTime Range), but it may not be an array.<a name="1000571565"></a><li> falsePart is the value returned if expression is False. It must be of the same type as truePart.</ul></ul><a name="1000571566"></a><h5>Returns</h5><p><a name="1000571567"></a>truePart if expression is True and falsePart if expression is False. The type of the returned value is the same as the type of truePart and falsePart.</p><a name="1000571568"></a><h5>Action</h5><p><a name="1000571569"></a>IIF returns one of two parts, depending on the evaluation of the expression. </p><a name="1000571570"></a><h5>Typical uses</h5><ul type="disc"><a name="1000571571"></a><li>IIF can be used as an alternative to the If/Then/Else control structure in some situations.
+<a name="1000571572"></a><li>One situation where IIF may be better than a control structure is when writing record selection formulas so that they can be pushed down to the database server. See <a href="functionshelp168.html#1000571589">Switch (expr1, value1, expr2, value2, ..., exprN, valueN)</a> for an example and <a href="07_recordgroupsel15.html#101807">Advanced record selection formulas</a> for an explanation of the techniques involved. 
+</ul><a name="1000571573"></a><h5>Examples</h5><p><a name="1000571574"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000571576"></a>IIF ({Orders.Order Amount} &gt; 10000, "large order", "standard order")</code></p><p class="example"><a name="1000571577"></a>Returns the String value "large order" if {Orders.Order Amount} is more than $10,000 and the String value "standard order" otherwise. </p><p><a name="1000571579"></a>You can insert a formula field that represents the order amount if the payment has been made already, and is 0 otherwise:</p><p class="code"><a name="1000571580"></a>Rem Basic syntax
+<br><a name="1000571581"></a>formula = IIF ({Orders.Payment Received}, {Orders.Order Amount}, 0)
+<br><a name="1000571582"></a>
+<br><a name="1000571583"></a>//Crystal syntax
+<br><a name="1000571584"></a>IIF ({Orders.Payment Received}, {Orders.Order Amount}, 0)
+</p><a name="1000571585"></a><h5>Comments</h5><ul type="disc"><a name="1000571586"></a><li>This function is designed to work like the Visual Basic function of the same name. A difference is that the function does not return a Variant and thus truePart and falsePart must have the same type.
+<a name="1000571587"></a><li>Every argument of the IIF function is evaluated before the result is returned. Thus, you should watch out for undesirable side effects when using IIF. For example, if falsePart results in division by zero, an error will occur, even if expression is True and so truePart is returned.
+</ul><a name="1000709016"></a><h6>Related topics</h6><p><a name="1000709093"></a><a href="functionshelp166.html#1000571527">Choose (index, choice1, choice2, ..., choiceN)</a></p><p><a name="1000709099"></a><a href="functionshelp168.html#1000571589">Switch (expr1, value1, expr2, value2, ..., exprN, valueN)</a></p><p><a name="1000709880"></a><a href="20_basicsyntax51.html#132768">Select statements</a> (Basic syntax)</p><p><a name="1000709020"></a><a href="21_crystalsyntax56.html#147492">Select expressions</a> (Crystal syntax)</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp166.html";
+var next = "functionshelp168.html";
+
+function setTopicID() { 
+      var number = "1000571561"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>ToWords (x), ToWords (x, #places)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000670748"></a><h3 class="newpage"> ToWords (x), ToWords (x, #places)</h3>
+<p><a name="1000747781"></a>Basic and Crystal syntax.</p><a name="1000509001"></a><h5>Arguments</h5><ul type="disc"><a name="1000509002"></a><li>x is a fractional Number to be converted into words.
+<a name="1000509003"></a><li>#places is a whole number indicating the number of decimal places to be converted. (This argument is optional.)
+</ul><a name="1000509004"></a><h5>Returns</h5><p><a name="1000509005"></a>Text String</p><a name="1000509006"></a><h5>Action </h5><p><a name="1000509007"></a>You can use this function to convert a Number or Currency field value or the result of a numeric calculation to words so it can be used as text. The ability to adjust the number of decimal places can be useful when the number is the result of a calculation that may produce more decimal places than you want.</p><a name="1000509008"></a><h5>Typical uses </h5><p><a name="1000509009"></a>You can use this function to spell out the dollar amount for each check if you are using computer checks. </p><a name="1000509010"></a><h5>Examples </h5><p><a name="1000509011"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000509012"></a>ToWords(12345) </code></p><p class="example"><a name="1000509013"></a>Returns twelve thousand three hundred forty<nobr>-f</nobr>ive and xx/100.</p><p><code><a name="1000509014"></a>ToWords(12345.6749,2) </code></p><p class="example"><a name="1000509015"></a>Returns twelve thousand three hundred forty<nobr>-f</nobr>ive and 67/100.</p><p><code><a name="1000509016"></a>ToWords(12345.4999,0) </code></p><p class="example"><a name="1000509017"></a>Returns twelve thousand three hundred forty<nobr>-f</nobr>ive.</p><p><code><a name="1000509018"></a>ToWords(12345.5000,0) </code></p><p class="example"><a name="1000509019"></a>Returns twelve thousand three hundred forty six.</p><p><code><a name="1000509020"></a>ToWords(-12345) </code></p><p class="example"><a name="1000509021"></a>Returns negative twelve thousand three hundred forty<nobr>-f</nobr>ive and xx/100.</p><p><code><a name="1000509022"></a>ToWords(12.3499) </code></p><p class="example"><a name="1000509023"></a>Returns twelve and 35/100.</p><p><code><a name="1000509024"></a>ToWords({orders.ORDER AMOUNT}) </code></p><p class="example"><a name="1000509025"></a>Returns two thousand sixteen and 84/100 where Amount = 2016.84.</p><p><code><a name="1000509026"></a>ToWords((({file.QTY1} + {file.QTY2} + {file.QTY3}) * {file.PRICE}) * 1.075) </code></p><p class="example"><a name="1000509027"></a>Returns one hundred two and 13/100.</p><p><code><a name="1000509028"></a>ToWords((({file.QTY1} + {file.QTY2} + {file.QTY3}) * {file.PRICE}) * 1.075,0)</code></p><p class="example"><a name="1000509029"></a>Returns one hundred two where QTY1 = 1, QTY2 = 82, QTY3 = 12, and Price = 1.00 (sums three quantities, multiplies them times the price and adds 7.5% sales tax). In this case the numeric answer is 102.125 which is then rounded to 102.13 (the standard two decimal places) before putting into words.</p><a name="1000509030"></a><h5>Comments </h5><ul type="disc"><a name="1000509031"></a><li>The function treats the number as a whole, rather than as a series of individual numbers. That is, 123 is treated as the number one hundred twenty<nobr>-t</nobr>hree rather than the individual digits one, two, and three. 
+<a name="1000509032"></a><li>Negative numbers begin with the word "negative." 
+<a name="1000509033"></a><li>Currency field values and Number field values are treated in the same way and produce identical results. 
+<a name="1000509034"></a><li>Since the spelled out value will be much longer than the Number value, you will need to increase the size of the field box to accommodate the new field length.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp85.html";
+var next = "functionshelp87.html";
+
+function setTopicID() { 
+      var number = "1000670748"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

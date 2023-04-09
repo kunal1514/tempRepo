@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Safety mechanism for loops </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="147677"></a><h3 class="newpage"> Safety mechanism for loops </h3>
+<p><a name="147679"></a>There is a safety mechanism to prevent report processing from hanging due to an infinite loop. Any one evaluation of a formula can have at most 30,000 loop condition evaluations per formula evaluation. This will be explained by the example below. </p><p><a name="158972"></a>For example:</p><PRE><a name="147681"></a>Local NumberVar i := 1;
+<a name="147682"></a>While i &lt;= 100000 Do
+<a name="147683"></a>(
+<a name="147684"></a>   If i &gt; {movie.STARS} Then
+<a name="147685"></a>      Exit While;
+<a name="147686"></a>   i := i + 1
+<a name="147687"></a>);
+<a name="147688"></a>20
+</PRE><p><a name="147690"></a>If {movie.STARS} is greater than 30,000 then the loop condition (i &lt;= 100000) will be evaluated more than the maximum number of times and an error message is displayed. Otherwise the loop is OK.</p><p><a name="147692"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The safety mechanism applies on a per formula base, not for each individual loop. For example:</p>
+<PRE><a name="147694"></a>Local NumberVar i := 1;
+<a name="147695"></a>For i := 1 To 10000 Do
+<a name="147696"></a>(
+<a name="147697"></a>   Sin (i);
+<a name="147698"></a>);
+<a name="147700"></a>While i &lt;= 25000 Do
+<a name="147701"></a>(
+<a name="147702"></a>   i := i + 1;
+<a name="147703"></a>)
+</PRE><p><a name="147705"></a>The above formula also triggers the safety mechanism since the 30,000 refers to the total number of loop condition evaluations in the formula and this formula will have 10001 + 25001 such evaluations.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax61.html";
+var next = "21_crystalsyntax63.html";
+
+function setTopicID() { 
+      var number = "147677"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

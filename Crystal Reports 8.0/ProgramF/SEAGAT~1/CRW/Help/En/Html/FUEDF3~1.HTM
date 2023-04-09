@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Remainder (num, denom)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000055248"></a><h3 class="newpage"> Remainder (num, denom)</h3>
+<p><a name="1000650513"></a>Basic and Crystal syntax.</p><a name="1000055253"></a><h5>Arguments</h5><ul type="disc"><a name="1000055254"></a><li>Numerator is a fractional value.
+<a name="1000055255"></a><li>Denominator is a fractional value.
+</ul><a name="1000055256"></a><h5>Returns</h5><p><a name="1000055257"></a>Fractional Value</p><a name="1000055258"></a><h5>Action</h5><p><a name="1000055259"></a>Remainder <a href="glossary16.html#13498">returns</a> the remainder after the numerator (dividend) has been divided by the denominator (divisor). In a typical division situation, the program expresses a quotient as a whole number (if any) and up to six decimal places. When using Remainder, however, the program performs the division internally, determines the whole number quotient and the remainder, and returns only the remainder.</p><a name="1000055260"></a><h5>Typical uses</h5><p><a name="1000055261"></a>You can use this function in making conversions (feet to miles, units to grosses, etc.) You can also use it to select every nth item out of an array.</p><a name="1000055262"></a><h5>Examples</h5><p><a name="1000055263"></a>The following examples are applicable to Basic and Crystal syntax:</p><p><code><a name="1000055264"></a>Remainder(12,5) </code></p><p class="example"><a name="1000055265"></a>Returns 2.</p><p><code><a name="1000055266"></a>Remainder(16,5) </code></p><p class="example"><a name="1000055267"></a>Returns 1.</p><p class="code"><a name="1000780837"></a>Rem Basic syntax
+<br><a name="1000780840"></a>If Remainder ({file.EXAM#}, 7) = 0 Then
+<br><a name="1000780841"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = "*****"
+<br><a name="1000780851"></a>End If
+<br><a name="1000780838"></a>
+<br><a name="1000780834"></a>//Crystal syntax
+<br><a name="1000780825"></a>If Remainder({file.EXAM#}, 7) = 0 Then
+<br><a name="1000404068"></a>&nbsp;&nbsp;&nbsp;&nbsp;"*****" 
+<br><a name="1000754975"></a>Else
+<br><a name="1000404069"></a>&nbsp;&nbsp;&nbsp;&nbsp;"" 
+</p><p class="example"><a name="1000055269"></a>This <a href="glossary7.html#13307">flag</a>s every 7th exam for grading by a second party.</p><p><code><a name="1000055270"></a>ToText(Truncate({file.DAYS}/7)) + " week(s), " + ToText(Remainder({file.DAYS},7)) + " day(s)" </code></p><p class="example"><a name="1000055271"></a>Returns "9 week(s), 1 day(s)". Converts days to weeks and days. For example, if the field had a value of 64 days, the formula would return the value of "9 week(s), 1 day(s)."</p><a name="1000055272"></a><h6>Related topics</h6><p><a name="1000780813"></a><a href="OperatorsHelp9.html#1000026081">Modulus (x Mod y)</a></p><p><a name="1000055273"></a><a href="19_introformulas43.html#305254">Formula 13</a></p><p><a name="1000055274"></a><a href="19_introformulas47.html#305487">Formula 17</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp8.html";
+var next = "functionshelp10.html";
+
+function setTopicID() { 
+      var number = "1000055248"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

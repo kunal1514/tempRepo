@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>SQL stored procedures and parameter fields </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="162243"></a><h3 class="newpage"> SQL stored procedures and parameter fields </h3>
+<p><a name="149994"></a>Seagate Crystal Reports supports designing reports based on stored procedures in SQL databases. Additionally, the Report Designer allows you to create parameter fields in the report itself. Both stored procedures and parameter fields can prompt users at runtime for a value to base the report on. For example, a salesperson may want to only see sales information for their region. When they request the report, the report can prompt the salesperson to enter a region name. The report then delivers data just for that region.</p><p><a name="161912"></a>To prevent users from specifying their own values for parameter fields or stored procedures, use the PROMPT# command when specifying the URL of a report. PROMPT# lets you specify values for one or more parameter fields in a report. Alternately, you can design your own web<nobr>-b</nobr>ased forms that accept user input and dynamically create the URL that includes the PROMPT# parameter and value.</p><p><a name="150004"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Users should not surround parameter values with quotation marks. All values are sent to the report as strings, regardless of the type of data. Parameters that expect numeric values interpret the string received when necessary.</p>
+<p><a name="150005"></a>The Web Component Server does not validate any parameter values you specify for stored procedures or parameter fields. If the value you pass to the parameter is invalid, passing text information when a number is expected, for example, an error is not returned to the web browser. In addition, the Web Component Server does not allow you to change the format expected by parameters. Be sure to test any web site that accesses reports with stored procedures or parameter fields before allowing users to request such reports.</p><p><a name="150006"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Parameter fields and SQL stored procedures limit the effectiveness of report caching and job sharing. Since each report containing stored procedures or parameter fields may generate a different set of data every time it is requested, multiple requests for the same report may not be distributable among multiple users.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerCommands12.html";
+var next = "WebServerCommands14.html";
+
+function setTopicID() { 
+      var number = "162243"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

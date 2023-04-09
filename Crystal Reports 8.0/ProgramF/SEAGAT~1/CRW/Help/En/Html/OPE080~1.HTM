@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Not Equal operator</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000036869"></a><h3 class="newpage"> Not Equal operator</h3>
+<p><a name="1000028525"></a>Basic and Crystal syntax.</p><a name="1000022015"></a><h5>Usage</h5><p><code><a name="1000022016"></a>x&lt;&gt;y</code></p><p class="example"><a name="1000022018"></a>x is not equal to y.</p><p><a name="1000022021"></a>The Not Equal operator tells the program to evaluate an expression (x&lt;&gt;y) and return a TRUE (if x is not equal to y) or FALSE (if x is equal to y).</p><a name="1000022023"></a><h5>Examples</h5><p><a name="1000022024"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000022025"></a>{orders.ORDER AMOUNT} &lt;&gt; 400</code></p><p class="example"><a name="1000022026"></a>TRUE, where {orders.ORDER AMOUNT} is equal to 200 or {orders.ORDER AMOUNT} is equal to 401, etc.</p><p><code><a name="1000022027"></a>{orders.ORDER AMOUNT} &lt;&gt; 400</code></p><p class="example"><a name="1000022028"></a>FALSE, where {orders.ORDER AMOUNT} is equal to 400.</p><p><code><a name="1000022029"></a>{file.DAY} &lt;&gt; "Thursday"</code></p><p class="example"><a name="1000022030"></a>TRUE, when {file.DAY} = "Friday".</p><p><code><a name="1000022031"></a>{file.DAY} &lt;&gt; "Thursday"</code></p><p class="example"><a name="1000022032"></a>FALSE, when {file.DAY} = "Thursday".</p><p><code><a name="1000022033"></a>{file.ONHAND} &lt;&gt;0</code></p><p class="example"><a name="1000022034"></a>TRUE, where the <a href="glossary20.html#318757">value</a> of {file.ONHAND} is 10 or -5.</p><p><code><a name="1000028536"></a>{file.ONHAND} &lt;&gt;0</code></p><p class="example"><a name="1000028537"></a>FALSE, where the value of {file.ONHAND} is zero.</p><p><code><a name="1000028538"></a>{file.AVAILABLE} - {file.USED} &lt;&gt;10</code></p><p class="example"><a name="1000022038"></a>TRUE, where the value of the {file.AVAILABLE} field less the value of the {file.USED} field gives a result other than 10.</p><p><code><a name="1000022039"></a>{file.AVAILABLE} - {file.USED} &lt;&gt;10</code></p><p class="example"><a name="1000022040"></a>FALSE, where it gives a value of 10.</p><a name="1000022041"></a><h5>Comments</h5><p><a name="1000022042"></a>This operator is often used with <a href="OperatorsHelp56.html#1000038617">If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operators</a>. For example in Crystal syntax:</p><p class="code"><a name="1000022043"></a>If {file.SEX} &lt;&gt; "M" Then
+<br><a name="1000047008"></a>&nbsp;&nbsp;&nbsp;&nbsp;"FEMALE"
+<br><a name="1000047009"></a>Else
+<br><a name="1000047010"></a>&nbsp;&nbsp;&nbsp;&nbsp;"MALE"
+</p><p class="example"><a name="1000022045"></a>Prints the word "FEMALE" if the value in the {file.SEX} field is not equal to "M", and prints the word "MALE" in all other situations.</p><a name="1000022046"></a><h6>Related topics</h6><p><a name="1000022054"></a><a href="19_introformulas35.html#305994">Formula 5</a></p><p><a name="1000022058"></a><a href="19_introformulas41.html#305098">Formula 11</a></p><p><a name="1000022062"></a><a href="19_introformulas45.html#305354">Formula 15</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp15.html";
+var next = "OperatorsHelp17.html";
+
+function setTopicID() { 
+      var number = "1000036869"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>CTime</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000570720"></a><h3 class="newpage"> CTime</h3>
+<p><a name="1000706262"></a>Basic and Crystal syntax.</p><p><a name="1000706267"></a>The <a href="functionshelp110.html#1000645674">TimeValue</a> and <a href="functionshelp107.html#1000686634">Time</a> functions are equivalent to CTime. However, Time can only be used in Crystal syntax since it is a type name in Basic syntax.</p><a name="1000570721"></a><h5>Overloads</h5><ul type="disc"><a name="1000570722"></a><li>CTime (number)
+<a name="1000570723"></a><li>CTime (string) 
+<a name="1000570724"></a><li>CTime (dateTime)
+<a name="1000570725"></a><li>CTime (HH, MM, SS)
+</ul><a name="1000752211"></a><h5>Arguments</h5><p><a name="1000752231"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><P><a name="1000752214"></a>CTime (number)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000752216"></a><li>Returns<strong> </strong>a Time value given a number in units of 24 hours
+<a name="1000756474"></a><li>number can be fractional or negative as well
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000752218"></a>CTime (string)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000752220"></a>Returns a Time value that represents the time, given a String expression specifying a time from 0:00:00 (12:00:00 A.M.) to 23:59:59 (11:59:59 P.M.), inclusive.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000752222"></a>CTime (dateTime)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000752224"></a>DateTime is a DateTime value.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000752226"></a>CTime (hour, min, sec)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000752228"></a><li>Hour is a whole number representing an hour of the day.
+<a name="1000752229"></a><li>Min is a whole number representing a minute.
+<a name="1000752230"></a><li>Sec is a whole number representing a second.
+</ul></td></tr>
+
+</Table></p>
+<a name="1000570737"></a><h5>Returns</h5><p><a name="1000570738"></a>A Time value.</p><a name="1000570739"></a><h5>Action</h5><p><a name="1000570740"></a><strong>CTime (</strong><strong>number</strong><strong>) </strong>converts the given number to a Time value; the given number is in units of 24 hours, can be fractional or negative as well.</p><p><a name="1000570742"></a><strong>CTime (</strong><strong>string</strong><strong>)</strong> converts and returns a time given a string that identifies a Time value.</p><p><a name="1000570744"></a><strong>CTime (</strong><strong>dateTime</strong><strong>) </strong>converts and returns a time given a DateTime value. </p><p><a name="1000570746"></a><strong>CTime (</strong><strong>hh, mm, ss</strong><strong>) </strong>converts and returns a time given the arguments of the hour, minute and seconds.</p><a name="1000570747"></a><h5>Examples</h5><p><a name="1000570748"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p class="code"><a name="1000570749"></a>CTime (.2) 
+<br><a name="1000570750"></a>CTime (1.2)
+</p><p class="example"><a name="1000570751"></a>Both return the same value 4:48:00 a.m.</p><p><code><a name="1000570752"></a>CTime (-.2)</code></p><p class="example"><a name="1000570753"></a>Returns 7:12:00 pm</p><p><code><a name="1000570754"></a>CTime ("Jan. 6, 1999 2:30pm")</code></p><p class="example"><a name="1000570755"></a>Returns 2:30:00 pm</p><p><code><a name="1000570756"></a>CTime (#Feb. 24, 1999 2:40pm#)</code></p><p class="example"><a name="1000570757"></a>Returns 2:40:00 pm</p><p><code><a name="1000570758"></a>CTime (18, 30, 30)</code></p><p class="example"><a name="1000570759"></a>Returns 6:30:30 pm</p><a name="1000570760"></a><h5>Comments</h5><p><a name="1000570762"></a>You can use the IsTime function to check if a String argument can be converted to a Time before doing the actual conversion. That way, if the conversion cannot be done, you can handle the situation appropriately. </p><a name="1000706279"></a><h6>Related topics</h6><p><a name="1000706296"></a><a href="functionshelp113.html#1000536658">TimeSerial (hour, minute, second)</a></p><p><a name="1000782293"></a><a href="functionshelp115.html#1000781158">IsTime</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp162.html";
+var next = "functionshelp164.html";
+
+function setTopicID() { 
+      var number = "1000570720"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

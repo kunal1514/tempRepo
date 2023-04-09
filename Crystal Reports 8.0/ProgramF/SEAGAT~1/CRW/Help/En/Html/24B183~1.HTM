@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Working with databases</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="395209"></a><h2 class="newpage">Working with databases</h2><p><a name="385166"></a>This section introduces several common procedures related to accessing database files from within Seagate Crystal Reports. Where practical, step<nobr>-b</nobr>y<nobr>-s</nobr>tep instructions are provided.</p><a name="386161"></a><h3>Using Access queries</h3>
+<a name="29488"></a><h4>Opening Access queries through DAO</h4><p><a name="14466"></a>Microsoft Access queries can be used in Seagate Crystal Reports as separate data sets, just like Access tables. When you open an Access database through the DAO engine (see <a href="25_access_sources9.html#116245">Microsoft Access</a>), any queries in the database can automatically be read.</p><a name="386170"></a><h6>To open an Access query through DAO</h6><ol>
+<a name="14474"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_new.gif">
+
+
+On the Standard toolbar, click <kbd>New</kbd>.
+<p class="indent"><a name="410404"></a>The Seagate Crystal Report Gallery appears.</p><p><a name="470624"></a> <img src="images/db_rptg1.gif">
+
+
+</p>
+<a name="470625"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>As a Blank Report</kbd> and then <kbd>OK</kbd>.
+<a name="470626"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">In the Data Explorer dialog box, locate, highlight, and then expand the Microsoft Access database (*.mdb) file that contains the query you want to use in your report.
+<p class="indent"><a name="417591"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If your database requires a user name and password, or any other log on information, a log on dialog box appears.</p>
+<a name="316305"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Highlight the query and any tables you want to include in your report and click <kbd>Add</kbd>.
+<a name="407656"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Close</kbd> when you are finished with the Data Explorer dialog box.
+<p class="indent"><a name="316308"></a>The Field Explorer dialog box appears with <EM>Database Fields</EM> selected and expanded.</p><p class="indent"><a name="407660"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The Visual Linking Expert dialog box appears first if you have selected several queries and tables.</p>
+<p class="indent"><a name="177172"></a>All of the queries and tables you highlighted from your Access database appear in the Field Explorer dialog box.</p><a name="316334"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Locate your query in the <kbd>Database Fields</kbd> list, and double<nobr>-c</nobr>lick its name.
+<p class="indent"><a name="407736"></a>The query expands to display all the fields it contains.</p><a name="14502"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Highlight any fields you want to use in your report and add them to the Design tab.
+</ol>
+<p><a name="350423"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>You cannot use Access Action queries or Update queries in Seagate Crystal Reports. However, you can use Access Select queries and Cross<nobr>-t</nobr>ab queries.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases41.html";
+var next = "24_under_databases43.html";
+
+function setTopicID() { 
+      var number = "395209"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

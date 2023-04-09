@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>If-Then-Else operators</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000038617"></a><h3 class="newpage"> If-Then-Else operators</h3>
+<a name="1000030484"></a><h4>Basic Syntax</h4><a name="1000045631"></a><h5>Usage</h5><p><a name="1000054490"></a>There are 2 kinds of If statements, the multi<nobr>-l</nobr>ine If, and the single<nobr>-l</nobr>ine If. Generally, it is better to use the multi<nobr>-l</nobr>ine If since it results in clearer formulas.</p><a name="1000054992"></a><h6>Multi-line If statements</h6><p class="code"><a name="1000054460"></a>If x Then
+<br><a name="1000054461"></a>&nbsp;&nbsp;&nbsp;&nbsp;statementsA
+<br><a name="1000054467"></a>End If
+</p><p class="example"><a name="1000054470"></a>If x is True then evaluate stamentsA.</p><p class="code"><a name="1000054471"></a>If x Then
+<br><a name="1000054472"></a>&nbsp;&nbsp;&nbsp;&nbsp;statementsA
+<br><a name="1000054473"></a>Else
+<br><a name="1000054474"></a>&nbsp;&nbsp;&nbsp;&nbsp;statementB
+<br><a name="1000054475"></a>End If
+</p><p class="example"><a name="1000054489"></a>If x is True then evaluate statementsA otherwise evaluate statementsB.</p><p class="code"><a name="1000054480"></a>If x Then
+<br><a name="1000054481"></a>&nbsp;&nbsp;&nbsp;&nbsp;statementsA
+<br><a name="1000054482"></a>ElseIf y Then
+<br><a name="1000054483"></a>&nbsp;&nbsp;&nbsp;&nbsp;statementsB
+<br><a name="1000054484"></a>Else
+<br><a name="1000054485"></a>&nbsp;&nbsp;&nbsp;&nbsp;statementsC
+<br><a name="1000054486"></a>End If
+</p><p class="indent"><a name="1000054494"></a>If x is True then evaluate statementsA; otherwise if y is True, evaluate statementsB; otherwise evaluate statementsC.</p><p><a name="1000054998"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font> </p>
+<ul type="disc"><a name="1000055177"></a><li>There can be 0 or more ElseIf clauses and either 0 or 1 Else clause. 
+<a name="1000055178"></a><li>The Else clause must be last.
+<a name="1000055183"></a><li>ElseIf is one word.
+<a name="1000055198"></a><li>Multi<nobr>-l</nobr>ine If statements must end in an End If.
+</ul><a name="1000055185"></a><h6>Single-line If statements</h6><p><code><a name="1000045632"></a>If x Then y Else z </code></p><p class="example"><a name="1000045633"></a>If x is true then do y. If x is not true (Else), do z.</p><a name="1000045634"></a><h5>Examples</h5><p><a name="1000045635"></a>The following example is applicable to Basic syntax:</p><p class="code"><a name="1000045907"></a>If {Employee.Dept} = "Sales" Then
+<br><a name="1000053925"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = {Employee.Salary} * 0.06
+<br><a name="1000053926"></a>Else
+<br><a name="1000053927"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = {Employee.Salary} * 0.04
+<br><a name="1000053928"></a>End If
+</p><p class="example"><a name="1000045912"></a>Assigns rate of salary increase based on an employee's department</p><a name="1000045658"></a><h5>Comments</h5><p><a name="1000045659"></a>The If part of the expression can include text, numbers, (Cust#&lt;"10000"), and <a href="glossary7.html#13326">formula</a>s ({@Formula}), where @Formula is Boolean. </p><a name="1000054389"></a><h6>Related topics</h6><p><a name="1000054458"></a>For full details on how to use the If statement, see:</p><p><a name="1000054450"></a><a href="20_basicsyntax49.html#132674">If statements</a> (Basic syntax)</p><p><a name="1000054454"></a><a href="20_basicsyntax50.html#132741">Single<nobr>-l</nobr>ine and multi<nobr>-l</nobr>ine If statements</a> (Basic syntax)</p><a name="1000030520"></a><h4>Crystal Syntax</h4><a name="1000013143"></a><h5>Usage</h5><p><code><a name="1000013144"></a>If x Then y Else z </code></p><p class="example"><a name="1000013145"></a>If x is true then do y. If x is not true (Else), do z.</p><a name="1000013146"></a><h5>Examples</h5><p><a name="1000013147"></a>The following example is applicable to Crystal syntax:</p><p class="code"><a name="1000013148"></a>If {customer.POSTAL CODE} &lt;= "49999" Then
+<br><a name="1000053929"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Blue Label"
+<br><a name="1000054146"></a>Else
+<br><a name="1000054147"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Ground" 
+</p><p class="example"><a name="1000013149"></a>Assigns method of shipping based on distance from ship point.</p><p class="code"><a name="1000013150"></a>If ToNumber ({file.ITEM}) &gt;= 2500 and ToNumber({file.ITEM}) &lt; 2600 Then
+<br><a name="1000054210"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Seasonal"
+<br><a name="1000054213"></a>Else
+<br><a name="1000054214"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+</p><p class="example"><a name="1000013151"></a>If statement includes an <strong>and </strong>operator for the <a href="functionshelp78.html#1000508281">ToNumber (numeric), ToNumber (string)</a> function.</p><p class="code"><a name="1000013152"></a>If {file.COUNT} &gt;= 25 Then
+<br><a name="1000054215"></a>&nbsp;&nbsp;&nbsp;&nbsp;{file.DISTRIBUTOR} * {file.COUNT}
+<br><a name="1000054216"></a>Else
+<br><a name="1000054217"></a>&nbsp;&nbsp;&nbsp;&nbsp;{file.DEALER} * {file.COUNT}
+</p><p class="example"><a name="1000013153"></a>Quantity ordered determines price list used.</p><p class="code"><a name="1000036604"></a>If {file.ONHAND}&gt;10 Then
+<br><a name="1000054218"></a>&nbsp;&nbsp;&nbsp;&nbsp;{file.ORDERED}
+<br><a name="1000054224"></a>Else 
+<br><a name="1000054219"></a>&nbsp;&nbsp;&nbsp;&nbsp;If {file.ORDERED} &lt; 5 Then
+<br><a name="1000054222"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{file.ORDERED}
+<br><a name="1000054223"></a>&nbsp;&nbsp;&nbsp;&nbsp;Else
+<br><a name="1000054225"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2
+</p><p class="example"><a name="1000036608"></a>Allocation based on quantity ordered using If<nobr>-T</nobr>hen<nobr>-E</nobr>lse <a href="glossary13.html#318617">nesting</a>.</p><p class="code"><a name="1000013157"></a>If PageNumber = 1 Then
+<br><a name="1000054226"></a>&nbsp;&nbsp;&nbsp;&nbsp;PrintDate
+<br><a name="1000054227"></a>Else
+<br><a name="1000054228"></a>&nbsp;&nbsp;&nbsp;&nbsp;CDate(0,0,0)
+</p><p class="example"><a name="1000013158"></a>Prints the print date (from the <a href="functionshelp193.html#1000582066">PrintDate</a> function on the first page, and prints nothing [as designated by the <a href="glossary6.html#28685">empty date</a> CDate(0,0,0)] on the remaining pages.</p><a name="1000013159"></a><h5>Comments</h5><ul type="disc"><a name="1000013162"></a><li>The If part of the expression can include text, numbers, (Cust#&lt;"10000"), and <a href="glossary7.html#13326">formula</a>s ({@Formula}), where @Formula is Boolean. 
+<a name="1000030542"></a><li>The Then and the Else parts, however, must both be of the same <a href="glossary5.html#22940">data type</a>: (Then text, Else text; Then number, Else number). Mixing text and number actions will result in an error message.
+</ul><a name="1000055204"></a><h6>Related topics</h6><p><a name="1000055205"></a>For full details on how to use the If statement, see:</p><p><a name="1000055209"></a><a href="21_crystalsyntax53.html#147318">If expressions</a> (Crystal syntax)</p><p><a name="1000055213"></a><a href="21_crystalsyntax55.html#147405">More details on If expressions</a> (Crystal syntax)</p><p><a name="1000030543"></a>Most formula examples use this operator. Select the formula of interest from the <a href="19_introformulas30.html#287844">Formulas In Action</a> index.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp55.html";
+var next = "OperatorsHelp57.html";
+
+function setTopicID() { 
+      var number = "1000038617"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

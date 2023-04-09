@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Creating custom groups</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="287558"></a><h3 class="newpage"> Creating custom groups</h3>
+<p><a name="33158"></a>Usually data is sorted based on the values from a field in the report. Sometimes, however, you may not want to group data based on the values found in one of the fields on your report. For example:</p><ul type="disc"><a name="33160"></a><li>The field you want to group on does not exist.
+<p class="indent"><a name="277679"></a>For example, your report may contain a City field and a State field, but no Country field, although you need to group by country.</p><a name="33161"></a><li>The field exists, but you do not want to group on the values in that field.
+<p class="indent"><a name="277680"></a>For example, you may have a Color field on your report that includes specific color names (Logan Green, Sky Blue, Emerald Green, Navy Blue, etc.) but you want all shades of each color to appear as a single group (Greens, Blues, Reds, etc.). In this case you can build custom groups and manually assign the records you want to be in each group.</p><a name="33162"></a><li>The field exists, but you want to select specific values or ranges of values for each group.
+<p class="indent"><a name="277681"></a>For example, you might want one group to contain records where gross sales are less than a certain value, a second group where gross sales are greater than a certain value, and a final group where gross sales fall between two values. In this case, you can build your groups using the same range of selection facilities that are available to you for building record selection queries.</p></ul><p><a name="288119"></a>Specified order grouping provides a solution to these custom sorting and grouping challenges. It enables you to create both the customized groups that will appear on a report and the records that each group will contain. The only limitation is that a record can be assigned to only one group.</p><p><a name="288137"></a>To follow a tutorial where you create custom groups to rank customers by the amount of business they did in the previous year, see <a href="08_sortgrouptotal12.html#274169">Grouping data in intervals</a>.</p><a name="288121"></a><h6>To create a custom group </h6><ol>
+<a name="277692"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/08_sortgrouptotal21a.gif">
+
+
+On the <strong>Insert</strong> menu, click <strong>Group</strong>.
+<p class="indent"><a name="277693"></a>The Insert Group dialog box appears.</p><a name="277699"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Select the field you want the data grouped by from the top drop<nobr>-d</nobr>own list.
+<p><a name="313172"></a> <img src="images/db_insertgroup_specorder.gif">
+
+
+</p>
+<a name="252684"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Select <strong>in specified order</strong> as your sort option from the second drop<nobr>-d</nobr>own list.
+<a name="287167"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">In the Change Group Options dialog box, enter the name of the group in the<strong> Named Group</strong> field.
+<a name="287825"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>New</strong>.
+<a name="277777"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">In the Defined Named Group dialog box, use the drop<nobr>-d</nobr>own lists to select the data to be part of the group.
+<a name="287851"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>&lt;New&gt;</kbd> tab to add more selection criteria to your specified group, if necessary.
+<a name="298749"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<a name="288157"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>New</strong> to create more custom groups as necessary.
+<a name="277786"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Click the <strong>Others</strong> tab to specify how you want to organize the data that is not part of the group(s) you defined.
+<a name="287837"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "08_sortgrouptotal5.html";
+var next = "08_sortgrouptotal7.html";
+
+function setTopicID() { 
+      var number = "287558"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

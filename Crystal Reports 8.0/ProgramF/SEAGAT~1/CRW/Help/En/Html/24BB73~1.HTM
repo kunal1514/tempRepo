@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Performance considerations for all reports</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="22989"></a><h4 class="newpage"> Performance considerations for all reports</h4><a name="22990"></a><h5>Consideration #1</h5><p><a name="23215"></a>With both data files and SQL databases, the program parses the entire selection formula and passes down whatever parts of the criteria it is able to translate (pass), wherever they may physically appear in the formula. Thus, if the formula finds criteria it can pass, then criteria that it cannot, then criteria that it can, it passes down the first part, skips the second, and then passes down the third.</p><ul type="disc"><a name="19033"></a><li>In the case of data files, the program passes down the criteria that it can to the database translation layer.
+<a name="17693"></a><li>In the case of SQL databases, the program passes down to the server the criteria that it can in the form of a WHERE clause.
+</ul><p><a name="17695"></a>While there are exceptions, as a general rule the program can pass down any part of the record selection formula that compares a field with a constant. Typically, this means that it can pass down any kind of record selection criteria that can be set up in the Select Expert (equal to, one of, less than, greater than, less than or equal, greater than or equal, between, starting with, or like constant).</p><p><a name="17696"></a>There are two special selection formula situations that you need to consider. In these situations, the record selection formula includes multiple conditions, some of which can be passed down while others cannot.</p><ul type="disc"><a name="17697"></a><li>AND situations
+</ul><PRE><a name="158708"></a>{customer.REGION} = "CA" and
+<a name="383935"></a>{customer.CUSTOMER ID}[3 to 5] = "777")
+</PRE><p class="example"><a name="158709"></a>In this situation, the program sees that it can pass down the condition before the And operator but not the condition after. Since the only records that will meet the second condition will have to meet the first as well, the program passes down the first condition, retrieves the data set that satisfies the condition, and then applies the second condition only to the retrieved data. The rule for AND situations is that the program passes down whatever conditions it can.</p><p class="indent"><a name="348264"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If all of the conditions in an AND situation can be satisfied on the server or in the database DLL, the program passes them all down.</p>
+<ul type="disc"><a name="150769"></a><li>OR situations
+</ul><PRE><a name="150770"></a>{customer.REGION} = "CA" or
+<a name="383946"></a>{customer.CUSTOMER ID}[3 to 5] = "777")
+</PRE><p class="example"><a name="74593"></a>In this situation, the program also sees that it can pass down the condition before the Or operator but not the condition after. Since there are records that can satisfy the second condition without satisfying the first, passing the first condition down does not make any sense because it will retrieve an incomplete data set. In other words, even if it retrieves all the data that satisfies the first condition, it will still have to retrieve all the data in the table(s) before it can apply the second condition in the Report Designer. Thus, instead of duplicating parts of the data retrieval, the program passes nothing down. It retrieves all the data and then runs both tests in the Report Designer. The rule for OR situations is that the program either passes down all the tests, or none of the tests.</p><p class="indent"><a name="348290"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If all the tests in an OR situation can be performed on the server or in the database DLL, the program passes them all down.</p>
+<a name="17703"></a><h5>Consideration #2</h5><p><a name="23218"></a>To make certain the program can use the index on Table A to enhance performance, make certain:</p><ul type="disc"><a name="17704"></a><li>There is a selection formula.
+<a name="17705"></a><li>There are range limits in the selection formula on the key (indexed) field in Table A.
+<a name="17706"></a><li>Use Indexes is selected in the Options dialog box. 
+</ul><a name="17707"></a><h5>Consideration #3</h5><p><a name="23221"></a>If the fields you are using from Table A are not indexed, but there is an indexed field that you can use in your record selection request, use that field. For example, assume that you have three products (Product 1, Product 2, and Product 3) and you want to identify all sales of Product 2 in the U.S. There is no index on the Product field but there is an index on the Order Date field. Since you know that Product 2 did not begin shipping until July of 1995, you can improve speed by limiting your report to orders placed in and after July 1995 using the selection formula. In such a case, the program uses the Order Date index to retrieve only those orders from July 1995 and afterward (a small subset of the entire database) and then searches for the occurrences of Product 2 in that subset, not in the entire database.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases11.html";
+var next = "24_under_databases13.html";
+
+function setTopicID() { 
+      var number = "22989"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 5</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="305994"></a><h3 class="newpage"> Formula 5</h3>
+<a name="305995"></a><h4>Operators/Functions Used</h4><p><a name="304669"></a>Nested formulas, If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Subtract (-), Not equal to (&lt;&gt;), Less than (&lt;), Concatenate (+), ToText, To dollar ($), Negate (-()), Parentheses ()</p><a name="304670"></a><h4>Formula Purpose</h4><p><a name="304671"></a>A company wants to stimulate new credit sales for those customers with open credit limits and to make customers who are over their limits aware of their over<nobr>-l</nobr>imit balances. To do this the company wants to include a brief "PS" to its already customized (company name, contact name, etc.) sales letter to each customer. </p><a name="304672"></a><h4>Formula</h4><PRE><a name="304673"></a>If {file.CREDIT LIMIT} - {file.BALANCE} &lt;&gt; 0 Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If {file.CREDIT LIMIT} - {file.BALANCE} &lt;0 Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Your account is currently $" + <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ToText($ (-{file.CREDIT LIMIT} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- {file.BALANCE})) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ " over limit. Please contact us if you would <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;like to discuss an increase in your credit limit." <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Your account has $" + ToText($({file.CREDIT 
+LIMIT}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-{file.BALANCE})) + " available credit. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can order today with no additional paperwork!" <br>
+Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;""
+</PRE><a name="304674"></a><h4>Result</h4><p><a name="304700"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="304677"></a>CreditLimit
+
+</td><td align="left" valign="TOP"><a name="304679"></a>Balance
+
+</td><td align="left" valign="TOP"><a name="304681"></a>Result
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304683"></a>$5000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304685"></a>$2250</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304687"></a>"Your account has $2750.00 available credit. You can order today with no additional paperwork!"</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304689"></a>$3000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304691"></a>$3457</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304693"></a>"Your account is currently $457.00 over limit. Please contact us if you would like to discuss an increase in your credit line."</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304695"></a>$7500</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304697"></a>$7500</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304699"></a>&#171;no message&#187;</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="304701"></a><h4>Explanation</h4><ul type="disc"><a name="304702"></a><li>The formula uses two If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operators, one nested inside the other.
+<a name="304703"></a><li>The first begins with the first word If and does not end until the Else at the very end of the expression. This expression says, essentially, "If the credit limit less the balance is less than zero, then print the message based on the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse expression that follows (the expression inside the parentheses). If the credit limit less the balance equals zero, print nothing. Think of this first If<nobr>-T</nobr>hen<nobr>-E</nobr>lse expression in this way: If {file.CREDIT LIMIT} - {file.BALANCE} &lt;&gt; 0 then (do what is in the parentheses ) Else "".
+<a name="304704"></a><li>The second If<nobr>-T</nobr>hen<nobr>-E</nobr>lse expression begins "If {file.CREDIT LIMIT}" and ends after the word "paperwork!". This expression says: "If the credit limit less the balance is less than zero, then print the over limit message, otherwise (in those cases where the result is greater than zero) print the available credit message. 
+<a name="304705"></a><li>The Then expression ToText($(- {file.CREDIT LIMIT} - {file.BALANCE})) means:
+<ul type="disc"><ul type="disc"><a name="304706"></a><li>_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first use the Subtract operator (-) to subtract {file.BALANCE} from {file.CREDIT LIMIT}.</ul></ul><a name="304707"></a><li>Since this part of the expression will only be activated if the result is a negative number (&lt;0), the formula uses the Negate operator (-()) to multiply the result by -1 to return a positive number.
+<a name="304708"></a><li>The To Dollar operator ($) assures that the result will be printed in a dollar and cents format with two decimal places.
+<a name="304709"></a><li>The ToText function takes the resulting number and converts it to text characters so it can be used in the over limit message.
+<a name="304710"></a><li>The Else expression ToText($({file.CREDIT LIMIT}-{file.BALANCE})) differs only slightly from the Then expression above. This expression does not use the Negate operator (-()) because this expression {file.CREDIT LIMIT}-{file.BALANCE} will be used only in those cases where the result is a positive number (&gt;0).
+<a name="304711"></a><li>The Concatenate operator (+) joins the text strings (enclosed in quotation marks) with the number (converted to text using the ToText function) to produce the appropriate message (the Then message [over limit] or the Else message [available credit]).
+<a name="304712"></a><li>Many sets of parentheses are used to control the order of calculation of this formula.
+<a name="304713"></a><li>The characters "" at the very end of the formula are the representation of an empty string. This means print nothing.
+</ul><a name="304714"></a><h4>Comments</h4><p><a name="304715"></a>Note the leading space in the string " over limit." Note too, the leading space in the string <br>" available credit." These spaces are purposely entered into the formula so a space occurs between the dollar figure and the words in each message.</p><a name="304716"></a><h6>Related topics</h6><p><a name="304720"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas34.html";
+var next = "19_introformulas36.html";
+
+function setTopicID() { 
+      var number = "305994"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

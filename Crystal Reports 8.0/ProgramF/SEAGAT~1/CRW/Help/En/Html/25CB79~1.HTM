@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Direct access database files</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="308484"></a><h2 class="newpage">Direct access database files</h2><p><a name="30861"></a>Seagate Crystal Reports can access many of the most common PC database formats directly. In other words, the program has the built<nobr>-i</nobr>n capabilities needed to directly open database files and tables designed in dBASE, FoxPro, Clipper, Btrieve, Paradox, and Microsoft Access, among others. This functionality exists as soon as you install Seagate Crystal Reports. Once the program is installed on your system, you can immediately begin creating reports based on these databases by selecting the appropriate file.</p><a name="1722"></a><h3>Advantages</h3>
+<p><a name="30888"></a>Accessing the database directly is the fastest way to read the data. Seagate Crystal Reports only needs to talk to a single data access layer that provides contact with the data. Report results can be obtained quickly in almost any system environment.</p><p><a name="71493"></a>In addition, data access is simple. Direct access database files are point<nobr>-a</nobr>nd<nobr>-c</nobr>lick data sources. You need only select the required database files, and Seagate Crystal Reports will read all the stored data.</p><a name="71494"></a><h3>Disadvantages</h3>
+<p><a name="1728"></a>When you access a database directly through Seagate Crystal Reports, only that database type can be used by the report. You can not switch to a different type of database or table without creating a new report.</p><p><a name="21800"></a>For example, if you design a report based on Btrieve data, you can not change the tables accessed by the report to Access data. Seagate Crystal Reports communicates with Btrieve data using Btrieve<nobr>-s</nobr>pecific syntax, a syntax that is not compatible with Access data.</p><p><a name="21803"></a>If you access data through ODBC, on the other hand, the syntax used is always the SQL language, regardless of the actual database type. See <a href="25_access_sources28.html#339300">ODBC data sources</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources4.html";
+var next = "25_access_sources6.html";
+
+function setTopicID() { 
+      var number = "308484"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

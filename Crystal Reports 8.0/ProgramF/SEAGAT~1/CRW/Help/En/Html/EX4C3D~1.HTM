@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Common tab</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000083824"></a><h3 class="newpage"> Common tab</h3>
+<p><a name="1000083827"></a>Use the Common tab to set properties such as: visible, new page before, keep together, etc. for a desired section.</p><a name="1000083832"></a><h5>Free-Form Placement</h5><p><a name="1000083833"></a>When you select this check box, the program enables you to place objects in a free<nobr>-f</nobr>orm environment similar to that of a drawing program. When this option is not selected, objects are placed at fixed points using an underlying grid that can be modified according to your specifications (see <a href="dialogs112.html#1000219785">Layout tab</a>).</p><a name="1000083834"></a><h5>Hide (Drill-Down OK)</h5><p><a name="1000083835"></a>Select this check box if you do not want the section to print, but you want the section contents to be available for drill<nobr>-d</nobr>own.</p><a name="1000083836"></a><h5>Suppress (No Drill-Down)</h5><p><a name="1000083837"></a>Select this check box if you do not want the section to print, and you do not want the section contents to be available for drill<nobr>-d</nobr>own.</p><a name="1000083838"></a><h5>Print at Bottom of Page</h5><p><a name="1000083839"></a>This check box causes each group value to print only at the bottom of a page. (Details continue to print in their normal positions.) The command is useful for printing invoices and other reports where you want a single group (i.e., line items grouped by order number) to appear on a page and the value for that group (subtotal, summary field, etc.) to print only at the bottom of the page.</p><a name="1000083840"></a><h5>New Page Before</h5><p><a name="1000083841"></a>New Page Before is an available format property for Group (header and footer) and Details sections. When you select this option, the program inserts a page break before it prints the section. The page break thus comes before:</p><ul type="disc"><a name="1000083842"></a><li>the group (if using the option with a Group footer section), or
+<a name="1000083843"></a><li>each report record (if using the option with a Details section).
+</ul><p><a name="1000083844"></a>The Page Header and Page Footer appear on each page. If you have a subtotal or summary field in a Group Footer section, you can use the New Page Before option to put these values on pages following the value being totaled.</p><a name="1000083845"></a><h5>New Page After</h5><p><a name="1000083846"></a>When this check box is selected, the program inserts a page break after it prints the section.</p><ul type="disc"><a name="1000083847"></a><li>The Page Header and Page Footer appear on each page.
+<a name="1000083848"></a><li>Use New Page After in the Group footer section to print each group on a separate page.
+</ul><a name="1000083849"></a><h5>Reset Page Number After</h5><p><a name="1000083850"></a>Resets the page number to one (1) for the following page, after it prints a group total. When this option is used in conjunction with Print at Bottom of Page, the program prints a single <a href="glossary8.html#13342">group</a> on a page, prints the group value at the bottom of the page, and resets the page number to 1 for the next page. This option is useful whenever you are printing multiple reports from a single file (i.e., invoices), and you want each report to be numbered beginning with Page 1.</p><a name="1000083854"></a><h5>Keep Together</h5><p><a name="1000083855"></a>When this check box is selected, the program keeps all the lines of the section together, either on the current page (if there is room) or on the next (if not). </p><p><a name="1000083856"></a>In a customer list, for example, data on a single customer (from a single record or linked records) may extend over several lines. If the standard page break falls within the data for a customer, the data will be split, part on one page, part on the next. But with Keep Together, the program inserts the page break before the record begins so that all the data will be printed together, on the following page.</p><p><a name="1000083857"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>This option does not work with multi<nobr>-l</nobr>ine string or memo fields. A page break may occur in the middle of a multi<nobr>-l</nobr>ine field.</p>
+<a name="1000083858"></a><h5>Suppress Blank Section</h5><p><a name="1000083859"></a>When you select this check box, the program hides the report section if it is blank, and prints it if it is not.</p><a name="1000083860"></a><h5>Underlay Following Sections</h5><p><a name="1000083861"></a>Select this check box if you want the selected object to underlay the following section(s) when it prints.</p><a name="1000083862"></a><h5>Format with Multiple Columns</h5><p><a name="1000083863"></a>When you select this, the <a href="experts65.html#1000734403">Layout tab</a> will appear.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "experts63.html";
+var next = "experts65.html";
+
+function setTopicID() { 
+      var number = "1000083824"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

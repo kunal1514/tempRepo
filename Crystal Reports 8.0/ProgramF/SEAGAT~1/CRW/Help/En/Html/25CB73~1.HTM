@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Three layers</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="30901"></a><h3 class="newpage"> Three layers</h3>
+<p><a name="30902"></a>Direct access of database files from Seagate Crystal Reports requires three layers: </p><ul type="disc"><a name="72233"></a><li><a href="25_access_sources6.html#1740">Seagate Crystal Reports</a>
+<a name="72234"></a><li><a href="25_access_sources6.html#11328">Data translation</a>
+<a name="72235"></a><li><a href="25_access_sources6.html#1748">Database</a>.
+<p><a name="355293"></a> <img src="images/3layers.gif">
+
+
+</p>
+</ul><p><a name="59374"></a>Seagate Crystal Reports uses the data translation layer to talk to the database and access its data.</p><a name="1740"></a><h4>Seagate Crystal Reports</h4><p><a name="11327"></a>Seagate Crystal Reports operates as an interface through which you can format, arrange, select, and sort the data stored in database files. It obtains data by communicating with one or more files in the data translation layer that can actually read the database. Since Seagate Crystal Reports can work with many forms of data, it must rely on other files in order to work directly with the data. Seagate Crystal Reports can then use a native method of communication to talk to the translation files.</p><a name="11328"></a><h4>Data translation</h4><p><a name="11329"></a>Data is translated through a set of DLLs specific to Seagate Crystal Reports. The program uses the DLLs specific to a certain data type to understand how data is organized for that type and to present it correctly when your report is printed, previewed, or exported.</p><p><a name="304948"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Seagate Crystal Reports comes with all the data translation files for each of the direct access database types that it supports. For complete information on all required files, refer to the Runtime File Requirements online Help (Runtime.hlp).</p>
+<a name="1748"></a><h4>Database</h4><p><a name="1750"></a>The database file consists of one or more tables. Different DBMS applications store database information differently. For example, dBASE stores each database table as a separate file. Access, on the other hand, can store several tables, along with queries, macros, and other database elements, all in a single file.</p><p><a name="11698"></a>When Seagate Crystal Reports accesses a database file directly, it automatically retrieves information about all of the tables and fields in that file. You may not use all of the tables or fields, but the program will make them available to you. In other words, when a dBASE file is opened, only one table in the dBASE file is available. However, when an Access file is opened, every table in that file is available, even if you never use them all.</p><p><a name="304970"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Seagate Crystal Reports will also open queries in an Access database through the DAO engine or ODBC and will allow you to report on query fields, as with table fields. See <a href="25_access_sources10.html#1782">DAO</a> and <a href="25_access_sources35.html#98286">Access</a>.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources5.html";
+var next = "25_access_sources7.html";
+
+function setTopicID() { 
+      var number = "30901"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

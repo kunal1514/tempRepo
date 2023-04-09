@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Allow Reporting On dialog box</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="809121"></a><h2 class="newpage">Allow Reporting On dialog box</h2><p><a name="809135"></a>This dialog box only appears when you have selected the Reprompt user when connecting check box on the <a href="dialogs116.html#1000219871">Database tab</a> of the <a href="dialogs111.html#1000219765">Options dialog box</a>. When you log on to a server and add a table by using the <a href="COMMANDS117.html#131445">Add Database to Report command</a> from the Database menu, the Allow Reporting On dialog box appears.</p><p><a name="809137"></a>Use the options in this dialog box to select the data that you want to report on. </p><a name="1000160317"></a><h5>Tables</h5><p><a name="1000160318"></a>When you select this check box, the program will report on database tables. This option is selected by default.</p><a name="809158"></a><h5>Views</h5><p><a name="1000223173"></a>When you select this check box, the program will report on virtual tables. This option is selected by default.</p><a name="1000223210"></a><h5>Synonyms</h5><p><a name="1000223211"></a>When you select this check box, the program will allow you to report on the virtual tables that are available on some hosts. This option is not selected by default.</p><a name="809162"></a><h5>System Tables</h5><p><a name="1000223179"></a>When you select this check box, the program will report on system tables. These tables are typically used by the system administrator only, but are available for use if you have the appropriate permissions. This option is not selected by default.</p><a name="809170"></a><h5>Procedures</h5><p><a name="809172"></a>When you select this check box, the program will allow you to report on the result sets from stored procedures (if you are using SQL systems that support stored procedures).</p><a name="1000326138"></a><h5>Table Name LIKE</h5><p><a name="1000326139"></a>This box allows you to enter the SQL LIKE function to specify the kinds of table names you want to appear in the <a href="dialogs36.html#1000205890">Data Explorer</a>. You can use the underscore character (_) or the percent sign character (%) as <a href="glossary21.html#318762">wildcard</a>s with this function. The underscore character specifies any single character while the percent sign signifies any character string. For example, DAV_ would match DAVE but not DAVI; whereas DAV% would match both DAVE and DAVID. A table name Like C% would display only those tables that have a table name beginning with the letter C.</p><a name="809178"></a><h5>Creator LIKE</h5><p><a name="809180"></a>This box works exactly like Table name Like, except that the LIKE function is used to select the Creator (or Alias) of the table, not the table name itself. For example, Creator Like C% would display only those tables that had an owner beginning with the letter C.</p><a name="1000223217"></a><h5>COUNT the tables first</h5><p><a name="1000223225"></a>This option will count the tables and give you a warning if there are more than the specified number.</p><a name="1000223145"></a><h6>Related topics</h6><p><a name="1000223149"></a><a href="dialogs116.html#1000219871">Database tab</a></p><p><a name="1000223153"></a><a href="dialogs111.html#1000219765">Options dialog box</a></p><p><a name="1000223154"></a><a href="dialogs36.html#1000205890">Data Explorer</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs2.html";
+var next = "dialogs4.html";
+
+function setTopicID() { 
+      var number = "809121"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

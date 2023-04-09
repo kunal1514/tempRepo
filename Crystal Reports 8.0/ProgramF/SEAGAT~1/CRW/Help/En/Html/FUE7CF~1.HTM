@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DistinctCount (fld), DistinctCount (fld, condFld), DistinctCount (fld, condFld, cond), DistinctCount (x)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000468844"></a><h3 class="newpage"> DistinctCount (fld), DistinctCount (fld, condFld), DistinctCount (fld, condFld, cond), DistinctCount (x)</h3>
+<p><a name="1000666260"></a>Basic and Crystal syntax.</p><a name="1000468847"></a><h5>Arguments</h5><ul type="disc"><a name="1000468848"></a><li>fld is any valid database or formula field that can be evaluated by the function.
+<a name="1000468849"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000665019"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+<a name="1000468850"></a><li>x is an array of values that can be evaluated by the function being used.
+</ul><a name="1000468852"></a><h5>Returns</h5><p><a name="1000468853"></a>Fractional Number</p><a name="1000468854"></a><h5>Action</h5><p><a name="1000468855"></a>Enables you to get a distinct count of the values that appear in your report. For example:</p><ul type="disc"><a name="1000468856"></a><li>If a sales report includes all orders made by customers, you can compute the total number of distinct customers that appear in the report (a grand total distinct count), excluding any duplicate records. If a customer made more than one order, the duplicate occurrences of that customer are ignored. For information on this kind of distinct count, see <a href="functionshelp22.html#1000432407">SummaryFunction (fld)</a>.
+<a name="1000468857"></a><li>If you break orders into groups (for example, orders grouped by the state that they come from), you can compute the number of distinct customers per group (in this case, per state). Any customers that made more than one order and appear more than once in a group are only counted once. For information on this kind of distinct count, see <a href="functionshelp23.html#1000432439">SummaryFunction (fld, condFld)</a>.
+<a name="1000468858"></a><li>If you break orders into date or Boolean groups (for example, orders grouped by the month in which they were placed), you can compute the number of distinct customers in each group based on a particular change in the date or Boolean field (in this case, the number of customers that placed orders each month). If a customer placed more than one order within the month, duplicate instances of that customer are ignored. For information on this kind of distinct count, see <a href="functionshelp24.html#1000599837">SummaryFunction (fld, condFld, cond)</a>.
+<a name="1000468859"></a><li>If you specify a set of individual values, you can compute the number of distinct values in the set. Duplicate values in the set are only counted once. For information on this kind of distinct count, see <a href="functionshelp155.html#1000567809">Array summary functions (x)</a>.
+</ul><a name="1000468860"></a><h5>Examples</h5><p><a name="1000468861"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000468862"></a>DistinctCount({customer.REGION})</code></p><p class="example"><a name="1000468863"></a>Counts the number of different States represented in the Region field, ignores any repetitions.</p><p><code><a name="1000468864"></a>DistinctCount({customer.CITY}, {customer.REGION})</code></p><p class="example"><a name="1000468865"></a>Calculates the number of different cities in each State group.</p><p><code><a name="1000468866"></a>DistinctCount({orders.CUSTOMER ID}, {orders.ORDER DATE}, "weekly")</code></p><p class="example"><a name="1000468867"></a>Counts the number of different customers contacted, follow up contacts are excluded. Customers are separated into groups whenever the value in the Date field changes to a new week.</p><p><a name="1000742537"></a>The following example is applicable to Crystal syntax:</p><p><code><a name="1000468868"></a>DistinctCount([1,3,5,3,2,5]) </code></p><p class="example"><a name="1000468869"></a>Returns 4. Counts the number of distinct values in the array. Duplicate values are ignored.</p><p><a name="1000656662"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. </p>
+<p><a name="1000656665"></a>For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p><a name="1000468876"></a><h5>Comments</h5><p><a name="1000468878"></a>DistinctCount counts the number of distinct values in a field. Duplicate values are ignored.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp32.html";
+var next = "functionshelp34.html";
+
+function setTopicID() { 
+      var number = "1000468844"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

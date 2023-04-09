@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>GridRowColumnValue (name)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000690158"></a><h3 class="newpage"> GridRowColumnValue (name)</h3>
+<p><a name="1000690159"></a>Basic and Crystal syntax.</p><a name="1000690160"></a><h5>Arguments</h5><p><a name="1000690161"></a>name is a String value which is an Alias for Formulas. The Alias for Formulas is a name you have specified for a level of dimension in an OLAP grid or a cross<nobr>-t</nobr>ab. <a href="16_olap9.html#34632">See Formatting the grid.</a></p><a name="1000690162"></a><h5>Returns</h5><p><a name="1000690163"></a>Value of a level of dimension in an OLAP grid or cross<nobr>-t</nobr>ab, that has been specified by the argument, name. The type of the value thus depends on the type of the specified dimension.</p><a name="1000690164"></a><h5>Action</h5><p><a name="1000690165"></a>GridRowColumnValue returns the value of a specified level of dimension in an OLAP grid or cross<nobr>-t</nobr>ab.</p><a name="1000690166"></a><h5>Typical uses</h5><p><a name="1000690167"></a>To format cells under a level of dimension in an OLAP grid or cross<nobr>-t</nobr>ab, based on the value of that level of dimension. For instance, you can format the font color for cells in a level of dimension based on the value of that level of dimension. The attributes of a cell that you can format conditionally using a formula include: font, border, object positioning, etc. They are accessible through the Format Editor. <a href="11_format52.html#10043">See Conditional attribute properties.</a></p><a name="1000690168"></a><h5>Examples</h5><p><a name="1000690169"></a>The following example is applicable to both Crystal and Basic syntax:</p><p><a name="1000690178"></a>Assume an OLAP grid with Products in the rows, and Regions in the columns. </p><p><a name="1000690182"></a> <img src="images/WinGridGroupAlias1.gif">
+
+
+</p>
+<p><a name="1000690216"></a>Suppose you would like to use GridRowcolumnValue to conditionally format cells under Level 1 of the Regions dimension and Level 2 of the Products dimension. In particular, you want to format the font color of the total sales of individual products for all of Europe to be red, and that under North America to be blue.</p><ol>
+<a name="1000690217"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Set up an Alias for Formulas for Level 1 of the Regions dimension to be "Continent". (You can do so using the OLAP Report Expert or Format OLAP Grid Object command. <a href="16_olap9.html#34632">See Formatting the grid.</a>
+<p class="indent"><a name="1000690218"></a>After setting up the necessary Alias for Formulas, you can then express the formatting condition as: if GridRowColumnValue("Continent") returns "Europe", then you would like the font color of the cells for each Level 2 input of the Products dimension to be red, otherwise, since there are only two continents in this scenario, the font color should be blue. </p><a name="1000690219"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Click in the OLAP grid on one of the cells representing total sales for Europe for a particular (Level 2) product. 
+<p class="indent"><a name="1000690220"></a>The cells for all Level 2 inputs for Products combined with all Level 1 inputs for Regions are also selected. Formatting done to one of these cells will be carried over to all other selected cells. </p><a name="1000690221"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Use the Format Field command to enter a conditional formatting formula for the selected cells. <a href="11_format50.html#16791">See Working with conditional formatting.</a>
+<p class="indent"><a name="1000690222"></a>In Crystal syntax, you can enter a formula like:</p></ol>
+<p><code><a name="1000690223"></a>If GridRowColumnValue("Continent") = "Europe" Then crRed Else crBlue</code></p><p class="indent"><a name="1000690224"></a>In Basic syntax, the formula will be:</p><p><code><a name="1000690225"></a>If GridRowColumnValue("Continent") = "Europe" Then formula = crRed Else formula = crBlue</code></p><p class="indent"><a name="1000690241"></a>You will see the total sales of individual products for Europe highlighted in red, and the total sales of individual products for North America highlighted in blue.</p><p><a name="1000690245"></a> <img src="images/WinGridGroupAlias4.gif">
+
+
+</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp248.html";
+var next = "functionshelp250.html";
+
+function setTopicID() { 
+      var number = "1000690158"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

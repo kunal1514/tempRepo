@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>SQL stored procedures</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="385873"></a><h3 class="newpage"> SQL stored procedures</h3>
+<a name="386928"></a><h4>Selecting an SQL stored procedure and changing parameters </h4><ol>
+<a name="416612"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Choose <kbd>Options</kbd> from the <kbd>File</kbd> menu.
+<p class="indent"><a name="418434"></a>The Options dialog box appears.</p><p><a name="445406"></a> <img src="images/db_fopt3.gif">
+
+
+</p>
+<a name="373672"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Database</kbd> tab and make sure either the <kbd>Stored Procedures</kbd> or the <kbd>Reprompt user when connecting</kbd> check box is selected.
+<ul type="disc"><ul type="disc"><a name="14899"></a><li>Selecting <EM>Stored Procedures</EM> automatically displays any available stored procedures when you log on to an SQL database.<a name="14900"></a><li>Selecting <EM>Reprompt user when connecting </EM>displays the Allow Reporting On dialog box every time you select an ODBC data source. This dialog box provides the same options as the Explorer Options section on the Database tab of the Options dialog box, but provides those options for every ODBC data source you log on to.</ul></ul><a name="14902"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">In addition, you can specify <kbd>Table name LIKE</kbd> and <kbd>Owner LIKE</kbd> options if you wish.
+<ul type="disc"><ul type="disc"><a name="14903"></a><li><EM>Table name LIKE</EM> is based on the SQL LIKE clause. This option allows you to specify the kinds of table names you want to appear in the Choose SQL Table dialog box. You can use the underscore character (_) or the percent sign character (%) as wildcards with this function. The underscore character specifies any single character, while the percent sign signifies any character string. For example, DAV_ matches DAVE only, while DAV% matches DAVE and DAVID. Table name LIKE C% would display only those tables that have a table name beginning with the letter C.<a name="14904"></a><li><EM>Owner LIKE</EM> is also based on the SQL LIKE clause. The Owner LIKE option allows you to select the Owner (or Creator or Alias) of the table, not the table name itself. For example Owner LIKE C% would display only those tables that have an owner beginning with the letter C.<p class="indent"><a name="393756"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>For more information on the SQL LIKE clause, refer to your SQL documentation.</p>
+</ul></ul><a name="14906"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> to exit the Options dialog box.
+<a name="14907"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Create a new report based on the SQL database that contains the stored procedure you want to use.
+<a name="418569"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Double<nobr>-c</nobr>lick the ODBC data source for your SQL Server from the Data Explorer dialog box.
+<p class="indent"><a name="14917"></a>The SQL Server Login dialog box appears.</p><p><a name="443114"></a> <img src="images/db_sqlog.gif">
+
+
+</p>
+<a name="373725"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Enter the required information to log in.
+<a name="373726"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Options</kbd>.
+<p class="indent"><a name="14930"></a>The Options section of the SQL Server Login dialog box appears.</p><p><a name="443127"></a> <img src="images/db_sqlg2.gif">
+
+
+</p>
+<a name="373736"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Verify the settings for your SQL Server.
+<a name="416689"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd>.
+<p class="indent"><a name="418605"></a>If you toggled on the <EM>Reprompt user when connecting </EM>check box in the Options dialog box, the Allow Reporting On dialog box now appears. Otherwise, skip to Step 12.</p><p><a name="445515"></a> <img src="images/db_alwr2.gif">
+
+
+</p>
+<a name="418980"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Make sure the <kbd>Procedures</kbd> check box is selected and click <kbd>OK</kbd> when finished.
+<a name="418982"></a><li value="12&nbsp;&nbsp;&nbsp;&nbsp;">Highlight an SQL stored procedure and click <kbd>Add</kbd>.
+<p class="indent"><a name="443153"></a>The Enter Parameter Values dialog box appears.</p><p><a name="445553"></a> <img src="images/db_spip.gif">
+
+
+</p>
+<p class="indent"><a name="419051"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Under the native driver for MS SQL Server, stored procedure input parameters are limited to 64 characters, rather than 255.</p>
+<a name="419045"></a><li value="13&nbsp;&nbsp;&nbsp;&nbsp;">Highlight a parameter in the <kbd>Parameter Fields</kbd> list.
+<p class="indent"><a name="418991"></a>Set to NULL Value is selected by default. If you want to assign a value, clear the Set to NULL Value check box.</p><a name="418992"></a><li value="14&nbsp;&nbsp;&nbsp;&nbsp;">Assign a value by typing into the <kbd>Discrete Value</kbd> box and then click <kbd>OK</kbd>.
+<a name="418993"></a><li value="15&nbsp;&nbsp;&nbsp;&nbsp;">Repeat Steps 13 and 14 for each parameter that appears in the <kbd>Parameter Fields</kbd> list.
+<a name="418994"></a><li value="16&nbsp;&nbsp;&nbsp;&nbsp;">On the Data Explorer dialog box, click <kbd>Close</kbd>.
+<p class="indent"><a name="418995"></a>You can change parameter values at any time by choosing Stored Procedure Parameters from the Database menu.</p><a name="418996"></a><li value="17&nbsp;&nbsp;&nbsp;&nbsp;">Create your report using the fields from the stored procedure. Only the records that satisfy the parameter values you specified in the Enter Parameter Values dialog box are used in your report.
+</ol>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases51.html";
+var next = "24_under_databases53.html";
+
+function setTopicID() { 
+      var number = "385873"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

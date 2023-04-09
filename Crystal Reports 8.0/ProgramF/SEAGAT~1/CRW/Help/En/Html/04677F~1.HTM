@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Record Selection</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="118981"></a><h3 class="newpage"> Record Selection</h3>
+<p><a name="118985"></a>Seagate Crystal Reports allows you to limit or restrict the records that are to be included in a report. In this section you will learn how to:</p><ul type="disc"><a name="79633"></a><li>select the records you want included in the report
+<a name="79634"></a><li>save a report, including the selection criteria.
+</ul><p><a name="79635"></a>For example, it may be useful to have a customer list that only lists customers from the USA. The sample data contains records from the United States and International customers. It is easy to restrict lists like this using the Select Expert. See <a href="07_recordgroupsel.html#94547">Record Selection</a>.</p><a name="79637"></a><h4>Entering the selection criteria</h4><p><a name="79638"></a>When you scroll through the report, you will see that it contains information for customers from many different countries. In this step, you will limit the number of countries displayed to the USA.</p><a name="90161"></a><h6>To enter selection criteria</h6><ol>
+<a name="79639"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">To begin, click the <kbd>Design</kbd> tab to return to design mode.
+<a name="79640"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Click an empty area of the report to make sure all fields are deselected.
+<a name="79645"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_selrc.gif">
+
+
+Click <kbd>Select Expert</kbd> on the Standard toolbar.
+<p class="indent"><a name="79646"></a>The Choose Field dialog box appears.</p><p><a name="79650"></a> <img src="images/db_tudb2.gif">
+
+
+</p>
+<p class="indent"><a name="79651"></a>This dialog box lists all the fields currently in the report in the Report Fields section and then lists all fields that are available from each table in the database fields section.</p><a name="79652"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Since you are going to base record selection on the country field, highlight {Customer.Country} in the <kbd>Fields</kbd> list and click <kbd>OK</kbd>.
+<p class="indent"><a name="79653"></a>The Select Expert appears. </p><p><a name="79657"></a> <img src="images/ex_selrc.gif">
+
+
+</p>
+<p class="indent"><a name="79658"></a>Imagine that you are completing the following sentence:</p></ol>
+<p><code><a name="79659"></a>Select all records where a customer's country is</code></p><p class="indent"><a name="79660"></a>You complete the sentence with the condition you want the program to use when selecting records for your report. Right now the condition is <EM>any value</EM>, which implies there is no restriction on the record selection.</p><ol>
+<a name="79661"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click the arrow on the operators box to see what other options you have. Since you want only those records where the Country is USA, select the <kbd>is equal to</kbd><EM> </EM>condition.
+<p class="indent"><a name="79662"></a>A new box appears on the right. The dialog box sentence now reads:</p></ol>
+<p><code><a name="79663"></a>Select all records where a customer's country is equal to</code></p><p class="indent"><a name="79664"></a>All that you need to complete the sentence is the value USA.</p><ol>
+<a name="79665"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click the arrow on the empty list. A list of all the country values appears. Select <kbd>USA</kbd> from the list.
+<p class="indent"><a name="79666"></a>The sentence now reads:</p></ol>
+<p><code><a name="79667"></a>Select all records where a customer's country is equal to USA</code></p><ol>
+<a name="79668"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> to return to the <kbd>Design</kbd> tab.
+<a name="79669"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Preview</kbd> tab to review the results of your work.
+<p class="indent"><a name="115234"></a>The Change in Record Selection Formula Detected dialog box appears.</p><a name="115255"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>Refresh Data</kbd>.
+<a name="79670"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Save this version of the report without overwriting the original report by choosing <kbd>Save As</kbd> from the File menu and giving the new report the name USA.rpt.
+</ol>
+<p><a name="79671"></a>Congratulations! You have started formatting your report and have added selection criteria to it. More than that, you have learned how to manipulate your data. By now, you have a good idea of the powerful kinds of reports you can prepare.</p><a name="79673"></a><h4>Deleting a field</h4><p><a name="79674"></a>Now that the report contains only records from the USA, displaying the Country field in the body of the report is not necessary. You can delete this field before continuing.</p><a name="94520"></a><h6>To delete a field</h6><ol>
+<a name="79675"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Select the <kbd>Country</kbd> field and the <kbd>Country</kbd> column heading using the Ctrl<nobr>-c</nobr>lick combination.
+<a name="79676"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Press <kbd>Delete</kbd> on your keyboard.
+</ol>
+<p><a name="112125"></a>That is all it takes to delete fields from the report.</p><p><a name="79677"></a>The report should now look similar to this:</p><p><a name="79681"></a> <img src="images/pw_tutr5.gif">
+
+
+</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "04_quick24.html";
+var next = "04_quick26.html";
+
+function setTopicID() { 
+      var number = "118981"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Overflow Field Representation</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="193943"></a><h3 class="newpage"> Overflow Field Representation</h3>
+<p><a name="193947"></a>Seagate Crystal Reports uses Overflow Field Representation to assist users when working with numeric or currency values in report cells. Normally, if a numeric or currency value is larger than the field containing it, that value is truncated, or "clipped." For example, values like 100,000,000 might appear on the report as 1,000, or as 000 (depending on the properties you have set). This could potentially cause confusion when the report is read.</p><p><a name="193948"></a>When the Allow Field Clipping option is cleared, numeric/currency field values that exceed the field size will be represented by number signs (######) in the Preview tab, letting you know immediately when the field is too small.</p><a name="194049"></a><h6>To allow for overflow field representation</h6><ol>
+<a name="193728"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Right<nobr>-c</nobr>lick the currency field or number field you want to format to bring up the shortcut menu.
+<a name="193729"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">On the shortcut menu, click <kbd>Format Field</kbd>.
+<p class="indent"><a name="193730"></a>The Format Editor dialog box appears with the Number tab open.</p><a name="193731"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Customize</kbd> button.
+<p class="indent"><a name="193732"></a>The Custom Style dialog box appears with the Number tab open.</p><p><a name="193733"></a> <img src="images/db_formedit_custom.gif">
+
+
+</p>
+<a name="193734"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">To allow overflow field representation, clear the <strong>Allow Field Clipping </strong>check box. 
+<p class="indent"><a name="193735"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>You also have the option to click the Format<strong> </strong>button to enter a formula in the Format Formula Editor. In the Format Formula Editor, you can specify that field clipping will be disabled only when certain conditions are met.</p>
+<a name="193736"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong> to save your changes.
+</ol>
+<p><a name="193737"></a>To view the results, refresh the report. If you disabled field clipping, any numeric/currency field values that are larger than the fields containing them will be represented by number signs (######).</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "11_format23.html";
+var next = "11_format25.html";
+
+function setTopicID() { 
+      var number = "193943"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

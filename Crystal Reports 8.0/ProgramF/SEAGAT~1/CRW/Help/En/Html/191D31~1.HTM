@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 6</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="304723"></a><h3 class="newpage"> Formula 6</h3>
+<a name="304724"></a><h4>Operators/Functions Used</h4><p><a name="304725"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Greater than (&gt;), Percentage (%), Greater than or equal (&gt;=), Boolean Operator (And), Boolean Operator (Or), Parentheses ()</p><a name="304726"></a><h4>Formula Purpose</h4><p><a name="304727"></a>The manager of a minor league baseball team wants a column on the statistics report that flags all batting averages of .300 or better and all averages below .200. The manager does not want the batting average flagged for any player who has batted fewer than 100 times because the manager does not feel that such a batting average is statistically significant.</p><a name="304728"></a><h4>Formula</h4><PRE><a name="304729"></a>If ({file.ATBAT}&gt;=100) And <br>
+(({file.HITS} % {file.ATBAT}&gt;=30) Or <br>
+({file.HITS} % {file.ATBAT}&lt;20)) Then <br>
+&nbsp;&nbsp;&nbsp;&nbsp;"####" <br>
+Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;""
+</PRE><a name="304730"></a><h4>Result</h4><p><a name="304782"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="304733"></a>Hits
+
+</td><td align="left" valign="TOP"><a name="304735"></a>AtBat
+
+</td><td align="left" valign="TOP"><a name="304737"></a>Average
+
+</td><td align="left" valign="TOP"><a name="304739"></a>Flag
+
+</td><td align="left" valign="TOP"><a name="304741"></a>Explanation
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304743"></a>31</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304745"></a>98</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304747"></a>.316</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304751"></a>AtBat &lt;100 (not significant)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304753"></a>31</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304755"></a>101</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304757"></a>.307</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304759"></a>####</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304761"></a>Average &gt; 30 (.300)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304763"></a>43</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304765"></a>216</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304767"></a>.199</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304769"></a>####</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304771"></a>Average &lt; 20 (.200)</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="304773"></a>19</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304775"></a>99</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304777"></a>.192</P>
+
+
+</td><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="304781"></a>AtBat &lt; 100 (not significant)</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="304783"></a><h4>Explanation</h4><ul type="disc"><a name="304784"></a><li>The formula uses the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operator to test for specific conditions. 
+<a name="304785"></a><li>Condition A ({file.ATBAT} &gt;= 100) uses the Greater than or equal operator (&gt;=) to make certain that the batter has batted at least one hundred times. If he has batted 100 or more times, this condition is true, otherwise it is false.
+<a name="304786"></a><li>Condition B ({file.HITS} % {file.ATBAT} &gt;30) uses the Percentage operator (%) to calculate {file.HITS} as a percentage of {file.ATBAT}. It then uses the Greater than or equal operator (&gt;=) to test the resulting percentage to see if it is 30% (.300 batting average) or more. If the percentage is greater than or equal to 30, this condition is true, otherwise it is false.
+<a name="304787"></a><li>Condition C ({file.HITS} % {file.ATBAT} &lt; 20) again uses the Percentage operator (%) to calculate {file.HITS} as a percentage of {file.ATBAT}. It then uses the Less than operator (&lt;) to test the resulting percentage to see if it is less than 20% (.200 batting average). If the percentage is less than 20, this condition is true, otherwise it is false.
+<a name="304788"></a><li>The formula uses the Boolean operators And, and Or to evaluate conditions A, B, and C. The logical relationship required is Condition A and either Condition B or Condition C. Thus, the If part of the formula is satisfied if Condition A is TRUE, and either Condition B or Condition C is TRUE.
+<a name="304789"></a><li>If the If part of the formula is satisfied (Then), it flags the batting average by printing four pound signs "####".
+<a name="304790"></a><li>If those conditions are not true (Else), it prints nothing (as indicated by the empty text string "").
+</ul><a name="304791"></a><h6>Related topics</h6><p><a name="304795"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas35.html";
+var next = "19_introformulas37.html";
+
+function setTopicID() { 
+      var number = "304723"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

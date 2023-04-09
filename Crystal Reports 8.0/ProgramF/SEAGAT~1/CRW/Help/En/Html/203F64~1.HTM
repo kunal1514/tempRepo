@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Automatic type conversions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="130518"></a><h3 class="newpage"> Automatic type conversions</h3>
+<p><a name="130520"></a>Generally in Seagate Crystal Reports, values of one type cannot be used where values of another type are expected without explicitly supplying a type conversion function. For example:</p><PRE><a name="130522"></a>Dim postalCode as String
+<a name="130523"></a>'Error- assigning a Number value to a String variable
+<a name="130524"></a>postalCode = 10025
+<a name="130525"></a>'OK- use the type conversion function CStr
+<a name="130526"></a>'to create "10025"
+<a name="130527"></a>postalCode = CStr (10025, 0)
+</PRE><p><a name="147512"></a>However, there are a few conversions that are made automatically:</p><ul type="disc"><a name="147513"></a><li>Number to Currency
+<a name="147514"></a><li>Date to DateTime
+<a name="130532"></a><li>Simple type to Range value of the same underlying simple type
+</ul><p><a name="130534"></a>For example, the following assignments are correct:</p><PRE><a name="130536"></a>Dim cost As Currency
+<a name="130537"></a>'Same as: cost = CCur (10)
+<a name="130538"></a>cost = 10
+<a name="130540"></a>Dim orderDate As DateTime
+<a name="130541"></a>'Same as: orderDate = CDateTime (1999, 9, 23, 0, 0, 0)
+<a name="130542"></a>orderDate = CDate (1999, 9, 23)
+<a name="130544"></a>Dim aRange As Number Range
+<a name="130545"></a>'Same as: aRange = 20 To 20
+<a name="130546"></a>aRange = 20
+<a name="130548"></a>Dim aRangeArray () As Number Range
+<a name="130549"></a>'Same as :
+<a name="130550"></a>'aRangeArray = Array (10 To 10, 20 To 25, 2 To 2)
+<a name="130551"></a>aRangeArray = Array (10, 20 To 25, 2)
+</PRE><p><a name="130553"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The opposite conversions are not allowed. For example:</p>
+<PRE><a name="130555"></a>Dim num As Number
+<a name="130556"></a>num = 5 + CCur (10) 'Error
+<a name="130557"></a>'OK- convert to Number type using the CDbl function
+<a name="130558"></a>num = CDbl (5 + CCur (10))
+</PRE><p><a name="130560"></a>5 is converted to CCur (5) and added to CCur (10) to make CCur (15). However, this Currency value cannot be automatically assigned to the Number variable num since automatic conversions from Currency to Number are not allowed. Similarly, functions accepting a Currency argument can be supplied a Number argument instead, and the Number argument will be converted to a Currency, whereas functions accepting a Number argument cannot be supplied a Currency argument without first explicitly converting the Currency to a Number using CDbl.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax30.html";
+var next = "20_basicsyntax32.html";
+
+function setTopicID() { 
+      var number = "130518"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

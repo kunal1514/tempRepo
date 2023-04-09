@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>SQL Expression Editor</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000281527"></a><h2 class="newpage">SQL Expression Editor</h2><p><a name="1000281532"></a><strong></strong>The SQL Expression Editor is added to the Field Explorer when you create a report based ODBC data source. The Editor also appears when you choose the SQL Expression Field command from the Insert menu.</p><p><a name="1000281533"></a>Use the SQL Expression Editor to create and edit SQL expressions that can be used in your reports. You can use: </p><ul type="disc"><a name="1000281534"></a><li><kbd>fields:<br></kbd>({customer.CUSTOMER LAST NAME}, {customer.LAST YEAR'S SALES}, and so on)
+<a name="1000281535"></a><li><strong>numbers:<br></strong>(1, 2, 3.1416, and so on) 
+<a name="1000281536"></a><li><strong>text:<br></strong>("Quantity", " ", ":", 'your text', and so on) 
+<a name="1000281537"></a><li><strong>operators:<br></strong>(+, -, and so on)
+<a name="1000281538"></a><li><strong>functions:<br></strong>(TrimRight (x), Length (x), and so on).
+</ul><p><a name="1000281539"></a>The SQL Expression Editor is used to combine these components into SQL expressions. The SQL Expression Editor allows you to type the components into the SQL expression directly, or, in the case of fields, functions, operators, group field values, and formulas, to select them from lists of those items that are available.</p><p><a name="1000281540"></a>The SQL Expression Editor requires you to enter the various components according to a specific set of rules called syntax. Some examples of rules:</p><ul type="disc"><a name="1000281541"></a><li>text enclosed in quotation marks
+<a name="1000281542"></a><li>arguments enclosed in parentheses (where applicable)
+<a name="1000281543"></a><li>referenced formulas identified with a leading @ sign, and so on.
+</ul><p><a name="1000281777"></a>The SQL Expression Editor checks the syntax and helps you debug (fix) problems before you enter the SQL expression field into the report.</p><a name="1000281783"></a><h5>SQL Expression</h5><p><a name="1000281551"></a>You build and edit your SQL expression in the large white SQL Expression box. There are a number of ways you can work with SQL expressions here:</p><ul type="disc"><a name="1000281552"></a><li>you can select individual components from the Fields, Functions, and Operators tree boxes at the top of the SQL Expression Editor, and the program will enter them directly in this box
+<a name="1000281553"></a><li>you can type your SQL expression in the box
+<a name="1000281554"></a><li>you can use these two methods together
+<a name="1000281555"></a><li>you can paste SQL expressions into the box that you cut or copied from other reports or from the Help system
+<a name="1000281556"></a><li>you can cut or copy SQL expression text from the box to use in other reports or in printed documents
+<a name="1000281557"></a><li>you can paste field values into your SQL expressions via the Browse Field Data button.
+</ul><a name="1000281558"></a><h5>New</h5><p><a name="1000281559"></a>Click this button to create a new SQL expression field without leaving the SQL Expression Editor. </p><p><a name="1000281560"></a>After you click New, the <a href="dialogs145.html#1000259876">SQL Expression Name dialog box</a> appears. Type in a name, click OK, and you are returned to the SQL Expression Editor with the name of your new SQL expression present in the Name list.</p><a name="1000281561"></a><h5>Save</h5><p><a name="1000281562"></a>Click Save to save the SQL expression you created.</p><a name="1000281563"></a><h5>Save and close</h5><p><a name="1000281564"></a>Click Save and close to save the SQL expression you created and then close the SQL Expression Editor. After clicking Save and close, you are returned to the Field Explorer.</p><a name="1000281565"></a><h5>Check</h5><p><a name="1000281566"></a>Use this button to test the syntax of your SQL expression and identify syntax errors (if they are any). Check is useful for interim syntax checks while you are building an SQL expression.</p><a name="1000281567"></a><h5>Name</h5><p><a name="1000281568"></a>The Name list shows all the SQL expression fields created for the report you are currently working on.</p><a name="1000281569"></a><h5>Undo</h5><p><a name="1000281570"></a>Click Undo to undo the last action performed in the SQL Expression Editor. For example, if you accidentally deleted a part of your SQL expression, you can recover it by clicking Undo. </p><a name="1000281571"></a><h5>Redo</h5><p><a name="1000281572"></a>Click Redo to have the program redo the last action.</p><a name="1000281573"></a><h5>Browse Data</h5><p><a name="1000281574"></a>This button lets you review values for the selected field and paste individual values directly into your SQL expression. When you select a field from the Fields Tree box and then click Browse Data, a dialog box appears with a scroll box listing the values for the selected field. The <a href="dialogs5.html#1000239216">Browse Data dialog box</a> shows:</p><ul type="disc"><a name="1000281575"></a><li>the name of the selected field at the top of the dialog box
+<a name="1000281576"></a><li>the data type of the field (number, string, and so on) listed immediately below the field name
+<a name="1000281577"></a><li>the length of the field (not the length of the value) listed below the Type Field values listed in the scroll box.
+</ul><p><a name="1000281579"></a>To paste a field value directly into your SQL expression, select the value and click Paste Data (or double<nobr>-c</nobr>lick the value). The value is pasted at the insertion point in the SQL expression.</p><a name="1000281580"></a><h5>Find/Replace</h5><p><a name="1000281581"></a>Use Find/Replace to search the SQL Expression Editor for a specified word, number, or text string.</p><a name="1000281582"></a><h5>Toggle Bookmark</h5><p><a name="1000281583"></a>Use Toggle Bookmark to insert a bookmark at the beginning of a selected SQL expression line. After clicking Toggle Bookmark, a blue dot appears at the beginning of the selected SQL expression line.</p><p><a name="1000281584"></a>To remove a single bookmark, position the insertion point in the line of text marked with a bookmark and click Toggle Bookmark. The blue dot disappears from the gray column left of the text line, indicating that the line is not bookmarked.</p><p><a name="1000281585"></a>Bookmarks make it easy to navigate through long SQL expressions, allowing you to write and edit complex SQL expressions efficiently. For example, bookmarks can be used to mark:</p><ul type="disc"><a name="1000281586"></a><li>frequently edited parts of an SQL expression, so you can find them easily when you want to revise the SQL expression
+<a name="1000281587"></a><li>major sections of an SQL expression, so you can quickly navigate through long SQL expressions
+<a name="1000281588"></a><li>the beginning of important SQL clauses, so you can easily jump from one to the next.
+</ul><a name="1000281589"></a><h5>Next Bookmark</h5><p><a name="1000281590"></a>Use Next Bookmark to jump between bookmarks in the SQL Expression Editor.</p><a name="1000281591"></a><h5>Previous Bookmark</h5><p><a name="1000281592"></a>Use Previous Bookmark to jump back to the previous bookmark.</p><a name="1000281593"></a><h5>Clear All Bookmarks</h5><p><a name="1000281594"></a>Use Clear All Bookmarks to delete all bookmarks in the current SQL expression.</p><a name="1000281595"></a><h5>Sort Trees</h5><p><a name="1000281596"></a>Use Sort Trees to arrange all fields, functions, and operators in the trees in an alphabetical list.</p><a name="1000281597"></a><h5>Field Tree</h5><p><a name="1000281598"></a>The Fields Tree contains all the fields you can use in your SQL expressions. By default, Field Tree is activated, allowing you to view field options for your SQL expression. To hide the Field Tree, click the Field Tree button.</p><a name="1000281599"></a><h5>Function Tree</h5><p><a name="1000281600"></a>The Function tree contains all the functions you can use in your SQL expression. By default, the Function Tree button is activated, allowing you to view function options for your SQL expression. To hide the Function tree, click the Function Tree button.</p><a name="1000281601"></a><h5>Operator Tree</h5><p><a name="1000281602"></a>The Operator Tree contains all the operators you can use in your SQL expression. By default, the Operator Tree button is activated, allowing you to view operator options for your SQL expression. To hide the Operator Tree, click the Operator Tree button.</p><a name="1000281603"></a><h5>Help</h5><p><a name="1000281604"></a>Click Help to view on<nobr>-l</nobr>ine help information for the SQL Expression Editor.</p><a name="1000281605"></a><h5>Field Tree</h5><p><a name="1000281606"></a>This box displays a list of those fields that are available for use in your SQL expressions. You can resize, move, and anchor the Field Tree box, as needed.</p><a name="1000281607"></a><h5>Function Tree</h5><p><a name="1000281608"></a>This box displays a list of functions available for use in the SQL expression. When you select a function from the list, the program inserts it in the SQL expression at the <a href="glossary10.html#13415">insertion point</a> To make your work easier, the function is inserted complete with its required syntax items (parentheses, commas, quotation marks, and so on) and the insertion point is moved to the point where you need to enter the first argument (if arguments are required).</p><p><a name="1000281612"></a>You can resize, move, and anchor the Function Tree box, as needed.</p><a name="1000281615"></a><h5>Operator Tree</h5><p><a name="1000281616"></a>This box displays a list of operators available for use in the SQL expression. When you select an operator from the list, the program inserts it in the SQL expression at the insertion point.</p><p><a name="1000281898"></a>You can resize, move, and anchor the Operator Tree box, as needed.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs143.html";
+var next = "dialogs145.html";
+
+function setTopicID() { 
+      var number = "1000281527"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

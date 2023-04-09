@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>ToText</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000727489"></a><h3 class="newpage"> ToText</h3>
+<p><a name="1000744960"></a>Basic and Crystal syntax. </p><p><a name="1000781048"></a>ToText and <a href="functionshelp161.html#1000569614">CStr</a> are equivalent functions.</p><a name="1000744965"></a><h5>Overloads</h5><ul type="disc"><a name="1000744966"></a><li>ToText (x) 
+<a name="1000744967"></a><li>ToText (x, y) 
+<a name="1000744968"></a><li>ToText (x, y, z) 
+<a name="1000744969"></a><li>ToText (x, y, z, w) 
+<a name="1000744970"></a><li>ToText (x, y, z, w, q) 
+</ul><a name="1000508745"></a><h5>Arguments</h5><p><a name="1000619960"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="1000620326"></a>Converting . . .
+
+</th><th align="left" valign="bottom"><a name="1000620328"></a>Description
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000620374"></a>Boolean values</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000620376"></a><li>x is a Boolean value that is converted to a String, either "True" or "False".
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000620378"></a>Number and Currency values</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000620380"></a><li>x is a Number or Currency value to be converted into a text string; it can be a whole or fractional value.
+<a name="1000620381"></a><li>y is a whole number indicating the number of decimal places to carry the value in x to (This argument is optional.).
+<a name="1000620383"></a><li>z is a single character text string indicating the character to be used to separate thousands in x. Default is the character specified in your International or Regional settings control panel. (This argument is optional.)
+<a name="1000620384"></a><li>w is a single character text string indicating the character to be used as a decimal separator in x. Default is the character specified in your International or Regional settings control panel. (This argument is optional.)
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000620386"></a>Number and Currency values (formatting)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000620388"></a><li>x is a Number or Currency value to be converted into a text string; it can be a whole or fractional value.
+<a name="1000620389"></a><li>y is a text string used to indicate the format for displaying the value in x. See <a href="functionshelp80.html#1000508806">Format Strings</a> for information on creating a format string.
+<a name="1000620390"></a><li>z is a whole number indicating the number of decimal places to carry the value in x to. (This argument is optional.)
+<a name="1000620391"></a><li>w is a single character text string indicating the character to be used to separate thousands in x. Default is the character specified in your International or Regional settings control panel. (This argument is optional.)
+<a name="1000620392"></a><li>q is a single character text string indicating the character to be used as a decimal separator in x. The default is the character specified in your International or Regional settings control panel. (This argument is optional.)
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000620394"></a>Date values</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000620396"></a><li>x is a Date value to be converted into a text string.
+<a name="1000620397"></a><li>y is a text string that defines how the value in x is to be formatted. See <a href="functionshelp81.html#1000508901">Format strings for Date, Time, and DateTime values</a> for more information on creating this format string. (This argument is optional.)
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000620399"></a>Time values</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000620401"></a><li>x is a Time value to be converted into a text string.
+<a name="1000620402"></a><li>y is a text string that defines how the value in x is to be formatted. See <a href="functionshelp81.html#1000508901">Format strings for Date, Time, and DateTime values</a> for more information on creating this format string. (This argument is optional.)
+<a name="1000620403"></a><li>z is a text string to be used as a label for A.M. (morning) hours. (This argument is optional.)
+<a name="1000620404"></a><li>w is a text string to be used as a label for P.M. (evening) hours. (This argument is optional.)
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000620406"></a>DateTime values</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000620408"></a><li>x is a DateTime value to be converted into a text string.
+<a name="1000620409"></a><li>y is a text string of characters that indicate how the resulting text string will be formatted. See <a href="functionshelp81.html#1000508901">Format strings for Date, Time, and DateTime values</a> for more information on creating a format string. (This argument is optional.)
+<a name="1000620410"></a><li>z is a text string to be used as a label for A.M. (morning) hours. (This argument is optional.)
+<a name="1000620411"></a><li>w is a text string to be used as a label for P.M. (evening) hours. (This argument is optional.)
+</ul></td></tr>
+
+</Table></p>
+<a name="1000508772"></a><h5>Returns</h5><p><a name="1000508773"></a>Text String</p><a name="1000508774"></a><h5>Action</h5><p><a name="1000508776"></a>The ToText function converts Numbers, Currency, Date, Time, and DateTime values to text strings.</p><a name="1000508777"></a><h5>Typical uses</h5><p><a name="1000508778"></a>Use this function to convert a Number, Currency, Date, Time, or DateTime value to a text string to appear as text in your report (form letters, comments, etc.).</p><a name="1000508779"></a><h5>Examples</h5><p><a name="1000508780"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000508781"></a>ToText({orders.SHIPPED}) </code></p><p class="example"><a name="1000508782"></a>Returns True where the value in ({orders.SHIPPED}) is True.</p><p><code><a name="1000508783"></a>ToText(123.45) </code></p><p class="example"><a name="1000508784"></a>Returns "123.45".</p><p><code><a name="1000508785"></a>ToText(12345.6749,2) </code></p><p class="example"><a name="1000508786"></a>Returns "12345.67".</p><p><code><a name="1000508787"></a>ToText(12345.6750,2)</code></p><p class="example"><a name="1000508788"></a>Returns "12345.68".</p><p><code><a name="1000508789"></a>ToText(12345.4999,0) </code></p><p class="example"><a name="1000508790"></a>Returns "12345".</p><p><code><a name="1000508791"></a>ToText(12345.5000,0) </code></p><p class="example"><a name="1000508792"></a>Returns "12346".</p><p><code><a name="1000508793"></a>ToText({file.AMT} * {file.QUANTITY}) </code></p><p class="example"><a name="1000508794"></a>Returns 44,890.20 where Amt = 24.45 and Quantity = 1836.</p><p><a name="1000508796"></a>ToText is useful when you want to build a sentence by combining (concatenating) a converted Number or other value with other text strings:</p><p><code><a name="1000508797"></a>"The base price of item # " + {file.ITEM NUMBER} + " is $" + ToText({file.BASE PRICE}) + "." </code></p><p class="example"><a name="1000508798"></a>Prints the sentence "The base price of item A1/4520/B12 is $50.00." where the Item number is A1/4520/B12 and the Base Price is 50.00, converted to text and formatted with two decimal places.</p><p><a name="1000508799"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000508800"></a>ToText(CDate(1996, 11, 1), "yy MMM dd, dddd") </code></p><p class="example"><a name="1000508801"></a>Returns 96 Nov 01, Monday.</p><p><code><a name="1000508802"></a>ToText(DateTime(1995,10,12,3,30,11),"HH:mm, yy MMMM ddd") </code></p><p class="example"><a name="1000508803"></a>Returns 03:30, 95 October Mon.</p><p><code><a name="1000508804"></a>ToText(Time(12, 10, 10), "HH*mm*ss tt", "amStr", "pmStr") </code></p><p class="example"><a name="1000508805"></a>Returns 12*10*10 pmStr.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp78.html";
+var next = "functionshelp80.html";
+
+function setTopicID() { 
+      var number = "1000727489"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

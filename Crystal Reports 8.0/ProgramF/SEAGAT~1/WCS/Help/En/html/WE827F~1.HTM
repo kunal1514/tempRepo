@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+
+<title>Refreshing web report data </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="150103"></a><h3 class="newpage"> Refreshing web report data </h3>
+<p><a name="150104"></a>When a report contains saved data, the report does not need to access a database. It retrieves the information directly from the Web Component Server. This can greatly reduce network traffic and the use of network server resources when many people are frequently requesting reports. For this reason, you may want to design most of your reports so that they contain saved data. Additionally, reports containing saved data can be easily cached by the Web Component Server for optimized job sharing, serving more users with the same information simultaneously. However, if a report contains saved data, and changes are made in the original database, the report will not reflect accurate information. To update the report, you can open it in Seagate Crystal Reports, refresh the data, and save the report again. However, the Web Component Server also provides a means to dynamically refresh report data.</p><p><a name="150105"></a>As a web system administrator, you must decide if you want to allow users to refresh report data themselves, or if you want to control how and how often they can refresh report data. Each of the Report Viewers include a button to refresh the data while it is viewed. However, sites with several users refreshing report data can result in network and system slow downs since every refresh requires connecting to a database and gathering data.</p><p><a name="150106"></a>You can override or even disable the user's capability for refreshing and create other means for keeping up<nobr>-t</nobr>o<nobr>-d</nobr>ate data in reports. One method is to set automatic refreshes using the Database Refresh setting in the Page Server tab of the Crystal Report Web Components Manager application. For more information, see <a href="WebServerAdministration18.html#161982">Database Refresh</a>.</p><p><a name="150113"></a>When deciding how data will be refreshed at your web site, keep in mind that frequent refreshes of report data limits report caching capabilities of the Web Component Server. Every time the report is refreshed, any cached version of that report becomes obsolete. </p><p><a name="149172"></a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerCommands17.html";
+var next = "Report_Viewers.html";
+
+function setTopicID() { 
+      var number = "150103"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Methods of looking up tables (direct access databases)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="13355"></a><h4 class="newpage"> Methods of looking up tables (direct access databases)</h4><p><a name="13356"></a>When a single table is linked to two or more tables, Seagate Crystal Reports needs to know in what order it should look up and link data from the primary table to data in the second, third, etc., lookup table.</p><p><a name="110890"></a>Seagate Crystal Reports offers three options for looking up records in two or more lookup tables from a single primary table:</p><ul type="disc"><a name="13357"></a><li><a href="24_under_databases16.html#13363">Look up both at the same time</a>
+<a name="246284"></a><li><a href="24_under_databases17.html#13429">Look up all of one, then all of others (A to B, A to C)</a>
+<a name="246288"></a><li><a href="24_under_databases18.html#13523">Look up all the combinations of the two files</a>.
+</ul><p><a name="348645"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>These options are not available if you are using data from an ODBC data source.</p>
+<p><a name="13361"></a>These options are available only when you have a single table (a primary table) that is linked to two or more lookup tables. The primary table must be the <EM>link from</EM> table in each of the links. For instance, if you link from the Customer table to the Orders table and from the Customer table to the Credit table, these lookup options are available. However, if you link from the Customer table to the Orders table and from the Credit table to the Customer table, these options are not available.</p><p><a name="13362"></a>In this example, for each method demonstrated, three fields from three different linked tables will be shown. In each case, the Customer table is linked to the Credit table and the Orders table. The fields displayed are the Customer Name field from the Customer table, the Amount field from the Credit table, and the Order Amount field from the Orders table. These are not necessarily actual link fields for the tables, but the data in these fields illustrates how data is retrieved using each of the three lookup methods.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases14.html";
+var next = "24_under_databases16.html";
+
+function setTopicID() { 
+      var number = "13355"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

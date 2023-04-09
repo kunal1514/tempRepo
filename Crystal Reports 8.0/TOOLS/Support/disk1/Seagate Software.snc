@@ -1,0 +1,219 @@
+[CallNow]
+MailGateway=
+MailAddress=
+MailSubject=SupportNow Call
+ServerVersion=2.5
+SupportServer=vansnoconf01.seagatesoftware.com
+[SupportServer - vansnoconf01.seagatesoftware.com]
+Active=Yes
+Port List=443;80;2409;
+[Seagate Software - Data]
+Install=
+Register=TRUE
+DesktopMode=TRUE
+CMDLine=
+RunDefaultBrowser=FALSE
+[Applications]
+AppsNames=Seagate Software
+[Wizard]
+Pages=Introduction,Identification,First information page,Attachments Page,Goodbye Page,Predefined Data,System Attributes
+[Page - Introduction]
+Type=Text
+Caption=Seagate Software Support Wizard
+Text1=Welcome to the Seagate Software Support Wizard.
+Text2=
+Text3=In the following pages you'll be asked to describe your problem and
+Text4=enter some details about yourself and your computer.
+Text5=
+Text6=When you finish, click on the 'SupportNow' button, and one of our
+Text7=support people will connect to your computer and help you.
+SkipPageOption=FALSE
+[Page - Identification]
+Type=Information
+Caption=Seagate Software Support Wizard
+Fields=Name,Organization,Phone,Problem Description
+[Field - Name]
+Type=Edit
+Save=Yes
+Mandatory=Yes
+Desktop=Yes
+[Field - Organization]
+Type=Edit
+Save=Yes
+Mandatory=Yes
+Desktop=Yes
+[Field - Phone]
+Type=Edit
+Save=Yes
+Mandatory=Yes
+Desktop=Yes
+[Field - Problem Description]
+Type=Edit
+LineCount=5
+[Page - First information page]
+Type=Information
+Caption=Seagate Software Support Wizard
+Fields=What product are you using?,Registration Number,Incident Number
+[Field - What product are you using?]
+Type=Selection
+Save=Yes
+List=Seagate Crystal Reports ,Seagate Info,Seagate Holos,Seagate Analysis,Seagate Worksheet
+[Field - Registration Number]
+Type=Edit
+Save=Yes
+[Field - Incident Number]
+Type=Edit
+Save=Yes
+[Page - Attachments Page]
+Type=Attachments
+Caption=SupportNow Wizard
+Hidden=Yes
+Files=Windows Initialization file,System Initialization file
+[File - Windows Initialization file]
+File Name=win.ini
+Search Path=<Windows Directory>
+[File - System Initialization file]
+File Name=system.ini
+Search Path=<Windows Directory>
+[Page - Goodbye Page]
+Type=Text
+Caption=Seagate Software Support Wizard
+Text1=That's all the information we need.
+Text2=
+Text3=
+Text4=Press the 'SupportNow' button. You will be notified when a support
+Text5=person connects to your computer.
+Text6=
+Text7=Please Be patient !   The support person will be with you as soon as
+Text8=possible.
+SkipPageOption=FALSE
+[Page - Predefined Data]
+Type=Information
+Hidden=Yes
+Fields=Version,Build Number
+[Field - Version]
+Type=Edit
+Value=<Enter product's version here>
+[Field - Build Number]
+Type=Edit
+Value=<Enter build number here>
+[Page - System Attributes]
+Type=Information
+Hidden=Yes
+Fields=Available Page File Bytes,Available Physical Memory,Available Virtual Memory,Color Palette,Default Browser,DNS Server,Environment,Local Drives Information,Local Ping results,Modem information,Mouse Present,Processor Type,Screen Resolution,Total Page File Bytes,Total Physical Memory,Total Virtual Memory,Host Name,Ip Address,Network Present,Environment Path,Operating System,System Directory,System Start Mode,User Name,Windows Directory,Winsock Version,Application Version Info,Loaded dlls of the application,Running processes in the system
+[Field - Available Page File Bytes]
+Type=System
+Info Type=24
+Param=
+[Field - Available Physical Memory]
+Type=System
+Info Type=12
+Param=
+[Field - Available Virtual Memory]
+Type=System
+Info Type=14
+Param=
+[Field - Color Palette]
+Type=System
+Info Type=21
+Param=
+[Field - Default Browser]
+Type=System
+Info Type=22
+Param=
+[Field - DNS Server]
+Type=System
+Info Type=27
+Param=
+[Field - Environment]
+Type=System
+Info Type=25
+Param=
+[Field - Local Drives Information]
+Type=System
+Info Type=19
+Param=
+[Field - Local Ping results]
+Type=System
+Info Type=29
+Param=ping localhost
+[Field - Modem information]
+Type=System
+Info Type=28
+Param=
+[Field - Mouse Present]
+Type=System
+Info Type=9
+Param=
+[Field - Processor Type]
+Type=System
+Info Type=5
+Param=
+[Field - Screen Resolution]
+Type=System
+Info Type=20
+Param=
+[Field - Total Page File Bytes]
+Type=System
+Info Type=23
+Param=
+[Field - Total Physical Memory]
+Type=System
+Info Type=11
+Param=
+[Field - Total Virtual Memory]
+Type=System
+Info Type=13
+Param=
+[Field - Host Name]
+Type=System
+Info Type=6
+Param=
+[Field - Ip Address]
+Type=System
+Info Type=7
+Param=
+[Field - Network Present]
+Type=System
+Info Type=10
+Param=
+[Field - Environment Path]
+Type=System
+Info Type=15
+Param=
+[Field - Operating System]
+Type=System
+Info Type=4
+Param=
+[Field - System Directory]
+Type=System
+Info Type=3
+Param=
+[Field - System Start Mode]
+Type=System
+Info Type=8
+Param=
+[Field - User Name]
+Type=System
+Info Type=1
+Param=
+[Field - Windows Directory]
+Type=System
+Info Type=2
+Param=
+[Field - Winsock Version]
+Type=System
+Info Type=26
+Param=
+[Field - Application Version Info]
+Type=System
+Info Type=16
+Param=
+[Field - Loaded dlls of the application]
+Type=System
+Info Type=17
+Param=
+[Field - Running processes in the system]
+Type=System
+Info Type=18
+Param=

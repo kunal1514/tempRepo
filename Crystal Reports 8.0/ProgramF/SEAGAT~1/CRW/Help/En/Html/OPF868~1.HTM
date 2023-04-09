@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Redim</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000026541"></a><h3 class="newpage"> Redim</h3>
+<a name="1000030061"></a><h4>Basic syntax x(n)</h4><p><a name="1000030062"></a>Use Redim x[n] (with the square brackets) only in Crystal syntax, and Redim x(n) (with the round brackets) only in Basic syntax.</p><a name="1000030063"></a><h5>Usage</h5><p><code><a name="1000030064"></a>Redim x(n)</code></p><p class="example"><a name="1000030065"></a>Re<nobr>-d</nobr>imension the array x to size n, where x is an array and n is a positive whole number specifying the new size of n.</p><a name="1000030066"></a><h5>Examples</h5><p><a name="1000030067"></a>The following example is applicable to Basic syntax:</p><p class="code"><a name="1000053439"></a>Dim x() As String
+<br><a name="1000030069"></a>'Initialize first three array elements
+<br><a name="1000053450"></a>x = Array ("a", "bb", "ccc")  
+<br><a name="1000030070"></a>'Re<nobr>-s</nobr>ize x to 4; old values are ignored
+<br><a name="1000053465"></a>'x is now equal to Array ("", "", "", "")
+<br><a name="1000053459"></a>Redim x(4)
+<br><a name="1000030072"></a>'x is now equal to Array ("", "", "", "dddd")
+<br><a name="1000053472"></a>x(4) = "dddd"
+<br><a name="1000030073"></a>formula = x(4)
+</p><a name="1000030074"></a><h5>Comments</h5><p><a name="1000030075"></a>When an array is re<nobr>-d</nobr>imensioned with Redim, elements in the array are filled with default values for that type. See <a href="20_basicsyntax30.html#130492">Default values for the simple types</a> (Basic syntax). </p><a name="1000053262"></a><h6>Related topics</h6><p><a name="1000053279"></a><a href="20_basicsyntax21.html#128315">Array data types</a> (Basic syntax)</p><p><a name="1000053291"></a><a href="20_basicsyntax29.html#130465">Using array variables</a> (Basic syntax)</p><a name="1000029886"></a><h4>Crystal syntax x[n]</h4><ul type="disc"><a name="1000029908"></a><li>Use Redim x[n] (with the square brackets) only in Crystal syntax, and Redim x(n) (with the round brackets) only in Basic syntax.
+<a name="1000029909"></a><li>Unlike Redim x(n) in Basic syntax, a Redim statement in Crystal syntax cannot have not have multiple arrays. 
+</ul><a name="1000026542"></a><h5>Usage</h5><p><code><a name="1000026543"></a>Redim x[n] </code></p><p class="example"><a name="1000026544"></a>Re<nobr>-d</nobr>imension the array x to size n, where x is an array and n is a positive whole number specifying the new size of n.</p><a name="1000026545"></a><h5>Examples</h5><p><a name="1000026546"></a>The following example is applicable to Crystal syntax:</p><p class="code"><a name="1000026547"></a>Local StringVar array x:= ["a", "bb", "ccc"];
+<br><a name="1000053513"></a>// resize the array to size 4; old values are ignored
+<br><a name="1000053522"></a>// and filled with default values of empty strings
+<br><a name="1000026548"></a>Redim x [4];
+<br><a name="1000029935"></a>x [4] := "dddd"; // only x[4] is initialized
+</p><a name="1000029936"></a><h5>Comments</h5><p><a name="1000029938"></a>When an array is re<nobr>-d</nobr>imensioned with Redim, elements in the array are filled with default values for that type. See <a href="21_crystalsyntax35.html#145556">Default values for the simple types</a> (Crystal syntax).</p><a name="1000053308"></a><h6>Related topics</h6><p><a name="1000053312"></a><a href="21_crystalsyntax26.html#145346">Array data types</a> (Crystal syntax)</p><p><a name="1000053316"></a><a href="21_crystalsyntax33.html#145513">Using array variables</a> (Crystal syntax)</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp49.html";
+var next = "OperatorsHelp51.html";
+
+function setTopicID() { 
+      var number = "1000026541"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

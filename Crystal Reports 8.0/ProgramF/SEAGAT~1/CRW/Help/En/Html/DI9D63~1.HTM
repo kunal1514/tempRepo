@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Create Running Total Field dialog box</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="810023"></a><h2 class="newpage">Create Running Total Field dialog box</h2><p><a name="1000391763"></a>The Create Running Total Field dialog box appears when you select Running Total Fields in the <a href="dialogs51.html#1000249864">Field Explorer</a> and then click the New button. This is the same as the Edit Running Total Field dialog box that appears when you edit a running total field in the Field Explorer or directly from the report. This description applies to both dialog boxes.</p><p><a name="1000393778"></a>Use these dialog boxes to create or edit running total fields. Running totals are totals that are displayed on a record by record basis. Running Totals total all records (in the report, in the group, and so on) up to and including the current record. For example, if your first three records have values of 2, 4, and 7, the running total for each of the three records would be as follows:</p><p><a name="810033"></a>2 + 0 = 2</p><p><a name="810035"></a>2 + 4 = 6</p><p><a name="810037"></a>6 + 7 = 13</p><a name="810048"></a><h5>Available Tables and Fields</h5><p><a name="810050"></a>Lists all tables and fields in the report. Choose the field you want to summarize (the field on which a running total will be based) from this list.</p><a name="810052"></a><h5>Add (&gt;)</h5><p><a name="810054"></a>Use the Add button (&gt;) to copy a field from the Available Tables and Fields list into the Field to summarize list.</p><a name="810056"></a><h5>Running Total Name</h5><p><a name="810058"></a>Type the name of your running total, for example Last Year's Sales, into the<strong> </strong>Running Total Name box.</p><a name="810060"></a><h5>Field to summarize</h5><p><a name="810062"></a>The Field to summarize list will display a field you select from the Available Tables and Fields list. The running total you are creating will be based on the field in the Field to summarize list.</p><a name="810064"></a><h5>Type of summary</h5><p><a name="810066"></a>Use the Type of summary list to select from a number of summary options. The summary type you choose will determine the running total calculation. For example, if you chose Customer.Last Year's Sales as the field to summarize, you can choose to have your running total field perform sum, average, or sample variance calculations on the selected field, to name only a few summary types. </p><p><a name="810068"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Summary<nobr>-t</nobr>ype options change depending on the field you chose to summarize. For example, you will have one set of summary types when creating a running total for Customer.Last Year's Sales, and you will have a different set of summary types when creating a running total for Customer.Region.</p>
+<a name="810072"></a><h5>For each record</h5><p><a name="810074"></a>Use the For each record option to have your running total evaluate each record in a field.</p><a name="810076"></a><h5>On change of field</h5><p><a name="810078"></a>Use the On change of field option to have your running total perform its evaluation only when a specified field has changed. </p><a name="810080"></a><h5>On change of group</h5><p><a name="810082"></a>Use the On change of group option to have your running total perform its evaluation only when a specified group has changed. </p><a name="810084"></a><h5>Use a formula</h5><p><a name="810086"></a>Select the Use a formula option to have your running total use a formula when performing its calculations.</p><a name="810088"></a><h5>Never </h5><p><a name="810090"></a>Use the Never option to lock your running total field. With the Never button selected, your running total will perform its calculations on that field throughout the entire report.</p><a name="810092"></a><h5>On change of field</h5><p><a name="810094"></a>Use the On change of field list to have your running total evaluate or reset when a designated field changes. </p><p><a name="810096"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Use the Add button (&gt;) to copy a field from the Available Tables and Fields list to the On change of field list.</p>
+<a name="810100"></a><h5>On change of group</h5><p><a name="810102"></a>Use the On change of group list to have your running total evaluate or reset when a designated group changes. </p><p><a name="810104"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Use the Add button (&gt;) to copy a field from the Available Tables and Fields list to the On change of field list.</p>
+<a name="1000223511"></a><h5>Use a formula</h5><p><a name="1000223512"></a>Select the Use a formula option to have your running total use a formula to determine when to reset.</p><a name="1000326557"></a><h6>Related topics</h6><p><a name="1000354747"></a><a href="09_runtotal6.html#1046460">Creating running totals</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "dialogs22.html";
+var next = "dialogs24.html";
+
+function setTopicID() { 
+      var number = "810023"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

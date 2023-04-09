@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DAO</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1782"></a><h4 class="newpage"> DAO</h4><p><a name="1784"></a>Microsoft's Data Access Object (DAO) Engine for versions of Access 2.0 and later is the part of the Microsoft Access Database Management System that actually handles your database data. As a user, you usually do not work directly with the DAO engine. It acts as a gateway through which Access data is made available to applications. Since the DAO engine is so closely tied to Access data, Seagate Crystal Reports considers it a part of the actual database.</p><p><a name="1794"></a>DAO uses Microsoft's Object Linking and Embedding (OLE) technology (installed with Windows 95, Windows 98, and Windows NT) to provide access to Access data through an object<nobr>-o</nobr>riented approach.</p><p><a name="1796"></a>In addition to Access database tables, Seagate Crystal Reports can open and use Access queries through DAO. If you are not familiar with Access queries, refer to your Access documentation. See also <a href="24_under_databases42.html#29488">Opening Access queries through DAO</a>.</p><p><a name="305231"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="333736"></a><li>Access Parameter queries and Cross<nobr>-t</nobr>ab queries can only be opened through an ODBC connection. See <a href="24_under_databases44.html#386205">Opening Access Parameter queries</a>. Access Action queries are not supported by Seagate Crystal Reports.
+<a name="305250"></a><li>When opening Access queries in a report, make sure the Views and Stored Procedures options are toggled on using the Database tab of the Options dialog box in Seagate Crystal Reports. This ensures that the queries will be visible when you open the Access database.
+</ul><p><a name="71049"></a>To translate information and data to and from DAO, the Report Designer uses the DAO translation files P2bdao.dll, P2ctdao.dll, and P2irdao.dll.</p><p><a name="353597"></a> </p>
+<p><a name="333072"></a> </p>
+<p><a name="305296"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Seagate Crystal Reports provides all the files necessary for reading Access data through the DAO engine. Because the program supports the most recent version of DAO, there is also native support for VSFoxPro (see <a href="25_access_sources39.html#27030">Visual FoxPro</a>). For more information on required files, refer to the Runtime File Requirements online Help (Runtime.hlp).</p>
+<a name="28736"></a><h5>Secured Microsoft Access Databases</h5><p><a name="28737"></a>If you will be using secured Access databases, the SystemDB parameter in the Windows Registry database must be set to point at the path where the System.mda or System.mdw (Access 95) file is located. On Windows 95, Windows 98, and Windows NT systems, the SystemDB parameter is located in the following Registry key:</p><p><code><a name="28738"></a>\\HKEY_LOCAL_MACHINE\SOFTWARE\Seagate&nbsp;Software\Jet\3.0\ Engines\Jet</code></p><p><a name="28739"></a>Seagate Crystal Reports includes a utility called Sysdb32.exe to take care of setting this parameter for you. Simply run the appropriate utility and point it at the location of the System.mda or System.mdw file.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources9.html";
+var next = "25_access_sources11.html";
+
+function setTopicID() { 
+      var number = "1782"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>SummaryFunction (fld, condFld)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000432439"></a><h3 class="newpage"> SummaryFunction (fld, condFld)</h3>
+<p><a name="1000650560"></a>Basic and Crystal syntax.</p><a name="1000432440"></a><h5>Arguments</h5><ul type="disc"><a name="1000432441"></a><li>fld is any valid database or formula field that can be evaluated by the function.
+<a name="1000432442"></a><li>condFld is any valid database or formula field used to group the values in fld.
+</ul><a name="1000432443"></a><h5>Returns</h5><p><a name="1000432444"></a>Fractional Number</p><a name="1000432445"></a><h5>Action </h5><p><a name="1000432448"></a>SummaryFunction (fld, condFld) summarizes each group of values that is generated when the specified summary condition is met.</p><a name="1000432449"></a><h5>Typical uses</h5><p><a name="1000432450"></a>Use these functions whenever you want to duplicate, in a formula, a summary: </p><ul type="disc"><a name="1000432451"></a><li>that summarizes the values in a group 
+<a name="1000432452"></a><li>that uses a String, Number, Date, Time, DateTime, or Currency field as the sort and group by (trigger) field.
+</ul><a name="1000432453"></a><h5>Examples </h5><p><a name="1000432454"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000432455"></a>SummaryFunction({orders.ORDER AMOUNT}, {customer.CUSTOMER ID})</code></p><p class="example"><a name="1000432456"></a>Summarizes the orders in each group of customer orders. The orders are separated into groups whenever the value in the Customer field changes.</p><p><code><a name="1000432459"></a>Count({orders.AMOUNT}, {orders.CUSTOMER ID})</code></p><p class="example"><a name="1000432460"></a>This formula counts the number of orders in each group of orders in the Amount field (the total orders for each month). The orders are separated into groups whenever the value in the Customer ID field changes.</p><p><code><a name="1000432461"></a>StdDev({orders.AMOUNT}, {orders.CUSTOMER ID})</code></p><p class="example"><a name="1000432462"></a>Calculates the standard deviation for the orders in each group of orders in the Orders field. The orders are separated into groups whenever the value in the Customer field changes.</p><p><code><a name="1000432463"></a>Sum({orders.ORDER ID}, {orders.CUSTOMER ID})</code></p><p class="example"><a name="1000432464"></a>Sums (totals) the orders in each group of orders in the Amount field. The orders are separated into groups whenever the value in the Customer ID field changes.</p><p><a name="1000735748"></a>The following example is applicable to Crystal syntax:</p><p><code><a name="1000735742"></a>SummaryFunction({orders.ORDER AMOUNT}, {customer.REGION}) % SummaryFunction({orders.ORDER AMOUNT})</code></p><p class="example"><a name="1000735743"></a>Groups values in the Amount field by region, summarizes the values for each region group, and shows those values as a percentage of the summary value for the entire report.</p><a name="1000432465"></a><h5>Comments </h5><p><a name="1000599835"></a>In order to use this function to insert a group field in a formula, you must have already entered a group field in your report with identical parameters: same field, same sort and group by (trigger) field, same action (average, count, etc.).</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp22.html";
+var next = "functionshelp24.html";
+
+function setTopicID() { 
+      var number = "1000432439"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

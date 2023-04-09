@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>If example</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="147365"></a><h4 class="newpage"> If example</h4><p><a name="147367"></a>Suppose that a company wants to compute an estimate of the amount of tax an employee needs to pay and write a suitable message. Income below $8,000 is not taxed, income from $8,000 to $20,000 is taxed at 20% income from $20,000 to $35,000 is taxed at 29% and income above $35,000 is taxed at 40%.</p><PRE><a name="147369"></a>//If example 5
+<a name="147370"></a>Local CurrencyVar tax := 0;
+<a name="147371"></a>Local CurrencyVar income := {Employee.Salary};
+<a name="147372"></a>Local StringVar message := "";
+<a name="147374"></a>If income &lt; 8000 Then
+<a name="147375"></a>(
+<a name="147376"></a>   message := "no";
+<a name="147377"></a>   tax := 0
+<a name="147378"></a>)
+<a name="147379"></a>Else If income &gt;= 8000 And income &lt; 20000 Then
+<a name="147380"></a>(
+<a name="147381"></a>   message := "lowest";
+<a name="147382"></a>   tax := (income - 8000)*0.20
+<a name="147383"></a>)
+<a name="147384"></a>Else If income &gt;= 20000 And income &lt; 35000 Then
+<a name="147385"></a>(
+<a name="147386"></a>   message := "middle";
+<a name="147387"></a>   tax := (20000 - 8000)*0.20 + (income - 20000)*0.29
+<a name="147388"></a>)
+<a name="147389"></a>Else
+<a name="147390"></a>(
+<a name="147391"></a>   message := "highest";
+<a name="147392"></a>   tax := (20000 - 8000)*0.20 + (35000 - 20000)*0.29 +
+<a name="147393"></a>          (income - 35000)*0.40
+<a name="147394"></a>);
+<a name="147396"></a>//Use 2 decimal places and the comma as a
+<a name="147397"></a>//thousands separator
+<a name="147398"></a>Local StringVar taxStr := CStr (tax, 2, ",");
+<a name="147400"></a>"You are in the " &amp; message &amp; " tax bracket. " &amp;
+<a name="147401"></a>"Your estimated tax is " &amp; taxStr &amp; "."
+</PRE><p><a name="147403"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The use of variables is to simplify the logic of the computation. Also, there are 2 expressions that are executed when one of the conditions are met; one assigns the tax variable, and the other assigns the message variable. It is often useful to have multiple expressions executed as a result of a condition.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax53.html";
+var next = "21_crystalsyntax55.html";
+
+function setTopicID() { 
+      var number = "147365"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

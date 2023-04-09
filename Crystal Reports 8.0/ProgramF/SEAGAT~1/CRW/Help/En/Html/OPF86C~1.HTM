@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Right end point excluded range (x To_ y)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000027093"></a><h3 class="newpage"> Right end point excluded range (x To_ y)</h3>
+<p><a name="1000029281"></a>Basic and Crystal syntax.</p><a name="1000027094"></a><h5>Usage</h5><p><code><a name="1000027095"></a>x  To_ y</code></p><p class="example"><a name="1000027096"></a>x  To_ y is used to specify a range of values greater than or equal to the value x, and less than but not including the value y. x and y can be of one of the types: Number, Boolean, Currency, Date, Time, DateTime, and String.</p><a name="1000027097"></a><h5>Examples</h5><p><a name="1000027098"></a>The following example is applicable to Basic syntax:</p><p class="code"><a name="1000048324"></a>Dim BlackoutDates As Date Range
+<br><a name="1000048325"></a>Rem Blackout period is Jan. 1, 1999 to March 31, 1999, inclusive
+<br><a name="1000048326"></a>BlackoutDates = CDate(#1/1/1999#) To_ CDate(#4/1/1999#)
+<br><a name="1000048327"></a>If CurrentDate In BlackoutDates Then
+<br><a name="1000048328"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = "Blackout"
+<br><a name="1000048329"></a>Else
+<br><a name="1000048330"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = "Free to trade"
+<br><a name="1000048331"></a>End If
+</p><p class="indent"><a name="1000027104"></a>If today's date is Dec. 31, 1998, then "Free to trade" is returned since it is before the Blackout period.</p><p class="indent"><a name="1000027105"></a>If today's date is Jan. 1, 1999, then "Blackout" is returned since it is within the Blackout period.</p><p class="indent"><a name="1000027106"></a>If today's date is March 31, 1999, then "Blackout" is returned since it is within the Blackout period.</p><p class="indent"><a name="1000027107"></a>If today's date is April 1, 1999, then "Free to trade" is returned since it is after the Blackout period.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp29.html";
+var next = "OperatorsHelp31.html";
+
+function setTopicID() { 
+      var number = "1000027093"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

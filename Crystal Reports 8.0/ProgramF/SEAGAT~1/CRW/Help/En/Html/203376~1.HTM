@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using the Exit For statement</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="132883"></a><h4 class="newpage"> Using the Exit For statement</h4><p><a name="132885"></a>You can exit from a For/Next loop by using the Exit For statement. The following example searches the Global array names for the name "Fred". If it finds the name, it returns the index of the name in the array. Otherwise it returns -1. For example, if the names array is</p><p><code><a name="132886"></a>Array ("Frank", "Helen", "Fred", "Linda")</code></p><p><a name="132887"></a>Then the formula returns 3.</p><PRE><a name="132889"></a>Global names () As String
+<a name="132890"></a>'The names array has been initialized and filled
+<a name="132891"></a>'in other formulas
+<a name="132892"></a>Dim i
+<a name="132893"></a>formula = -1
+<a name="132894"></a>'The UBound function returns the size of its array
+<a name="132895"></a>'argument
+<a name="132896"></a>For i = 1 to UBound (names)
+<a name="132897"></a>   If names (i) = "Fred" Then
+<a name="132898"></a>      formula = i
+<a name="132899"></a>      Exit For
+<a name="132900"></a>   End If
+<a name="132901"></a>Next i
+</PRE><a name="132903"></a><h3>Do Loops</h3>
+<p><a name="132905"></a>Another looping mechanism is the Do loop. A Do loop can be used to execute a fixed block of statement an indefinite number of time.</p><a name="133227"></a><h4>The 4 different types of Do loops<Table Border="1">
+<tr><th align="left" valign="bottom"><a name="133325"></a><strong>Type of Do Loop
+</strong>
+</th><th align="left" valign="bottom"><a name="133327"></a>Explanation
+
+</th><th align="left" valign="bottom"><a name="133329"></a>Example
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="133331"></a>Do While ... Loop</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="133375"></a>The Do While ... Loop evaluates the condition, and if the condition is true, then it evaluates the statements following the condition. </P>
+
+
+<P><br></P>
+
+
+<P><a name="133393"></a>When it has finished doing this, it evaluates the condition again and if the condition is true, it evaluates the statements again. </P>
+
+
+<P><br></P>
+
+
+<P><a name="133395"></a>It continues repeating this process until the condition is false.</P>
+
+
+</td><td align="left" valign="TOP"><PRE><a name="133335"></a>Do While <EM>condition
+</EM><a name="133336"></a>   <EM>statements
+</EM><a name="133337"></a>Loop
+</PRE></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="133339"></a>Do Until ... Loop</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="133401"></a>The Do Until ... Loop is similar to the Do While ... Loop except it keeps evaluating the statements <EM>until</EM><EM> </EM>the condition is true rather than <EM>while</EM> it is true.</P>
+
+
+</td><td align="left" valign="TOP"><PRE><a name="133343"></a>Do Until <EM>condition
+</EM><a name="133344"></a>   <EM>statements
+</EM><a name="133345"></a>Loop
+</PRE></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="133347"></a>Do ... Loop While</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="133417"></a>The Do ... Loop While evaluates the statements only once. </P>
+
+
+<P><br></P>
+
+
+<P><a name="133444"></a>It then evaluates the condition, and if the condition is true, evaluates the statements again. This process continues until the condition is false.</P>
+
+
+</td><td align="left" valign="TOP"><PRE><a name="133351"></a>Do
+<a name="133352"></a>   <EM>statements
+</EM><a name="133353"></a>Loop While <EM>condition
+</EM></PRE></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="133355"></a>Do ... Loop Until</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="133357"></a>Similar to Do ... Loop While except that it evaluates the statements until the condition is true.</P>
+
+
+</td><td align="left" valign="TOP"><PRE><a name="133359"></a>Do
+<a name="133360"></a>   <EM>statements
+</EM><a name="133361"></a>Loop Until <EM>condition
+</EM></PRE></td></tr>
+
+</Table></h4><p><a name="133455"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The Do loops support an Exit Do statement to immediately jump out of the loop. The Exit Do statement is similar to the Exit For in For/Next loops.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax53.html";
+var next = "20_basicsyntax55.html";
+
+function setTopicID() { 
+      var number = "132883"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Equal operator</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000011031"></a><h3 class="newpage"> Equal operator</h3>
+<p><a name="1000028483"></a>Basic and Crystal syntax.</p><a name="1000011033"></a><h5>Usage</h5><p><code><a name="1000011034"></a>x = y</code></p><p class="example"><a name="1000011036"></a>x is equal to y</p><p><a name="1000011039"></a>The equal operator tells the program to evaluate an expression (x=y) and return a TRUE (if x is equal to y) or FALSE (if x is not equal to y).</p><a name="1000011042"></a><h5>Examples</h5><p><a name="1000011043"></a>The following examples are applicable to both Crystal and Basic syntax:</p><p><code><a name="1000011044"></a>{file.QUANTITY} = 3</code></p><p class="example"><a name="1000011045"></a>TRUE, where {file.QUANTITY} has a value of 3.</p><p><code><a name="1000011046"></a>{file.QUANTITY} = 3</code></p><p class="example"><a name="1000011047"></a>FALSE, in all other situations.</p><p><code><a name="1000011048"></a>{file.YTD} = {file.LASTYEARYTD}</code></p><p class="example"><a name="1000011049"></a>TRUE, where the value of the field {file.YTD} is identical to the value of the field {file.LASTYEARYTD}.</p><p><code><a name="1000011050"></a>{file.YTD} = {file.LASTYEARYTD} </code></p><p class="example"><a name="1000011051"></a>FALSE, in all other situations.</p><p><code><a name="1000011052"></a>({file.SALES} - {file.COGS}) = 22,654</code></p><p class="example"><a name="1000011053"></a>TRUE, where calculating the expression {file.SALES}-{file.COGS} produces the value 22,654, for example {file.SALES} = 109,986} and {file.COGS} = 87,332}.</p><p><code><a name="1000028507"></a>({file.SALES} - {file.COGS}) = 22,654</code></p><p class="example"><a name="1000028508"></a>FALSE, in all other situations.</p><p><code><a name="1000035677"></a>{customer.LAST NAME} = "Johnson"</code></p><p class="example"><a name="1000035678"></a>TRUE, where the text <a href="glossary17.html#13544">string</a> in the {customer.LAST NAME} field is "Johnson".</p><p><code><a name="1000011058"></a>{customer.LAST NAME} = "Johnson"</code></p><p class="example"><a name="1000011059"></a>FALSE, in all other situations.</p><a name="1000011060"></a><h5>Comments</h5><p><a name="1000011061"></a>This operator is often used in expressions with <a href="OperatorsHelp56.html#1000038617">If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operators</a>. For example in Crystal syntax: </p><p class="code"><a name="1000011062"></a>If {file.PURCHASES} = 0 Then
+<br><a name="1000046968"></a>&nbsp;&nbsp;&nbsp;&nbsp;"Your account had no activity this month."
+<br><a name="1000046981"></a>Else
+<br><a name="1000046994"></a>&nbsp;&nbsp;&nbsp;&nbsp;"";
+</p><p class="example"><a name="1000035851"></a>Which prints the "Your account..." statement if the {file.PURCHASES} field has a zero value, and prints nothing (indicated by the <a href="glossary6.html#13290">empty string</a> "") if the {file.PURCHASES} field has something other than a zero value.</p><a name="1000011068"></a><h6>Related topics</h6><p><a name="1000011072"></a><a href="19_introformulas39.html#304946">Formula 9</a></p><p><a name="1000036863"></a><a href="19_introformulas45.html#305354">Formula 15</a></p><p><a name="1000036867"></a><a href="19_introformulas47.html#305487">Formula 17</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp14.html";
+var next = "OperatorsHelp16.html";
+
+function setTopicID() { 
+      var number = "1000011031"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

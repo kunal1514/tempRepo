@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Join</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000496524"></a><h3 class="newpage"> Join</h3>
+<p><a name="1000671281"></a>Basic and Crystal syntax.</p><a name="1000496525"></a><h5>Overloads</h5><ul type="disc"><a name="1000496526"></a><li>Join (list)
+<a name="1000496527"></a><li>Join (list, delimiter)
+</ul><a name="1000496528"></a><h5>Arguments</h5><ul type="disc"><a name="1000496529"></a><li>list is a String array containing substrings to be joined.
+<a name="1000496530"></a><li>delimiter is an optional String used to separate the substrings in the returned string. If omitted, the space character (" ") is used. If delimiter is a zero<nobr>-l</nobr>ength string (""), all items in the list are concatenated with no delimiters.
+</ul><a name="1000496531"></a><h5>Returns</h5><p><a name="1000496532"></a>String value.</p><a name="1000496533"></a><h5>Action</h5><p><a name="1000496534"></a>Join returns a String created by joining a number of substrings contained in an array.</p><a name="1000496535"></a><h5>Typical use</h5><p><a name="1000496536"></a>To convert elements stored in a String array to a single String.</p><a name="1000496537"></a><h5>Examples</h5><p><a name="1000496538"></a>The following examples are applicable to Basic and Crystal syntax. </p><p><a name="1000671282"></a>The examples assume that list is a String array consisting of the 3 elements: "Chocolate", "Vanilla" and "Strawberry".</p><p><code><a name="1000496539"></a>Join (list)</code></p><p class="example"><a name="1000496540"></a>Returns the String "Chocolate Vanilla Strawberry".</p><p><code><a name="1000496541"></a>Join (list, "***")</code></p><p class="example"><a name="1000496542"></a>Returns the String "Chocolate***Vanilla***Strawberry".</p><a name="1000496543"></a><h5>Comments</h5><p><a name="1000496544"></a>This function is designed to work like the Visual Basic function of the same name.</p><a name="1000671283"></a><h6>Related topics</h6><p><a name="1000496545"></a><a href="functionshelp101.html#1000496717">Split</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp99.html";
+var next = "functionshelp101.html";
+
+function setTopicID() { 
+      var number = "1000496524"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

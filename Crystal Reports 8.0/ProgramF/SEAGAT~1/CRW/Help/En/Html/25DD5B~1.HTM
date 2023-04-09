@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Advantages</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1814"></a><h3 class="newpage"> Advantages</h3>
+<p><a name="1816"></a>Perhaps the biggest advantage to accessing data through ODBC is the ability to access a wide range of data with just one interface. Since most popular Database Management Systems now offer ODBC drivers, with more appearing every day, Seagate Crystal Reports can use any type of data you have.</p><p><a name="1818"></a>Because of the extreme flexibility built into ODBC, you can use the same report file with different ODBC data sources. For example, you might design a report using an Oracle data source, and later, if your company switches to Microsoft SQL Server, you can simply change the ODBC data source used by your report. The only requirement is that the new data source must have the same structure (tables and fields) that the original data source had (although table names can be different). See <a href="24_under_databases51.html#14833">Changing the ODBC data source accessed by a report</a>.</p><p><a name="1820"></a>Experienced SQL (Structured Query Language) programmers also benefit from the ODBC standard. Since Seagate Crystal Reports uses SQL to communicate with ODBC, SQL programmers and Database Administrators can view and edit the SQL statements sent to ODBC, controlling exactly how data is retrieved from the data source.</p><p><a name="1822"></a>Finally, by using SQL pass<nobr>-t</nobr>hrough technology to send an SQL statement to ODBC and retrieve an initial set of data, Seagate Crystal Reports off<nobr>-l</nobr>oads much of the data retrieval and sorting work on to the server system, freeing up local memory and resources for more important tasks. In addition, only the data specified by the SQL statement is returned to Seagate Crystal Reports, reducing network traffic and the use of network resources. By working more efficiently with the original data, Seagate Crystal Reports saves you time and effort, and lets you concentrate on the design process and other more important work.</p><a name="1824"></a><h3>Disadvantages</h3>
+<p><a name="71190"></a>Because of the many layers involved in passing data through ODBC from a database to an application, ODBC data sources often take more time to return data than natively accessed data sources. First, Seagate Crystal Reports must request some data. The request must be translated by the ODBC translation layer into a format that ODBC understands (an SQL statement). ODBC must determine where the requested data exists, and pass the request on to the ODBC data source. For more information, see <a href="25_access_sources33.html#1862">DBMS translation (ODBC data source) layer</a>. The data source must analyze the request and translate it again into a format that can be understood by the DBMS. This complex process not only takes time, but it can also fail at any of several possible levels.</p><p><a name="26159"></a>In addition, ODBC data sources must be correctly configured and set up in the Odbc.ini and Odbcinst.ini files before they can be used. If you create a report on one system and try to open it on another system that does not have the same ODBC data source set up, Seagate Crystal Reports will not be able to connect to the data.</p><p><a name="1828"></a>When working with ODBC, you should also be aware that the SQL language used by ODBC is based on the standards set for the SQL language by the American National Standards Institute (ANSI). Some SQL<nobr>-b</nobr>ased DBMS applications, however, provide additional features to the SQL language that are specific to that DBMS. If your data uses features unique to your DBMS, ODBC will not be able to translate those features (though in many cases it will still retrieve most of the data). See <a href="24_under_databases31.html#14420">The SQL language</a>.</p><a name="1830"></a><h3>Five layers</h3>
+<p><a name="1832"></a>The process by which Seagate Crystal Reports accesses data from an ODBC data source consists of five layers:</p><ul type="disc"><a name="120895"></a><li><a href="25_access_sources30.html#1848">Seagate Crystal Reports layer</a>
+<a name="120900"></a><li><a href="25_access_sources31.html#1852">ODBC translation layer</a>
+<a name="120905"></a><li><a href="25_access_sources32.html#1856">ODBC layer</a>
+<a name="120910"></a><li><a href="25_access_sources33.html#1862">DBMS translation (ODBC data source) layer</a>
+<a name="120914"></a><li><a href="25_access_sources34.html#1870">Database layer</a>.
+</ul><p><a name="353999"></a></p><p><a name="333256"></a> </p>
+<p><a name="1846"></a> <img src="images/Odbclyrs.gif">
+
+
+</p>
+<p><a name="355243"></a>By using the Structured Query Language (SQL), all five layers can conveniently pass data from the database to your report.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources28.html";
+var next = "25_access_sources30.html";
+
+function setTopicID() { 
+      var number = "1814"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

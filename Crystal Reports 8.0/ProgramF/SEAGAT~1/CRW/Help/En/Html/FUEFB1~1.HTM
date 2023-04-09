@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Mode (fld), Mode (fld, condFld), Mode (fld, condFld, cond)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000480445"></a><h3 class="newpage"> Mode (fld), Mode (fld, condFld), Mode (fld, condFld, cond)</h3>
+<p><a name="1000666383"></a>Basic and Crystal syntax.</p><a name="1000480448"></a><h5>Arguments</h5><ul type="disc"><a name="1000480449"></a><li>fld is any valid database or formula field that can be evaluated by the function.
+<a name="1000480450"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000665085"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+</ul><a name="1000480452"></a><h5>Returns</h5><p><a name="1000480453"></a>Fractional Number</p><a name="1000480454"></a><h5>Action</h5><p><a name="1000480455"></a>Identifies the most frequently occurring value.</p><p><a name="1000480456"></a>For example:</p><ul type="disc"><a name="1000480458"></a><li>You can calculate the mode of all the values in a field. For information on this kind of summary, see <a href="functionshelp22.html#1000432407">SummaryFunction (fld)</a>.
+<a name="1000480460"></a><li>You can calculate the mode of all the values in the field, within a group (for example, sales grouped by the state that they come from). For information on this kind of summary, see <a href="functionshelp23.html#1000432439">SummaryFunction (fld, condFld)</a>.
+<a name="1000480462"></a><li>You can calculate the mode of all the values within a group in which grouping is controlled by changes in a date or Boolean field (for example, sales grouped by the month in which they were made). For information on this kind of summary, see <a href="functionshelp24.html#1000599837">SummaryFunction (fld, condFld, cond)</a>.
+</ul><a name="1000480463"></a><h5>Examples</h5><p><a name="1000480464"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000480465"></a>Mode({Customer.CUSTOMER NAME})</code></p><p class="example"><a name="1000480467"></a>Returns the mode (the most frequently occurring value) for the Customer Name field.</p><p><code><a name="1000480468"></a>Mode({Customer.CUSTOMER NAME}, {Customer.REGION})</code></p><p class="example"><a name="1000480469"></a>Groups values in the Customer Name field by region, and then returns the mode for the Customer Name field, per region.</p><p><code><a name="1000480471"></a>Mode({Customer.CUSTOMER NAME}, {Customer.REGION}, "monthly")</code></p><p class="example"><a name="1000480472"></a>Groups values in the Customer Name field by region, then returns the mode of the Customer Name field for each region, per month.</p><a name="1000480474"></a><h5>Comments</h5><p><a name="1000480476"></a>Mode works like NthMost Frequent when N = 1.</p><p><a name="1000656882"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. </p>
+<p><a name="1000656885"></a>For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp40.html";
+var next = "functionshelp42.html";
+
+function setTopicID() { 
+      var number = "1000480445"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>StdDev (fld), StdDev (fld, condFld), StdDev (fld, condFld, cond), StdDev (x)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000450614"></a><h3 class="newpage"> StdDev (fld), StdDev (fld, condFld), StdDev (fld, condFld, cond), StdDev (x)</h3>
+<p><a name="1000650777"></a>Basic and Crystal syntax.</p><a name="1000450618"></a><h5>Arguments</h5><ul type="disc"><a name="1000450619"></a><li>fld is any valid database or formula field that can be evaluated by the function.
+<a name="1000450620"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000450621"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+<a name="1000450622"></a><li>x is an array of values that can be evaluated by the function being used.
+</ul><a name="1000450623"></a><h5>Returns</h5><p><a name="1000450624"></a>Fractional Number</p><a name="1000450625"></a><h5>Action</h5><p><a name="1000450626"></a>Enables you to find the standard deviation of a set of values in your report. For example:</p><ul type="disc"><a name="1000450627"></a><li>You can calculate the grand total standard deviation for all values in a field. For information about this kind of summary, see <a href="functionshelp22.html#1000432407">SummaryFunction (fld)</a>.
+<a name="1000450628"></a><li>You can calculate the standard deviation for all values within a group (for example, sales grouped by the state that they come from). For information on this kind of summary, see <a href="functionshelp23.html#1000432439">SummaryFunction (fld, condFld)</a>.
+<a name="1000450629"></a><li>You can calculate the standard deviation for all values within a group in which grouping is controlled by changes in a date or Boolean field (for example, sales grouped by the month in which they were made). For information on this kind of summary, see <a href="functionshelp24.html#1000599837">SummaryFunction (fld, condFld, cond)</a>.
+<a name="1000450630"></a><li>If you specify a set of individual values, you can compute the standard deviation of the values in the set. For information on this kind of summary, see <a href="functionshelp155.html#1000567809">Array summary functions (x)</a>.
+</ul><a name="1000450631"></a><h5>Examples</h5><p><a name="1000450632"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000450633"></a>StdDev({file.RESULTS})</code></p><p class="example"><a name="1000450634"></a>Calculates the standard deviation of all values in the Result field.</p><p><code><a name="1000450635"></a>StdDev({orders.AMOUNT}, {orders.CUSTOMER ID})</code></p><p class="example"><a name="1000450636"></a>Calculates the standard deviation for the orders in each group of orders in the Orders field. The orders are separated into groups whenever the value in the Customer field changes.</p><p><code><a name="1000450637"></a>StdDev({file.RESULTS}, {file.DATE}, "daily")</code></p><p class="example"><a name="1000450638"></a>Calculates the variation for each group of laboratory test results in the Results field. The test results are separated into groups whenever the value in the Date field changes to a new day.</p><p><code><a name="1000450639"></a>StdDev({file.SCORES}, {file.NATURALIZED}, "any change")</code></p><p class="example"><a name="1000450640"></a>Groups values in the Scores field based on whether or not the test taker is a naturalized citizen, and calculates the standard deviation for each group of scores.</p><p><a name="1000735865"></a>The following example is applicable to Crystal syntax:</p><p><code><a name="1000450641"></a>StdDev([({file.QTY1} * {file.PRICE1}),({file.QTY2} * {file.PRICE2}),({file.QTY3} * {file.PRICE3}), ({file.QTY4} * {file.PRICE4})]) </code></p><p class="example"><a name="1000450642"></a>Returns 36.60 where Qty1 = 2, Price1 = 10.00, Qty2 = 2, Price2 = 2.00, Qty3 = 10, Price3 = 3.00, and Qty4 = 8, Price4 = 11.00.</p><a name="1000450643"></a><h5>Comments</h5><p><a name="1000450644"></a>Standard deviation is calculated using the following technique:</p><ul type="disc"><a name="1000450645"></a><li>It calculates the average (mean) value for the items in the sample.
+<a name="1000450646"></a><li>It subtracts the average value from the value of each item.
+<a name="1000450647"></a><li>It squares the difference for each item.
+<a name="1000450648"></a><li>It adds the squared differences for all of the items in the sample.
+<a name="1000450649"></a><li>It divides the sum by one less than the number of items in the sample (N - 1). The result is the variance. Compare this step to the <a href="functionshelp27.html#1000282197">PopulationStdDev (fld), PopulationStdDev (fld, condFld), PopulationStdDev (fld, condFld, cond), PopulationStdDev (x)</a>.
+<a name="1000450650"></a><li>It calculates the square root of the variance to arrive at the standard deviation.
+</ul><p><a name="1000652619"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Using this function in a formula forces the formula to be evaluated at print time. </p>
+<p><a name="1000652648"></a>For more information on evaluation time considerations, see <a href="functionshelp169.html#1000572432">Evaluation Time functions</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp25.html";
+var next = "functionshelp27.html";
+
+function setTopicID() { 
+      var number = "1000450614"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

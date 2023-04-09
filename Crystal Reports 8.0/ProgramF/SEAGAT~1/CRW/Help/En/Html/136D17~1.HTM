@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Creating maps</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="72904"></a><h2 class="newpage">Creating maps</h2><p><a name="89692"></a>The process for creating a map varies depending on the data you are mapping on. The following sections detail the mapping process for each map layout.</p><a name="91523"></a><h3>Mapping on details fields (Advanced layout)</h3>
+<p><a name="91524"></a>Using the Advanced layout, you can map on specific values rather than summaries. This layout also allows you to use multiple fields as map values. Use this layout to use multiple map values or when you do not have any groups or summaries in a report.</p><p><a name="91525"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>You must map on a geographic field, such as Country, Region, or City. Seagate Crystal Reports cannot generate a map based on a non<nobr>-g</nobr>eographic field.</p>
+<a name="91526"></a><h6>To map on a details field</h6><ol>
+<a name="97226"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_insertmap.gif">
+
+
+On the <kbd>Insert</kbd> menu, click <kbd>Map</kbd>.
+<p class="indent"><a name="98029"></a>The Map Expert dialog box appears.</p><p><a name="97824"></a> <img src="images/tb_detmp.gif">
+
+
+</p>
+<a name="98460"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Data</kbd> tab, in the <kbd>Layout</kbd> area, click <kbd>Advanced</kbd>.
+<a name="98016"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Placement</kbd> area, in the <kbd>Place map</kbd> list, specify how often your map appears on the report, then click <kbd>Header</kbd> or <kbd>Footer</kbd> to specify where to place your map.
+<a name="92765"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Data</kbd> area, add the database field you want to base your map on to the <kbd>Geographic field</kbd>.
+<p class="indent"><a name="91537"></a>The arrow buttons on the Map Expert dialog box allow you to move fields from one list to the other. Single arrows move only the selected field; double arrows move all fields at the same time.</p><p class="indent"><a name="91538"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>You must map on a geographic field, such as City, Region, or Country; otherwise, Seagate Crystal Reports cannot generate your map.</p>
+<a name="91539"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Add the database field you want to appear with each change to the <kbd>On change of</kbd> field.
+<a name="94157"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Add the database fields you want to use as values to the <kbd>Map values</kbd> list.
+<a name="91541"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">If you do not want Seagate Crystal Reports to automatically summarize the map values, select the <kbd>Don't summarize values</kbd> check box.
+<a name="91542"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Type</kbd> tab.
+<p><a name="97267"></a> <img src="images/db_mapadv_type.gif">
+
+
+</p>
+<a name="98474"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Click the map type that best illustrates your data (Ranged, Dot Density, Graduated, Pie Chart, or Bar Chart). See <a href="13_map5.html#57897">Map types</a>.
+<a name="92777"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Options</kbd> area, apply formatting options to your map.
+<a name="92786"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Click the <kbd>Text</kbd> tab.
+<p><a name="97320"></a> <img src="images/tb_txtmp.gif">
+
+
+</p>
+<a name="98488"></a><li value="12&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Map title</kbd> field, enter a title for your map.
+<a name="91868"></a><li value="13&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Legend</kbd> area, you can click one of the following options:
+<ul type="disc"><ul type="disc"><a name="92803"></a><li><kbd>Full legend</kbd> to show a detailed legend on your map<a name="92464"></a><li><kbd>Compact legend</kbd> to show a condensed legend on your map<a name="92468"></a><li><kbd>No legend</kbd> to exclude the legend from your map.</ul></ul><a name="92836"></a><li value="14&nbsp;&nbsp;&nbsp;&nbsp;">If you click <kbd>Full legend</kbd>, click <kbd>Made by map</kbd> to have Seagate Crystal Reports create a legend title based on your map, or click <kbd>Specify</kbd> to enter your own legend title and subtitle.
+<a name="91550"></a><li value="15&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<p class="indent"><a name="91551"></a>Your map is placed in the Header or Footer section of the report, depending on your selection in Step 3.</p></ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "13_map7.html";
+var next = "13_map9.html";
+
+function setTopicID() { 
+      var number = "72904"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

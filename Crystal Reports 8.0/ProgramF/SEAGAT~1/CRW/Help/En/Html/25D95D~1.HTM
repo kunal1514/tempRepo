@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>SQL databases through Merant DataDirect</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="27238"></a><h4 class="newpage"> SQL databases through Merant DataDirect</h4><p><a name="1930"></a>There are many different SQL Database Management Systems available on the market, and most of them can be accessed through ODBC. Seagate Crystal Reports automatically installs and sets up several ODBC data sources, allowing you to access many of the most popular SQL databases, including:</p><ul type="disc"><a name="1932"></a><li>Oracle
+<a name="1934"></a><li>Sybase SQL Server
+<a name="1942"></a><li>DB2/2
+</ul><p><a name="26758"></a>Seagate Crystal Reports provides the Merant DataDirect ODBC drivers for these SQL database formats. Not all SQL databases are accessed through these drivers, but as a convenience, the program automatically sets up these drivers for you during installation. Seagate Crystal Reports still communicates with ODBC through the P2sodbc.dll translation file, but the DataDirect drivers provide ODBC with easy access to the actual databases.</p><p><a name="306052"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If you are using an SQL database not accessed by the Merant drivers, refer to your DBMS documentation for more information about the required ODBC drivers.</p>
+<p><a name="1948"></a>Do not confuse SQL databases with the SQL language. Structured Query Language (SQL) is a specialized computer language used to design, build, and read database files. See <a href="24_under_databases28.html#14368">Using SQL and SQL databases</a>.</p><p><a name="1950"></a>SQL databases are any collection of computer applications that depend on the SQL language for database creation and manipulation. SQL DBMS applications are usually designed to run as large client/server applications spread across a network.</p><p><a name="1952"></a>To open an SQL database, ODBC uses a set of four DataDirect ODBC support drivers (these are the same for every SQL database format), a DataDirect ODBC driver specific to the database format, and the Database Communication layer that actually communicates directly to the database file. The files provided for this DBMS translation layer are all Merant DataDirect drivers.</p><p><a name="306074"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>ODBC does not have to use the Merant DataDirect drivers to access the SQL databases shown here. Most SQL DBMS applications provide their own ODBC drivers. However, Seagate Crystal Reports sets up the Merant drivers for you automatically. </p>
+<p><a name="306093"></a> </p>
+<p><a name="306106"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Seagate Crystal Reports provides Merant drivers for accessing SQL databases. These 32<nobr>-b</nobr>it drivers are named Cr*13.dll.</p>
+<p><a name="27239"></a>As mentioned previously, Seagate Crystal Reports automatically creates several ODBC data sources for the SQL database formats supported by Merant DataDirect. These data sources are automatically created:</p><ul type="disc"><a name="1962"></a><li>ODBC<nobr>-C</nobr>RDB supports DB2/2
+<a name="1966"></a><li>ODBC<nobr>-C</nobr>ROR7 supports Oracle 7
+<a name="1968"></a><li>ODBC<nobr>-C</nobr>ROR8 supports Oracle 8
+<a name="26463"></a><li>ODBC<nobr>-C</nobr>RSYB supports Sybase System 10.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources37.html";
+var next = "25_access_sources39.html";
+
+function setTopicID() { 
+      var number = "27238"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

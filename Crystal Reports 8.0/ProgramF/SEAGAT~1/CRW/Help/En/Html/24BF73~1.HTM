@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Server-side processing</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="394532"></a><h2 class="newpage">Server-side processing</h2><p><a name="394533"></a>Server<nobr>-s</nobr>ide processing allows you to set up a report that performs the majority of its processing on the server and pushes only relevant details to your computer.</p><p><a name="444447"></a>Server<nobr>-s</nobr>ide processing provides you with a number of benefits:</p><ul type="disc"><a name="394534"></a><li>less time connected to the server
+<a name="394535"></a><li>less memory needed to process the report on your computer
+<a name="394536"></a><li>lower transfer time from the server to the client.
+</ul><p><a name="394537"></a>Here's how server<nobr>-s</nobr>ide processing works: by using SQL pass<nobr>-t</nobr>hrough technology to send an SQL statement to the database server and retrieve an initial set of data, Seagate Crystal Reports off<nobr>-l</nobr>oads much of the data retrieval and sorting work onto the server system, thus freeing up local memory and resources for more important tasks. That is why server<nobr>-s</nobr>ide processing works only for reports that have been sorted and grouped; if a report has not been sorted and grouped (for example, if it is a simple list report), then there is no processing to push to the server. You should also note that server<nobr>-s</nobr>ide processing works only for reports based on SQL data sources (you could not, for example, use server<nobr>-s</nobr>ide processing for a report based on a query, since a query is not an SQL data source).</p><p><a name="394541"></a>Keep in mind that in order to perform the grouping on the server, your report must conform to the following conditions:</p><ul type="disc"><a name="394542"></a><li>The Perform Grouping on Server<EM> </EM>option (in the Options dialog box) is enabled. For more information, see <a href="24_under_databases34.html#394572">Enabling server<nobr>-s</nobr>ide processing</a>.
+<a name="394546"></a><li>The report uses some form of grouping.
+<a name="394547"></a><li>The report is at least partially hidden (at the very least, the Details section must be hidden). Since the server will process those sections that are hidden, the greater the portion of the report that is visible, the greater the amount of processing that must take place on the client side. If the Details section is shown, server<nobr>-s</nobr>ide processing will not be possible.
+<a name="394548"></a><li>In some cases, formula fields must be processed on the client side. If grouping is based on a formula field, or if a formula is used in a summary field, then all the records must be transferred to the client side before the formula can be evaluated. This will increase the amount of time required to run the report. Therefore, you may want to use SQL expressions as an alternative to formulas.
+<p class="indent"><a name="420310"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Formulas used for record selection are an exception and can be pushed down to the server.</p>
+<a name="394549"></a><li>In order for a report to be processed on the server, any running totals appearing in the report must be based on summary fields (since the data needed for the running totals will be pulled over to the client side).
+<a name="394550"></a><li>In order for a report to be processed on the server, the report must not contain Average or Distinct count summaries.
+<a name="394552"></a><li>The report does not contain specified value grouping.
+</ul><p><a name="394553"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="394554"></a><li>When you drill<nobr>-d</nobr>own on a hidden section of a report, with the processing being done on the server, connection to the server will be automatically initiated. If the client is disconnected from the server (for example, if you download a report onto your laptop and you work on it from a remote location), then drilling<nobr>-d</nobr>own on data will produce an error since the database is not available.
+<a name="394555"></a><li>If you save a report that has been partially processed on the server using the Save Data with Report option, the program will save only those records that have been transferred to the client side. In other words, if you have drilled<nobr>-d</nobr>own on a hidden section and there is a tab for that data in Seagate Crystal Reports (indicating the data has been transferred), those records will be saved with the report.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases31.html";
+var next = "24_under_databases33.html";
+
+function setTopicID() { 
+      var number = "394532"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

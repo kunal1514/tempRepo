@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Selecting records</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="97381"></a><h2 class="newpage">Selecting records</h2><p><a name="98806"></a>When a field is selected to appear on a report, field values from every record in the active table(s) are printed by default. In many cases, you may not want to include all the values, but only a subset of those values. For example, you may want to include:</p><ul type="disc"><a name="98807"></a><li>records only for a specific group of customers
+<a name="98808"></a><li>records for a specific range of account numbers out of the total number of records in the database
+<a name="98809"></a><li>values from only those records that fall within a particular date range.
+</ul><a name="88918"></a><h4>Options for selecting records</h4><p><a name="98869"></a>Seagate Crystal Reports includes a very sophisticated formula language that you can use to specify virtually any type of record selection. However, you may not always need the flexibility in record selection that the formula language provides. The Select Expert is designed for such instances.</p><p><a name="98814"></a>You can select records in one of two ways:</p><ul type="disc"><a name="88998"></a><li><a href="07_recordgroupsel4.html#95100">Using the Select Expert</a>
+<a name="88999"></a><li><a href="07_recordgroupsel5.html#105712">Using formulas</a>.
+</ul><a name="100213"></a><h4>Determining which field(s) to use</h4><p><a name="100214"></a>When you select records, you are basing your report only on those records that meet some conditions that you have set. You base those conditions on the kind of information you want in the finished report.</p><p><a name="100215"></a>Assume, for example, that you want a report that only shows data from California. The challenge is to find the best way to identify those records that come from California.</p><ul type="disc"><a name="100216"></a><li>If the table used in a report has a State or Region field, you can specify in your request that the program use only those records in which the value in the state field is equal to California (Region is equal to CA).
+<a name="100217"></a><li>If the table does not have a State field and you still want to report only on California data, there may be another way to identify that data.
+<ul type="disc"><ul type="disc"><a name="100218"></a><li>If the table has a Postal Code field, you could base your record selection on the range of ZIP codes that apply to California (Postal Code is between <EM>n</EM> and <EM>N</EM>).<a name="100219"></a><li>If the table has an Area Code field, you could base your record selection on California Area Codes (Area Code is one of x, y,....z).</ul></ul></ul><p><a name="100220"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="104246"></a><li>If the Area Code is stored in the telephone number field, you will not be able to do this same record selection using the Select Expert based on the Area Code. You will have to create a record selection formula using the formula language to extract the Area Code part of the phone number and then do record selection based on that.
+<a name="100225"></a><li>As a general rule, if you can base your record selection on a number of fields (as in this example), you should select an indexed field instead of a field that is not indexed.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "07_recordgroupsel2.html";
+var next = "07_recordgroupsel4.html";
+
+function setTopicID() { 
+      var number = "97381"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

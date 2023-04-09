@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Replace</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000518255"></a><h3 class="newpage"> Replace</h3>
+<p><a name="1000671277"></a>Basic and Crystal syntax.</p><a name="1000518256"></a><h5>Overloads</h5><ul type="disc"><a name="1000518257"></a><li>Replace (inputString, findString, replaceString)
+<a name="1000518258"></a><li>Replace (inputString, findString, replaceString, startPosition)
+<a name="1000518259"></a><li>Replace (inputString, findString, replaceString, startPosition, count)
+<a name="1000518260"></a><li>Replace (inputString, findString, replaceString, startPosition, count, compare)
+</ul><a name="1000518261"></a><h5>Arguments</h5><ul type="disc"><a name="1000518262"></a><li>inputString is a String containing substring to replace.
+<a name="1000518263"></a><li>findString is a substring being searched for.
+<a name="1000518264"></a><li>replaceString is the replacement substring.
+<a name="1000518265"></a><li>startPosition is an optional Number indicating the position within inputString where substring search is to begin. If omitted, 1 is assumed. 
+<a name="1000518266"></a><li>count is an optional Number of substring substitutions to perform. If omitted, the default value is -1, which means make all possible substitutions.
+<a name="1000518267"></a><li>compare is an optional Number indicating the kind of comparison to use when evaluating substrings:
+<ul type="disc"><ul type="disc"><a name="1000518268"></a><li> Performs a comparison that is case<nobr>-s</nobr>ensitive<a name="1000518269"></a><li> Performs a comparison that is case<nobr>-i</nobr>nsensitive<p class="indent"><a name="1000518270"></a>If omitted, a case<nobr>-s</nobr>ensitive comparison is performed.</p></ul></ul></ul><a name="1000518271"></a><h5>Returns</h5><p><a name="1000518272"></a>String value.</p><a name="1000518273"></a><h5>Action</h5><p><a name="1000518274"></a>Replace returns a String in which a specified substring has been replaced with another substring a specified number of times. As an option, you can also specify where in the String to begin replacing, and return a String starting from that position.</p><a name="1000518275"></a><h5>Typical use</h5><p><a name="1000518276"></a>To systematically replace in a String one substring with another.</p><a name="1000518277"></a><h5>Examples</h5><p><a name="1000518278"></a>The following examples are applicable to both Basic and Crystal syntax. They assume that inputString is the text String "Monday is my day off. Can we meet next Monday?".</p><p><code><a name="1000518279"></a>Replace (inputString, "Monday", "Wednesday")</code></p><p class="example"><a name="1000518280"></a>Returns "Wednesday is my day off. Can we meet next Wednesday?".</p><p><code><a name="1000518281"></a>Replace (inputString, "Monday", "Wednesday", 23)</code></p><p class="example"><a name="1000518282"></a>Returns "Can we meet next Wednesday?" The replacement begins at the 23<sup>rd</sup> character from the beginning of the original inputString. The returned string is this portion of the string with the substitutions made.</p><p><code><a name="1000518283"></a>Replace (inputString, "Monday", "Wednesday", 1, 1)</code></p><p class="example"><a name="1000518284"></a>Returns "Wednesday is my day off. Can we meet next Monday?" There is only 1 replacement beginning at the 1<sup>st</sup> character from the beginning of the original inputString. The returned string is thus the original string with the single substitution made.</p><p><code><a name="1000518285"></a>Replace (inputString, "monday", "Wednesday", 1, -1, 0)</code></p><p class="example"><a name="1000518286"></a>Returns the same inputString with no replacements since no match was found for "monday" with a case<nobr>-s</nobr>ensitive comparison.</p><p><code><a name="1000518287"></a>Replace (inputString, "monday", "Wednesday", 1, -1, 1)</code></p><p class="example"><a name="1000518288"></a>Returns the inputString with both occurrences of "Monday" replaced by "Wednesday". That is, "Wednesday is my day off. Can we meet next Wednesday?".</p><a name="1000518289"></a><h5>Comments</h5><ul type="disc"><a name="1000518290"></a><li>This function is designed to work like the Visual Basic function of the same name.
+<a name="1000518291"></a><li>The returned value of the Replace function is a String, with the specified substring replacements made, that begins at the position specified by startPosition and ends at the end of the inputString string. It is not a copy of the original string from start to finish.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp98.html";
+var next = "functionshelp100.html";
+
+function setTopicID() { 
+      var number = "1000518255"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

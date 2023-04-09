@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>DBMS translation (ODBC data source) layer</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1862"></a><h4 class="newpage"> DBMS translation (ODBC data source) layer</h4><p><a name="1864"></a>This layer consists of one or more drivers provided by a DBMS that allow ODBC to communicate with the database. Seagate Crystal Reports ships with several ODBC drivers for many of the most common database formats. If you are unsure whether you can use an ODBC driver to access the data in your database, refer to the documentation for your DBMS application. Most DBMS applications that run on a Windows<nobr>-b</nobr>ased platform offer an ODBC driver.</p><p><a name="1866"></a>When a DBMS provides an ODBC driver, it must register the driver with ODBC on the machine on which it has been installed. It does this by assigning a name to the driver and recording the filename in the Odbcinst.ini file. Usually, this step is handled automatically when the DBMS application is installed on the system. However, your network system or DBMS application may require that you register the ODBC driver manually with the ODBC Setup application. For more information about registering an ODBC driver with ODBC, refer to the documentation for your DBMS.</p><p><a name="1868"></a>Once an ODBC driver is registered, you need to establish an ODBC data source using that driver. The ODBC data source is the object that you connect to when accessing data from Seagate Crystal Reports through ODBC. Data sources are recorded in the Odbc.ini file. The data source keeps track of the DBMS translation files (ODBC drivers) and, sometimes, the database itself. An ODBC data source can specify just a database format, such as Oracle, Sybase SQL, or MS SQL Server. Some users, however, prefer to actually specify a particular database. In this case, the ODBC data source extends across both the DBMS translation layer, and the database layer.</p><p><a name="26491"></a>If you are using a client/server database, such as an SQL server, the ODBC drivers communicate with the database server through the Database Communication layer, the same layer that your database client uses to communicate with the database server.</p><p><a name="305843"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>ODBC drivers find their specific DBMS client files on the local machine mainly through key directories that the DBMS client has installed in the search path (specified in Autoexec.bat). The important thing to remember is that a workstation client on a local PC must be able to connect to its server successfully. If you are not sure how to verify this, contact your IS manager.</p>
+<p><a name="26493"></a>For Seagate Crystal Reports and the ODBC drivers, it does not matter what kind of platform your database server exists on. It is the DBMS client that connects and communicates with the server; Seagate Crystal Reports and the drivers need only communicate with the DBMS client. For more information, see <a href="24_under_databases28.html#14368">Using SQL and SQL databases</a>.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources32.html";
+var next = "25_access_sources34.html";
+
+function setTopicID() { 
+      var number = "1862"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

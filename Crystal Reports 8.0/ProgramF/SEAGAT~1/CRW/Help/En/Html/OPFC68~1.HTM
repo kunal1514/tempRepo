@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Redim Preserve</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000026572"></a><h3 class="newpage"> Redim Preserve</h3>
+<a name="1000030223"></a><h4>Basic syntax x(n)</h4><a name="1000030224"></a><h5>Usage</h5><p><code><a name="1000030225"></a>Redim Preserver x(n) </code></p><p class="example"><a name="1000030226"></a>Re<nobr>-d</nobr>imension the array x to size n, while preserving the initial values in x. x is an array and n is a positive whole number specifying the new size of n.</p><a name="1000030227"></a><h5>Examples</h5><p><a name="1000030228"></a>The following example is applicable to Basic syntax:</p><p class="code"><a name="1000030229"></a>Dim x() As String
+<br><a name="1000053539"></a>'Initialize first three array elements
+<br><a name="1000053537"></a>x = Array ("a", "bb", "ccc")
+<br><a name="1000053549"></a>'Re<nobr>-s</nobr>ize x to 4; old values are retained
+<br><a name="1000053544"></a>Redim Preserve x(4)
+<br><a name="1000053579"></a>'initialize x(4)
+<br><a name="1000053554"></a>x(4) = "dddd"
+<br><a name="1000053564"></a>'return "dddd"
+<br><a name="1000030233"></a>formula = x(4)
+</p><a name="1000053407"></a><h6>Related topics</h6><p><a name="1000053411"></a><a href="20_basicsyntax21.html#128315">Array data types</a> (Basic syntax)</p><p><a name="1000053415"></a><a href="20_basicsyntax29.html#130465">Using array variables</a> (Basic syntax)</p><a name="1000030106"></a><h4>Crystal syntax x[n]</h4><ul type="disc"><a name="1000030146"></a><li>Use Redim Preserve x[n] (with the square brackets) only in Crystal syntax, and Redim Preserve x(n) (with the round brackets) only in Basic syntax.
+<a name="1000030151"></a><li>Unlike Redim Preserve x(n) in Basic syntax, you may not have multiple arrays in one Redim Preserve statement in Crystal syntax. 
+</ul><a name="1000030140"></a><h5>Usage</h5><p><code><a name="1000030111"></a>Redim Preserver x[n] </code></p><p class="example"><a name="1000030112"></a>Re<nobr>-d</nobr>imension the array x to size n, while preserving the initial values in x. x is an array and n is a positive whole number specifying the new size of n.</p><a name="1000026576"></a><h5>Examples</h5><p><a name="1000026577"></a>The following example is applicable to Crystal syntax:</p><p class="code"><a name="1000026578"></a>Local StringVar array x := ["a", "bb", "ccc"];
+<br><a name="1000053582"></a>// resize the array to size 4 while preserving the old values.
+<br><a name="1000026579"></a>Redim Preserve x [4];
+<br><a name="1000026580"></a>// now x = ["a", "bb", "ccc", "dddd"]
+<br><a name="1000053618"></a>x [4] := "dddd";
+<br><a name="1000053613"></a>x[4] // returns "dddd"
+</p><a name="1000053422"></a><h6>Related topics</h6><p><a name="1000053426"></a><a href="21_crystalsyntax26.html#145346">Array data types</a> (Crystal syntax)</p><p><a name="1000053430"></a><a href="21_crystalsyntax33.html#145513">Using array variables</a> (Crystal syntax)</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp50.html";
+var next = "OperatorsHelp52.html";
+
+function setTopicID() { 
+      var number = "1000026572"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>ReplicateString (str, #copies) </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000496341"></a><h3 class="newpage"> ReplicateString (str, #copies) </h3>
+<p><a name="1000670841"></a>Basic and Crystal syntax.</p><a name="1000496342"></a><h5>Arguments</h5><ul type="disc"><a name="1000496343"></a><li>str is the text string to be replicated.
+<a name="1000496344"></a><li>#copies is a whole number indicating the number of times str is to be replicated.
+</ul><a name="1000496345"></a><h5>Returns</h5><p><a name="1000496346"></a>Text String</p><a name="1000496347"></a><h5>Action</h5><p><a name="1000496348"></a>Replicates the string in str the number of times specified by #copies.</p><a name="1000496349"></a><h5>Typical uses</h5><p><a name="1000496350"></a>You can use this function to insert a line of characters any time they are needed. Some typical uses are:</p><ul type="disc"><a name="1000496351"></a><li>to <a href="glossary7.html#13307">flag</a> critical data on your report
+<a name="1000496352"></a><li>to build simple bar graphs
+<a name="1000496353"></a><li>to split your report into visible sections
+<a name="1000496354"></a><li>to highlight totals, subtotals, and other summary data.
+</ul><a name="1000496355"></a><h5>Examples</h5><p><a name="1000496356"></a>The following examples are applicable to Crystal syntax:</p><p class="code"><a name="1000496357"></a>If {file.SALES} &lt; {file.QUOTA} Then
+<br><a name="1000747745"></a>&nbsp;&nbsp;&nbsp;&nbsp;ReplicateString("*",10)
+<br><a name="1000747746"></a>Else
+<br><a name="1000747747"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+</p><p class="example"><a name="1000496358"></a>Prints the character * ten times as a flag.</p><p><code><a name="1000496359"></a>{file.NAME}+ "  " + ReplicateString("*", {file.SCORE})</code></p><p class="example"><a name="1000496360"></a>Prints a simple bar graph showing test results. The formula prints an asterisk for each point in a test score (the value in the file.SCORE field).</p><p><a name="1000496361"></a>The formula prints an asterisk for each point in a test score (the value in the {file.SCORE} field). For example, given the following data:</p><p><a name="1000496387"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="1000496364"></a>Name
+
+</td><td align="left" valign="TOP"><a name="1000496366"></a>Score
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496368"></a>Smith</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496370"></a>23</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496372"></a>Jones</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496374"></a>17</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496376"></a>Brown</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496378"></a>21</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496380"></a>Johnson</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496382"></a>13</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496384"></a>Reynolds</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496386"></a>25</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="1000496388"></a>The formula will produce the following results:</p><p><a name="1000496414"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="1000496391"></a>Name
+
+</td><td align="left" valign="TOP"><a name="1000496393"></a>@Score
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496395"></a>Smith</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496397"></a>***********************</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496399"></a>Jones</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496401"></a>******************</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496403"></a>Brown</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496405"></a>**********************</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496407"></a>Johnson</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496409"></a>***************</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000496411"></a>Reynolds</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000496413"></a>*****************************</P>
+
+
+</td></tr>
+
+</Table></p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp86.html";
+var next = "functionshelp88.html";
+
+function setTopicID() { 
+      var number = "1000496341"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

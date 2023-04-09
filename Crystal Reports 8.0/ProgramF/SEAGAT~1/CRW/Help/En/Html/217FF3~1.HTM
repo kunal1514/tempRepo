@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Conditional formatting functions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="147204"></a><h3 class="newpage"> Conditional formatting functions</h3>
+<p><a name="147206"></a>When writing a conditional formatting formula, certain additional functions appear at the top of the Functions tree to help you with this. For example, you can format the {Customer.Last Year's Sales} field to print sales of more than $100,000 in green, sales of less than $15,000 in red, and all other sales in black.</p><a name="152352"></a><h5>Example</h5><PRE><a name="147208"></a>//Conditional formatting example 1
+<a name="147209"></a>If {Customer.Last Year's Sales} &gt; 100000 Then
+<a name="147210"></a>   crGreen
+<a name="147211"></a>Else If {Customer.Last Year's Sales} &lt; 15000 Then
+<a name="147212"></a>   crRed
+<a name="147213"></a>Else
+<a name="147214"></a>   crBlack
+</PRE><p><a name="147216"></a>Since this is a font color formatting function, the list of Color Constants appears in the Functions Tree. This example uses three: crGreen, crRed and crBlack. You could have used the actual numeric values of the color constants instead. For example, crRed is 255 and crGreen is 32768. However, the formula is more understandable using the color constants. All constant functions in Crystal syntax can have the "cr" prefix.</p><p><a name="153559"></a>Crystal syntax still supports constant functions from previous versions without the "cr" prefix. For example, you can use "Red" instead of "crRed". However, using the "cr" prefix organizes constant functions and is recommended.</p><p><a name="147218"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Some formatting attributes do not use constant functions. For example, if you wanted to not print {Customer.Last Year's Sales} values if the sales were less than $50,000, you could write the following conditional formatting formula for the suppress attribute:</p>
+<PRE><a name="147220"></a>//Conditional formatting example 2
+<a name="147221"></a>If {Customer.Last Year's Sales} &lt; 50000 Then
+<a name="147222"></a>   True //suppress the value
+<a name="147223"></a>Else
+<a name="147224"></a>   False //do not suppress the value
+</PRE><p><a name="147226"></a>Or more simply:</p><PRE><a name="147228"></a>//Conditional formatting example 3 -
+<a name="147229"></a>//equivalent to example 2
+<a name="147230"></a>{Customer.Last Year's Sales} &lt; 50000
+</PRE><p><a name="147232"></a>If the last year's sales are less than $50,000, then the expression</p><p><code><a name="147233"></a>{Customer.Last Year's Sales} &lt; 50000</code></p><p><a name="147234"></a>is True, and so the formula returns True. On the other hand, if the last year's sales are greater than or equal to $50,000, then</p><p><code><a name="147235"></a>{Customer.Last Year's Sales} &lt; 50000</code></p><p><a name="147236"></a> is False and so the formula returns False.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax44.html";
+var next = "21_crystalsyntax46.html";
+
+function setTopicID() { 
+      var number = "147204"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

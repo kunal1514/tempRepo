@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>To update a cube location in an OLAP grid object</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="45190"></a><h4 class="newpage"> To update a cube location in an OLAP grid object</h4><ol>
+<a name="30395"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><strong></strong>Select the grid by clicking on the border.
+</ol>
+<ol>
+<a name="35799"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">From the <strong>Database</strong> menu, click <kbd>Set OLAP Cube Location</kbd>.
+<p class="indent"><a name="35820"></a>The Confirm Command dialog box appears.</p><a name="35825"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click<strong> Yes</strong>.
+<p class="indent"><a name="35829"></a>The Set OLAP Database Location dialog box appears.</p><a name="30397"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Select</strong>.
+<p class="indent"><a name="35831"></a>The Choose OLAP Type dialog box appears.</p><a name="35830"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Select the OLAP Type.
+<a name="35835"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click<strong> OK.</strong>
+<p class="indent"><a name="35838"></a>The Connect To Server dialog box appears.</p><a name="35839"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Enter the <strong>OLAP Server</strong>,<strong> User ID</strong>, and <strong>Password</strong>.
+<p class="indent"><a name="35848"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The fields will vary depending on the OLAP type you are using.</p>
+<a name="35840"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Connect</strong>.
+<p class="indent"><a name="35842"></a>The Chose Cube dialog box appears.</p><a name="35841"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Select a cube.
+<a name="35845"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<p class="indent"><a name="35849"></a>The Set OLAP Location dialog box appears.</p><a name="35850"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK.</strong>
+<p class="indent"><a name="35851"></a>The Propagate Set Location dialog box appears.</p><a name="35863"></a><li value="12&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Yes</strong> to update the remaining OLAP grids and follow the updating the database location steps; otherwise click <strong>No</strong> to return to the report.
+</ol>
+<a name="35865"></a><h5>Updating the database location</h5><ol>
+<a name="35854"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Yes</strong> to update the database location.
+<p class="indent"><a name="35870"></a>The Set Location dialog box appears.</p><a name="35869"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Select the database, then click <strong>Set Location</strong>.
+<p class="indent"><a name="35871"></a>The Data Explorer appears.</p><a name="35872"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Expand the directory for the cube.
+<a name="35873"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Select the table, then click <strong>Set</strong>.
+<p class="indent"><a name="35874"></a>The Connect to Server dialog box appears.</p><a name="35877"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Enter the <strong>OLAP Server</strong>,<strong> User ID</strong>, and <strong>Password</strong>.
+</ol>
+<p><a name="35878"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The fields will vary depending on the OLAP type you are using.</p>
+<ol>
+<a name="35875"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Connect</strong>.
+<p class="indent"><a name="35852"></a>The Chose Cube Dialog box appears.</p><a name="35881"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Select the cube, then click <strong>OK</strong>.
+<a name="35941"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">The Propagate Set Location dialog box appears with a message asking you to propagate the server and database changes across tables with the same original information.
+<a name="35942"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Yes</strong>.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "16_olap13.html";
+var next = "16_olap15.html";
+
+function setTopicID() { 
+      var number = "45190"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

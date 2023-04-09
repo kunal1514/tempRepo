@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Sorting single and multiple fields</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="32789"></a><h3 class="newpage"> Sorting single and multiple fields</h3>
+<p><a name="32790"></a>In single field sorting, all the records used in the report are sorted based on the values in a single field. Sorting an inventory report by stock number or sorting a customer list by customer number are examples of single field sorts.</p><p><a name="285315"></a>In multiple field sorts, the Report Designer first sorts the records based on the values in the first field selected, putting them in ascending or descending order as specified. When two or more records have the same field value in the first sort field, the program then sorts those records based on the value in the second sort field.</p><p><a name="286066"></a>For example, if you choose to sort first by the {customer.COUNTRY} field and then by the {customer.REGION} field, both in ascending order, the report would appear with countries listed in alphabetic order, and regions within each country listed in alphabetic order. Any other fields, such as the postal codes within each region, would remain unsorted.</p><p><a name="286630"></a>You create single or multiple field sorts using the same procedure.</p><a name="234517"></a><h6>To sort your data</h6><ol>
+<a name="306032"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_sordr.gif">
+
+
+On the <strong>Report</strong> menu, click <strong>Sort Records</strong>.
+<p class="indent"><a name="306033"></a>The Record Sort Order dialog box appears.</p><p><a name="306037"></a> <img src="images/recsort1.gif">
+
+
+</p>
+<a name="274856"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Highlight the field to be sorted from the Report Fields list.
+<a name="231892"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Click the <strong>Add</strong> button.
+<p class="indent"><a name="274939"></a>The selected field is added to the Sort Fields list.</p><a name="231893"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Specify the sort direction.
+</ol>
+<ol>
+<a name="285526"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">If sorting by more than one field, highlight the second field you want the data to be sorted by and add it to the Sort Fields list.
+<a name="285577"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">As you add each field to the Sort Fields list, specify the sort direction.
+<a name="231894"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong> when finished.
+<p class="indent"><a name="231895"></a>Records are sorted based on the values in the Sort Fields list.</p></ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "08_sortgrouptotal3.html";
+var next = "08_sortgrouptotal5.html";
+
+function setTopicID() { 
+      var number = "32789"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

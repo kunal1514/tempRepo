@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using array variables</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="145513"></a><h4 class="newpage"> Using array variables</h4><p><a name="145515"></a>You can assign values to elements of an array and also use the values of the elements for other computations.</p><a name="151371"></a><h5>Example</h5><PRE><a name="145517"></a>StringVar Array x := ["hello", "bye", "again"];
+<a name="145518"></a>x [2] := "once"; //Now x is ["hello", "once", "again"]
+<a name="145519"></a>//The expression below would cause an error if not
+<a name="145520"></a>//commented out since the array has size 3
+<a name="145521"></a>//x [4] := "zap";
+<a name="145523"></a>//The formula returns the String "HELLO"
+<a name="145524"></a>UpperCase (x [1])
+</PRE><p><a name="145526"></a>The Redim and Redim Preserve keywords can be used to resize an array if you want to add extra information to it. Redim erases the previous contents of the array first before resizing it whereas Redim Preserve preserves the previous contents.</p><PRE><a name="145528"></a>Local NumberVar Array x;
+<a name="145529"></a>Redim x [2]; //Now x is [0, 0]
+<a name="145530"></a>x [2] := 20; //Now x is [0, 20]
+<a name="145531"></a>Redim x [3]; //Now x is [0, 0, 0]
+<a name="145532"></a>x [3] := 30; //Now x is [0, 0, 30]
+<a name="145533"></a>Redim Preserve x [4]; //Now x is [0, 0, 30, 0]
+<a name="145534"></a>"finished"
+<a name="145536"></a>Local StringVar Array a;
+<a name="145537"></a>Redim a [2];
+<a name="145538"></a>//Assign a value to the first element of the array a
+<a name="145539"></a>a[1] := "good";
+<a name="145540"></a>a[2] := "bye";
+<a name="145541"></a>//The &amp; operator can be used to concatenate strings
+<a name="145542"></a>a[1] &amp; a[2] //The formula returns the String "goodbye"
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "21_crystalsyntax32.html";
+var next = "21_crystalsyntax34.html";
+
+function setTopicID() { 
+      var number = "145513"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Switch (expr1, value1, expr2, value2, ..., exprN, valueN)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000571589"></a><h3 class="newpage"> Switch (expr1, value1, expr2, value2, ..., exprN, valueN)</h3>
+<p><a name="1000711495"></a>Basic and Crystal syntax.</p><a name="1000571590"></a><h5>Arguments</h5><ul type="disc"><a name="1000571591"></a><li>expr1, expr2, ..., exprN are Boolean expressions. 
+<a name="1000571592"></a><li>value1, value2, ...., valueN are the possible values that may be returned. All the values must be of the same type. A value can be any simple type (Number, Currency, String, Boolean, Date, Time or DateTime) or range type (Number Range, Currency Range, String Range, Date Range, Time Range or DateTime Range), but it may not be an array.
+</ul><a name="1000571593"></a><h5>Returns</h5><p><a name="1000571594"></a>One of the values in the value list value1, value2, ...., valueN. The type of the returned value is the same as the type of the values.</p><a name="1000571595"></a><h5>Action</h5><p><a name="1000571596"></a>The argument list for Switch consists of pairs of expressions and values. Switch evaluates the expressions from left to right, and returns the value associated with the first expression to evaluate to True. </p><p><a name="1000709883"></a>For example, if expression1 is True, the Switch returns value1. If expression1 is False and expression2 is True, then Switch returns value2. If expression1 and expression2 are False and expression3 is True, then Switch returns value3. </p><p><a name="1000709884"></a>If all of the expressions are False, then Switch returns a default value. (The default value returned depends on the type of the values in the value list. For example, if the values are of Number type, the default value is 0 and if the values are of String type, the default value is the empty string ("").)</p><a name="1000709898"></a><h5>Typical uses</h5><p><a name="1000709917"></a>Switch can be used instead of <a href="OperatorsHelp56.html#1000038617">If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operators</a> or <a href="20_basicsyntax51.html#132768">Select statements</a> (Basic syntax) and <a href="21_crystalsyntax56.html#147492">Select expressions</a> (Crystal syntax) in some situations. </p><p><a name="1000571599"></a>One situation where Switch may be better than a control structure is when writing record selection formulas so that they can be pushed down to the database server. See below for an example as well as <a href="07_recordgroupsel15.html#101807">Advanced record selection formulas</a> for an explanation of the techniques involved.</p><a name="1000571600"></a><h5>Examples</h5><p><a name="1000571601"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><a name="1000571603"></a>Suppose that a company wants to classify orders into "large", "medium" or "small" based on the order size:</p><p class="code"><a name="1000571604"></a>Rem Basic syntax
+<br><a name="1000571605"></a>formula = Switch ({Orders.Order Amount} &gt; 5000, "large", _
+<br><a name="1000571606"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Orders.Order Amount} &gt; 1000, "medium", _
+<br><a name="1000571607"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;True, "small")
+<br><a name="1000571608"></a>
+<br><a name="1000571609"></a>//Crystal syntax
+<br><a name="1000571610"></a>Switch ({Orders.Order Amount} &gt; 5000, "large",
+<br><a name="1000571611"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Orders.Order Amount} &gt; 1000, "medium",
+<br><a name="1000571612"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;True, "small")
+</p><p class="example"><a name="1000571613"></a>If {Orders.Order Amount} is greater than $5,000 then the formula returns the String value "high". Otherwise, if {Orders.Order Amount} is greater than $1,000, the formula returns the String "medium". Otherwise, the formula returns "small".</p><p><a name="1000709043"></a>Here is an example showing how to use the Switch function for writing efficient record selection formulas that can be pushed down to the database server. Writing this formula using <a href="OperatorsHelp56.html#1000038617">If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operators</a> or  <a href="20_basicsyntax51.html#132768">Select statements</a> (Basic syntax) and <a href="21_crystalsyntax56.html#147492">Select expressions</a> (Crystal syntax) would not let it be pushed down. </p><p><a name="1000571852"></a>See <a href="07_recordgroupsel15.html#101807">Advanced record selection formulas</a> for further explanation of the techniques involved. </p><p><a name="1000571853"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>This example is in Crystal syntax since record selection formulas edited with the Formula Editor must be in Crystal syntax only.</p>
+<a name="1000712300"></a><h5>Sample report</h5><p><a name="1000712301"></a>A more complete version of the example, with 27 Switch conditions, is provided with the sample report named Date Range Formula.rpt.</p><p><a name="1000790441"></a>Sample reports are located in the Crystal Reports directory under \Samples\Reports.</p><p><a name="1000712302"></a>When you preview the report, you supply a reference order date parameter, {?reference date} and a range condition, {?reference condition} to indicate a range of dates around the reference order date. The report is then previewed with only the records whose order dates fall in the specified range. </p><p><a name="1000712303"></a>The entire record selection is performed on the database server. This is because the Switch function and all its arguments can be evaluated before accessing the database. </p><p><a name="1000712438"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="1000712434"></a><li>In this sample report, the Switch function is returning a Date Range value.
+<a name="1000712437"></a><li> The indentation style of the code makes the Switch function call look similar to a control structure and makes reading the function easier. 
+<a name="1000712441"></a><li>The last expression is the Boolean value True. 
+<p class="indent"><a name="1000712442"></a>This Switch function call provides for an explicit default value since if none of the other expression are True, the last expression is automatically True, and so the Date Range CDate (1899, 12, 30) To CDate(1899, 12, 30) is returned.</p></ul><p class="code"><a name="1000571617"></a>//Crystal syntax record selection formula
+<br><a name="1000571618"></a>{Orders.Order Date} in
+<br><a name="1000571619"></a>Switch
+<br><a name="1000571620"></a>(
+<br><a name="1000571621"></a>&nbsp;&nbsp;&nbsp;&nbsp;{?reference condition} = "Aged 0 to 30 days",
+<br><a name="1000571622"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;({?reference date} - 30) To {?reference date},
+<br><a name="1000571623"></a>&nbsp;&nbsp;&nbsp;&nbsp;{?reference condition} = "Aged 31 to 60 days",
+<br><a name="1000571624"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;({?reference date} - 60) To ({?reference date} - 31),
+<br><a name="1000571625"></a>&nbsp;&nbsp;&nbsp;&nbsp;{?reference condition} = "Aged 61 to 90 days",
+<br><a name="1000571626"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;({?reference date} - 90) To ({?reference date} - 61),
+<br><a name="1000571627"></a>&nbsp;&nbsp;&nbsp;&nbsp;True, // provide default handling and specify a valid range
+<br><a name="1000571628"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDate(1899, 12, 30) To CDate(1899, 12, 30)
+<br><a name="1000571629"></a>)
+</p><a name="1000571630"></a><h5>Comments</h5><ul type="disc"><a name="1000571631"></a><li>This function is designed to work like the Visual Basic function of the same name. A difference is that the function does not return a Variant and thus all the values must have the same type.
+<a name="1000571632"></a><li>Every argument of the Switch function is evaluated before the result is returned. Thus, you should watch out for undesirable side effects when using Switch. 
+<p class="indent"><a name="1000712447"></a>For example, if one of the values results in division by zero, an error will occur, even if that value is not the value that is returned by the Switch function.</p></ul><a name="1000648958"></a><h6>Related topics</h6><p><a name="1000709059"></a><a href="functionshelp166.html#1000571527">Choose (index, choice1, choice2, ..., choiceN)</a></p><p><a name="1000712452"></a><a href="functionshelp167.html#1000571561">IIF (expression, truePart, falsePart)</a></p><p><a name="1000712451"></a>.<a href="20_basicsyntax51.html#132768">Select statements</a> (Basic syntax)</p><p><a name="1000709063"></a><a href="21_crystalsyntax56.html#147492">Select expressions</a> (Crystal syntax)</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp167.html";
+var next = "functionshelp169.html";
+
+function setTopicID() { 
+      var number = "1000571589"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Parentheses operators</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000006327"></a><h3 class="newpage"> Parentheses operators</h3>
+<p><a name="1000030559"></a>Basic and Crystal syntax.</p><a name="1000024374"></a><h5>Usage</h5><p><code><a name="1000030552"></a>(x + y) * z </code></p><p class="example"><a name="1000030554"></a>Performs the calculations inside the parentheses first.</p><p><a name="1000030556"></a>Parentheses are used to control the <a href="glossary14.html#25594">order of precedence</a> in which the <a href="dialogs66.html#1000269594">Format Editor</a> calculates a <a href="glossary7.html#13326">formula</a>. In Basic syntax, they are also used as a string and array subscript.</p><a name="1000024380"></a><h5>Examples</h5><p><a name="1000024381"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000024382"></a>8 + 6 * 3 - 6 / 2 </code></p><p class="example"><a name="1000024383"></a>Returns 23.</p><p><code><a name="1000030562"></a>(8 + 6) * 3 - 6 / 2 </code></p><p class="example"><a name="1000030563"></a>Returns 39.</p><p><code><a name="1000024384"></a>(8 + 6) * (3 - 6 / 2) </code></p><p class="example"><a name="1000030565"></a>Returns 0.</p><p><code><a name="1000024385"></a>(8 + 6 * 3 - 6) / 2 </code></p><p class="example"><a name="1000024386"></a>Returns 10.</p><p><code><a name="1000030568"></a>{file.SALES} - {file.COGS} - {file.T&amp;E} * .8 </code></p><p class="example"><a name="1000024387"></a>Returns 1000, where SALES=25,000, COGS=12,000, and T&amp;E=15,000.</p><p><code><a name="1000030571"></a>{file.SALES} - (({file.COGS} - {file.T&amp;E}) * .8)</code></p><p class="example"><a name="1000030572"></a>Returns 27,400, where SALES=25,000, COGS=12,000, and T&amp;E=15,000.</p><p><code><a name="1000030573"></a>({file.SALES} - {file.COGS} - {file.T&amp;E}) * .8 </code></p><p class="example"><a name="1000024391"></a>Returns -1,600, where SALES=25,000, COGS=12,000, and T&amp;E=15,000.</p><a name="1000024483"></a><h6>Related topics</h6><p><a name="1000030576"></a>Most formula examples use this operator. Select the formula of interest from the <a href="19_introformulas30.html#287844">Formulas In Action</a> index.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "OperatorsHelp57.html";
+var next = "OperatorsHelp59.html";
+
+function setTopicID() { 
+      var number = "1000006327"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

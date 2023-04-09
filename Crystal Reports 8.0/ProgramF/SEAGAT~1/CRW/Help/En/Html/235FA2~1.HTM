@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>How subreport linking works</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="6025"></a><h3 class="newpage"> How subreport linking works</h3>
+<p><a name="6069"></a>When you link a subreport to a primary report, the program creates the link by using a parameter field.</p><p><a name="6070"></a>When a subreport link field is selected, the program creates:</p><ul type="disc"><a name="6071"></a><li>a parameter field in the subreport which is then used to retrieve values passed to it by the primary report
+<a name="6072"></a><li>a record selection formula for the subreport using the parameter field
+<a name="6073"></a><li>the selection formula limits the subreport to those records in which the link field is equal to the parameter field value.
+</ul><p><a name="6074"></a>When the report is run, the program finds the first primary field record it needs and passes the value in the link field to the parameter field in the subreport. The program then creates the subreport with record selection based on the parameter field value. Here is an example:</p><ul type="disc"><a name="6075"></a><li>You create a report that shows customer data and a subreport that shows order data and then you link the two reports using the Customer ID field.
+<a name="6076"></a><li>When you run the report, the program finds the first customer record it needs and passes the Customer ID value from that record to the subreport parameter field.
+<a name="6077"></a><li>The program runs the Orders subreport. Since the subreport selection formula selects only those records in which the Customer ID value is equal to the parameter field value, and since that parameter field value is equal to the Customer ID in the first record in the primary report, the subreport contains only those records that have the same customer ID. Namely, those records that are orders for the first customer.
+<a name="6078"></a><li>When the subreport is finished, the program locates the second record it needs in the primary report, prints the customer data, and then passes this customer's ID number to the parameter field.
+<a name="6079"></a><li>The program then runs a subreport including only those order records for the second customer.
+<a name="6080"></a><li>The process continues until the report is finished.
+<a name="6081"></a><li>All of this parameter field manipulation takes place behind the scenes. You simply pick the fields that will link the primary report with the subreport and the program does the rest. The values are passed without the parameter field prompting you for a value.
+</ul><p><a name="59666"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font><img src="images/bt_prevw.gif">
+
+
+If you have a linked subreport and you click the <kbd>Print Preview</kbd> button on the Standard toolbar (from the Subreport Design Tab), the program runs the subreport on its own, without waiting to receive a parameter field value from the primary report and without evaluating the tab text formula. In this case, the program displays the Enter Parameter Values dialog box and prompts you for a value.</p>
+<p><a name="65511"></a>The value entered in the drop<nobr>-d</nobr>own box is the value the program uses to run the subreport.</p><p><a name="59674"></a> <img src="images/db_eprsb.gif">
+
+
+</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "23_subreports4.html";
+var next = "23_subreports6.html";
+
+function setTopicID() { 
+      var number = "6025"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

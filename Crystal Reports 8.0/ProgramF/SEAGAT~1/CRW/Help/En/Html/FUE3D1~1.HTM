@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>PercentOfMinimum</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000486377"></a><h3 class="newpage"> PercentOfMinimum</h3>
+<p><a name="1000667448"></a>Basic and Crystal syntax.</p><a name="1000486378"></a><h5>Overloads</h5><ul type="disc"><a name="1000486379"></a><li>PercentOfMinimum (fld, condFld)
+<a name="1000486380"></a><li>PercentOfMinimum (fld, condFld, cond)
+<a name="1000486381"></a><li>PercentOfMinimum (fld, innerCondFld, outerCondFld)
+<a name="1000486382"></a><li>PercentOfMinimum (fld, innerCondFld, innerCond, outerCondFld)
+<a name="1000486383"></a><li>PercentOfMinimum (fld, innerCondFld, outerCondFld, outerCond)
+<a name="1000486384"></a><li>PercentOfMinimum (fld, innerCondFld, innerCond, outerCondFld, outerCond)
+</ul><a name="1000486385"></a><h5>Arguments</h5><ul type="disc"><a name="1000486386"></a><li>fld is a Number or Currency field that can be evaluated by the function.
+<a name="1000486387"></a><li>condFld is a field used to group the values in fld by.
+<a name="1000486388"></a><li>cond is a String indicating the type of grouping for condFld. You only specify this argument when condFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+<a name="1000486392"></a><li>innerCondFld is a field used to group the values in fld by.
+<a name="1000486393"></a><li>innerCond is a String indicating the type of grouping for innerCondFld. You only specify this argument when innerCondFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see<a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+<a name="1000486397"></a><li>outerCondFld is a field used to group the values in fld by.
+<a name="1000486398"></a><li>outerCond is a String indicating the type of grouping for outerCondFld. You only specify this argument when outerCondFld is a Date, Time, DateTime or Boolean field. For more information on the valid strings for this argument, see <a href="functionshelp20.html#1000339514">Conditions for summary functions</a>.
+</ul><a name="1000486402"></a><h5>Returns</h5><p><a name="1000486403"></a>Number value.</p><a name="1000486404"></a><h5>Action</h5><p><a name="1000486405"></a><strong>PercentOfMinimum (</strong><strong>fld</strong><strong>, </strong><strong>condFld</strong><strong>) </strong>has the same effect as: 100 * Minimum (fld, condFld) / Minimum (fld). It expresses the minimum of the values of the field fld for the group determined by condFld as a percentage of the minimum of all the values of fld.</p><p><a name="1000486406"></a><strong>PercentOfMinimum (</strong><strong>fld</strong><strong>, </strong><strong>condFld</strong><strong>, </strong><strong>cond</strong><strong>) </strong>has the same effect as: 100 * Minimum (fld, condFld, cond) / Minimum (fld). The String argument cond expresses some additional information to precisely specify the grouping. For example, if condFld is a Date field, is the grouping "daily" or "weekly" or "monthly" etc.</p><p><a name="1000486407"></a><strong>PercentOfMinimum (</strong><strong>fld</strong><strong>, </strong><strong>innerCondFld</strong><strong>, </strong><strong>outerCondFld</strong><strong>) </strong>has the same effect as: 100 * Minimum (fld, innerCondFld) / Minimum (fld, outerCondFld). It expresses the minimum of the values of the field fld for the group determined by innerCondFld as a percentage of the minimum for the group determined by outerCondFld.</p><p><a name="1000486408"></a><strong>PercentOfMinimum (</strong><strong>fld</strong><strong>, </strong><strong>innerCondFld</strong><strong>, </strong><strong>innerCond</strong><strong>, </strong><strong>outerCondFld</strong><strong>) </strong>has the same effect as: 100 * Minimum (fld, innerCondFld, innerCond) / Minimum (fld, outerCondFld).</p><p><a name="1000486409"></a><strong>PercentOfMinimum (</strong><strong>fld</strong><strong>, </strong><strong>innerCondFld</strong><strong>, </strong><strong>outerCondFld</strong><strong>, </strong><strong>outerCond</strong><strong>) </strong>has the same effect as: 100 * Minimum (fld, innerCondFld) / Minimum (fld, outerCondFld, outerCond).</p><p><a name="1000486410"></a><strong>PercentOfMinimum (</strong><strong>fld, innerCondFld, innerCond, outerCondFld, outerCond</strong><strong>)</strong> has the same effect as: 100 * Minimum (fld, innerCondFld, innerCond) / Minimum (fld, outerCondFld, outerCond).</p><a name="1000486411"></a><h5>Comment</h5><p><a name="1000486412"></a>This function and other percentage functions are intended to support Percentage Summary fields. The groupings supplied as arguments must actually exist in the report for the summary function call to succeed.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp45.html";
+var next = "functionshelp47.html";
+
+function setTopicID() { 
+      var number = "1000486377"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

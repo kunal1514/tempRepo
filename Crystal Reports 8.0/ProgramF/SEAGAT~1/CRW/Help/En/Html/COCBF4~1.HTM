@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Using the Set Alias command</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000217093"></a><h2 class="newpage">Using the Set Alias command</h2><ol>
+<a name="1000217094"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">With a report open in the active window, choose the Set Alias command from the Database menu. The <a href="dialogs137.html#815930">Set Alias dialog box</a> appears. The Databases list contains a list of aliases used in the current report, and the first alias on the list is highlighted. The Location box at the bottom of the dialog box indicates the name and path of the database that is using the highlighted alias.
+<a name="1000217095"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Select the alias of interest and click the Set Alias button. The Alias Name dialog box appears with the alias displayed in the Alias Name box.
+<a name="1000217096"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Type your new alias in the Alias Name box, and then click OK. The program returns you to the Set Alias dialog box. The new alias has replaced the old alias in the Databases box but the location remains the same.
+<a name="1000217097"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click Done. The program replaces the old alias with the new one. Fields already placed in the report using the old alias are now identified with the new alias ({old.fieldname} is now {new.fieldname}).
+<p class="indent"><a name="1000217098"></a>The Set Alias command does not affect the aliases used in formulas. When you change an alias, you must make certain that you change any formula references to the old alias as well. For example, if you change the "company" alias to "customer", you must make certain that you change any formula references to that alias from {company.fieldname} to {customer.fieldname}. If you don't, the program will not be able to locate the referenced field, and it will return an error message. Formula references include both formulas used in the report and selection formulas.</p></ol>
+<p><a name="1000217099"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Set Alias changes the alias only, not the database location. If you want to change the location of a database (if you want to find the database in a new location), choose the <a href="COMMANDS119.html#131465">Set Location command</a> from the Database menu.</p>
+<a name="1000217103"></a><h6>Related topics</h6><p><a name="1000217107"></a><a href="COMMANDS120.html#131485">Set Alias command</a> </p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "COMMANDS230.html";
+var next = "COMMANDS232.html";
+
+function setTopicID() { 
+      var number = "1000217093"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

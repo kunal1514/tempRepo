@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>PASSWORD# command </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="162222"></a><h4 class="newpage"> PASSWORD# command </h4><p><a name="162216"></a>Specifies passwords for logging on to SQL, ODBC, or password<nobr>-p</nobr>rotected databases used by the report.</p><PRE><a name="163865"></a>PASSWORD#=&lt;password&gt;
+<a name="163866"></a>&#171;&lt;password&gt; is a string.&#187;
+</PRE><p><a name="163867"></a>For example:</p><p><code><a name="149937"></a>password0=secret</code></p><p><a name="149938"></a>If the report accesses more than one password<nobr>-p</nobr>rotected database, multiple passwords can be passed by incrementing the index number. For example:</p><p><code><a name="149939"></a>password0=secret&amp;password1=mystery&amp;password2=unknown</code></p><p><a name="161676"></a>PASSWORD# is normally used in conjunction with the USER# command. For example:</p><p><code><a name="161678"></a>user0=SmithJ&amp;password0=secret&amp;user1=JohnS&amp;password1=mystery</code></p><p><a name="149945"></a>If the report contains subreports that require passwords for logging on to SQL or ODBC data sources, use the following syntax in the URL:</p><PRE><a name="149946"></a>password@subname#=&lt;userid&gt;
+<a name="149947"></a>&#171;subname is the name of the subreport.&#187;
+</PRE><p><a name="149948"></a>For example:</p><p><code><a name="149949"></a>user0@Crosstab=jimmys&amp;password0@Crosstab=jimmyz</code></p><p><a name="150971"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Make sure passwords appear in the URL in the same order in which the password<nobr>-p</nobr>rotected databases appear in the report. Additionally, if passwords are not passed using the URL address, the user is prompted for logon information at runtime.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerCommands9.html";
+var next = "WebServerCommands11.html";
+
+function setTopicID() { 
+      var number = "162222"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

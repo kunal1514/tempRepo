@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Split</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000496717"></a><h3 class="newpage"> Split</h3>
+<p><a name="1000671293"></a>Basic and Crystal syntax.</p><a name="1000496718"></a><h5>Overloads</h5><ul type="disc"><a name="1000496719"></a><li>Split (inputString)
+<a name="1000496720"></a><li>Split (inputString, delimiter)
+<a name="1000496721"></a><li>Split (inputString, delimiter, count)
+<a name="1000496722"></a><li>Split (inputString, delimiter, count, compare)
+</ul><a name="1000496723"></a><h5>Arguments</h5><ul type="disc"><a name="1000496724"></a><li>inputString is a String expression containing substrings and delimiters.
+<a name="1000496725"></a><li>delimiter is an optional String character used to identify substring limits. If omitted, the space character (" ") is assumed to be the delimiter. If delimiter is a zero<nobr>-l</nobr>ength string, a single<nobr>-e</nobr>lement array containing the entire inputString string is returned.
+<a name="1000496726"></a><li>count is an optional number value of substrings to be returned. The value -1 indicates that all substrings are returned. If omitted, -1 is assumed.
+<a name="1000496727"></a><li>compare is an optional Number indicating the kind of comparison to use when evaluating the delimiter string:
+<ul type="disc"><ul type="disc"><a name="1000496728"></a><li> Performs a comparison that is case<nobr>-s</nobr>ensitive<a name="1000496729"></a><li>Performs a comparison that is case<nobr>-i</nobr>nsensitive<p class="indent"><a name="1000496730"></a>If omitted, a case<nobr>-s</nobr>ensitive comparison is performed.</p></ul></ul></ul><a name="1000496731"></a><h5>Returns</h5><p><a name="1000496732"></a>Array of String values.</p><a name="1000496733"></a><h5>Action</h5><p><a name="1000496734"></a>Split takes a String that contains a number of substrings, breaks it up into a specified number of substrings and returns an array containing the substrings.</p><a name="1000496735"></a><h5>Examples</h5><p><a name="1000496736"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000496737"></a>Split ("Chocolate Strawberry Pineapple")</code></p><p class="example"><a name="1000496738"></a>Returns an array that contains 3 elements, "Chocolate",  "Strawberry" and "Pineapple".</p><p><code><a name="1000496739"></a>Split ("Chocolate//Strawberry//Pineapple", "//") </code></p><p class="example"><a name="1000496740"></a>Returns an array that contains 3 elements, "Chocolate",  "Strawberry" and "Pineapple".</p><p><code><a name="1000496741"></a>Split ("Chocolate//Strawberry//Pineapple", "//", 2)</code></p><p class="example"><a name="1000496742"></a>Returns an array that contains 2 elements, "Chocolate" and  "Strawberry//Pineapple". The last element in the array is a concatenation of the 2<sup>nd</sup> substring and the remaining substring.</p><p><code><a name="1000496743"></a>Split ("Chocolate and Strawberry and Pineapple", " And ", -1, 0)</code></p><p class="example"><a name="1000496744"></a>Returns an array that contains 1 element, "Chocolate and Strawberry and Pineapple". The delimiter " And " cannot be matched.</p><p><code><a name="1000496745"></a>Split ("Chocolate and Strawberry and Pineapple", " And ", -1, 1)</code></p><p class="example"><a name="1000496746"></a>Returns an array that contains 3 elements, "Chocolate",  "Strawberry" and "Pineapple". The delimiter " And " is matched with " and " regardless of the case.</p><a name="1000496747"></a><h5>Comments</h5><ul type="disc"><a name="1000496748"></a><li>This function is designed to work like the Visual Basic function of the same name.
+<a name="1000496749"></a><li>If count, c, is less than the total number of substrings in inputString, then at most c substrings will be returned as elements in the resultant array. The last element in the array being a concatenation of the c<nobr>-t</nobr>h substring and all the remaining substrings.
+</ul><a name="1000671294"></a><h6>Related topics</h6><p><a name="1000496750"></a><a href="functionshelp100.html#1000496524">Join</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp100.html";
+var next = "functionshelp102.html";
+
+function setTopicID() { 
+      var number = "1000496717"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

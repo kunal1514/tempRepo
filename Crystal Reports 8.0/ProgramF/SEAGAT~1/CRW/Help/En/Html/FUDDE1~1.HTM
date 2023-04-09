@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Time </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000686634"></a><h3 class="newpage"> Time </h3>
+<p><a name="1000690028"></a>Crystal syntax.</p><p><a name="1000730871"></a>The <a href="functionshelp163.html#1000570720">CTime</a> and <a href="functionshelp110.html#1000645674">TimeValue</a> functions are equivalent to Time. However, Time can only be used in Crystal syntax since it is a type name in Basic syntax.</p><a name="1000781132"></a><h5>Overloads</h5><ul type="disc"><a name="1000781133"></a><li>Time (number)
+<a name="1000781134"></a><li>Time (string)
+<a name="1000781135"></a><li>Time (dateTime)
+<a name="1000781136"></a><li>Time (HH, MM, SS) 
+</ul><a name="1000755111"></a><h5>Arguments</h5><p><a name="1000755131"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><P><a name="1000755114"></a>Time (number)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000755116"></a><li>Returns<strong> </strong>a Time value given a number in units of 24 hours
+<a name="1000755389"></a><li>number can be fractional or negative as well
+</ul></td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000755118"></a>Time (string)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000755120"></a>Returns a Time value that represents the time, given a String expression specifying a time from 0:00:00 (12:00:00 A.M.) to 23:59:59 (11:59:59 P.M.), inclusive.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000755122"></a>Time (dateTime)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="1000755124"></a>DateTime is a DateTime value.</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="1000755126"></a>Time (hour, min, sec)</P>
+
+
+</td><td align="left" valign="TOP"><ul type="disc"><a name="1000755128"></a><li>Hour is a whole number representing an hour of the day.
+<a name="1000755129"></a><li>Min is a whole number representing a minute.
+<a name="1000755130"></a><li>Sec is a whole number representing a second.
+</ul></td></tr>
+
+</Table></p>
+<a name="1000686647"></a><h5>Returns</h5><p><a name="1000686648"></a>Time Value</p><a name="1000686649"></a><h5>Action</h5><p><a name="1000686650"></a>Creates a Time value from the information provided.</p><a name="1000686651"></a><h5>Typical uses</h5><p><a name="1000686652"></a>Use this function any time you need to work with a Time value that is obtained either from a DateTime value or from the individual elements of the time (i.e. hour, minute, second).</p><a name="1000686653"></a><h5>Examples</h5><p><a name="1000686654"></a>The following examples are applicable to Crystal syntax:</p><p><code><a name="1000686655"></a>Time(.2) and Time (1.2)</code></p><p class="example"><a name="1000686656"></a>Both return 4:48:00 AM</p><p><code><a name="1000686657"></a>Time(-.2) </code></p><p class="example"><a name="1000686658"></a>Returns 7:12:00 PM</p><p><code><a name="1000686659"></a>Time("3:05pm") </code></p><p class="example"><a name="1000686660"></a>Returns 3:05:00 PM</p><p><code><a name="1000686661"></a>Time(DateTime(1996, 1, 1, 12, 10, 10) </code></p><p class="example"><a name="1000686662"></a>Returns 12:10:10.</p><p><code><a name="1000686663"></a>Time(10, 20, 22) </code></p><p class="example"><a name="1000686664"></a>Returns 10:20:22.</p><a name="1000686665"></a><h6>Related topics</h6><p><a name="1000690061"></a><a href="functionshelp110.html#1000645674">TimeValue</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp106.html";
+var next = "functionshelp108.html";
+
+function setTopicID() { 
+      var number = "1000686634"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

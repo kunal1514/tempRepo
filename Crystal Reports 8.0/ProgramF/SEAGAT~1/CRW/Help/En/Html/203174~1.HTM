@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Conditional formatting functions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="130639"></a><h3 class="newpage"> Conditional formatting functions</h3>
+<p><a name="130641"></a>When writing a conditional formatting formula, you may want to use the additional functions that appear at the top of the Functions tree.</p><a name="135690"></a><h5>Example</h5><p><a name="135691"></a>If you wanted to format the {Customer.Last Year's Sales} field so that sales of more than $100,000 are printed in green and sales of less than $15,000 are printed in red and all else are printed in black.</p><PRE><a name="130643"></a>Rem Conditional formatting example 1
+<a name="130644"></a>If {Customer.Last Year's Sales} &gt; 100000 Then
+<a name="130645"></a>   formula = crGreen
+<a name="130646"></a>ElseIf {Customer.Last Year's Sales} &lt; 15000 Then
+<a name="130647"></a>   formula = crRed
+<a name="130648"></a>Else
+<a name="130649"></a>   formula = crBlack
+<a name="130650"></a>End If
+</PRE><p><a name="130652"></a>Since this is a font color formatting function, the list of Color Constants appears in the Functions tree. This example uses three: crGreen, crRed and crBlack. You could have used the actual numeric values of the color constants instead. For example, crRed is 255 and crGreen is 32768. However, the formula is easier to understand using the color constants. All constant functions in Basic syntax have the "cr" prefix.</p><p><a name="130654"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Some formatting attributes do not use constant functions. For example, if you wanted to not print {Customer.Last Year's Sales} values if the sales were less than $50,000, you could write the following conditional formatting formula for the suppress attribute:</p>
+<PRE><a name="130656"></a>Rem Conditional formatting example 2
+<a name="130657"></a>If {Customer.Last Year's Sales} &lt; 50000 Then
+<a name="130658"></a>   formula = True 'suppress the value
+<a name="130659"></a>Else
+<a name="130660"></a>   formula = False 'do not suppress the value
+<a name="130661"></a>End If
+</PRE><p><a name="130663"></a>Or more simply:</p><PRE><a name="130665"></a>Rem Conditional formatting example 3 -
+<a name="130666"></a>Rem equivalent to example 2
+<a name="130667"></a>formula = {Customer.Last Year's Sales} &lt; 50000
+</PRE><p><a name="130669"></a>If the last year's sales are less than $50,000, then the expression</p><p><code><a name="130670"></a>{Customer.Last Year's Sales} &lt; 50000</code></p><p><a name="130671"></a>is True, and so the formula returns True. On the other hand, if the last year's sales are greater than or equal to $50,000, then</p><p><code><a name="130672"></a>{Customer.Last Year's Sales} &lt; 50000</code></p><p><a name="130673"></a> is False and so the formula returns False.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax40.html";
+var next = "20_basicsyntax42.html";
+
+function setTopicID() { 
+      var number = "130639"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 14</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="305296"></a><h3 class="newpage"> Formula 14</h3>
+<a name="305297"></a><h4>Operators/Functions Used</h4><p><a name="305298"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Length, TrimLeft, Less than or equal (&lt;+), Parentheses ().</p><a name="305299"></a><h4>Formula Purpose</h4><p><a name="305300"></a>Five and a half years earlier, a company had changed from a lifetime warranty for its products to a five year warranty. The first products that had been manufactured with the shorter warranty were now out of warranty, but the repair department was slow to adapt. It continued to repair all products for free, as if they were all covered by the original lifetime warranty.</p><p><a name="305301"></a>All products manufactured under the new, shorter warranty had issued eight character serial numbers instead of the five, six, or seven character serial numbers that had been issued to lifetime<nobr>-w</nobr>arranted products.</p><p><a name="305302"></a>To begin controlling the situation, management has called for a column on its repair report that identifies products serviced as either lifetime warranty or five year warranty products.</p><a name="305303"></a><h4>Formula</h4><PRE><a name="305304"></a>If Length(TrimLeft({file.SERIAL#}))&lt;= 7 Then <br>
+&nbsp;&nbsp;&nbsp;&nbsp;"Lifetime Warranty" <br>
+Else <br>
+&nbsp;&nbsp;&nbsp;&nbsp;"5 Year Warranty"
+</PRE><a name="305305"></a><h4>Result</h4><p><a name="305337"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="305308"></a>Serial Number
+
+</td><td align="left" valign="TOP"><a name="305310"></a># Characters
+
+</td><td align="left" valign="TOP"><a name="305312"></a>Flag
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305314"></a>BP10001</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305316"></a>7</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305318"></a>"Lifetime Warranty"</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305320"></a>BP1000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305322"></a>6</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305324"></a>"Lifetime Warranty"</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305326"></a>BP999</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305328"></a>5</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305330"></a>"Lifetime Warranty"</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305332"></a>BP100001</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305334"></a>8</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305336"></a>"5 Year Warranty"</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="305338"></a><h4>Explanation</h4><ul type="disc"><a name="305339"></a><li>The formula uses the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operator to say, "If the serial number is 7 characters long or less (Then), print "Lifetime Warranty", otherwise (Else) print "5 Year Warranty".
+<a name="305340"></a><li>TrimLeft({file.SERIAL#}) removes all of the blank spaces stored to the left of the actual serial number in the right<nobr>-j</nobr>ustified {file.SERIAL#} field. The formula uses TrimLeft to eliminate spaces because Length counts spaces as characters if they are present.
+<a name="305341"></a><li>Length counts the characters in the actual serial number.
+<a name="305342"></a><li>The formula uses the Less than or equal to operator (&lt;=) to make certain that the serial number is 7 characters long (or less).
+<a name="305343"></a><li>If the serial number is less than or equal to 7 characters, the If part of the expression is satisfied, thus triggering the Then consequence.
+<a name="305344"></a><li>If the If part of the expression is satisfied, the formula prints the text string "Lifetime Warranty".
+<a name="305345"></a><li>If the serial number is greater than 7 characters, the If part of the expression is not satisfied, thus triggering the Else consequence.
+<a name="305346"></a><li>If the If part of the expression is not satisfied, the formula prints the text string "5 Year Warranty".
+</ul><a name="305347"></a><h6>Related topics</h6><p><a name="305351"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas43.html";
+var next = "19_introformulas45.html";
+
+function setTopicID() { 
+      var number = "305296"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

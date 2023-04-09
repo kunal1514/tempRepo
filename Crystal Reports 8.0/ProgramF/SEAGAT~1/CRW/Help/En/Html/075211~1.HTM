@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Troubleshooting record selection formulas </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="91150"></a><h2 class="newpage">Troubleshooting record selection formulas </h2><p><a name="91151"></a>To troubleshoot your selection formula, you should first begin by making sure that all of the fields referenced in the selection formula are placed on your report. Then delete the selection formula and test it as you rebuild it, <br>step by step.</p><a name="92001"></a><h6>To troubleshoot record selection formulas</h6><ol>
+<a name="91152"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Write down the record selection formula on paper. You will use this written copy to help you reconstruct the selection formula one step at a time.
+<a name="91153"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Remove the record selection formula from your report by deleting the formula from the formula text box in the Record Selection Formula Editor.
+<a name="91158"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_svcls.gif">
+
+
+Click <strong>Save and Close</strong> when finished.
+<a name="91159"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Make certain that all fields referenced in the record selection formula (the selectors) are on the report physically and are not hidden.
+<p class="indent"><a name="91160"></a>For example, if one of the selectors is:</p></ol>
+<PRE><a name="91161"></a>{customer.POSTAL CODE} &gt; "80000"
+<p class="indent"><a name="91162"></a>but the {customer.POSTAL CODE} field is not used on your report (as in the case of a sales report that uses the postal code to define territories but does not include the postal code in the report data), then insert the {customer.POSTAL CODE} field into the report.</p><p class="indent"><a name="91163"></a>Or, if one of the fields referenced in the selection formula is on the report but is hidden, unhide it by deselecting the Suppress option in the Format Editor for that field.</p></PRE><ol>
+<a name="91164"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Print the report and verify that the data in those fields which are referenced in the selection formula print satisfactorily. Make certain that all the data prints. For example, if there are <EM>x</EM> total records in the database you should have <EM>x</EM> records printing for each of the referenced fields. This establishes a baseline against which you can compare the results of printing with the selection formula.
+<a name="91165"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">When you are sure that you are getting satisfactory results without using the selection formula, you can enter the selection formula using only one of the selectors.
+<p class="indent"><a name="91166"></a>For example, to use this as the final selection formula:</p></ol>
+<p><code><a name="91167"></a>{customer.POSTAL CODE} &gt; "80000" and {customer.CONTACT LAST NAME}[1] = "C" and {customer.LAST YEAR'S SALES} &gt;= 5000</code></p><p class="indent"><a name="91168"></a>this formula will select all of those records that show a Postal code greater than 80000, a value in the {customer.CONTACT LAST NAME} field beginning with "C", and a value in the {customer.LAST YEAR'S SALES} field greater than or equal to 5000.</p><p class="indent"><a name="91169"></a>You might start with this as the first test selection formula:</p><p><code><a name="91170"></a>{customer.POSTAL CODE} &gt; "80000"</code></p><p class="indent"><a name="91171"></a>Print the report and evaluate the data that prints when you have only one selector activated. Does the {customer.POSTAL CODE} field show only ZIP codes greater than 80000? </p><ul type="disc"><ul type="disc"><a name="91172"></a><li>If it does, then you know that this part of the selection formula is working.<a name="91173"></a><li>If it does not, then troubleshoot this part of the selection formula.</ul></ul><ol>
+<a name="91174"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">Once the selection formula with one selector activated is working properly, add a second selector. For example, the new selection formula might look like this:
+</ol>
+<p><code><a name="91175"></a>{customer.POSTAL CODE} &gt; "80000" and {customer.CONTACT LAST NAME}[1] = "C"</code></p><ol>
+<a name="91176"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Print the report and evaluate the data that prints when you have two selectors activated. Evaluate the data in the {customer.CONTACT LAST NAME} field (since you already evaluated {customer.POSTAL CODE} in the last step).
+<p class="indent"><a name="91177"></a>Does the {customer.CONTACT LAST NAME} field show only text strings beginning with the letter "C"?</p><ul type="disc"><ul type="disc"><a name="91178"></a><li>If it does, then this part of the selection formula is working.<a name="91179"></a><li>If it does not, then troubleshoot this part of the selection formula.</ul></ul><a name="100882"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Once the selection formula with two selectors activated is working properly, add a third selector, then a fourth, etc., until you have tested each selector in the selection formula.
+</ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "07_recordgroupsel16.html";
+var next = "07_recordgroupsel18.html";
+
+function setTopicID() { 
+      var number = "91150"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

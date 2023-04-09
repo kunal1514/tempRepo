@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>String functions</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000496279"></a><h2 class="newpage">String functions</h2><p><a name="1000674338"></a>String functions are used for the evaluation, manipulation and conversion of text <a href="glossary17.html#13544">string</a>s.</p><p><a name="1000674345"></a><a href="functionshelp64.html#1000669116">Len (str)</a></p><p><a name="1000666550"></a><a href="functionshelp65.html#1000518891">Length (str)</a></p><p><a name="1000666405"></a><a href="functionshelp66.html#1000499000">Trim (str)</a></p><p><a name="1000666416"></a><a href="functionshelp67.html#1000498575">LTrim (str)</a></p><p><a name="1000666423"></a><a href="functionshelp68.html#1000520678">TrimLeft (str)</a></p><p><a name="1000666460"></a><a href="functionshelp69.html#1000500763">RTrim (str)</a></p><p><a name="1000666475"></a><a href="functionshelp70.html#1000524259">TrimRight (str)</a></p><p><a name="1000666486"></a><a href="functionshelp71.html#1000526610">UCase (str)</a></p><p><a name="1000666497"></a><a href="functionshelp72.html#1000526144">UpperCase (str)</a></p><p><a name="1000666507"></a><a href="functionshelp73.html#1000504269">LCase (str)</a></p><p><a name="1000666521"></a><a href="functionshelp74.html#1000527267">LowerCase (str)</a></p><p><a name="1000666528"></a><a href="functionshelp75.html#1000506007">StrReverse (inputString)</a></p><p><a name="1000666567"></a><a href="functionshelp76.html#1000507779">IsNumeric (str)</a></p><p><a name="1000666590"></a><a href="functionshelp77.html#1000527509">NumericText (str)</a></p><p><a name="1000666597"></a><a href="functionshelp78.html#1000508281">ToNumber (numeric), ToNumber (string)</a></p><p><a name="1000666604"></a><a href="functionshelp79.html#1000727489">ToText</a></p><p><a name="1000666633"></a><a href="functionshelp86.html#1000670748">ToWords (x), ToWords (x, #places)</a></p><p><a name="1000666649"></a><a href="functionshelp87.html#1000496341">ReplicateString (str, #copies)</a></p><p><a name="1000666966"></a><a href="functionshelp88.html#1000509630">Space (x)</a></p><p><a name="1000666996"></a><a href="functionshelp89.html#1000510180">InStr (str1, str2), InStr (start, str1, str2)</a></p><p><a name="1000667011"></a><a href="functionshelp90.html#1000511842">InStrRev</a></p><p><a name="1000667022"></a><a href="functionshelp91.html#1000512268">StrCmp (str1, str2), StrCmp (str1, str2, compare)</a></p><p><a name="1000667033"></a><a href="functionshelp92.html#1000513968">Mid (str, start), Mid (str, start, length)</a></p><p><a name="1000667050"></a><a href="functionshelp93.html#1000514534">Left (str, length)</a></p><p><a name="1000667057"></a><a href="functionshelp94.html#1000514961">Right (str, length)</a></p><p><a name="1000667064"></a><a href="functionshelp95.html#1000515044">Val (str)</a></p><p><a name="1000667071"></a><a href="functionshelp96.html#1000515931">Chr (x)</a></p><p><a name="1000667086"></a><a href="functionshelp97.html#1000516606">Asc (str)</a></p><p><a name="1000667482"></a><a href="functionshelp98.html#1000496417">Filter</a></p><p><a name="1000667493"></a><a href="functionshelp99.html#1000518255">Replace</a></p><p><a name="1000667500"></a><a href="functionshelp100.html#1000496524">Join</a></p><p><a name="1000667507"></a><a href="functionshelp101.html#1000496717">Split</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp62.html";
+var next = "functionshelp64.html";
+
+function setTopicID() { 
+      var number = "1000496279"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Configuring Lotus Domino to work with the Web Component Server</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="170150"></a><h3 class="newpage"> Configuring Lotus Domino to work with the Web Component Server</h3>
+<p><a name="170151"></a>If you are using a Lotus Domino server, complete the following procedure before accessing reports over the Web.</p><ol>
+<a name="170152"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">Copy the <kbd>wcscgi.exe</kbd> file into the Lotus Domino<kbd> cgi<nobr>-b</nobr>in</kbd> directory.
+<p class="indent"><a name="170153"></a>This gives Domino Webserver access to the Crystal Reports Web Server program files through its CGI directory.</p><a name="170154"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Create a virtual directory in Lotus Domino for Seagate Crystal Reports.
+<p class="indent"><a name="170155"></a>Use the Domino Configuration database to do this. If you do not have a Domino Configuration database, create one called domcfg.nsf in the Domino Server default data directory using the Domino Configuration template (domcfg.ntf). </p><a name="170156"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Map the URLs to the report.
+<p class="indent"><a name="170157"></a>The steps for doing this will vary depending on the version of Domino you are using. Refer to Domino's online help for more information.</p><ul type="disc"><ul type="disc"><a name="170158"></a><li><kbd>Mapping Directories in Lotus Domino Version 4.x</kbd></ul></ul><p class="indent"><a name="170159"></a>Using the Domino Configuration Database follow the path Create -&gt; Mapping URL -&gt; Directory and map the four directories below:</p><p><a name="171104"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="171108"></a><strong>
+</strong>
+</td><td align="left" valign="TOP"><a name="171110"></a>URL Path
+
+</td><td align="left" valign="TOP"><a name="171112"></a>Directory
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="171114"></a>1</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171116"></a>/scrreports/*</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171118"></a>c:\Progra~1\Seagat~1\Crysta~1\Reports\*</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="171120"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171122"></a>/scrsamples/*</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171124"></a>c:\Progra~1\Seagat~1\Crysta~1\samples\ code\web\*</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="171126"></a>3</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171128"></a>/viewer/*</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171130"></a>c:\Progra~1\Seagat~1\Viewers\*</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="171132"></a>4</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171134"></a>/reports</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171136"></a>d:\notes\data\report</P>
+
+
+</td></tr>
+
+</Table></p>
+<p class="indent"><a name="170191"></a>The first two mappings are optional. They enable you to view samples that are included with the product.</p><p class="indent"><a name="170192"></a>The third mapping is required; this is the directory where the viewer clients are stored. When a browser requests a report, the Web Component Server interprets the browser and automatically loads the proper viewer (Java, ActiveX, HTML, or HTML with Frames).</p><p class="indent"><a name="170193"></a>The fourth mapping is required. This sets the current directory on the server whenever a request comes in for a report. The actual name of the directory (in this case /reports) is whatever you set up under the Notes data directory. It is activated via the URL redirection below.</p><p class="indent"><a name="170194"></a>In Directory Mapping, you can specify the IP address to which the mapping applies. This is only necessary if you are running multiple Virtual Servers and wish to restrict reporting access to one of them. All of the Directory Mappings should also be set to Read access not Execute. It is recommended to enter something in the comment field for reference, but this is optional.</p><ul type="disc"><ul type="disc"><a name="170195"></a><li><kbd>Mapping directories in Lotus Domino Version 5.X</kbd></ul></ul><p class="indent"><a name="170196"></a>Open the Domino Administrator. Click the Configuration tab and open the server -&gt;Current Server Documents view. Then select the Web.button. Create a URL Directory Mapping Redirection.</p><p><a name="171144"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="171148"></a>
+
+</td><td align="left" valign="TOP"><a name="171150"></a>URL Path
+
+</td><td align="left" valign="TOP"><a name="171152"></a>Directory
+
+</td><td align="left" valign="TOP"><a name="171154"></a>Access
+
+</td><td align="left" valign="TOP"><a name="171156"></a>Site 
+Information
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="171158"></a>1</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171160"></a>/scrreports/*</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171162"></a>c:\Program Files\Seagate Software\Crystal Reports\Samples\Reports\*</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171164"></a>Read</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171166"></a>Optional</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="171168"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171170"></a>/scrsamples/*</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171172"></a>c:\Program Files\Seagate Software\Crystal Reports\Samples\*</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171174"></a>Read</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171176"></a>Optional</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="171178"></a>3</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171180"></a>/viewer/*</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171182"></a>c:\Program Files\Seagate Software\Viewers\*</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171184"></a>Read</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171186"></a>Optional</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="171188"></a>4</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171190"></a>/reports</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171192"></a>d:\notes\data\report</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171194"></a>Read</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="171196"></a>Optional</P>
+
+
+</td></tr>
+
+</Table></p>
+<p class="indent"><a name="170725"></a>The first two mappings are optional. They enable you to view samples that are creatd with the product.</p><p class="indent"><a name="170229"></a>The third mapping is required; this is the directory where the viewer clients are stored. When a browser requests a report, the Web Component Server interprets the browser and automatically loads the proper viewer (Java, ActiveX, HTML, or HTML with Frames).</p><p class="indent"><a name="170230"></a>The fourth mapping is required. This sets the current directory on the server whenever a request comes in for a report. The actual name of the directory (in this case /reports) is whatever you set up under the Notes data directory. It is activated via the URL redirection below.</p><p class="indent"><a name="170249"></a>In Directory Mapping, you can specify the IP address to which the mapping applies. This is only necessary if you are running multiple Virtual Servers and wish to restrict reporting access to one of them. All of the Directory Mappings should also be set to Read access not Execute. It is recommended to enter something in the comment field for reference, but this is optional.</p><a name="170730"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Restart the Lotus Domino server.
+<a name="170250"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Ensure NT Services have started.
+<ul type="disc"><ul type="disc"><a name="170251"></a><li>Choose <kbd>Services</kbd> from the Control Panel.<p class="indent"><a name="170252"></a>The Services dialog box appears.</p><a name="170253"></a><li>Confirm the<kbd> Seagate Page Server</kbd> and <kbd>Seagate Web Component Server</kbd> services have started. If they are not running, click<kbd> Start</kbd>.<p><a name="170257"></a> <img src="images/db_services.gif">
+
+
+</p>
+</ul></ul><a name="170241"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Access sample reports by entering the URL into your web browser
+<p class="indent"><a name="170242"></a><code>http:/localhost/scrsamples</code></p></ol>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerImplementation9.html";
+var next = "WebServerImplementation11.html";
+
+function setTopicID() { 
+      var number = "170150"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

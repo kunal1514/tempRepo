@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Selection performance tips</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="100676"></a><h2 class="newpage">Selection performance tips</h2><p><a name="100677"></a>Consider the following performance<nobr>-r</nobr>elated items when setting up record selection requests:</p><a name="101892"></a><h4>General </h4><ul type="disc"><a name="101895"></a><li>To push down record selection, "Use Indexes or Server for Speed" must be on.
+<a name="101899"></a><li>Avoid date type conversion in record selection formulas.
+<p class="indent"><a name="101901"></a>For example, using ToText ( ) to convert a numeric field to a string.</p><a name="101900"></a><li>Able to push down some record selection formulas that use constant expressions.
+</ul><a name="101896"></a><h4>PC Databases</h4><ul type="disc"><a name="101897"></a><li>Can only push down selection on indexed fields.
+<a name="101906"></a><li>Able to push down AND clauses only (not OR).
+</ul><a name="101904"></a><h4>SQL Databases</h4><ul type="disc"><a name="101905"></a><li>Able to push down selection on indexed or non<nobr>-i</nobr>ndexed fields.
+<p class="indent"><a name="101909"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Server will respond faster if you use indexed fields.</p>
+<a name="101898"></a><li>Able to push down AND and OR clauses.
+<a name="101918"></a><li>Record selection which contains some types of embedded formulas can be pushed down.
+<a name="101928"></a><li>Use SQL Expression fields to push down formula calculations necessary for the record selection.
+<p class="indent"><a name="101929"></a>For example, a record selection of {@ExtendedPrice &gt; 1000} where @ExtendedPrice = (Orders x Quantity) can't be pushed down. However, if @ExtendedPrice is replaced with a SQL Expression field it will be pushed down.</p><a name="101919"></a><li>Use Show SQL Query to view SQL that will be sent to server.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "07_recordgroupsel13.html";
+var next = "07_recordgroupsel15.html";
+
+function setTopicID() { 
+      var number = "100676"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Pmt</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000494316"></a><h3 class="newpage"> Pmt</h3>
+<p><a name="1000666041"></a>Basic and Crystal syntax.</p><a name="1000494317"></a><h5>Overloads</h5><ul type="disc"><a name="1000494318"></a><li>Pmt (rate, nPeriods, presentValue)
+<a name="1000494319"></a><li>Pmt (rate, nPeriods, presentValue, futureValue)
+<a name="1000494320"></a><li>Pmt (rate, nPeriods, presentValue, futureValue, type)
+</ul><a name="1000494321"></a><h5>Arguments</h5><ul type="disc"><a name="1000494322"></a><li>rate is a Number that specifies the interest rate per period. 
+<a name="1000494323"></a><li>nPeriods is a positive Number that specifies the total number of payment periods in the annuity. The units used for specifying rate and nPeriods must consistent. For example, if nPeriods is the number of periods in months, then rate is a monthly interest rate.
+<a name="1000494324"></a><li>presentValue is a Number or Currency that specifies the present value or principal. That is, the amount that a series of payments in the future is worth now. 
+<a name="1000494325"></a><li>futureValue is an optional Number or Currency that specifies the future value or cash balance you want after you've made the final payment. If omitted, 0 is assumed. 
+<a name="1000494326"></a><li>type is an optional Number that specifies when payments are due. Specify 0 if payments are due at the end of the payment period, and 1 if payments are due at the beginning of the period. If omitted, 0 is assumed.
+</ul><a name="1000494327"></a><h5>Returns</h5><p><a name="1000494328"></a>Number value</p><a name="1000494329"></a><h5>Action</h5><p><a name="1000494330"></a>Pmt returns a Number specifying the payment for an annuity based on periodic, fixed payments and a fixed interest rate.</p><a name="1000494331"></a><h5>Examples</h5><p><a name="1000494332"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><a name="1000494334"></a>Suppose that you want to take out a $250,000 loan payable monthly over 15 years at an annual interest rate of 7 percent. The following formula returns your monthly loan payment. Note that the monthly interest rate is 0.07 / 12 and the number of months of the loan is 15 * 12.</p><p><code><a name="1000494335"></a>Pmt (0.07 / 12, 15 * 12, 250000)</code></p><p class="example"><a name="1000494336"></a>Returns the Number value -2247.07 (rounded to 2 decimals). The value is negative because it represents a payment out from you whereas the loan amount of $250,000 is positive because it represents a payment in to you.</p><p><a name="1000494338"></a>Now suppose that the payments are made at the beginning of the month instead of the end (as is the default). Your monthly loan payment is calculated as:</p><p><code><a name="1000494339"></a>Pmt (0.07 / 12, 15 * 12, 250000, 0, 1)</code></p><p class="example"><a name="1000494340"></a>Returns -2234.04 (rounded to 2 decimals). Note that your monthly payment is about $13 less each month than in the previous example where payments are made at the end of the month.</p><p><a name="1000494342"></a>Now suppose that you know that you'll receive $100,000 in 15 years so there is no need to fully pay off the loan; only to reduce the amount owed to $100,000 after 15 years. Note that the future value is negative since after 15 years you need to pay out $100,000 to clear the loan. Your monthly loan payment is calculated as:</p><p><code><a name="1000494343"></a>Pmt (0.07 / 12, 15 * 12, 250000, -100000)</code></p><p class="example"><a name="1000494344"></a>Returns -1931.58 (rounded to 2 decimals). </p><a name="1000494345"></a><h5>Comment</h5><ul type="disc"><a name="1000494346"></a><li>This function is designed to work like the Visual Basic function of the same name.
+<a name="1000494347"></a><li>To find the total amount paid out over the whole loan, multiply the payment per period (the value returned by Pmt) by the total number of periods (nPeriods).
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp56.html";
+var next = "functionshelp58.html";
+
+function setTopicID() { 
+      var number = "1000494316"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

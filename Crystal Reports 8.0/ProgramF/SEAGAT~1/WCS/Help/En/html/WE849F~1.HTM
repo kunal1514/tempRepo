@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>SQL and ODBC data sources </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="149904"></a><h3 class="newpage"> SQL and ODBC data sources </h3>
+<p><a name="149905"></a>The Web Component Server opens reports based on SQL servers and ODBC data sources as easily as it opens reports based on smaller desktop database files. If the data in a report requires access to a secure data source such as a SQL server or ODBC data source, the Web Component Server automatically prompts the user requesting the report to provide a user ID and password before it displays report data.</p><p><a name="150952"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Although the Web Component Server requires users to log on before it displays reports that access secured databases, security conflicts can arise if several people attempt to access the same report simultaneously. To prevent this type of conflict, add security to your web site, preventing users from seeing and accessing secured reports. Forcing users to log on to the intranet site is a common solution to providing complete system security.</p>
+<p><a name="149916"></a>Depending on the type of data your reports are based on, the logon page that appears may differ slightly. </p><p><a name="149921"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If the database security has no password or a blank password, users are not be prompted by the Web Component Server to log on. To ensure security, make sure databases have valid passwords.</p>
+<p><a name="149924"></a>To create hyperlinks in your web pages that handle user IDs and passwords automatically, use the User and Password commands. These commands let you specify more than one user ID and password if the report connects to two or more secured databases. Keep in mind that if an incorrect user ID or password is sent, the Web Component Server prevents access until the correct information is supplied.</p><p><a name="162212"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The Web Component Server applies a simple encryption algorithm to user names and passwords. If you are using a Microsoft web server, make sure your intranet or extranet site has the Secure Sockets Layer (SSL) encryption protocol installed and enabled to ensure complete security when accessing database information. Due to a documented problem in the Netscape web servers, SSL is not supported by the Web Component Server on Netscape servers. For more information, refer to Netscape documentation.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerCommands8.html";
+var next = "WebServerCommands10.html";
+
+function setTopicID() { 
+      var number = "149904"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

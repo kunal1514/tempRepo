@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Creating a running total in a one-to-many linking relationship</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1057590"></a><h4 class="newpage"> Creating a running total in a one-to-many linking relationship</h4><ol>
+<a name="1048484"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">From the Field Explorer dialog box, place the following fields from left to right in the Details section of your report:
+</ol>
+<PRE><a name="1026789"></a>{customer.CUSTOMER NAME}
+<a name="1046247"></a>{credit.CUSTOMER CREDIT ID}
+<a name="1046248"></a>{credit.AMOUNT}
+<a name="1046249"></a>{orders.ORDER ID}
+<a name="1046250"></a>{orders.ORDER AMOUNT}
+</PRE><ol>
+<a name="1026804"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/Bt_insum.gif">
+
+
+On the <kbd>Design</kbd> tab, highlight the {orders.ORDER AMOUNT} field and insert a subtotal, grouping on the {customer.CUSTOMER NAME} field.
+<p class="indent"><a name="1051145"></a>If you look carefully at the subtotals for each group, you will notice they aren't accurate. This is caused by the one<nobr>-t</nobr>o<nobr>-m</nobr>any link you created for the report. Follow the rest of this procedure to see how running totals produce accurate results in one<nobr>-t</nobr>o<nobr>-m</nobr>any linking relationships.</p><a name="1026805"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">On the <kbd>Insert</kbd> menu, click <kbd>Running Total Field</kbd>.
+<p class="indent"><a name="1042045"></a>The Field Explorer dialog box appears.</p><a name="1047450"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Double<nobr>-c</nobr>lick <kbd>Running Total Fields</kbd>.
+<p class="indent"><a name="1047451"></a>The Create Running Total Field dialog box appears.</p><a name="1039432"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">Enter the name "CreditsSubtotal" in the <kbd>Running Total Name</kbd> box.
+<a name="1039433"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Highlight {Credit.AMOUNT} in the <kbd>Available Tables and Fields</kbd> box, and use the first arrow button to move it over to the <kbd>Field to summarize</kbd> box.
+<a name="1039443"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;"><img src="images/bt_indat.gif">
+
+
+Select <kbd>sum</kbd> from the <kbd>Type of Summary</kbd> list.
+<a name="1051131"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Evaluate</kbd> section of the dialog box, click <kbd>On change of field</kbd> and choose the field {Credit.CUSTOMER CREDIT ID}.
+<p class="indent"><a name="1051227"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>When selecting a field to be an <EM>On change of field</EM> field, choose one that is unique to the database table you are using.</p>
+<a name="1051132"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">In the <kbd>Reset</kbd> section of the dialog box, click <kbd>On change of field</kbd> and choose the field {Customer.CUSTOMER NAME}.
+<a name="1041741"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Click <kbd>OK</kbd> to save the Running Total field.
+<p class="indent"><a name="1042057"></a>The program returns you to the Field Explorer dialog box.</p><a name="1039453"></a><li value="11&nbsp;&nbsp;&nbsp;&nbsp;">Place the running total in the <kbd>Group Footer</kbd> section of the report.
+</ol>
+<p><a name="1051261"></a>Compare the running total amount with the subtotal amount for each group. You will see the running total is accurate while the subtotal isn't. This is why you should use a running total when your report has a one<nobr>-t</nobr>o<nobr>-m</nobr>any linking relationship.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "09_runtotal13.html";
+var next = "09_runtotal15.html";
+
+function setTopicID() { 
+      var number = "1057590"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

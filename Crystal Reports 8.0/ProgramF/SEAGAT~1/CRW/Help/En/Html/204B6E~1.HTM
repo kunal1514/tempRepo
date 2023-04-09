@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Date, Time, and DateTime</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="128228"></a><h3 class="newpage"> Date, Time, and DateTime</h3>
+<p><a name="128230"></a>The DateTime type can hold date<nobr>-t</nobr>imes, dates only or times only. The Date type holds dates only and the Time type holds times only. The Date and Time types are more efficient than the DateTime type, and so can be used in situations where the added functionality and flexibility of the DateTime type is not needed.</p><p><a name="135109"></a>Visual Basic does not support separate types for holding dates only or times only. The Basic syntax DateTime type is similar to Visual Basic's Date type.</p><p><a name="135180"></a>You can create DateTime values directly using the date<nobr>-t</nobr>ime literal construction. It is formed by typing in the date<nobr>-t</nobr>ime between 2 pound (#) signs. Many different formats are supported, as in Visual Basic.</p><p><a name="135181"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Date<nobr>-t</nobr>ime literals cannot be split between lines.</p>
+<a name="135200"></a><h5>Examples</h5><PRE><a name="135182"></a>#8/6/1976 1:20 am#
+<a name="128235"></a>#August 6, 1976#
+<a name="128236"></a>#6 Aug 1976 13:20:19#
+<a name="128237"></a>#6 Aug 1976 1:30:15 pm#
+<a name="128238"></a>#8/6/1976#
+<a name="128239"></a>#10:20 am#
+</PRE><p><a name="128241"></a>Even though<code> #10:20 am#</code> looks like it could have the Time type and <br><code>#8/6/1976#</code> looks like it could have the Date type, they do not. They both have the DateTime type, as do all date<nobr>-t</nobr>ime literals. For example, you can think of <code>#10:20 am#</code> as a DateTime value with a null date part. To convert it to the Time type use <code>CTime (#10:20 am#)</code>.</p><p><a name="128243"></a>Instead of using date<nobr>-t</nobr>ime literals you can use CDateTime to convert a String to a DateTime. For example,</p><PRE><a name="128245"></a>CDateTime ("8/6/1976 1:20 am")
+<a name="128246"></a>CDateTime ("10:20 am")
+</PRE><p><a name="137602"></a>However, there is one key difference between using date<nobr>-t</nobr>ime literals and the above usage of CDateTime. Date<nobr>-t</nobr>ime literals always use U.S. English date formats rather than settings from the locale of the particular computer on which Seagate Crystal Reports is running. Thus, the date<nobr>-t</nobr>ime literal examples above would work on all computers. On the other hand, on a French system, you could use constructions like:</p><p><code><a name="137603"></a>CDateTime ("22 aout 1997") 'Same as #Aug 22, 1997#</code></p><p><a name="137604"></a>Date values can be constructed with CDate and Time values with CTime:</p><PRE><a name="128254"></a>CDate ("Aug 6, 1969")
+<a name="128255"></a>CDate (1969, 8, 6) 'Specify the year, month, day
+<a name="128256"></a>'Converts the DateTime argument to a Date
+<a name="128257"></a>CDate (#Aug 6, 1969#)
+<a name="128259"></a>CTime ("10:30 am")
+<a name="128260"></a>CTime (10, 30, 0) 'Specify the hour, minute, second
+<a name="128261"></a>CTime (#10:30 am#)
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax17.html";
+var next = "20_basicsyntax19.html";
+
+function setTopicID() { 
+      var number = "128228"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Performance considerations in one-to-many links</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="13340"></a><h4 class="newpage"> Performance considerations in one-to-many links</h4><p><a name="17053"></a>The information provided in this section is intended to help you maximize processing time and minimize network traffic when you are running your reports. You will learn about the best ways to use selection formulas and indexes in one<nobr>-t</nobr>o<nobr>-m</nobr>any situations to make your reporting more efficient. If you do not use the information in this section, your reports may end up processing dozens or even hundreds more records than necessary.</p><p><a name="17115"></a>When a one<nobr>-t</nobr>o<nobr>-m</nobr>any situation exists between two database tables and the program matches up records from the tables, there are a number of factors that determine how many records the program reads and evaluates.</p><p><a name="15689"></a>The tables that follow show the effects of the different factors on the number of records the program ultimately has to read. The charts are based on these assumptions:</p><ul type="disc"><a name="20223"></a><li>Table A contains 26 records (one for each letter in the alphabet).
+<a name="15691"></a><li>Table B contains 2600 records (100 matching records for every record in Table A).
+<a name="15692"></a><li>The scenario is to produce a report that finds two specific records in Table A and the 200 records (100+100) in Table B that match those two records in Table A.
+<p class="indent"><a name="15693"></a>In a best case scenario, the program would only have to read about 200 records to accomplish the task.</p><p class="indent"><a name="15694"></a>In a worst case scenario the program would have to read about 67,600 records to accomplish the same task.</p></ul><p><a name="406640"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The performance considerations for data files are different from the considerations for SQL databases. A data file is any non<nobr>-S</nobr>QL database that is accessed directly from Seagate Crystal Reports. For the purpose of this discussion, an SQL database is any SQL database accessed directly from Seagate Crystal Reports or through ODBC as well as any other database types that are accessed through ODBC. For a better understanding of the difference between direct access databases and ODBC data sources, see <a href="25_access_sources.html#246299">Accessing Data Sources</a>.</p>
+<a name="406647"></a><h5>Extended descriptions of chart columns</h5><p><a name="17129"></a>The performance charts use the following columns:</p><ul type="disc"><a name="17344"></a><li><strong>Linking or Subreport<br></strong>Are you creating a report from linked databases or are you inserting a subreport and binding it to the data in your primary report?
+<a name="18938"></a><li><strong>Selection Formula<br></strong>Does your primary report include a record selection formula that sets range limits on the key (indexed) field in Table A?
+<a name="18939"></a><li><strong>Index A<br></strong>Is Table A on the field you are going to use indexed to match up the records?
+<a name="17347"></a><li><strong>Index B<br></strong>Is Table B on the field you are going to use indexed to match up the records?
+<a name="17348"></a><li><strong>Reads A<br></strong>How many records does the program have to read out of Table A to find the two records it is looking for?
+<a name="17349"></a><li><strong>For each A reads in B<br></strong>How many records does the program have to read in Table B to find the 200 records it is looking for?
+<a name="361664"></a><li><strong>Total Records Read<br></strong>What is the total number of records the program has to process to complete the task?
+<p><a name="362110"></a> <Table Border="1">
+<tr><th colspan=7 rowspan=1><a name="361895"></a>PC Data
+
+</th></tr>
+<tr><td align="left" valign="TOP"><a name="361909"></a>Linking/
+Subreport
+
+</td><td align="left" valign="TOP"><a name="361911"></a>Selection 
+Formula
+
+</td><td align="left" valign="TOP"><a name="361913"></a>Index A
+
+</td><td align="left" valign="TOP"><a name="361915"></a>Index B
+
+</td><td align="left" valign="TOP"><a name="361917"></a>Reads A
+
+</td><td align="left" valign="TOP"><a name="361919"></a>For each 
+A reads in 
+B
+
+</td><td align="left" valign="TOP"><a name="361921"></a>Total 
+Records 
+Read
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="361923"></a>Linking</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361925"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361927"></a>Yes or No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361929"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361931"></a>26</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361933"></a>100 (26*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361935"></a>2600</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="361937"></a>Linking</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361939"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361941"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361943"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361945"></a>26</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361947"></a>100 (26*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361949"></a>2600</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="361951"></a>Linking</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361953"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361955"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361957"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361959"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361961"></a>100 (2*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361963"></a>200</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="361965"></a>Subreport</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361967"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361969"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361971"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361973"></a>26</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361975"></a>2600 (26*2600)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361977"></a>67,600</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="361979"></a>Subreport</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361981"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361983"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361985"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361987"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361989"></a>2600 (26*2600)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361991"></a>67,600</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="361993"></a>Subreport</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361995"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361997"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="361999"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362001"></a>26</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362003"></a>100 (26*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362005"></a>2600</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="362007"></a>Subreport</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362009"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362011"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362013"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362015"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362017"></a>2600 (2*2600)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362019"></a>5200</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="362021"></a>Subreport</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362023"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362025"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362027"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362029"></a>26</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362031"></a>100 (26*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362033"></a>2600</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="362035"></a>Subreport</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362037"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362039"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362041"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362043"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362045"></a>100 (2*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362047"></a>200</P>
+
+
+</td></tr>
+
+</Table><Table Border="1">
+<tr><th colspan=5 rowspan=1><a name="362051"></a>SQL Data
+
+</th></tr>
+<tr><td align="left" valign="TOP"><a name="362061"></a>Linking/
+Subreport
+
+</td><td align="left" valign="TOP"><a name="362063"></a>Selection 
+Formula
+
+</td><td align="left" valign="TOP"><a name="362065"></a>Reads A
+
+</td><td align="left" valign="TOP"><a name="362067"></a>For each A reads 
+in B
+
+</td><td align="left" valign="TOP"><a name="362069"></a>Total Records 
+Read
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="362071"></a>Linking</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362073"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362075"></a>26</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362077"></a>100 (26*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362079"></a>2600</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="362081"></a>Linking</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362083"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362085"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362087"></a>100 (2*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362089"></a>200</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="362091"></a>Subreport</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362093"></a>No</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362095"></a>26</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362097"></a>100 (26*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362099"></a>2600</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="362101"></a>Subreport</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362103"></a>Yes</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362105"></a>2</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362107"></a>100 (2*100)</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="362109"></a>200</P>
+
+
+</td></tr>
+
+</Table></p>
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases8.html";
+var next = "24_under_databases10.html";
+
+function setTopicID() { 
+      var number = "13340"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

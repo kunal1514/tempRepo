@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+
+<title>Specifying the Report Viewer</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="149487"></a><h3 class="newpage"> Specifying the Report Viewer</h3>
+<p><a name="163420"></a>As a web site designer, you can specify which viewer is used when the report is requested, overriding the default viewer used according to the browser. For example, the following URL forces the Java viewer to be used, even if you are running Internet Explorer or any other web browser:</p><p><code><a name="149488"></a>http://localhost/mydirectory/account statement.rpt?init=java</code></p><p><a name="149489"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>If the user's browser does not support the technology used by the viewer specified, Java in this case, an error will occur or an empty web page will be displayed.</p>
+<p><a name="149490"></a>In this URL, INIT is a parameter recognized by the Web Component Server. By setting the INIT parameter equal to Java, you can force the Web Component Server to use the Report Viewer for Java when displaying the report inside a browser. The Web Component Server supports several parameters for controlling how reports are generated and displayed. For more information, see <a href="WebServerCommands.html#162489">Web Component Server Commands</a>.</p><p><a name="149172"></a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerImplementation21.html";
+var next = "WebServerAdministration.html";
+
+function setTopicID() { 
+      var number = "149487"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

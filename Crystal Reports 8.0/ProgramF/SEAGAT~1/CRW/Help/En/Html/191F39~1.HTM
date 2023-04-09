@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 12</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="305179"></a><h3 class="newpage"> Formula 12</h3>
+<a name="305180"></a><h4>Operators/Functions Used</h4><p><a name="305181"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Average([array]), Subtract (-), Greater than (&gt;), Minimum([array]), Multiply (*), Parentheses ().</p><a name="305182"></a><h4>Formula Purpose</h4><p><a name="305183"></a>A consultant has contracts that pay him a percentage of the amount he saves his clients with a cap or ceiling on the amount he can earn. His contracts pay him 25% of the monthly savings up to a maximum of $10,000 per month. If his percentage amounts to more than $10,000, he collects the $10,000 maximum; if the percentage is less than $10,000, he collects the actual percentage. The base period against which savings are calculated is the average of three typical months in a prior year.</p><a name="305184"></a><h4>Formula</h4><PRE><a name="305185"></a>If (Average([{file.MON1}, {file.MON2}, {file.MON3}]) -
+<a name="305186"></a>{file.CURRENTMON})&gt; 0 Then
+<a name="305187"></a>Minimum([.25*((Average([{file.MON1}, {file.MON2},
+<a name="305188"></a>{file.MON3}) - {file.CURRENTMON}]), 10000])
+<a name="305189"></a>Else
+<a name="305190"></a>0
+</PRE><a name="305191"></a><h4>Result</h4><p><a name="305233"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="305194"></a>Average
+
+</td><td align="left" valign="TOP"><a name="305196"></a>CurMon
+
+</td><td align="left" valign="TOP"><a name="305198"></a>Savings
+
+</td><td align="left" valign="TOP"><a name="305200"></a>25%
+
+</td><td align="left" valign="TOP"><a name="305202"></a>Amt.Due
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305204"></a>90, 000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305206"></a>65, 000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305208"></a>25, 000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305210"></a>6250</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305212"></a>6250</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305214"></a>120, 000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305216"></a>60, 000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305218"></a>60, 000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305220"></a>15, 000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305222"></a>10, 000</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305224"></a>75, 000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305226"></a>77, 000</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305228"></a>N/A</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305230"></a>N/A</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305232"></a>0</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="305234"></a><h4>Explanation</h4><ul type="disc"><a name="305235"></a><li>The formula uses the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operator to say: if the average outlay during the three months specified was higher than the current month, then return 25% of the difference, up to a maximum of $10,000. If the average outlay was equal to or less than the outlay during the current month, return 0.
+<a name="305236"></a><li>The formula uses the Average function to calculate the average outlay during {file.MON1}, {file.MON2}, and {file.MON3} - the baseline period.
+<a name="305237"></a><li>It uses the Subtract operator (-) to subtract the outlay in the current month from the average during the baseline period, thus giving the difference between the current month and the baseline.
+<a name="305238"></a><li>It uses the Greater than operator (&gt;) to compare that difference to 0.
+<a name="305239"></a><li>If the difference is greater than 0 (there actually was a savings), the If part of the expression is satisfied, thus triggering the Then consequences.
+<a name="305240"></a><li>If the Then consequences are triggered:
+<a name="305241"></a><li>The formula uses the Average function to calculate the average outlay during {file.MON1}, {file.MON2}, and {file.MON3} - the baseline period.
+<a name="305242"></a><li>&#183;	It uses the Subtract operator (-) to subtract the outlay in the current month from the average during the baseline period.
+<a name="305243"></a><li>&#183;	It uses the Multiply operator (*) to calculate 25% of the difference (.25 *...).
+<a name="305244"></a><li>&#183;	It uses the Minimum ([array]) function to return the smaller amount: either 25% of the difference, or $10,000. Using the Minimum function in this way effectively puts a ceiling on the result of the calculation.
+<a name="305245"></a><li>&#183;	If the difference is equal to or less than 0 (there was no savings), the If part of the expression is not satisfied, thus triggering the Else consequence.
+<a name="305246"></a><li>&#183;	The Else consequence (Else 0) simply returns the value 0.
+</ul><a name="305247"></a><h6>Related topics</h6><p><a name="305251"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas41.html";
+var next = "19_introformulas43.html";
+
+function setTopicID() { 
+      var number = "305179"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

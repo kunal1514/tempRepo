@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Btrieve</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="16535"></a><h4 class="newpage"> Btrieve</h4><p><a name="183286"></a>Seagate Crystal Reports connects to the Btrieve engine through the translation files P2bbtrv.dll and P2ctbtrv.dll.</p><p><a name="333096"></a> </p>
+<p><a name="333746"></a>The Btrieve engine is a complex collection of DLLs and EXEs that are specific to the version of Btrieve you are using. For more information on the different Btrieve engine files, refer to your Btrieve documentation.</p><p><a name="333747"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font></p>
+<ul type="disc"><a name="333751"></a><li>Btrieve must be configured correctly for Seagate Crystal Reports to read Btrieve databases. If Btrieve is already configured correctly on your system, Seagate Crystal Reports can use your Btrieve data immediately upon installation. Seagate Crystal Reports automatically installs the Btrieve files that it requires to read Btrieve data. Refer to your Btrieve documentation to make sure the Btrieve engine is configured correctly.
+<a name="327473"></a><li>When you open a Btrieve database, Seagate Crystal Reports opens the entire database and loads information about all the tables in the database. To do this, Seagate Crystal Reports must reserve a large section of your computer's memory, called a buffer, in advance. Computer memory restrictions limit this buffer to 65,536 bytes (64K). This restricts the size of your Btrieve database to about 80 tables, depending on the number of fields in each table.
+</ul><a name="14151"></a><h5>Btrieve DDF files</h5><p><a name="14152"></a>Seagate Crystal Reports does not determine the definitions of Btrieve data files directly from the data files themselves. It needs a set of Btrieve Data Dictionary Files (.DDF) that contain file, field, and index information. Seagate Crystal Reports uses Wbtrvdef.dll and Sbtrvdef.dll to parse these DDF files. The following are the required DDFs which must all reside in the same directory:</p><ul type="disc"><a name="14153"></a><li>File.ddf
+<a name="14154"></a><li>Field.ddf
+<a name="14155"></a><li>Index.ddf
+</ul><p><a name="14156"></a>A set of DDFs normally contain definitions for multiple Btrieve data files. Once one of the DDFs is selected when creating a new report, Seagate Crystal Reports immediately adds all the data files defined in that DDF into the report. Seagate Crystal Reports also takes the path defined in the DDFs as the default path of the data files. The DDFs and data files can reside in different locations.</p><p><a name="305418"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Be sure to study your Btrieve documentation for more information on Btrieve DDFs and on configuring the Btrieve engine.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "25_access_sources10.html";
+var next = "25_access_sources12.html";
+
+function setTopicID() { 
+      var number = "16535"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Determining printing area characteristics</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="295881"></a><h3 class="newpage"> Determining printing area characteristics</h3>
+<p><a name="295882"></a>Each report area has its own printing characteristics. It is important to understand these characteristics because they affect when and how often different report objects get printed.</p><a name="295883"></a><h4>In what order will the areas print on the report?</h4><p><a name="295884"></a>Areas print in the order they appear on the Design tab (top to bottom). If there is more than one section in an area, the sections print in the order they appear. For example, if you have three Report Header sections, all three of those sections will print, in order, before the section(s) in the Page Header area begin to print.</p><a name="295885"></a><h4>How often do report objects print?</h4><p><a name="295886"></a>The way objects print will determine how you design your report. This will help you decide where to place charts, Cross<nobr>-T</nobr>abs, and formulas to get specific results.</p><a name="295887"></a><h5>Report Header</h5><p><a name="295888"></a>Objects placed in the Report Header area print once, at the beginning of the report.</p><ul type="disc"><a name="295889"></a><li>Charts and Cross<nobr>-T</nobr>abs placed in this area contain data for the entire report.
+<a name="295890"></a><li>Formulas placed in this area are evaluated once, at the beginning of the report.
+</ul><a name="295891"></a><h5>Page Header</h5><p><a name="295892"></a>Objects placed in the Page Header area print at the beginning of each new page.</p><ul type="disc"><a name="295893"></a><li>Charts or Cross<nobr>-T</nobr>abs cannot be placed in this section.
+<a name="295894"></a><li>Formulas placed in this area are evaluated once per page, at the beginning of each new page.
+</ul><a name="295895"></a><h5>Group Header</h5><p><a name="295896"></a>Objects placed in the Group Header area print at the beginning of each new group.</p><ul type="disc"><a name="295897"></a><li>Charts and Cross<nobr>-T</nobr>abs placed in this area contain data just for the group.
+<a name="295898"></a><li>Formulas placed in this area are evaluated once for each group, at the beginning of the group.
+</ul><a name="295899"></a><h5>Details area</h5><p><a name="295900"></a>Objects placed in the Details area print with each new record.</p><ul type="disc"><a name="295901"></a><li>Charts or Cross<nobr>-T</nobr>abs cannot be placed in this area.
+<a name="295902"></a><li>Formulas placed in this area are evaluated once for each record.
+</ul><a name="295903"></a><h5>Group Footer</h5><p><a name="295904"></a>Objects placed in the Group Footer area print at the end of each group.</p><ul type="disc"><a name="295905"></a><li>Charts and Cross<nobr>-T</nobr>abs placed in this area contain data just for the group.
+<a name="295906"></a><li>Formulas placed in this area are evaluated once for each group, at the end of the group.
+</ul><a name="295907"></a><h5>Report Footer</h5><p><a name="295908"></a>Objects placed in the Report Footer area print once at the end of the report.</p><ul type="disc"><a name="295909"></a><li>Charts and Cross<nobr>-T</nobr>abs placed in this area contain data for the entire report.
+<a name="295910"></a><li>Formulas placed in this area are evaluated once, at the end of the report.
+</ul><a name="295911"></a><h5>Page Footer</h5><p><a name="295912"></a>Objects placed in the Page Footer area print at the bottom of each page.</p><ul type="disc"><a name="295913"></a><li>Charts and Cross<nobr>-T</nobr>abs cannot be placed in this area.
+<a name="295914"></a><li>Formulas placed in this area are evaluated once per page, at the end of each new page.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "05_concept_rpt6.html";
+var next = "05_concept_rpt8.html";
+
+function setTopicID() { 
+      var number = "295881"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

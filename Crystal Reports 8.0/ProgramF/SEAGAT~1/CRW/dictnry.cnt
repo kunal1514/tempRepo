@@ -1,0 +1,45 @@
+:Base DICTNRY.hlp
+1 Crystal Dictionaries Overview
+2 Overview Topics Index=DICTN_Crystal_Dictonaries_Overview_Topics_Index
+2 Crystal Dictionaries Overview=DICTN_Crystal_Dictionaries_Overview
+2 Why use a Crystal Dictionary?=DICTN_Why_use_a_Crystal_Dictionary
+1 Dictionaries Expert
+2 Crystal Dictionaries Expert=DIALOGBX_Dictionaries_Expert
+2 Tables Tab=DIALOGBX_Tables_Tab
+2 Links Tab=DIALOGBX_Links_Tab
+2 View Tab=DIALOGBX_View_Tab
+2 Graphic Tab=DIALOGBX_Graphic_Tab
+2 Sample Data Tab=DIALOGBX_Sample_Data_Tab
+1 Crystal Dictionaries Buttons
+2 Buttons Index=COMMANDS_Buttons_Index
+2 New Dictionary button=COMMANDS_New_Dictionary_button
+2 Open Dictionary button=COMMANDS_Open_Dictionary_button
+2 Save button=COMMANDS_Save_button
+1 Crystal Dictionaries Menu Commands
+2 Menu Commands Index=COMMANDS_Crystal_Dictionaries_Menu_Commands_Index
+2 New Dictionary command (File menu)=COMMANDS_New_Dictionary_command_File_menu
+2 Open Dictionary command (File menu)=COMMANDS_Open_Dictionary_command_File_menu
+2 Save command (File menu)=COMMANDS_Save_command_File_menu
+2 Save As command (File menu)=COMMANDS_Save_As_command_File_menu
+2 Close command (File menu)=COMMANDS_Close_command_File_menu
+2 Verify Dictionary command (File menu)=COMMANDS_Verify_Dictionary_command_File_menu
+2 Log On Database Server command (File menu)=COMMANDS_Log_On_Database_Server_command_File_menu
+2 Log Off Database Server command (File menu)=COMMANDS_Log_Off_Database_Server_command_File_menu
+2 Options command (File menu)=COMMANDS_Options_command_File_menu
+1 Hands-On Tutorials
+2 How to create a new Dictionary=DICTN_How_to_create_a_new_Dictionary
+2 How to add a data file=DICTN_How_to_add_a_data_file
+2 How to open an SQL or ODBC data source=DICTN_How_to_open_an_SQL_or_ODBC_data_source
+2 How to link multiple tables=DICTN_How_to_link_multiple_tables
+2 How to select tables and fields for users=DICTN_How_to_select_tables_and_fields_for_users
+2 How to add/create formulas=DICTN_How_to_add_create_formulas
+2 How to rename field headings, fields, and formulas=DICTN_How_to_rename_field_headings_fields_and_formulas
+2 How to move fields/field headings within the list=DICTN_How_to_move_fields_field_headings_within_the_list
+2 How to update the location of a database table=DICTN_How_to_update_the_location_of_a_database_table
+2 How to add a new field heading=DICTN_How_to_add_a_new_field_heading
+2 How to add Help text=DICTN_How_to_add_Help_text
+2 How to add a graphic=DICTN_How_to_add_a_graphic
+2 How to create sample data for users to browse=DICTN_How_to_create_sample_data_for_users_to_browse
+2 How to edit an existing Dictionary=DICTN_How_to_edit_an_existing_Dictionary
+2 How to convert a Crystal Reports 4.x or 5.x Dictionary file=DICTN_How_to_convert_a_Crystal_Reports_4_x_or_5_x_Dictionary_file
+2 How to select a Crystal Dictionary for a report=DICTN_How_to_select_a_Crystal_Dictionary_for_a_report

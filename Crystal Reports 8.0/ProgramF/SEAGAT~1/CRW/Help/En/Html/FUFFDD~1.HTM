@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>RTrim (str)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000500763"></a><h3 class="newpage"> RTrim (str)</h3>
+<p><a name="1000524679"></a>RTrim and <a href="functionshelp70.html#1000524259">TrimRight (str)</a> are equivalent functions. However, RTrim is preferred in Basic syntax, whereas TrimRight is preferred in Crystal syntax.</p><a name="1000500764"></a><h5>Argument</h5><p><a name="1000500765"></a>str is a text String value</p><a name="1000500766"></a><h5>Returns</h5><p><a name="1000500767"></a>String value.</p><a name="1000500768"></a><h5>Action</h5><p><a name="1000500769"></a>RTrim removes all spaces to the right of the given string and returns it. </p><a name="1000500770"></a><h5>Typical uses</h5><ul type="disc"><a name="1000500771"></a><li>Use this function any time there are trailing blanks in a text object that may interfere with an alignment of text strings, a character count, or with a calculation (if the string is eventually converted to a Number). 
+<a name="1000500772"></a><li>Use whenever you combine (<a href="glossary4.html#13227">concatenate</a>) justified text strings and want to have the proper spacing between strings.
+</ul><a name="1000500773"></a><h5>Examples</h5><p><a name="1000500774"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000500775"></a>RTrim("Al/4520/B12&nbsp;&nbsp;&nbsp;&nbsp;") </code></p><p class="example"><a name="1000500776"></a>Returns "A1/4520/B12".</p><p><code><a name="1000500777"></a>RTrim({file.REFERENCE})</code></p><p class="example"><a name="1000500778"></a>Returns "Bal Fwd." where {file.REFERENCE} contains the left<nobr>-j</nobr>ustified text string "Bal Fwd.&nbsp;&nbsp;&nbsp;&nbsp;".</p><a name="1000500779"></a><h5>Comments</h5><p><a name="1000500780"></a>This function is designed to work like the Visual Basic function of the same name.</p><a name="1000669688"></a><h6>Related topics</h6><p><a name="1000500781"></a><a href="functionshelp66.html#1000499000">Trim (str)</a> </p><p><a name="1000780999"></a><a href="functionshelp67.html#1000498575">LTrim (str)</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp68.html";
+var next = "functionshelp70.html";
+
+function setTopicID() { 
+      var number = "1000500763"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

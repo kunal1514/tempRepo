@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>FV</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000494156"></a><h3 class="newpage"> FV</h3>
+<p><a name="1000665956"></a>Basic and Crystal syntax.</p><a name="1000494157"></a><h5>Overloads</h5><ul type="disc"><a name="1000494158"></a><li>FV (rate, nPeriods, payment)
+<a name="1000494159"></a><li>FV (rate, nPeriods, payment, presentValue)
+<a name="1000494160"></a><li>FV (rate, nPeriods, payment, presentValue, type)
+</ul><a name="1000494161"></a><h5>Arguments</h5><ul type="disc"><a name="1000494162"></a><li>rate is a Number that specifies the interest rate per period. 
+<a name="1000494163"></a><li>nPeriods is a positive Number that specifies the total number of payment periods in the annuity. The units used for specifying rate and nPeriods must consistent. For example, if nPeriods is the number of periods in months, then rate is a monthly interest rate.
+<a name="1000494164"></a><li>payment is a Number or Currency that specifies the payment to be made each period. 
+<a name="1000494165"></a><li>presentValue is an optional Number or Currency that specifies the present value of a series of future payments. 
+<a name="1000494166"></a><li>Type is an optional Number that specifies when payments are due. Specify 0 if payments are due at the end of the payment period, and 1 if payments are due at the beginning of the period. If omitted, 0 is assumed.
+</ul><a name="1000494167"></a><h5>Returns</h5><p><a name="1000494168"></a>Number value</p><a name="1000494169"></a><h5>Action</h5><p><a name="1000494170"></a>FV returns a Number specifying the future value of an annuity based on periodic, fixed payments and a fixed interest rate.</p><a name="1000494171"></a><h5>Examples</h5><p><a name="1000494172"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><a name="1000494174"></a>Suppose that you put $1000 per month into a retirement savings plan that pays 6 percent annual interest, compounded monthly. How much will the account be worth after 20 years?</p><p><code><a name="1000494175"></a>FV (0.06 / 12, 20 * 12, -1000)</code></p><p class="example"><a name="1000494176"></a>Returns 462041 (rounded to the nearest integer). So your account will have $462,041. The payment (-1000) is negative since you are paying out the money to the plan.</p><p><a name="1000494178"></a>The above example assumes that you made your payments into the plan at the end of the month. Thus after the first month, your plan would have only $1000 in it, since there was no time for interest to accrue. Suppose that instead you make your payments at the start of the month:</p><p><code><a name="1000494179"></a>FV (0.06 / 12, 20 * 12, -1000, 0, 1)</code></p><p class="example"><a name="1000494180"></a>Returns 464351 (rounded to the nearest integer). So your account will have $464,351. You will save $2,310 more by depositing at the beginning of the month.</p><p><a name="1000494182"></a>Now suppose that in addition to making payments at the start of the month, you start your plan with an initial deposit of $20,000.</p><p><code><a name="1000494183"></a>FV (0.06 / 12, 20 * 12, -1000, -20000, 1)</code></p><p class="example"><a name="1000494184"></a>Returns 530555 (rounded to the nearest integer). Your account will have $530,555 after 20 years.</p><p><a name="1000494186"></a>You can also use the FV function to calculate the future value of a lump sum deposit. For example, if you deposit $20,000 in to a plan that pays 6 percent annual interest compounded monthly for 20 years:</p><p><code><a name="1000494187"></a>FV (0.06 / 12, 20 * 12, 0, -20000)</code></p><p class="example"><a name="1000494188"></a>Returns 66204 (rounded to the nearest integer). Thus you would have $66,204 in your account. This is also equal to the difference of the previous 2 examples ($530,555 - $464,351).</p><a name="1000494189"></a><h5>Comment</h5><p><a name="1000494190"></a>This function is designed to work like the Visual Basic function of the same name.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp50.html";
+var next = "functionshelp52.html";
+
+function setTopicID() { 
+      var number = "1000494156"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

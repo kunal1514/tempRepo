@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>How formulas relate to functions in Microsoft Visual Basic</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="128067"></a><h4 class="newpage"> How formulas relate to functions in Microsoft Visual Basic</h4><p><a name="128069"></a>Consider the following Basic syntax formula:</p><PRE><a name="128071"></a>Rem A formula that returns a String value
+<a name="128072"></a>Rem The function Rnd returns a random number
+<a name="128073"></a>Rem between 0 and 1
+<a name="128074"></a>If Rnd &gt; 0.9 Then
+<a name="128075"></a>   formula = "You won!"
+<a name="128076"></a>Else
+<a name="128077"></a>   formula = "Sorry, try again."
+<a name="128078"></a>End If
+</PRE><p><a name="128080"></a>The above formula returns the text string value "You won!" if the random number returned by Rnd is greater than 0.9 and the text string value "Sorry, try again." otherwise.</p><p><a name="128082"></a>The use of the <EM>formula</EM> variable is similar to writing a function named <EM>formula</EM> in Visual Basic.</p><p><a name="128083"></a>For example, the above formula could be written as a Visual Basic function as follows:</p><PRE><a name="128085"></a>Rem The following code is in Visual Basic
+<a name="128086"></a>Function formula()
+<a name="128087"></a>    If Rnd &gt; 0.9 Then
+<a name="128088"></a>       formula = "You won!"
+<a name="128089"></a>    Else
+<a name="128090"></a>       formula = "Sorry, try again."
+<a name="128091"></a>    End If
+<a name="128092"></a>End Function
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax5.html";
+var next = "20_basicsyntax7.html";
+
+function setTopicID() { 
+      var number = "128067"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

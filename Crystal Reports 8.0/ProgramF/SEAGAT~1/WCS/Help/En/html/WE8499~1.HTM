@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Changing Selection Formulas in Web Reports </title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="161718"></a><h3 class="newpage"> Changing Selection Formulas in Web Reports </h3>
+<p><a name="161719"></a>In addition to specifying a record or group selection formula when designing a report, you can also change the selection formula using a command appended to the URL of a report called through the Web Component Server. As an administrator, you can create one report and design a web page that allows users to choose selection criteria for the information they need. The Web Component Server then dynamically generates the requested report with only the selected records.</p><p><a name="149864"></a>To specify a record selection in a request for a web report, use the parameter SF command. For example:</p><p><code><a name="149865"></a>http://server_name/reports/boxoffic.rpt? sf={studio.Studio}+%3d+'Universal'</code></p><p><a name="149866"></a>This overrides any selection formula already contained in Boxoffic.Rpt. However, the new selection formula is not saved with the original report file. It is only valid for the currently requested job. The GF command (group selection) can be used to change a group selection formula in a report.</p><p><a name="149870"></a>The Web Component Server does not check the validity of any selection formulas you send to a report. If the selection formula you create is invalid, an error is returned to the web browser. If you are designing a web site that passes selection formulas to reports, be sure to test the selection formulas before allowing users to access your site.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "WebServerCommands5.html";
+var next = "WebServerCommands7.html";
+
+function setTopicID() { 
+      var number = "161718"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "WebHelpTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "WebHelpIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Soundex (string)</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000593084"></a><h3 class="newpage"> Soundex (string)</h3>
+<p><a name="1000724033"></a>Basic and Crystal syntax.</p><a name="1000593087"></a><h5>Arguments</h5><p><a name="1000593088"></a>string is one of two or more <a href="glossary17.html#13544">string</a>s that sound alike.</p><a name="1000593089"></a><h5>Returns</h5><p><a name="1000593090"></a>Text String</p><a name="1000593091"></a><h5>Action</h5><p><a name="1000593093"></a>Soundex (string) evaluates a text string and returns a four character value that symbolizes the way string sounds.</p><a name="1000593094"></a><h5>Typical uses</h5><p><a name="1000593095"></a>Use this function whenever you want to locate records based on two or more field values that are spelled differently yet sound alike. </p><p><a name="1000724050"></a>This function can also be used to find customer names that have been misspelled.</p><a name="1000593096"></a><h5>Examples</h5><p><a name="1000593097"></a>The following examples are applicable to Crystal syntax:</p><p class="code"><a name="1000593098"></a>If Soundex{customer.LAST NAME} = Soundex ("Snider") Then
+<br><a name="1000750977"></a>&nbsp;&nbsp;&nbsp;&nbsp;{customer.LAST NAME}
+<br><a name="1000751000"></a>Else
+<br><a name="1000751023"></a>&nbsp;&nbsp;&nbsp;&nbsp;""
+</p><p class="example"><a name="1000593099"></a>Runs a Soundex on each value in the Last Name field and prints only those values that have a Soundex value equal to the Soundex value of the name Snider. This formula returns the names Sneider, Schneider, Snyder, and Snider if they are all in the database.</p><a name="1000593100"></a><h5>Comments</h5><ul type="disc"><a name="1000593101"></a><li>The value string must be in quotes.
+<a name="1000593102"></a><li>Soundex works only with values that begin with the same letter: For example, Soundex will return the same value for Chris and Cris (C620) but not for Kris (K620)
+<a name="1000593103"></a><li>Soundex creates a code based on the first character in the string plus three characters based on the following:
+<ul type="disc"><ul type="disc"><a name="1000593104"></a><li>Non<nobr>-a</nobr>lpha characters (i.e. numbers and punctuation) become -1.<a name="1000593105"></a><li>The characters a, e, i, o, u, y, h, and w are ignored (except when they are the first character in the original string).<a name="1000593106"></a><li>The characters b, f, p, and v become 1.<a name="1000593107"></a><li>The characters c, g, j, k, q, s, x, and z become 2.<a name="1000593108"></a><li>The characters d and t become 3.<a name="1000593109"></a><li>The character l becomes 4.<a name="1000593110"></a><li>The characters m and n become 5.<a name="1000593111"></a><li>The character r becomes 6.</ul></ul><a name="1000593112"></a><li>If the resulting code is only 2 or 3 characters long, Soundex uses zeros to fill out the code to four characters. For example, in the name Lauren, only the L, r, and n are translated (Lrn), so the resulting Soundex code becomes L650.
+<a name="1000593113"></a><li>If the resulting code is more than four characters long, all characters after the fourth character are ignored. For example, in the name Patrick, the P, t, r, c, and k can be translated (Ptrck), but the resulting Soundex code will only be four characters: P362.
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp238.html";
+var next = "functionshelp240.html";
+
+function setTopicID() { 
+      var number = "1000593084"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

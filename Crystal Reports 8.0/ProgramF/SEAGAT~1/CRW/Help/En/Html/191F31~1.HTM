@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Formula 16</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="305433"></a><h3 class="newpage"> Formula 16</h3>
+<a name="305434"></a><h4>Operators/Functions Used</h4><p><a name="305435"></a>If<nobr>-T</nobr>hen<nobr>-E</nobr>lse, Add (+), Less than (&lt;), Multiply (*)</p><a name="305436"></a><h4>Formula Purpose</h4><p><a name="305437"></a>A manufacturer of lawn and garden products grants a 10-5-5 discount on Category A products and 15-10-5 discount on Category B products. It also pays the freight on all orders of $5,000 or more (before discount). It charges a flat 4% freight on all orders of less than $5,000. Management wants a Total Including Freight figure to appear on the daily sales report.</p><a name="305438"></a><h4>Formula</h4><PRE><a name="305439"></a>If ({file.CAT A} + {file.CAT B}) &lt; 5000 Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.04 * .95 *.95 *.90 *{file.CAT A} + .95 *.90 *.85 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;*{file.CAT B}<br>
+Else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.95 *.95 *.90 *{file.CAT A} + .95 *.90 *.85 *{file.CAT 
+B}
+</PRE><a name="305440"></a><h4>Result</h4><p><a name="305466"></a> <Table Border="1">
+<tr><td align="left" valign="TOP"><a name="305443"></a>Cat A
+
+</td><td align="left" valign="TOP"><a name="305445"></a>Cat B
+
+</td><td align="left" valign="TOP"><a name="305447"></a>Cat A+Cat B
+
+</td><td align="left" valign="TOP"><a name="305449"></a>TotInclFrt
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305451"></a>9524</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305453"></a>1344</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305455"></a>10868</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305457"></a>8712.62</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="305459"></a>3424</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305461"></a>1344</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305463"></a>4768</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="305465"></a>3908.21</P>
+
+
+</td></tr>
+
+</Table></p>
+<a name="305467"></a><h4>Explanation</h4><ul type="disc"><a name="305468"></a><li>This formula uses the If<nobr>-T</nobr>hen<nobr>-E</nobr>lse operator to say, if the sum of {file.CAT A} and {file.CAT B} is lower than $5,000 (Then), multiply the discounted price by 104% (1.04) to arrive at the price plus freight. If the sum of {file.CAT A} and {file.CAT B} is higher than $5,000 (Else), simply calculate the discounted price (no freight, since the order is bigger than $5,000.
+<a name="305469"></a><li>The If part of the expression uses the Add operator (+) to calculate the undiscounted value of {file.CAT A} and {file.CAT B}.
+<a name="305470"></a><li>It uses the Less than operator (&lt;) to determine if the sum of {file.CAT A} and {file.CAT B} is less than $5000.
+<a name="305471"></a><li>If the sum is less than $5000, the If part of the expression is satisfied, thus triggering the Then consequence.
+<a name="305472"></a><li>The formula uses the Multiply operator (*) several times, first to multiply the value of {file.CAT A} by .90 (10% discount), to multiply that result by .95 (5% discount), and to multiply that result by .95 (5% discount) to arrive at the discounted amount for {file.CAT A}.
+<a name="305473"></a><li>It performs the same set of calculations on {file.CAT B} to determine the discounted amount for that category.
+<a name="305474"></a><li>It uses the Add operator (+) to add the discounted amounts of {file.CAT A} and {file.CAT B} to arrive at the discounted total (before freight).
+<a name="305475"></a><li>Finally, it uses the Multiply operator (*) to multiply the discounted total by 1.04 (100% + 4% freight) to arrive at the invoice total including freight.
+<a name="305476"></a><li>If the sum is $5,000 or more, the If part of the expression is not satisfied, thus triggering the Else consequence.
+<a name="305477"></a><li>The formula uses the Multiply operator (*) several times, first to multiply the value of {file.CAT A} by .90 (10% discount), to multiply that result by .95 (5% discount), and to multiply that result by .95 (5% discount) to determine the discounted amount for {file.CAT A} (freight free). 
+<a name="305478"></a><li>It performs the same set of calculations on {file.CAT B} to determine the discounted amount for that category.
+<a name="305479"></a><li>Finally, it uses the Add operator (+) to add the discounted amounts of {file.CAT A} and {file.CAT B} to arrive at the final invoice total (freight free).
+</ul><a name="305480"></a><h6>Related topics</h6><p><a name="305484"></a><a href="19_introformulas30.html#287844">Formulas In Action</a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "19_introformulas45.html";
+var next = "19_introformulas47.html";
+
+function setTopicID() { 
+      var number = "305433"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

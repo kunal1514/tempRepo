@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Safety mechanism for loops</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="132957"></a><h3 class="newpage"> Safety mechanism for loops</h3>
+<p><a name="132959"></a>There is a safety mechanism to prevent report processing from hanging due to an infinite loop. Any one evaluation of a formula can have at most 30,000 loop condition evaluations per formula evaluation. For example:</p><PRE><a name="132961"></a>Dim i
+<a name="132962"></a>i = 1
+<a name="132963"></a>Do While i &lt;= 100000
+<a name="132964"></a>   If i &gt; {movie.STARS} Then Exit Do
+<a name="132965"></a>   i = i + 1
+<a name="132966"></a>Loop
+<a name="132967"></a>formula = 20
+</PRE><p><a name="132969"></a>If {movie.STARS} is greater than 30,000 then the loop condition (i &lt;= 100000) will be evaluated more than the maximum number of times and an error message is displayed. Otherwise the loop is OK.</p><p><a name="132971"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>The safety mechanism applies on a per formula base, not for each individual loop. For example:</p>
+<PRE><a name="132973"></a>Dim i
+<a name="132974"></a>i = 1
+<a name="132975"></a>For i = 1 To 10000
+<a name="132976"></a>   formula = Sin (i)
+<a name="132977"></a>Next i
+<a name="132979"></a>Do While i &lt;= 25000
+<a name="132980"></a>   i = i + 1
+<a name="132981"></a>Loop
+</PRE><p><a name="132983"></a>The above formula also triggers the safety mechanism since the 30,000 refers to the total number of loop condition evaluations in the formula and this formula will have 10001 + 25001 such evaluations.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax56.html";
+var next = "20_basicsyntax58.html";
+
+function setTopicID() { 
+      var number = "132957"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

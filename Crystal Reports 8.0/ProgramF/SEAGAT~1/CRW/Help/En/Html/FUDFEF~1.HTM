@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>IsDate</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="1000540723"></a><h3 class="newpage"> IsDate</h3>
+<p><a name="1000691353"></a>Basic and Crystal syntax.</p><a name="1000540724"></a><h5>Overloads</h5><ul type="disc"><a name="1000540725"></a><li>IsDate (string)
+<a name="1000540726"></a><li>IsDate (number)
+</ul><a name="1000540727"></a><h5>Arguments</h5><ul type="disc"><a name="1000540728"></a><li>string is a String value or expression to be tested for being convertible to a Date value. Many forms are accepted.
+<a name="1000540729"></a><li>number is a Number value or expression to be tested for being convertible to a Date value. It can be positive, negative or fractional. It is interpreted as a number of days since December 30, 1899.
+</ul><a name="1000540730"></a><h5>Returns</h5><p><a name="1000540731"></a>Boolean value (True or False).</p><a name="1000540732"></a><h5>Action</h5><p><a name="1000540733"></a>IsDate returns True if the given String or Number value can be converted to a valid Date and returns False otherwise. A valid Date is any date between January 1, 100 through December 31, 9999.</p><a name="1000540734"></a><h5>Typical use</h5><p><a name="1000540735"></a>If you want to convert a String value to a Date using the functions <a href="functionshelp162.html#1000568875">CDate</a> or <a href="functionshelp109.html#1000531915">DateValue</a>, use the IsDate function first to check if the conversion will succeed. See below for an example.</p><a name="1000540736"></a><h5>Examples</h5><p><a name="1000540737"></a>The following examples are applicable to both Basic and Crystal syntax:</p><p><code><a name="1000540738"></a>IsDate ("Jan 1, 1999") </code></p><p class="example"><a name="1000540739"></a>Returns True.</p><p><code><a name="1000540740"></a>IsDate (100)</code></p><p class="example"><a name="1000540741"></a>Also returns True since the number 100 is interpreted as 100 days from Dec. 30, 1899, which is April 9, 1900.</p><p><code><a name="1000540742"></a>IsDate ("Feb 29, 1999")</code></p><p class="example"><a name="1000540743"></a>Returns False since 1999 is not a leap year and so the String cannot be converted to a Date.</p><p><a name="1000540745"></a>Suppose an orders report is grouped monthly by order date. Here is a formula that returns the Date value that is extracted from the GroupName String field. If the report is a TopN report, the GroupName field can have a value "Others". This can not be converted into a Date, and so IsDate is used to prevent an error from being generated in the call to CDate:</p><p class="code"><a name="1000540746"></a>Rem Basic syntax
+<br><a name="1000540747"></a>Dim s As String
+<br><a name="1000540748"></a>s = GroupName ({Orders.Order Date}, "monthly")
+<br><a name="1000540749"></a>If IsDate(s) Then
+<br><a name="1000540750"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = CDate(s)
+<br><a name="1000540751"></a>Else
+<br><a name="1000540752"></a>&nbsp;&nbsp;&nbsp;&nbsp;formula = CDate(0,0,0)
+<br><a name="1000540753"></a>End If
+<br><a name="1000540754"></a>
+<br><a name="1000540755"></a>//Crystal syntax
+<br><a name="1000540756"></a>Local StringVar s := GroupName ({Orders.Order Date}, "monthly");
+<br><a name="1000540757"></a>If IsDate(s) Then
+<br><a name="1000540758"></a>&nbsp;&nbsp;&nbsp;&nbsp;CDate(s)
+<br><a name="1000540759"></a>Else
+<br><a name="1000540760"></a>&nbsp;&nbsp;&nbsp;&nbsp;CDate(0,0,0)
+</p><p class="example"><a name="1000540761"></a>Returns the Date value May 1, 1998 if the GroupName field value is "May - 1998". Returns the null Date (a non<nobr>-p</nobr>rinting Date value, if the GroupName field value is "Others".</p><a name="1000540763"></a><h5>Comment</h5><p><a name="1000540764"></a>This function is similar to the Visual Basic function of the same name, except that it works specifically with Seagate Crystal Report's Date type which holds date values only.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "functionshelp115.html";
+var next = "functionshelp117.html";
+
+function setTopicID() { 
+      var number = "1000540723"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Fields</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="133725"></a><h2 class="newpage">Fields</h2><p><a name="133726"></a>Many of the fields you use when creating your report can also be referred to in your formulas. For example, database, parameter, running total, SQL expression, summary, and group name fields can all be used in a formula. You can also refer to other formula fields in your formula.</p><p><a name="136766"></a>The easiest way to insert a field into your report is to double<nobr>-c</nobr>lick a field's name in the Report Fields tree. This ensures that the correct syntax for the field is used.</p><a name="136728"></a><h4>How fields appear in formulas</h4><p><a name="133832"></a>Database, parameter, formula, running total and SQL expression fields have their names surrounded by braces. Database field names are taken from the database. For example: </p><ul type="disc"><a name="144113"></a><li>database field: <code>{Employee.Last Name}</code>
+</ul><p><a name="144097"></a>Parameter, formula, running total, and SQL expression field names are specified when the fields are created. </p><ul type="disc"><a name="128131"></a><li>parameter fields also includes a question mark: <code>{?my parameter field}</code>
+<a name="128132"></a><li>formula fields include an at sign: <code>{@another formula }</code>
+<a name="128133"></a><li>running totals fields include a pound sign: <code>{#my running total}</code>
+<a name="128134"></a><li>SQL expression fields include a percent sign: <code>{%my SQL expression}</code>
+</ul><p><a name="128136"></a>Summary and group name fields look like function calls. However, they are really shorthand notation for a report field.</p><ul type="disc"><a name="128138"></a><li>sum summary field: <code>Sum({Orders.Order Amount}</code>, <code>{Orders.Ship Via})</code>
+<a name="128139"></a><li>group name field: GroupName<code>({Orders.Ship Via})</code>
+</ul>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax9.html";
+var next = "20_basicsyntax11.html";
+
+function setTopicID() { 
+      var number = "133725"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Indexed tables</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="456239"></a><h3 class="newpage"> Indexed tables</h3>
+<p><a name="13212"></a>Creating indexes for database tables can increase the speed of data access and reduce the time it takes for the program to evaluate data. Some DBMS applications automatically index your database tables, while others require that you create an index yourself. For the best report generation performance, make sure each of your database tables has a corresponding index.</p><p><a name="347913"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Some DBMS applications do not support indexed tables. Refer to the documentation for your DBMS to find out if it supports indexes and how to create them. If your DBMS documentation does not mention indexed tables, it may not support them, and you should link tables based on common fields. The Visual Linking Expert can also help you determine if your tables include indexes. </p>
+<p><a name="47693"></a>Indexes organize the records in a relational database table so that data can be located easier. For example, assume you have a table with the following data:</p><p><a name="295727"></a>  <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="46357"></a><strong>Order#
+</strong>
+</th><th align="left" valign="bottom"><a name="46359"></a>Customer
+
+</th><th align="left" valign="bottom"><a name="46361"></a>Amount
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="46363"></a>10444</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46365"></a>Allez Distribution</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46367"></a>25141.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="46369"></a>10470</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46371"></a>BG Mountain Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46373"></a>19164.30</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="46375"></a>10485</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46377"></a>Sierra Mountain</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46379"></a>8233.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="46381"></a>10488</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46383"></a>Mountain Toad</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46385"></a>24580.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="46387"></a>10495</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46389"></a>SFB Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46391"></a>7911.80</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="46393"></a>10501</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46395"></a>La Bomba de Bicicleta</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46397"></a>1956.20</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="46399"></a>10511</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46401"></a>BG Mountain Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46403"></a>1683.60</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="46405"></a>10544</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46407"></a>Sierra Bicycle Group</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46409"></a>19766.20</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="46411"></a>10568</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46413"></a>Mountain Tops Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46415"></a>29759.55</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="46417"></a>10579</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46419"></a>Sierra Bicycle Group</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="46421"></a>12763.95</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="13282"></a>The information in this table is organized according to the Order# field. This is fine anytime you want to look up information in the table based on order numbers. However, what if you want to look up information specific to a certain customer?</p><p><a name="13283"></a>Say you want to look up all orders made by Sierra Bicycle Group. The database engine must begin by looking at the first order number in the list and checking to see if the customer name matches the request. If not, it goes to the second order number, and checks that customer name. When an order number is reached that contains the correct customer name, the database engine retrieves the information, then continues to the next order number. Using this technique, both the Order# field and the Customer field must be read for every single record in the table. This takes a long time and a large amount of computer processing effort for examining extensive database tables with thousands, or even millions of records.</p><p><a name="13284"></a>Instead, you can create an index for the table based on the Customer field. Such an index might look like this:</p><p><a name="295728"></a> <Table Border="1">
+<tr><th align="left" valign="bottom"><a name="13287"></a>Customer
+
+</th><th align="left" valign="bottom"><a name="13289"></a>Pointer to Order#
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="13291"></a>Allez Distribution</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13293"></a>10444</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13295"></a>BG Mountain Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13297"></a>10470</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13299"></a>BG Mountain Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13301"></a>10511</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13303"></a>La Bomba de Bicicleta</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13305"></a>10501</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13307"></a>Mountain Toad</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13309"></a>10488</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13311"></a>Mountain Tops Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13313"></a>10568</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13315"></a>SFB Inc.</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13317"></a>10495</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13319"></a>Sierra Bicycle Group</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13321"></a>10544</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13323"></a>Sierra Bicycle Group</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13325"></a>10579</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13327"></a>Sierra Mountain</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13329"></a>10485</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="13330"></a>In this index, information is organized by customers, not order numbers. Also, notice that the second column actually contains pointers to specific order numbers in the original table. By using this index, the database engine can search just the information in the Customer column until it finds the customer you are interested in, Sierra Bicycle Group.</p><p><a name="13331"></a>For each correct customer entry the database engine finds in the index, it looks up the matching order in the table according to the pointer in the second column of the index. Only the orders for the correct customer are read. Finally, since information in the index is organized according to the customer names, the database engine does not need to continue searching through the index or the table as soon as it finds an index entry that does not match the requested customer.</p><p><a name="13332"></a>The advantage of this highly organized search through a database table according to an index is speed. Using indexes speeds up data retrieval and report generation, important factors when reporting on large database files.</p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases5.html";
+var next = "24_under_databases7.html";
+
+function setTopicID() { 
+      var number = "456239"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

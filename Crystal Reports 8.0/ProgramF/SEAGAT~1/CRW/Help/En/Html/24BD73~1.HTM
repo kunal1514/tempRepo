@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Right Outer [(+)=, =*] join</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="19065"></a><h4 class="newpage"> Right Outer [(+)=, =*] join</h4><p><a name="13810"></a>The result set from a Right Outer join includes all the records in which the linked field value in both tables is an exact match. It also includes a row for every record in the lookup (right) table for which the linked field value has no match in the primary table. If you link the Customer table to the Orders table, you get one row in the table for each order a customer has placed, as with an Equal join. You also get a row for every order found that cannot be linked to a customer. Theoretically, this should not happen, but if an inexperienced sales person forgot to assign a customer ID to an order, you can quickly locate that order with a Right Outer join. The resulting table leaves a blank in any of the Customer fields for the order without a customer.</p><p><a name="444237"></a> :<Table Border="1">
+<tr><th align="left" valign="bottom"><a name="13815"></a>Customer Table
+
+</th><th align="left" valign="bottom"><a name="13817"></a>Orders Table
+
+</th><th align="left" valign="bottom"><a name="13819"></a>Orders Table
+
+</th></tr>
+<tr><th align="left" valign="bottom"><a name="13821"></a>Customer ID
+
+</th><th align="left" valign="bottom"><a name="13823"></a>Order ID
+
+</th><th align="left" valign="bottom"><a name="13825"></a>Order Amount
+
+</th></tr>
+<tr><td align="left" valign="TOP"><P><a name="13827"></a>52</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13829"></a>6</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13831"></a>25141.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13833"></a>53</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13835"></a>11</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13837"></a>19164.30</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13839"></a>53</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13841"></a>21</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13843"></a>1683.60</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13845"></a>57</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13847"></a>4</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13849"></a>15716.40</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13851"></a>58</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13853"></a>20</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13855"></a>1956.20</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13857"></a>60</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13859"></a>16</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13861"></a>24580.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13863"></a>62</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13865"></a>19</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13867"></a>7911.80</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13869"></a>63</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13871"></a>28</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13873"></a>19766.20</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13875"></a>63</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13877"></a>32</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13879"></a>12763.95</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><a name="13881"></a>64</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13883"></a>14</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13885"></a>8233.50</P>
+
+
+</td></tr>
+<tr><td align="left" valign="TOP"><P><br></P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13889"></a>25</P>
+
+
+</td><td align="left" valign="TOP"><P><a name="13891"></a>10320.87</P>
+
+
+</td></tr>
+
+</Table></p>
+<p><a name="349076"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Left Outer and Right Outer joins are handled differently in the SQL language from other join types. If the database is accessed through ODBC, Seagate Crystal Reports uses ODBC syntax in the SQL statement. If you are connecting to a SQL database directly (not through ODBC), Seagate Crystal Reports uses a syntax native to the database. For more information about what an Outer join looks like in an SQL statement, refer to Microsoft ODBC documentation or to the documentation for your SQL database.</p>
+
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "24_under_databases21.html";
+var next = "24_under_databases23.html";
+
+function setTopicID() { 
+      var number = "19065"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

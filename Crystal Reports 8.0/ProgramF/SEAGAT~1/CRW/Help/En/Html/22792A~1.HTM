@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+
+<title>To define entry type and format using the Edit Mask</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="80515"></a><h4 class="newpage"> To define entry type and format using the Edit Mask</h4><ol>
+<a name="80516"></a><li value="1&nbsp;&nbsp;&nbsp;&nbsp;">On the<strong> Insert</strong> menu, click <strong>Parameter Field</strong>.
+<a name="80141"></a><li value="2&nbsp;&nbsp;&nbsp;&nbsp;">Click<strong> New</strong>.
+<a name="80140"></a><li value="3&nbsp;&nbsp;&nbsp;&nbsp;">Enter the Name, Prompting text, and Value type.
+<a name="80143"></a><li value="4&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>Set Default values</strong>.
+<a name="80142"></a><li value="5&nbsp;&nbsp;&nbsp;&nbsp;">For a string parameter field that you are setting the default values for, you can choose to enter an Edit Mask in the<EM> </EM>Edit Mask<EM> </EM>field, rather than specifying a range. An Edit Mask can be any of a set of masking characters used to restrict the values you can enter as parameter values (the Edit Mask also limits the values you can enter as default prompting values).
+<p class="indent"><a name="82483"></a>You can enter any of the following masking characters, or any combination of them:</p><ul type="disc"><ul type="disc"><a name="79328"></a><li>"A" (allows an alphanumeric character and requires the entry of a character in the parameter value)<a name="79329"></a><li>"a" (allows an alphanumeric character and does not require the entry of a character in the parameter value)<a name="79330"></a><li>"0" (allows a digit [0 to 9] and requires the entry of a character in the parameter value)<a name="79331"></a><li>"9" (allows a digit or a space, and does not require the entry of a character in the parameter value)<a name="79332"></a><li>"#" (allows a digit, space, or plus/minus sign, and does not require the entry of a character in the parameter value)<a name="79333"></a><li>"L" (allows a letter [A to Z], and requires the entry of a character in the parameter value)<a name="79334"></a><li>"?" (allows a letter, and does not require the entry of a character in the parameter value)<a name="79335"></a><li>"&amp;" (allows any character or space, and requires the entry of a character in the parameter value)<a name="79336"></a><li>"C" (allows any character or space, and does not require the entry of a character in the parameter value)<a name="79337"></a><li>".  ,  :  ;  -  /" (separator characters). Inserting separator characters into an Edit Mask is something like hard coding the formatting for the parameter field. When the field is placed on the report, the separator character will appear in the field object frame, like this: LLLL/0000. This example depicts an edit mask that requires four letters followed by four numbers.<a name="79338"></a><li>"&lt;" (causes subsequent characters to be converted to lowercase)<a name="79339"></a><li>"&gt;" (causes subsequent characters to be converted to uppercase)<a name="79340"></a><li>"\" (causes the subsequent character to be displayed as a literal). For example, the Edit Mask "\A" would display a parameter value of "A." If the Edit Mask is "00\A00," then a valid parameter value would consist of two digits, the letter "A," and then two additional digits.<a name="79341"></a><li>"Password". Allows you to set the Edit Mask to "Password," you can create conditional formulas specifying that certain sections of the report become visible only when certain user passwords are entered.<p class="indent"><a name="79342"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Some of the Edit Mask characters require that you enter a character in their place (when entering a parameter value), while others allow you to leave a space, if needed. For example, if the Edit Mask is 000099, you can enter a parameter value with four digits, five digits, or six digits, since the '9' Edit Mask character does not require the entry of a character. However, since '0' does require such an entry, you could not enter a parameter value with less than four digits.</p>
+</ul></ul><a name="79344"></a><li value="6&nbsp;&nbsp;&nbsp;&nbsp;">Enter the default prompting values by adding to or highlighting values on the "Select or enter value to add" list and using the <strong>Add </strong>(&gt;) and<EM> </EM><strong>Add All</strong> (&gt;&gt;) buttons to add these values to the <strong>Default Values</strong> list. You can use the <strong>Remove</strong> (&lt;) and <strong>Remove All </strong>(&lt;&lt;) buttons to remove prompting values from the list. The items you add appear in a drop<nobr>-d</nobr>own list on the Enter Parameter Values dialog box with the default prompting values you specify.
+<a name="79346"></a><li value="7&nbsp;&nbsp;&nbsp;&nbsp;">When you have more than one item in the <strong>Default values</strong> list box, the <strong>Allow Editing of default values</strong> check box appears. This check box is selected by default to specify that you can edit or enter new values when prompted for parameter values. Select or clear this check box as needed.
+<p class="indent"><a name="79347"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>This check box is inactive until you enter at least two default prompting values.</p>
+<a name="79348"></a><li value="8&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<p class="indent"><a name="80148"></a>The Create Parameter Field dialog box appears.</p><a name="80149"></a><li value="9&nbsp;&nbsp;&nbsp;&nbsp;">Click <strong>OK</strong>.
+<p class="indent"><a name="80150"></a>The Field Explorer appears with the parameter selected.</p><a name="80151"></a><li value="10&nbsp;&nbsp;&nbsp;&nbsp;">Drag and drop the parameter into the report.
+</ol>
+<p><a name="34599"></a></p>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "22_param15.html";
+var next = "23_subreports.html";
+
+function setTopicID() { 
+      var number = "80515"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

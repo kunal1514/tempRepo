@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<title>Single-line and multi-line If statements</title>
+
+<link REL=STYLESHEET TYPE="text/css" HREF="seagate.css">
+
+<!--
+                 ***********************************
+                 * Seagate Software copyright 1999 *
+                 ***********************************
+
+                      Template version: 5.1
+-->
+
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#800080">
+
+
+ 
+<a name="132741"></a><h4 class="newpage"> Single-line and multi-line If statements</h4><p><a name="132743"></a>There are two kinds of If statement, the single<nobr>-l</nobr>ine if statement and the multi<nobr>-l</nobr>ine if statement. Starting on a new line after the first <EM>Then</EM> turns your If statement into a multi<nobr>-l</nobr>ine If statement. Otherwise it is a single<nobr>-l</nobr>ine If statement. The multi<nobr>-l</nobr>ine If statement always includes an End If whereas the single line If statement does not.</p><p><a name="135939"></a><font color="darkblue"><b>Note:   &nbsp;&nbsp;&nbsp;</b></font>Because of the use of line<nobr>-c</nobr>ontinuation characters, single<nobr>-l</nobr>ine If statements do not need to be on a single line. In general, it is preferable to use multi<nobr>-l</nobr>ine If statements since they have a clearer layout. However, for simple situations, the single<nobr>-l</nobr>ine If statement is sometimes used.</p>
+<PRE><a name="132745"></a>Rem Single<nobr>-l</nobr>ine If example 1
+<a name="132746"></a>Rem Same result as multi<nobr>-l</nobr>ine If example 1
+<a name="132747"></a>If {Employee.Dept} = "Sales" Then _
+<a name="132748"></a>   formula = {Employee.Salary} * 0.06 _
+<a name="132749"></a>Else _
+<a name="132750"></a>   formula = {Employee.Salary} * 0.04
+</PRE><p><a name="132752"></a>Here is an example showing various forms of single<nobr>-l</nobr>ine If statements:</p><PRE><a name="132754"></a>Rem Single<nobr>-l</nobr>ine If example 2
+<a name="132755"></a>Dim per As Number, extra As Boolean
+<a name="132756"></a>per = 2 : extra = False
+<a name="132758"></a>'An example with no Else clause
+<a name="132759"></a>If {Employee.Dept} = "Sales" Then per = 10
+<a name="132761"></a>'More than 1 statement in the Then or Else part can
+<a name="132762"></a>'be included by separating them with colons
+<a name="132763"></a>If {Employee.Dept} = "R&amp;D" Then _
+<a name="132764"></a>   per = 5 : extra = True _
+<a name="132765"></a>Else _
+<a name="132766"></a>   per = 3
+</PRE>
+<hr><br>
+
+<script  language="JavaScript"><!--
+
+var prev = "20_basicsyntax49.html";
+var next = "20_basicsyntax51.html";
+
+function setTopicID() { 
+      var number = "132741"; 
+      return number; 
+}
+
+// --></script>
+
+
+
+
+<SCRIPT>
+
+if (!window.parent.toc && navigator.appName == "Netscape") {
+
+   document.writeln ('<TABLE ALIGN="left" border="0" cellspacing="0" cellpadding="10">');
+   document.writeln ('<TR>');
+   document.write ('<TD ALIGN="left">');
+
+   if (prev != "crwTOC.hhc") {
+      document.writeln ('<A HREF="' + prev + '">');
+      document.writeln ('<IMG SRC="prevpage.gif" HEIGHT=17 BORDER=0 ALT="Previous page"></A>');
+   } else {
+//   window.alert ('no previous page');
+   }
+
+   if (next != "crwIX.hhk") {
+      document.writeln ('<A HREF="' + next + '">');
+      document.writeln ('<IMG SRC="nextpage.gif" HEIGHT=17 BORDER=0 ALT="Next page"></A>');
+   } else {
+//   window.alert ('no next page');
+   }
+   document.writeln ('</TD><TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?TOC">');
+   document.writeln ('<IMG SRC="showtoc.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Table of Contents"></A></TD>');
+   document.writeln ('<TD ALIGN="left">');
+   document.writeln ('<A HREF="frameset.htm?IDX">');
+   document.writeln ('<IMG SRC="showix.gif" HEIGHT=17 BORDER=0 ALT="Click to show the Index"></A></TD>');
+   document.writeln ('</TD>');
+   document.writeln ('</TR>');
+   document.writeln ('</TABLE>');
+
+}
+
+</SCRIPT>
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1">Seagate Software, Inc.<br>
+    <a href="http://www.seagatesoftware.com">http://www.seagatesoftware.com</a><br>
+    Please send comments to:<br>
+    <a href="mailto:techpubs@seagatesoftware.com">techpubs@seagatesoftware.com</a><br>
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
+
+
